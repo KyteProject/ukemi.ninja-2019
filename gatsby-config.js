@@ -1,43 +1,55 @@
-const urljoin = require('url-join');
-const config = require('./data/SiteConfig');
+const urljoin = require( 'url-join' );
+const config = require( './data/SiteConfig' );
 
 module.exports = {
 	pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
 	siteMetadata: {
-		siteUrl: urljoin(config.siteUrl, config.pathPrefix),
+		siteUrl: urljoin( config.siteUrl, config.pathPrefix ),
 		rssMetadata: {
-			site_url: urljoin(config.siteUrl, config.pathPrefix),
-			feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
+			site_url: urljoin( config.siteUrl, config.pathPrefix ),
+			feed_url: urljoin( config.siteUrl, config.pathPrefix, config.siteRss ),
 			title: config.siteTitle,
 			description: config.siteDescription,
-			image_url: `${urljoin(config.siteUrl, config.pathPrefix)}/logos/logo-512.png`,
-			copyright: config.copyright,
-		},
+			image_url: `${urljoin( config.siteUrl, config.pathPrefix )}/logos/logo-512.png`,
+			copyright: config.copyright
+		}
 	},
 	plugins: [
-		`gatsby-plugin-react-helmet`,
+		'gatsby-plugin-react-helmet',
 		{
-			resolve: `gatsby-source-filesystem`,
+			resolve: 'gatsby-source-filesystem',
 			options: {
-				name: `src`,
-				path: `${__dirname}/src/`,
-			},
+				name: 'src',
+				path: `${__dirname}/src/`
+			}
 		},
 		{
 			resolve: 'gatsby-plugin-google-analytics',
 			options: {
-				trackingId: config.googleAnalyticsID,
-			},
+				trackingId: config.googleAnalyticsID
+			}
 		},
 		{
 			resolve: 'gatsby-plugin-nprogress',
 			options: {
-				color: config.themeColor,
-			},
+				color: config.themeColor
+			}
 		},
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
+		{
+			resolve: 'gatsby-plugin-prefetch-google-fonts',
+			options: {
+				fonts: [
+					{
+						family: 'Rubik',
+						variants: [ '400', '500', '700', '900' ]
+					}
+				]
+			}
+		},
+		'gatsby-transformer-sharp',
+		'gatsby-plugin-sharp',
 		'gatsby-plugin-sitemap',
+		'gatsby-plugin-sass',
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
@@ -52,16 +64,16 @@ module.exports = {
 					{
 						src: '/logos/logo-192x192.png',
 						sizes: '192x192',
-						type: 'image/png',
+						type: 'image/png'
 					},
 					{
 						src: '/logos/logo-512x512.png',
 						sizes: '512x512',
-						type: 'image/png',
-					},
-				],
-			},
+						type: 'image/png'
+					}
+				]
+			}
 		},
-		'gatsby-plugin-offline',
-	],
+		'gatsby-plugin-offline'
+	]
 };

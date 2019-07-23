@@ -16,36 +16,40 @@ const config = {
 		{
 			label: 'GitHub',
 			url: 'https://github.com/KyteProject',
-			iconClassName: 'fa fa-github',
+			iconClassName: 'fa fa-github'
 		},
 		{
 			label: 'Twitter',
 			url: 'https://twitter.com/UkemiProject',
-			iconClassName: 'fa fa-twitter',
+			iconClassName: 'fa fa-twitter'
 		},
 		{
 			label: 'Email',
 			url: 'mailto:support@ukemi.ninja',
-			iconClassName: 'fa fa-envelope',
-		},
+			iconClassName: 'fa fa-envelope'
+		}
 	],
 	copyright: 'Copyright © 2019. Ukemi',
 	themeColor: '#c62828', // Used for setting manifest and progress theme colors.
-	backgroundColor: '#e0e0e0', // Used for setting manifest background color.
+	backgroundColor: '#e0e0e0' // Used for setting manifest background color.
 };
 
 // Make sure pathPrefix is empty if not needed
-if (config.pathPrefix === '/') {
+if ( config.pathPrefix === '/' ) {
 	config.pathPrefix = '';
 } else {
 	// Make sure pathPrefix only contains the first forward slash
-	config.pathPrefix = `/${config.pathPrefix.replace(/^\/|\/$/g, '')}`;
+	config.pathPrefix = `/${config.pathPrefix.replace( /^\/|\/$/g, '' )}`;
 }
 
 // Make sure siteUrl doesn't have an ending forward slash
-if (config.siteUrl.substr(-1) === '/') config.siteUrl = config.siteUrl.slice(0, -1);
+if ( config.siteUrl.substr( -1 ) === '/' ) {
+	config.siteUrl = config.siteUrl.slice( 0, -1 );
+}
 
 // Make sure siteRss has a starting forward slash
-if (config.siteRss && config.siteRss[0] !== '/') config.siteRss = `/${config.siteRss}`;
+if ( config.siteRss && config.siteRss[ 0 ] !== '/' ) {
+	config.siteRss = `/${config.siteRss}`;
+}
 
 module.exports = config;
