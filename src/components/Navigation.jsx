@@ -6,26 +6,43 @@ const Navigation = () => {
 		toggle = () => setNavOpen( !navOpen );
 
 	return (
-		<Navbar bg="light" expand="lg">
+		<Navbar expand="lg" className="fixed-top sticky">
 			<Container>
 				<Navbar.Brand href="/">Ukemi</Navbar.Brand>
 				<Navbar.Toggle onClick={toggle} aria-controls="basic-navbar-nav" label="Toggle Navigation" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="mr-auto">
-						<Nav.Link href="/">Home</Nav.Link>
-						<Nav.Link href="/about">About</Nav.Link>
-						<Nav.Link href="/blog">Blog</Nav.Link>
-						<Nav.Link href="/services">Services</Nav.Link>
+					<Nav className="ml-auto">
+						<Nav.Item>
+							<Nav.Link href="/">Home</Nav.Link>
+						</Nav.Item>
+						<Nav.Item>
+							<Nav.Link href="/about">About</Nav.Link>
+						</Nav.Item>
+						<Nav.Item>
+							<Nav.Link href="/blog">Blog</Nav.Link>
+						</Nav.Item>
+						<NavDropdown title="Services" id="basic-nav-dropdown">
+							<NavDropdown.Item href="/services">Overview</NavDropdown.Item>
+							<NavDropdown.Divider />
+							<NavDropdown.Item href="/services/design">Design</NavDropdown.Item>
+							<NavDropdown.Item href="/services/events">Events</NavDropdown.Item>
+							<NavDropdown.Item href="/services/products">Products</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.4">Talks & Presentations</NavDropdown.Item>
+						</NavDropdown>
 						<NavDropdown title="Projects" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/projects">Overview</NavDropdown.Item>
 							<NavDropdown.Divider />
-							<NavDropdown.Item href="/projects/design">Design</NavDropdown.Item>
-							<NavDropdown.Item href="/projects/events">Events</NavDropdown.Item>
-							<NavDropdown.Item href="/projects/products">Products</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.4">Talks & Presentations</NavDropdown.Item>
+							<NavDropdown.Item href="/projects/gpnb">The Greatest Park Never Build</NavDropdown.Item>
+							<NavDropdown.Item href="/projects/events">Ukemi Card Game</NavDropdown.Item>
+							<NavDropdown.Item href="/projects/products">Parkour Van</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.4">Fucked Knee eBook</NavDropdown.Item>
 						</NavDropdown>
-						<Nav.Link href="/shop">Shop</Nav.Link>
-						<Nav.Link href="/contact">Contact</Nav.Link>
+						<Nav.Item>
+							<Nav.Link href="/shop">Shop</Nav.Link>
+						</Nav.Item>
+						<Nav.Item>
+							<Nav.Link href="/contact">Contact</Nav.Link>
+						</Nav.Item>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

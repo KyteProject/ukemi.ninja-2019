@@ -5,9 +5,9 @@ import config from '../../data/SiteConfig';
 import Footer from '../components/Footer';
 import Header from './../components/Header';
 
-import '../sass/main.sass';
+import('../scss/main.scss');
 
-const MainLayout = ( { children } ) => {
+const MainLayout = ({ children }) => {
 	return (
 		<React.Fragment>
 			<Helmet>
