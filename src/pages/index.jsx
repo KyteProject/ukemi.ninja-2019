@@ -1,14 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import Layout from '../layout';
-// import PostListing from "../components/PostListing/PostListing";
-// import SEO from "../components/SEO/SEO";
+import MainLayout from '../layout';
 import config from '../../data/SiteConfig';
 
 const Index = () => {
 	return (
-		<Layout>
+		<MainLayout>
 			<div className="index-container">
 				<Helmet title={config.siteTitle} />
 				<h1>Ukemi</h1>
@@ -18,7 +16,7 @@ const Index = () => {
 					incidunt, consequatur veritatis.
 				</p>
 			</div>
-		</Layout>
+		</MainLayout>
 	);
 };
 

@@ -1,17 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Layout from '../layout';
+import MainLayout from '../layout';
 import About from '../components/About';
 import config from '../../data/SiteConfig';
 
 const about = () => {
 	return (
-  <Layout>
-    <div className="about-container">
-      <Helmet title={`About | ${config.siteTitle}`} />
-      <About />
-    </div>
-  </Layout>
+		<MainLayout>
+			<div className="about-container">
+				<Helmet title={`About | ${config.siteTitle}`} />
+				<About />
+			</div>
+		</MainLayout>
 	);
 };
 
