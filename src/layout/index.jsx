@@ -1,9 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+
 import config from '../../data/SiteConfig';
-import Navigation from '../components/Navigation.jsx';
-import '../sass/main.sass';
 import Footer from '../components/Footer';
+import Header from './../components/Header';
+
+import '../sass/main.sass';
 
 const MainLayout = ( { children } ) => {
 	return (
@@ -11,7 +13,7 @@ const MainLayout = ( { children } ) => {
 			<Helmet>
 				<meta name="description" content={config.siteDescription} />
 			</Helmet>
-			<Navigation />
+			<Header />
 			<main>{children}</main>
 			<Footer />
 		</React.Fragment>
