@@ -3,9 +3,9 @@ import Helmet from 'react-helmet';
 import MainLayout from '../layout';
 import config from '../../data/SiteConfig';
 
-const shop = () => {
+const shop = ( { location } ) => {
 	return (
-		<MainLayout>
+		<MainLayout location={location} crumbLabel="Shop">
 			<div className="shop-container">
 				<Helmet title={`Shop | ${config.siteTitle}`} />
 				{/*  */}

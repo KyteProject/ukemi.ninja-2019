@@ -5,10 +5,10 @@ const config = {
 	siteLogo: '/logos/logo-1024.png',
 	siteUrl: 'https://ukemi.ninja',
 	pathPrefix: '',
-	siteDescription: 'Ukemi project blah',
+	siteDescription: 'Ukemi project blah', // TODO
 	siteRss: '/rss.xml',
-	siteFBAppID: '',
-	googleAnalyticsID: '',
+	siteFBAppID: '', // TODO
+	googleAnalyticsID: '', // TODO
 	// disqusShortname: 'https-vagr9k-github-io-gatsby-advanced-starter',
 	dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
 	dateFormat: 'DD/MM/YYYY', // Date format for display.
@@ -34,20 +34,16 @@ const config = {
 	backgroundColor: '#e0e0e0' // Used for setting manifest background color.
 };
 
-// Make sure pathPrefix is empty if not needed
 if ( config.pathPrefix === '/' ) {
 	config.pathPrefix = '';
 } else {
-	// Make sure pathPrefix only contains the first forward slash
 	config.pathPrefix = `/${config.pathPrefix.replace( /^\/|\/$/g, '' )}`;
 }
 
-// Make sure siteUrl doesn't have an ending forward slash
 if ( config.siteUrl.substr( -1 ) === '/' ) {
 	config.siteUrl = config.siteUrl.slice( 0, -1 );
 }
 
-// Make sure siteRss has a starting forward slash
 if ( config.siteRss && config.siteRss[ 0 ] !== '/' ) {
 	config.siteRss = `/${config.siteRss}`;
 }

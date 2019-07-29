@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Helmet from 'react-helmet';
 
 import config from '../../data/SiteConfig';
+import Navigation from './../components/Navigation';
 import Footer from '../components/Footer';
-import Header from './../components/Header';
+import { TitleSection } from '../components/TitleSection';
 
 import('../scss/main.scss');
 
@@ -13,7 +14,8 @@ const MainLayout = ({ children }) => {
 			<Helmet>
 				<meta name="description" content={config.siteDescription} />
 			</Helmet>
-			<Header />
+			<Navigation />
+			{/* <TitleSection loc={location} label={crumbLabel} /> */}
 			<main>{children}</main>
 			<Footer />
 		</React.Fragment>

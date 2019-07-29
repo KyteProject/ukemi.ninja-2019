@@ -74,6 +74,19 @@ module.exports = {
 				]
 			}
 		},
-		'gatsby-plugin-offline'
+		'gatsby-plugin-offline',
+		{
+			resolve: 'gatsby-plugin-breadcrumb',
+			options: {
+				defaultCrumb: {
+					location: {
+						state: { crumbClicked: false },
+						pathname: '/'
+					},
+					crumbLabel: 'Home',
+					crumbSeparator: ' / '
+				}
+			}
+		}
 	]
 };

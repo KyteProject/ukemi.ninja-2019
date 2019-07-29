@@ -122,3 +122,35 @@ ul {
 		}
 	}
 }
+
+.section-title {
+	position: relative;
+	background-color: $color1;
+	padding-bottom: 80px;
+	padding-top: 200px;
+
+	.title-h2 {
+		padding-top: 0;
+		margin-bottom: 0;
+		color: $color3;
+		font-size: 36px;
+	}
+
+	.breadcrumb {
+		background-color: transparent;
+		display: block;
+		position: relative;
+		text-align: center;
+		li {
+			display: inline-block;
+
+			a {
+				color: $color3;
+			}
+		}
+
+		.breadcrumb-item::before {
+			color: $color3;
+		}
+	}
+}
