@@ -33,9 +33,9 @@ const Navigation = () => {
 							<NavDropdown.Item href="/projects">Overview</NavDropdown.Item>
 							<NavDropdown.Divider />
 							<NavDropdown.Item href="/projects/gpnb">The Greatest Park Never Build</NavDropdown.Item>
-							<NavDropdown.Item href="/projects/events">Ukemi Card Game</NavDropdown.Item>
-							<NavDropdown.Item href="/projects/products">Parkour Van</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.4">Fucked Knee eBook</NavDropdown.Item>
+							<NavDropdown.Item href="/projects/cards">Ukemi Card Game</NavDropdown.Item>
+							<NavDropdown.Item href="/projects/mobile-parkour-van">Parkour Van</NavDropdown.Item>
+							<NavDropdown.Item href="/projects/fucked-knee-ebook">Fucked Knee eBook</NavDropdown.Item>
 						</NavDropdown>
 						<Nav.Item>
 							<Nav.Link href="/shop">Shop</Nav.Link>

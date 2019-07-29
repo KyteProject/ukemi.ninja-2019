@@ -15,7 +15,6 @@ const MainLayout = ({ children }) => {
 				<meta name="description" content={config.siteDescription} />
 			</Helmet>
 			<Navigation />
-			{/* <TitleSection loc={location} label={crumbLabel} /> */}
 			<main>{children}</main>
 			<Footer />
 		</React.Fragment>

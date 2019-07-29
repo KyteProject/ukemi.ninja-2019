@@ -1,6 +1,9 @@
 @import './variables';
 @import './../../node_modules/bootstrap/scss/bootstrap';
 
+/**************************
+	Body
+***************************/
 body {
 	font-family: $font;
 	font-size: $font-base;
@@ -32,6 +35,29 @@ ul {
 	list-style: none;
 }
 
+/**************************
+	Button Styles
+***************************/
+.btn-white {
+	background-color: #ffffff;
+	color: $color1;
+	border: 2px solid #ffffff;
+	padding: 10px 35px;
+	border-radius: 23px;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: transparent;
+		border-color: #ffffff;
+		color: #ffffff;
+		box-shadow: 0 000;
+	}
+}
+
+/**************************
+	Navigtion
+***************************/
 .navbar-brand {
 	color: $color3;
 }
@@ -123,17 +149,23 @@ ul {
 	}
 }
 
+/**************************
+	Title
+***************************/
+
 .section-title {
 	position: relative;
 	background-color: $color1;
-	padding-bottom: 80px;
-	padding-top: 200px;
+	padding-bottom: 25px;
+	padding-top: 100px;
 
-	.title-h2 {
+	h1 {
 		padding-top: 0;
 		margin-bottom: 0;
 		color: $color3;
 		font-size: 36px;
+		font-weight: 500;
+		line-height: 1.8;
 	}
 
 	.breadcrumb {
@@ -151,6 +183,79 @@ ul {
 
 		.breadcrumb-item::before {
 			color: $color3;
+		}
+	}
+}
+
+/**************************
+	About
+***************************/
+.about-section {
+	.about {
+		position: relative;
+		padding-top: 80px;
+	}
+
+	.title {
+		font-size: 42px;
+		color: #1c3547;
+		line-height: 46px;
+		margin-bottom: 25px;
+		font-weight: 500;
+	}
+
+	.subtitle {
+		display: block;
+		margin-bottom: 20px;
+		font-size: 20px;
+		color: #1c3547;
+	}
+
+	.about-text {
+		font-size: 16px;
+		color: #828893;
+		line-height: 26px;
+	}
+
+	.img-right {
+		top: -115px;
+		position: absolute;
+		right: 150px;
+	}
+
+	.story {
+		position: relative;
+		padding-top: 200px;
+		padding-bottom: 100px;
+
+		.bottom-text {
+			margin-top: 25px;
+
+			span {
+				margin-bottom: 10px;
+				display: block;
+				color: #1c3547;
+				font-weight: 700;
+				font-size: 26px;
+			}
+		}
+	}
+
+	.cta {
+		background-color: $color-pink;
+		padding-bottom: 50px;
+		padding-top: 50px;
+	}
+
+	.cta-text {
+		span {
+			color: $color3;
+			display: block;
+			margin-bottom: 15px;
+		}
+
+		h2 {
+			font-size: 32px;
 		}
 	}
 }

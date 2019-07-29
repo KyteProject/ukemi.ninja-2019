@@ -1,19 +1,20 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
+import { Container, Row, Col, Breadcrumb } from 'react-bootstrap';
 
-export const TitleSection = ( props ) => {
-	console.log( props );
-
+export const TitleSection = ( { location, sub, crumbLabel } ) => {
 	return (
 		<section className="section-title">
 			<Container>
 				<Row>
-					<Col>
+					<Col lg="12">
 						<div className="text-center">
-							<h2>Title</h2>
+							<h1>{crumbLabel}</h1>
 
-							<Breadcrumb location={props.location} crumbLabel={props.location} />
+							<Breadcrumb>
+								<Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+								{sub && <Breadcrumb.Item href={`/${sub.name}`}>{sub.label}</Breadcrumb.Item>}
+								<Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
+							</Breadcrumb>
 						</div>
 					</Col>
 				</Row>
