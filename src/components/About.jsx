@@ -22,6 +22,12 @@ const About = () => {
 								culture, to encourage play, and to demystify movement and make it more accessible
 								through our products and services.
 							</p>
+
+							<p className="about-text">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis et quas eius
+								voluptatum, sint placeat atque soluta dolorum doloribus sequi illo quasi numquam quo,
+								ipsam rerum animi harum laboriosam voluptate.
+							</p>
 						</Col>
 						<div className="img-right">
 							<img src="/images/about-team.svg" alt="Ukemi team photo" />
@@ -37,22 +43,24 @@ const About = () => {
 							<img src="/images/about-story.svg" alt="Ukemi Back Story" />
 						</Col>
 
-						<Col md={5} className="ml-5">
+						<Col md={6} className="mx-auto pl-5">
 							<h2 className="title text-left">
 								a lifelong <strong>TEAM</strong>.
 							</h2>
+
 							<span className="subtitle">Our Story</span>
 							<p className="about-text">
 								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis nam maxime autem
 								assumenda ea, recusandae vitae similique accusantium id nobis, voluptatibus architecto,
 								quasi nostrum? Doloremque beatae sapiente alias sunt!
 							</p>
-							<p className="about-text">
+							<p className="about-text pb-2">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta reiciendis molestias odit
 								nihil distinctio. Maxime in enim et odit animi, temporibus minus voluptates voluptas
 								explicabo nulla nesciunt placeat sint sapiente?
 							</p>
 
+							<span className="subtitle">Our Experience</span>
 							<Row className="bottom-text">
 								<Col md={4} className="text-center">
 									<span>43</span>
@@ -72,7 +80,7 @@ const About = () => {
 				</Container>
 			</section>
 
-			<section id="numbers" className="cta">
+			<section className="cta">
 				<Container>
 					<Row>
 						<Col md={12}>
