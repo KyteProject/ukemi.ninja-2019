@@ -29,9 +29,9 @@ const About = () => {
 								ipsam rerum animi harum laboriosam voluptate.
 							</p>
 						</Col>
-						<div className="img-right">
+						<Col md={6} className="img-right">
 							<img src="/images/about-team.svg" alt="Ukemi team photo" />
-						</div>
+						</Col>
 					</Row>
 				</Container>
 			</section>
@@ -62,17 +62,23 @@ const About = () => {
 
 							<span className="subtitle">Our Experience</span>
 							<Row className="bottom-text">
-								<Col md={4} className="text-center">
-									<span>43</span>
-									<small>Years of Parkour (combined)</small>
+								<Col md={4}>
+									<div>
+										<span>43</span>
+										<p>Years of Parkour (combined)</p>
+									</div>
 								</Col>
-								<Col md={4} className="text-center">
-									<span>17</span>
-									<small>Years of Friendship</small>
+								<Col md={4}>
+									<div>
+										<span>17</span>
+										<p>Years of Friendship</p>
+									</div>
 								</Col>
-								<Col md={4} className="text-center">
-									<span>1.5</span>
-									<small>Years of Ukemi</small>
+								<Col md={4}>
+									<div>
+										<span>1.5</span>
+										<p>Years of Ukemi</p>
+									</div>
 								</Col>
 							</Row>
 						</Col>

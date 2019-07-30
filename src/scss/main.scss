@@ -1,8 +1,9 @@
 @import './variables';
+@import '../scss/responsive.scss';
 @import './../../node_modules/bootstrap/scss/bootstrap';
 
 /**************************
-	Body
+Body
 ***************************/
 body {
 	font-family: $font;
@@ -218,7 +219,7 @@ ul {
 	}
 
 	.img-right {
-		top: -115px;
+		top: -150px;
 		position: absolute;
 		right: 150px;
 	}
@@ -232,11 +233,17 @@ ul {
 			margin-top: 25px;
 
 			span {
+				text-align: center;
 				margin-bottom: 10px;
 				display: block;
 				color: #1c3547;
 				font-weight: 700;
 				font-size: 26px;
+			}
+
+			p {
+				text-align: center;
+				display: block;
 			}
 		}
 	}

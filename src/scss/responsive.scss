@@ -1,0 +1,161 @@
+@media only screen and (max-width: 767px) {
+	body {
+		.about-section {
+			.img-right {
+				top: 0;
+				position: relative;
+				right: 0;
+			}
+
+			.story {
+				padding-top: 40px;
+				padding-bottom: 30px;
+
+				img {
+					padding-bottom: 35px;
+				}
+
+				.bottom-text {
+					span {
+						text-align: left !important;
+						font-size: 42px;
+					}
+
+					p {
+						text-align: left !important;
+						padding-bottom: 10px;
+					}
+				}
+			}
+		}
+
+		.navbar-toggler {
+			font-size: 22px;
+			line-height: 1;
+			color: $color3;
+			padding: 0;
+			span {
+				height: auto;
+			}
+		}
+
+		.sticky {
+			padding: 0.5rem 1rem;
+
+			.navbar-toggler {
+				color: $color1;
+			}
+		}
+
+		.navbar-collapse {
+			background-color: $color3;
+			li {
+				a {
+					line-height: 20px !important;
+					padding: 12px 10px !important;
+				}
+				.social-media {
+					margin-left: 0 !important;
+				}
+			}
+		}
+
+		.dropdown-menu {
+			position: relative;
+			box-shadow: none !important;
+		}
+
+		.navbar-nav {
+			li {
+				a {
+					color: $color11 !important;
+					&:after {
+						top: 0 !important;
+					}
+				}
+			}
+		}
+
+		.about-text {
+			img {
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	body {
+		p {
+			font-size: 13px !important;
+		}
+
+		.navbar-collapse {
+			background-color: $color3;
+			li {
+				a {
+					line-height: 20px !important;
+					padding: 12px 10px !important;
+				}
+				.social-media {
+					margin-left: 0 !important;
+				}
+			}
+		}
+
+		.navbar-toggler {
+			font-size: 22px;
+			line-height: 1;
+			color: $color1;
+			padding: 0;
+
+			span {
+				height: auto;
+			}
+		}
+
+		.img-right {
+			right: 0 !important;
+			width: 60%;
+		}
+
+		.navbar-toggler {
+			color: $color3;
+		}
+
+		.navbar-expand-lg {
+			.navbar-nav {
+				li {
+					a {
+						color: $color5 !important;
+						&:after {
+							top: 0 !important;
+						}
+					}
+				}
+				.dropdown-menu {
+					box-shadow: none;
+				}
+			}
+		}
+
+		.sticky {
+			.navbar-toggler {
+				color: $color1;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+	body {
+		.img-right {
+			right: 0 !important;
+			width: 60%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	//
+}
