@@ -24,10 +24,11 @@ const Navigation = () => {
 						<NavDropdown title="Services" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/services">Overview</NavDropdown.Item>
 							<NavDropdown.Divider />
-							<NavDropdown.Item href="/services/design">Design</NavDropdown.Item>
-							<NavDropdown.Item href="/services/events">Events</NavDropdown.Item>
-							<NavDropdown.Item href="/services/products">Products</NavDropdown.Item>
+							<NavDropdown.Item href="/services/park-design">Park & Equiptment Design</NavDropdown.Item>
+							<NavDropdown.Item href="/services/events">Events & Shows</NavDropdown.Item>
+							<NavDropdown.Item href="/services/products">Physical Products</NavDropdown.Item>
 							<NavDropdown.Item href="#action/3.4">Talks & Presentations</NavDropdown.Item>
+							<NavDropdown.Item href="/services/web-dev">Website Development</NavDropdown.Item>
 						</NavDropdown>
 						<NavDropdown title="Projects" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/projects">Overview</NavDropdown.Item>
