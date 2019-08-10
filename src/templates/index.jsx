@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 import MainLayout from '../layout';
@@ -9,7 +9,13 @@ import PostCard from './../components/PostCard';
 import { MetaData } from '../components/meta';
 
 const Index = ( { data, location, pageContext } ) => {
-	const posts = data.allGhostPost.edges;
+	const posts = data.allGhostPost.edges,
+		bannerPost = posts[ Object.keys( posts )[ 0 ] ].node;
+
+	console.log( posts );
+	console.log( bannerPost );
+
+	delete posts[ 0 ];
 
 	return (
 		<React.Fragment>
@@ -18,6 +24,31 @@ const Index = ( { data, location, pageContext } ) => {
 			<MainLayout>
 				<section id="blog" className="blog-section">
 					<Container>
+						<Row>
+							<Col>
+								<article className="blog-banner">
+									<div className="content">
+										<header>
+											<h2>
+												<Link to={`/blog/${bannerPost.slug}`}>{bannerPost.title}</Link>
+											</h2>
+										</header>
+										<p>{bannerPost.excerpt}</p>
+										<Button
+											variant="outline"
+											href={`/blog/${bannerPost.slug}`}
+											className="banner-button"
+										>
+											Read More
+										</Button>
+									</div>
+									<Link href={`/blog/${bannerPost.slug}`} className="image">
+										<img src={bannerPost.feature_image} alt={bannerPost.title} />
+									</Link>
+								</article>
+							</Col>
+						</Row>
+
 						<Row>
 							<Col lg={8} md={8}>
 								<div className="blog-content">
