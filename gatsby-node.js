@@ -1,53 +1,190 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
 const path = require( 'path' );
-const _ = require( 'lodash' );
-const moment = require( 'moment' );
-const siteConfig = require( './data/SiteConfig' );
+const { postsPerPage } = require( './data/SiteConfig' );
+const { paginate } = require( 'gatsby-awesome-pagination' );
 
-exports.onCreateNode = ( { node, actions, getNode } ) => {
-	const { createNodeField } = actions;
-	let slug;
+exports.createPages = async( { graphql, actions } ) => {
+	const { createPage } = actions;
 
-	if ( node.internal.type === 'MarkdownRemark' ) {
-		const fileNode = getNode( node.parent );
-		const parsedFilePath = path.parse( fileNode.relativePath );
-
-		if (
-			Object.prototype.hasOwnProperty.call( node, 'frontmatter' ) &&			Object.prototype.hasOwnProperty.call( node.frontmatter, 'title' )
-		) {
-			slug = `/${_.kebabCase( node.frontmatter.title )}`;
-		} else if ( parsedFilePath.name !== 'index' && parsedFilePath.dir !== '' ) {
-			slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
-		} else if ( parsedFilePath.dir === '' ) {
-			slug = `/${parsedFilePath.name}/`;
-		} else {
-			slug = `/${parsedFilePath.dir}/`;
-		}
-
-		if ( Object.prototype.hasOwnProperty.call( node, 'frontmatter' ) ) {
-			if ( Object.prototype.hasOwnProperty.call( node.frontmatter, 'slug' ) ) {
-				slug = `/${_.kebabCase( node.frontmatter.slug )}`;
-			}
-			if ( Object.prototype.hasOwnProperty.call( node.frontmatter, 'date' ) ) {
-				const date = moment( node.frontmatter.date, siteConfig.dateFromFormat );
-
-				if ( !date.isValid ) {
-					console.warn( 'WARNING: Invalid date.', node.frontmatter );
+	const result = await graphql( `
+		{
+			allGhostPost(sort: { order: ASC, fields: published_at }) {
+				edges {
+					node {
+						slug
+					}
 				}
-
-				createNodeField( {
-					node,
-					name: 'date',
-					value: date.toISOString()
-				} );
+			}
+			allGhostTag(sort: { order: ASC, fields: name }) {
+				edges {
+					node {
+						slug
+						url
+						postCount
+					}
+				}
+			}
+			allGhostAuthor(sort: { order: ASC, fields: name }) {
+				edges {
+					node {
+						slug
+						url
+						postCount
+					}
+				}
+			}
+			allGhostPage(sort: { order: ASC, fields: published_at }) {
+				edges {
+					node {
+						slug
+						url
+					}
+				}
+			}
+			allGhostPage(sort: { order: ASC, fields: published_at }) {
+				edges {
+					node {
+						slug
+						url
+					}
+				}
 			}
 		}
-		createNodeField( { node, name: 'slug', value: slug } );
+	` );
+
+	// Check for any errors
+	if ( result.errors ) {
+		throw new Error( result.errors );
 	}
+
+	// Extract query results
+	const tags = result.data.allGhostTag.edges;
+	const authors = result.data.allGhostAuthor.edges;
+	const pages = result.data.allGhostPage.edges;
+	const posts = result.data.allGhostPost.edges;
+
+	// Load templates
+	const tagsTemplate = path.resolve( './src/templates/tag.jsx' );
+	const authorTemplate = path.resolve( './src/templates/author.jsx' );
+	const pageTemplate = path.resolve( './src/templates/page.jsx' );
+	const postTemplate = path.resolve( './src/templates/post.jsx' );
+
+	// Create tag pages
+	tags.forEach( ( { node } ) => {
+		const totalPosts = node.postCount !== null ? node.postCount : 0;
+		const numberOfPages = Math.ceil( totalPosts / postsPerPage );
+
+		// This part here defines, that our tag pages will use
+		// a `/tag/:slug/` permalink.
+		node.url = `blog/tag/${node.slug}/`;
+
+		Array.from( { length: numberOfPages } ).forEach( ( _, i ) => {
+			const currentPage = i + 1;
+			const prevPageNumber = currentPage <= 1 ? null : currentPage - 1;
+			const nextPageNumber = currentPage + 1 > numberOfPages ? null : currentPage + 1;
+			const previousPagePath = prevPageNumber				? prevPageNumber === 1 ? node.url : `${node.url}page/${prevPageNumber}/`				: null; // prettier-ignore eslint-disable-line
+			const nextPagePath = nextPageNumber ? `${node.url}page/${nextPageNumber}/` : null;
+
+			createPage( {
+				path: i === 0 ? node.url : `${node.url}page/${i + 1}/`,
+				component: tagsTemplate,
+				context: {
+					// Data passed to context is available
+					// in page queries as GraphQL variables.
+					slug: node.slug,
+					limit: postsPerPage,
+					skip: i * postsPerPage,
+					numberOfPages: numberOfPages,
+					humanPageNumber: currentPage,
+					prevPageNumber: prevPageNumber,
+					nextPageNumber: nextPageNumber,
+					previousPagePath: previousPagePath,
+					nextPagePath: nextPagePath
+				}
+			} );
+		} );
+	} );
+
+	// Create author pages
+	authors.forEach( ( { node } ) => {
+		const totalPosts = node.postCount !== null ? node.postCount : 0;
+		const numberOfPages = Math.ceil( totalPosts / postsPerPage );
+
+		// This part here defines, that our author pages will use
+		// a `/author/:slug/` permalink.
+		node.url = `blog/author/${node.slug}/`;
+
+		Array.from( { length: numberOfPages } ).forEach( ( _, i ) => {
+			const currentPage = i + 1;
+			const prevPageNumber = currentPage <= 1 ? null : currentPage - 1;
+			const nextPageNumber = currentPage + 1 > numberOfPages ? null : currentPage + 1;
+			const previousPagePath = prevPageNumber				? prevPageNumber === 1 ? node.url : `${node.url}page/${prevPageNumber}/`				: null; // prettier-ignore eslint-disable-line
+			const nextPagePath = nextPageNumber ? `${node.url}page/${nextPageNumber}/` : null;
+
+			createPage( {
+				path: i === 0 ? node.url : `${node.url}page/${i + 1}/`,
+				component: authorTemplate,
+				context: {
+					// Data passed to context is available
+					// in page queries as GraphQL variables.
+					slug: node.slug,
+					limit: postsPerPage,
+					skip: i * postsPerPage,
+					numberOfPages: numberOfPages,
+					humanPageNumber: currentPage,
+					prevPageNumber: prevPageNumber,
+					nextPageNumber: nextPageNumber,
+					previousPagePath: previousPagePath,
+					nextPagePath: nextPagePath
+				}
+			} );
+		} );
+	} );
+
+	// Create pages
+	pages.forEach( ( { node } ) => {
+		// This part here defines, that our pages will use
+		// a `/:slug/` permalink.
+		node.url = `blog/${node.slug}/`;
+
+		createPage( {
+			path: node.url,
+			component: pageTemplate,
+			context: {
+				// Data passed to context is available
+				// in page queries as GraphQL variables.
+				slug: node.slug
+			}
+		} );
+	} );
+
+	// Create post pages
+	posts.forEach( ( { node } ) => {
+		// This part here defines, that our posts will use
+		// a `/:slug/` permalink.
+		node.url = `blog/${node.slug}/`;
+
+		createPage( {
+			path: node.url,
+			component: postTemplate,
+			context: {
+				// Data passed to context is available
+				// in page queries as GraphQL variables.
+				slug: node.slug
+			}
+		} );
+	} );
+
+	// Create pagination
+	// paginate( {
+	// 	createPage,
+	// 	items: posts,
+	// 	itemsPerPage: postsPerPage,
+	// 	component: indexTemplate,
+	// 	pathPrefix: ( { pageNumber } ) => {
+	// 		if ( pageNumber === 0 ) {
+	// 			return '/';
+	// 		}
+	// 		return '/page';
+	// 	}
+	// } );
 };

@@ -1,12 +1,24 @@
+require( 'dotenv' ).config();
+
 const urljoin = require( 'url-join' );
+const path = require( 'path' );
 const config = require( './data/SiteConfig' );
 
-require( 'dotenv' ).config( {
-	path: `.env.${process.env.NODE_ENV}`
-} );
+const ghostConfig = {
+	production: {
+		apiUrl: process.env.GHOST_API_URL,
+		contentApiKey: process.env.GHOST_CONTENT_API_KEY
+	},
+	development: {
+		apiUrl: process.env.DEV_GHOST_API_URL,
+		contentApiKey: process.env.DEV_GHOST_CONTENT_API_KEY
+	}
+};
 
-if ( !process.env.GHOST_API_URL || !process.env.GHOST_API_KEY ) {
-	throw new Error( 'GHOST_API_URL and GHOST_API_KEY are required to build.' );
+const { apiUrl, contentApiKey } =	process.env.NODE_ENV === 'development' ? ghostConfig.development : ghostConfig.production;
+
+if ( !apiUrl || !contentApiKey || contentApiKey.match( /<key>/ ) ) {
+	throw new Error( 'GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build.' );
 }
 
 module.exports = {
@@ -23,12 +35,22 @@ module.exports = {
 		}
 	},
 	plugins: [
-		'gatsby-plugin-react-helmet',
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
-				path: `${__dirname}/src/`
+				path: path.join( __dirname, 'src', 'images' ),
+				name: 'images'
 			}
+		},
+		// {
+		// 	resolve: 'gatsby-source-filesystem',
+		// 	options: {
+		// 		path: `${__dirname}/src/`
+		// 	}
+		// },
+		{
+			resolve: 'gatsby-source-ghost',
+			options: process.env.NODE_ENV === 'development' ? ghostConfig.development : ghostConfig.production
 		},
 		{
 			resolve: 'gatsby-plugin-google-analytics',
@@ -53,6 +75,7 @@ module.exports = {
 				]
 			}
 		},
+		'gatsby-plugin-react-helmet',
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-sitemap',
