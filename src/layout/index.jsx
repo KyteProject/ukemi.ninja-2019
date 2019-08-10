@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { Link, StaticQuery, graphql } from 'gatsby';
 
 import config from '../../data/siteConfig';
 import Navigation from './../components/Navigation';
@@ -8,17 +10,33 @@ import { TitleSection } from '../components/TitleSection';
 
 import('../scss/main.scss');
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ data, children, bodyClass }) => {
 	return (
 		<React.Fragment>
 			<Helmet>
-				<meta name="description" content={config.siteDescription} />
+				<html lang="eng" />
+				<body className={bodyClass} />
 			</Helmet>
-			<Navigation />
-			<main>{children}</main>
-			<Footer />
+
+			<div className="viewport">
+				<div className="viewport-top">
+					<Navigation />
+					<main>{children}</main>
+				</div>
+				<div className="viewport-bottom">
+					<Footer />
+				</div>
+			</div>
 		</React.Fragment>
 	);
+};
+
+MainLayout.propTypes = {
+	children: PropTypes.node.isRequired,
+	bodyClass: PropTypes.string,
+	data: PropTypes.shape({
+		allGhostSettings: PropTypes.object,
+	}),
 };
 
 export default MainLayout;

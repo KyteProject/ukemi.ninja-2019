@@ -67,6 +67,7 @@ exports.createPages = async( { graphql, actions } ) => {
 	// Load templates
 	const tagsTemplate = path.resolve( './src/templates/tag.jsx' ),
 		authorTemplate = path.resolve( './src/templates/author.jsx' ),
+		indexTemplate = path.resolve( './src/templates/index.jsx' ),
 		pageTemplate = path.resolve( './src/templates/page.jsx' ),
 		postTemplate = path.resolve( './src/templates/post.jsx' );
 
@@ -161,16 +162,16 @@ exports.createPages = async( { graphql, actions } ) => {
 	} );
 
 	// Create pagination
-	// paginate( {
-	// 	createPage,
-	// 	items: posts,
-	// 	itemsPerPage: postsPerPage,
-	// 	component: indexTemplate,
-	// 	pathPrefix: ( { pageNumber } ) => {
-	// 		if ( pageNumber === 0 ) {
-	// 			return '/';
-	// 		}
-	// 		return '/page';
-	// 	}
-	// } );
+	paginate( {
+		createPage,
+		items: posts,
+		itemsPerPage: postsPerPage,
+		component: indexTemplate,
+		pathPrefix: ( { pageNumber } ) => {
+			if ( pageNumber === 0 ) {
+				return '/blog/';
+			}
+			return '/blog/page';
+		}
+	} );
 };
