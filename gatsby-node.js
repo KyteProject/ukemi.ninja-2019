@@ -1,6 +1,8 @@
+/* eslint-disable no-nested-ternary */
+
 const path = require( 'path' );
-const { postsPerPage } = require( './data/SiteConfig' );
 const { paginate } = require( 'gatsby-awesome-pagination' );
+const { postsPerPage } = require( './data/siteConfig' );
 
 exports.createPages = async( { graphql, actions } ) => {
 	const { createPage } = actions;
@@ -57,39 +59,35 @@ exports.createPages = async( { graphql, actions } ) => {
 	}
 
 	// Extract query results
-	const tags = result.data.allGhostTag.edges;
-	const authors = result.data.allGhostAuthor.edges;
-	const pages = result.data.allGhostPage.edges;
-	const posts = result.data.allGhostPost.edges;
+	const tags = result.data.allGhostTag.edges,
+		authors = result.data.allGhostAuthor.edges,
+		pages = result.data.allGhostPage.edges,
+		posts = result.data.allGhostPost.edges;
 
 	// Load templates
-	const tagsTemplate = path.resolve( './src/templates/tag.jsx' );
-	const authorTemplate = path.resolve( './src/templates/author.jsx' );
-	const pageTemplate = path.resolve( './src/templates/page.jsx' );
-	const postTemplate = path.resolve( './src/templates/post.jsx' );
+	const tagsTemplate = path.resolve( './src/templates/tag.jsx' ),
+		authorTemplate = path.resolve( './src/templates/author.jsx' ),
+		pageTemplate = path.resolve( './src/templates/page.jsx' ),
+		postTemplate = path.resolve( './src/templates/post.jsx' );
 
 	// Create tag pages
 	tags.forEach( ( { node } ) => {
-		const totalPosts = node.postCount !== null ? node.postCount : 0;
-		const numberOfPages = Math.ceil( totalPosts / postsPerPage );
+		const totalPosts = node.postCount !== null ? node.postCount : 0,
+			numberOfPages = Math.ceil( totalPosts / postsPerPage );
 
-		// This part here defines, that our tag pages will use
-		// a `/tag/:slug/` permalink.
 		node.url = `blog/tag/${node.slug}/`;
 
 		Array.from( { length: numberOfPages } ).forEach( ( _, i ) => {
-			const currentPage = i + 1;
-			const prevPageNumber = currentPage <= 1 ? null : currentPage - 1;
-			const nextPageNumber = currentPage + 1 > numberOfPages ? null : currentPage + 1;
-			const previousPagePath = prevPageNumber				? prevPageNumber === 1 ? node.url : `${node.url}page/${prevPageNumber}/`				: null; // prettier-ignore eslint-disable-line
-			const nextPagePath = nextPageNumber ? `${node.url}page/${nextPageNumber}/` : null;
+			const currentPage = i + 1,
+				prevPageNumber = currentPage <= 1 ? null : currentPage - 1,
+				nextPageNumber = currentPage + 1 > numberOfPages ? null : currentPage + 1,
+				nextPagePath = nextPageNumber ? `${node.url}page/${nextPageNumber}/` : null,
+				previousPagePath = prevPageNumber	? prevPageNumber === 1 ? node.url : `${node.url}page/${prevPageNumber}/` : null; // prettier-ignore
 
 			createPage( {
 				path: i === 0 ? node.url : `${node.url}page/${i + 1}/`,
 				component: tagsTemplate,
 				context: {
-					// Data passed to context is available
-					// in page queries as GraphQL variables.
 					slug: node.slug,
 					limit: postsPerPage,
 					skip: i * postsPerPage,
@@ -106,26 +104,22 @@ exports.createPages = async( { graphql, actions } ) => {
 
 	// Create author pages
 	authors.forEach( ( { node } ) => {
-		const totalPosts = node.postCount !== null ? node.postCount : 0;
-		const numberOfPages = Math.ceil( totalPosts / postsPerPage );
+		const totalPosts = node.postCount !== null ? node.postCount : 0,
+			numberOfPages = Math.ceil( totalPosts / postsPerPage );
 
-		// This part here defines, that our author pages will use
-		// a `/author/:slug/` permalink.
 		node.url = `blog/author/${node.slug}/`;
 
 		Array.from( { length: numberOfPages } ).forEach( ( _, i ) => {
-			const currentPage = i + 1;
-			const prevPageNumber = currentPage <= 1 ? null : currentPage - 1;
-			const nextPageNumber = currentPage + 1 > numberOfPages ? null : currentPage + 1;
-			const previousPagePath = prevPageNumber				? prevPageNumber === 1 ? node.url : `${node.url}page/${prevPageNumber}/`				: null; // prettier-ignore eslint-disable-line
-			const nextPagePath = nextPageNumber ? `${node.url}page/${nextPageNumber}/` : null;
+			const currentPage = i + 1,
+				prevPageNumber = currentPage <= 1 ? null : currentPage - 1,
+				nextPageNumber = currentPage + 1 > numberOfPages ? null : currentPage + 1,
+				nextPagePath = nextPageNumber ? `${node.url}page/${nextPageNumber}/` : null,
+				previousPagePath = prevPageNumber ? prevPageNumber === 1 ? node.url : `${node.url}page/${prevPageNumber}/` : null; // prettier-ignore
 
 			createPage( {
 				path: i === 0 ? node.url : `${node.url}page/${i + 1}/`,
 				component: authorTemplate,
 				context: {
-					// Data passed to context is available
-					// in page queries as GraphQL variables.
 					slug: node.slug,
 					limit: postsPerPage,
 					skip: i * postsPerPage,
@@ -142,16 +136,12 @@ exports.createPages = async( { graphql, actions } ) => {
 
 	// Create pages
 	pages.forEach( ( { node } ) => {
-		// This part here defines, that our pages will use
-		// a `/:slug/` permalink.
 		node.url = `blog/${node.slug}/`;
 
 		createPage( {
 			path: node.url,
 			component: pageTemplate,
 			context: {
-				// Data passed to context is available
-				// in page queries as GraphQL variables.
 				slug: node.slug
 			}
 		} );
@@ -159,16 +149,12 @@ exports.createPages = async( { graphql, actions } ) => {
 
 	// Create post pages
 	posts.forEach( ( { node } ) => {
-		// This part here defines, that our posts will use
-		// a `/:slug/` permalink.
 		node.url = `blog/${node.slug}/`;
 
 		createPage( {
 			path: node.url,
 			component: postTemplate,
 			context: {
-				// Data passed to context is available
-				// in page queries as GraphQL variables.
 				slug: node.slug
 			}
 		} );

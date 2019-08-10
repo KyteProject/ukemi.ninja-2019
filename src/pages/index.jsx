@@ -1,12 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
 import MainLayout from '../layout';
-import config from '../../data/SiteConfig';
+import config from '../../data/siteConfig';
+import { MetaData } from '../components/meta';
 
 const Index = () => {
 	return (
 		<MainLayout>
+			<MetaData title={'Movement Design Specialists'} location={location} />
+
 			<div className="index-container">
 				<Helmet title={config.siteTitle} />
 				<h1>Ukemi</h1>

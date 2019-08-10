@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Helmet from 'react-helmet';
 
-import config from '../../data/SiteConfig';
+import config from '../../data/siteConfig';
 import Navigation from './../components/Navigation';
 import Footer from '../components/Footer';
 import { TitleSection } from '../components/TitleSection';

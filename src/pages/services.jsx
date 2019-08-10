@@ -1,14 +1,14 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import MainLayout from '../layout';
-import config from '../../data/SiteConfig';
 import { TitleSection } from '../components/TitleSection';
+import { MetaData } from '../components/meta';
 
 const services = ( { location } ) => {
 	return (
 		<MainLayout>
+			<MetaData title={'Services'} location={location} />
+
 			<div className="services-container">
-				<Helmet title={`Services | ${config.siteTitle}`} />
 				<TitleSection location={location} crumbLabel="Services" />
 				{/*  */}
 			</div>

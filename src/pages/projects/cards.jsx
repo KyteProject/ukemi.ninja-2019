@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import MainLayout from '../../layout';
-import config from '../../../data/SiteConfig';
+import config from '../../../data/siteConfig';
 import { TitleSection } from '../../components/TitleSection';
 
 const cards = ( { location } ) => {

@@ -1,15 +1,14 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import MainLayout from '../layout';
-import config from '../../data/SiteConfig';
-import { TitleSection } from '../components/TitleSection';
 import Contact from '../components/Contact';
+import MainLayout from '../layout';
+import { TitleSection } from '../components/TitleSection';
+import { MetaData } from '../components/meta';
 
 const contact = ( { location } ) => {
 	return (
 		<MainLayout>
 			<div className="contact-container">
-				<Helmet title={`Contact | ${config.siteTitle}`} />
+				<MetaData title={'Contact Us'} location={location} />
 				<TitleSection location={location} crumbLabel="Contact" />
 				<Contact />
 			</div>

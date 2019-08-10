@@ -2,7 +2,7 @@ require( 'dotenv' ).config();
 
 const urljoin = require( 'url-join' );
 const path = require( 'path' );
-const config = require( './data/SiteConfig' );
+const config = require( './data/siteConfig' );
 
 const ghostConfig = {
 	production: {
