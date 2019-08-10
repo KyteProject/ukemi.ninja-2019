@@ -39,11 +39,11 @@ const About = () => {
 			<section className="story">
 				<Container>
 					<Row>
-						<Col md={6}>
+						<Col lg md={6}>
 							<img src="/images/about-story.svg" alt="Ukemi Back Story" />
 						</Col>
 
-						<Col md={6} className="mx-auto pl-5">
+						<Col lg md={6} className="mx-auto pl-5">
 							<h2 className="title text-left">
 								a lifelong <strong>TEAM</strong>.
 							</h2>

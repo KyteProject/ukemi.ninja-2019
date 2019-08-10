@@ -29,6 +29,14 @@
 			}
 		}
 
+		.contact-section {
+			.img-right {
+				top: 0;
+				position: relative;
+				right: 0;
+			}
+		}
+
 		.navbar-toggler {
 			font-size: 22px;
 			line-height: 1;
@@ -114,9 +122,24 @@
 			}
 		}
 
-		.img-right {
-			right: 0 !important;
-			width: 60%;
+		.about-section {
+			.img-right {
+				right: 0 !important;
+				width: 60%;
+			}
+		}
+
+		.contact-section {
+			.img-right {
+				right: 0 !important;
+				width: 60%;
+			}
+
+			.contact-info {
+				.social-links {
+					margin-bottom: 0;
+				}
+			}
 		}
 
 		.navbar-toggler {
@@ -149,9 +172,18 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
 	body {
-		.img-right {
-			right: 0 !important;
-			width: 60%;
+		.about-section {
+			.img-right {
+				right: 0 !important;
+				width: 60%;
+			}
+		}
+
+		.contact-section {
+			.img-right {
+				right: 0 !important;
+				width: 60%;
+			}
 		}
 	}
 }

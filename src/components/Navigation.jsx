@@ -26,9 +26,9 @@ const Navigation = () => {
 							<NavDropdown.Divider />
 							<NavDropdown.Item href="/services/park-design">Park & Equiptment Design</NavDropdown.Item>
 							<NavDropdown.Item href="/services/events">Events & Shows</NavDropdown.Item>
-							<NavDropdown.Item href="/services/products">Physical Products</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.4">Talks & Presentations</NavDropdown.Item>
-							<NavDropdown.Item href="/services/web-dev">Website Development</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.4">
+								Consultation, Presentations & Workshops
+							</NavDropdown.Item>
 						</NavDropdown>
 						<NavDropdown title="Projects" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/projects">Overview</NavDropdown.Item>

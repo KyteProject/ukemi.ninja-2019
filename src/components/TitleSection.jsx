@@ -8,7 +8,7 @@ export const TitleSection = ( { location, sub, crumbLabel } ) => {
 				<Row>
 					<Col lg="12">
 						<div className="text-center">
-							<h1>{crumbLabel}</h1>
+							<h2>{crumbLabel}</h2>
 
 							<Breadcrumb>
 								<Breadcrumb.Item href="/">Home</Breadcrumb.Item>

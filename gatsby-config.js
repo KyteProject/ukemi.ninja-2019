@@ -1,6 +1,14 @@
 const urljoin = require( 'url-join' );
 const config = require( './data/SiteConfig' );
 
+require( 'dotenv' ).config( {
+	path: `.env.${process.env.NODE_ENV}`
+} );
+
+if ( !process.env.GHOST_API_URL || !process.env.GHOST_API_KEY ) {
+	throw new Error( 'GHOST_API_URL and GHOST_API_KEY are required to build.' );
+}
+
 module.exports = {
 	pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
 	siteMetadata: {
