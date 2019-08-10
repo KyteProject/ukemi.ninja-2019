@@ -14,7 +14,7 @@ const MainLayout = ({ data, children, bodyClass }) => {
 	return (
 		<React.Fragment>
 			<Helmet>
-				<html lang="eng" />
+				<html lang="en" />
 				<body className={bodyClass} />
 			</Helmet>
 

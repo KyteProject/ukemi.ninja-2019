@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 import MainLayout from '../layout';
 import Pagination from './../components/Pagination';
+import PostCard from './../components/PostCard';
 import { MetaData } from '../components/meta';
 
 const Index = ( { data, location, pageContext } ) => {
@@ -13,16 +15,19 @@ const Index = ( { data, location, pageContext } ) => {
 		<React.Fragment>
 			<MetaData location={location} />
 
-			<MainLayout isHome={true}>
-				<div className="container">
-					<section className="post-feed">
-						{posts.map( ( { node } ) => (
-							// The tag below includes the markup for each post - components/common/PostCard.js
-							<div key={node.id} post={node} />
-						) )}
-					</section>
-					<Pagination pageContext={pageContext} />
-				</div>
+			<MainLayout>
+				<section id="blog" className="blog-section">
+					<Container>
+						<Row>
+							<Col lg={8} md={8}>
+								<div className="blog-content">
+									{posts.map( ( { node } ) => <PostCard key={node.id} post={node} /> )}
+								</div>
+							</Col>
+						</Row>
+					</Container>
+				</section>
+				<Pagination pageContext={pageContext} />
 			</MainLayout>
 		</React.Fragment>
 	);
