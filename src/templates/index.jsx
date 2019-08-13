@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import MainLayout from '../layout';
@@ -8,6 +8,7 @@ import Pagination from './../components/Pagination';
 import PostCard from './../components/PostCard';
 import CategoryItem from './../components/CategoryItem';
 import { MetaData } from '../components/meta';
+import { TitleSection } from '../components/TitleSection';
 
 const Index = ( { data, location, pageContext } ) => {
 	const posts = data.allGhostPost.edges;
@@ -15,9 +16,10 @@ const Index = ( { data, location, pageContext } ) => {
 
 	return (
 		<React.Fragment>
-			<MetaData location={location} />
-
 			<MainLayout>
+				<MetaData location={location} />
+				<TitleSection location={location} crumbLabel="Blog" />
+
 				<section id="blog" className="blog-section">
 					<Container>
 						<Row>
@@ -34,6 +36,14 @@ const Index = ( { data, location, pageContext } ) => {
 										</h4>
 										<div className="widget-content">
 											{cats.map( ( { node } ) => <CategoryItem key={node.id} item={node} /> )}
+										</div>
+									</aside>
+									<aside className="widget widget-tags">
+										<h4 className="widget-title">
+											<span>Popular Posts</span>
+										</h4>
+										<div className="widget-content">
+											<p>...Coming soon</p>
 										</div>
 									</aside>
 								</div>

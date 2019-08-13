@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 
 import MainLayout from '../layout';
 import { MetaData } from '../components/meta';
+import { TitleSection } from '../components/TitleSection';
 
 const Post = ( { data, location } ) => {
 	const post = data.ghostPost;
@@ -12,6 +13,7 @@ const Post = ( { data, location } ) => {
 	return (
 		<React.Fragment>
 			<MetaData data={data} location={location} type="article" />
+			<TitleSection location={location} sub={{ slug: 'blog', label: 'Blog' }} crumbLabel={post.title} />
 			<Helmet>
 				<style type="text/css">{`${post.codeinjection_styles}`}</style>
 			</Helmet>

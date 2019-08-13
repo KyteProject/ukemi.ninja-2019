@@ -8,7 +8,7 @@ import Navigation from './../components/Navigation';
 import Footer from '../components/Footer';
 import { TitleSection } from '../components/TitleSection';
 
-import('../scss/main.scss');
+import('../scss/index.scss');
 
 const MainLayout = ({ data, children, bodyClass }) => {
 	return (

@@ -12,7 +12,7 @@ export const TitleSection = ( { location, sub, crumbLabel } ) => {
 
 							<Breadcrumb>
 								<Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-								{sub && <Breadcrumb.Item href={`/${sub.name}`}>{sub.label}</Breadcrumb.Item>}
+								{sub && <Breadcrumb.Item href={`/${sub.slug}`}>{sub.label}</Breadcrumb.Item>}
 								<Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
 							</Breadcrumb>
 						</div>

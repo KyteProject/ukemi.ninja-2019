@@ -1,0 +1,19 @@
+/**************************
+	Button Styles
+***************************/
+.btn-white {
+	background-color: #ffffff;
+	color: $color1;
+	border: 2px solid #ffffff;
+	padding: 10px 35px;
+	border-radius: 23px;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: transparent;
+		border-color: #ffffff;
+		color: #ffffff;
+		box-shadow: 0 000;
+	}
+}
