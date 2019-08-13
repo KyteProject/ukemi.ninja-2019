@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
-import { Container, Row, Col, Button, Image, Jumbotron } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import MainLayout from '../layout';
 import Pagination from './../components/Pagination';
 import PostCard from './../components/PostCard';
+import CategoryItem from './../components/CategoryItem';
 import { MetaData } from '../components/meta';
 
 const Index = ( { data, location, pageContext } ) => {
-	const posts = data.allGhostPost.edges,
-		bannerPost = posts[ Object.keys( posts )[ 0 ] ].node;
-
-	delete posts[ 0 ];
+	const posts = data.allGhostPost.edges;
+	const cats = data.allGhostTag.edges;
 
 	return (
 		<React.Fragment>
@@ -22,9 +21,21 @@ const Index = ( { data, location, pageContext } ) => {
 				<section id="blog" className="blog-section">
 					<Container>
 						<Row>
-							<Col lg={8} md={8}>
+							<Col lg={9} md={9}>
 								<div className="blog-content">
 									{posts.map( ( { node } ) => <PostCard key={node.id} post={node} /> )}
+								</div>
+							</Col>
+							<Col lg={3} md={3}>
+								<div className="blog-sidebar">
+									<aside className="widget widget-tags">
+										<h4 className="widget-title">
+											<span>Categories</span>
+										</h4>
+										<div className="widget-content">
+											{cats.map( ( { node } ) => <CategoryItem key={node.id} item={node} /> )}
+										</div>
+									</aside>
 								</div>
 							</Col>
 						</Row>
@@ -38,7 +49,8 @@ const Index = ( { data, location, pageContext } ) => {
 
 Index.propTypes = {
 	data: PropTypes.shape( {
-		allGhostPost: PropTypes.object.isRequired
+		allGhostPost: PropTypes.object.isRequired,
+		allGhostTag: PropTypes.object.isRequired
 	} ).isRequired,
 	location: PropTypes.shape( {
 		pathname: PropTypes.string.isRequired
@@ -54,6 +66,13 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					...GhostPostFields
+				}
+			}
+		}
+		allGhostTag(sort: { order: DESC, fields: postCount }) {
+			edges {
+				node {
+					...GhostTagFields
 				}
 			}
 		}

@@ -17,11 +17,17 @@ const PostCard = ( { post } ) => {
 	return (
 		<Card className="blog-item">
 			<div>
-				{post.feature_image && <Card.Img variant="top" src={post.feature_image} alt={post.title} />}
-				<span className="blog-overlay">{post.primary_tag.name}</span>
+				{post.feature_image && (
+					<Link to={url}>
+						<Card.Img variant="top" src={post.feature_image} alt={post.title} />
+					</Link>
+				)}
+				<span className="blog-overlay">#{post.primary_tag.name}</span>
 			</div>
 			<Card.Body className="blog-summary">
-				<h3>{post.title}</h3>
+				<Link to={url}>
+					<h3>{post.title}</h3>
+				</Link>
 				<Card.Subtitle>
 					<ul>
 						<li>

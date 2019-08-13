@@ -64,7 +64,7 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [https://github.com/ukemi-project/ukemi.ninja-2019](https://github.com/ukemi-project/)
 
-## Contributing
+## Contributing 🔗
 
 1. Fork it (<https://github.com/ukemi-project/ukemi.ninja-2019/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
