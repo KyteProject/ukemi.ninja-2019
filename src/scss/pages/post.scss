@@ -6,7 +6,7 @@
 	font-size: 19px;
 	overflow: visible;
 	margin: 0 auto;
-	// padding: 60px 85px 120px;
+	padding: 100px 85px 120px;
 }
 
 .post-full-content {
@@ -23,6 +23,7 @@
 		line-height: 1.4;
 		margin: 5px 0 25px;
 		color: $color1;
+		font-family: $font-secondary;
 	}
 
 	h1 {
@@ -30,6 +31,7 @@
 		font-weight: 700;
 		line-height: 1.4;
 		margin: 5px 0 25px;
+		font-family: $font-head;
 	}
 	h2 {
 		font-size: 40px;
@@ -89,6 +91,7 @@
 
 	blockquote p {
 		margin: 0;
+		font-family: $font-secondary;
 	}
 
 	.kg-code-card {
@@ -238,6 +241,8 @@
 	.kg-gallery-card img {
 		max-width: 100%;
 		border-radius: 5px;
+		display: block;
+		height: auto;
 	}
 
 	.kg-image-card figcaption,
@@ -293,65 +298,16 @@
 	.kg-gallery-card .kg-gallery-image:not(:first-of-type) {
 		margin: 0 0 0 15px;
 	}
-}
 
-@media (max-width: 767px) {
-	.kg-image-card,
-	.kg-gallery-card,
-	.kg-embed-card {
-		margin: 35px 0;
-	}
-}
+	// @media (min-width: 1200px) {
+	// 	.kg-width-wide {
+	// 		margin-left: calc(-960px / 2 + 100% / 2);
+	// 		margin-right: calc(-960px / 2 + 100% / 2);
+	// 		max-width: 1200px;
 
-@media (min-width: 768px) {
-	.kg-image-card.kg-width-full img,
-	.kg-image-card.kg-width-full figcaption {
-		max-width: 75vw;
-	}
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-	.kg-image-card.kg-width-wide img,
-	.kg-gallery-card .kg-gallery-container {
-		width: 110%;
-		margin-left: -5%;
-	}
-}
-
-@media (min-width: 1024px) and (max-width: 1299px) {
-	.kg-image-card.kg-width-wide img,
-	.kg-gallery-card .kg-gallery-container {
-		width: calc(1000px - 85px - 85px);
-	}
-
-	.kg-image-card.kg-width-wide img,
-	.kg-image-card.kg-width-wide figcaption,
-	.kg-gallery-card .kg-gallery-container,
-	.kg-gallery-card figcaption {
-		margin-left: calc((700px - 1000px) / 2 + 85px);
-	}
-
-	.kg-image-card.kg-width-wide figcaption,
-	.kg-gallery-card figcaption {
-		width: 780px;
-	}
-}
-
-@media (min-width: 1300px) {
-	.kg-image-card.kg-width-wide img,
-	.kg-gallery-card .kg-gallery-container {
-		width: calc(1200px - 85px - 85px);
-	}
-
-	.kg-image-card.kg-width-wide img,
-	.kg-image-card.kg-width-wide figcaption,
-	.kg-gallery-card .kg-gallery-container,
-	.kg-gallery-card figcaption {
-		margin-left: calc((700px - 1200px) / 2 + 85px);
-	}
-
-	.kg-image-card.kg-width-wide figcaption,
-	.kg-gallery-card figcaption {
-		width: 900px;
-	}
+	// 		img {
+	// 			width: 100%;
+	// 		}
+	// 	}
+	// }
 }

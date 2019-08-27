@@ -65,14 +65,10 @@ module.exports = {
 			}
 		},
 		{
-			resolve: 'gatsby-plugin-prefetch-google-fonts',
+			resolve: 'gatsby-plugin-google-fonts',
 			options: {
-				fonts: [
-					{
-						family: 'Rubik',
-						variants: [ '400', '500', '700', '900' ]
-					}
-				]
+				fonts: [ 'Muli', 'Alice', 'Quattrocento Sans' ],
+				display: 'swap'
 			}
 		},
 		'gatsby-plugin-react-helmet',

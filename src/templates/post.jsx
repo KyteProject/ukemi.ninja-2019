@@ -22,7 +22,7 @@ const Post = ( { data, location } ) => {
 
 				<Container>
 					<Row className="row-centered">
-						<Col lg={10} md={10}>
+						<Col lg={12} md={12}>
 							<article className="post-content">
 								{post.feature_image ? (
 									<figure className="post-feature-image">
