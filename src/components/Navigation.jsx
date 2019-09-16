@@ -8,7 +8,9 @@ const Navigation = () => {
 	return (
 		<Navbar expand="lg" className="fixed-top sticky">
 			<Container>
-				<Navbar.Brand href="/">Ukemi</Navbar.Brand>
+				<Navbar.Brand href="/">
+					<img src="/logos/ukemi-logo.svg" alt="Ukemi Project text logo" />
+				</Navbar.Brand>
 				<Navbar.Toggle onClick={toggle} aria-controls="basic-navbar-nav" label="Toggle Navigation" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
