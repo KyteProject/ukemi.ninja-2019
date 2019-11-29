@@ -13,10 +13,14 @@ const Footer = () => {
 			<Container>
 				<Nav className="footer-nav">
 					<div className="footer-col footer-col-intro">
-						<a className="footer-logo" href="/" data-footer-link="1" />
+						<a className="footer-logo" href="/" data-footer-link="1">
+							<img src="/logos/kanji-text-white2.svg" alt="Ukemi Project text logo" />
+						</a>
 						<p className="footer-slogan">
-							We create possibilities for the connected world.<br />
-							<strong>Be Bold.</strong>
+							<span className="text-white">受け身</span>
+							<br />
+							Movement inspired design specialists.<br />
+							<strong>Be Dauntless.</strong>
 						</p>
 					</div>
 
@@ -96,13 +100,15 @@ const Footer = () => {
 					</section>
 
 					<section className="footer-col footer-col-next">
-						<h6 className="footer-col-title">Legal</h6>
-						<a href="/terms" className="footer-link">
-							Terms
-						</a>
-						<a href="/privacy" className="footer-link">
-							Privacy
-						</a>
+						<div className="footer-col-wrap">
+							<h6 className="footer-col-title">Legal</h6>
+							<a href="/terms" className="footer-link">
+								Terms
+							</a>
+							<a href="/privacy" className="footer-link">
+								Privacy
+							</a>
+						</div>
 					</section>
 
 					<small className="footer-legal">{copyright}</small>

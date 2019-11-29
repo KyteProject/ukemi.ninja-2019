@@ -4,7 +4,8 @@
 	-webkit-font-smoothing: auto;
 	-moz-osx-font-smoothing: grayscale;
 	position: relative;
-	padding: 50px 0;
+	padding-top: 50px;
+	padding-bottom: 20px;
 	width: 100%;
 	z-index: 1;
 	font-size: 14px;
@@ -129,6 +130,10 @@
 	width: 50%;
 }
 
+.footer-col-wrap {
+	margin-top: 105px;
+}
+
 .footer-col-title-link {
 	color: inherit;
 }
@@ -185,6 +190,30 @@
 		border-bottom: 0;
 		margin-bottom: 0;
 		min-width: auto;
+		margin-right: 3%;
+	}
+
+	.footer-col:first-child {
+		margin-right: 5%;
+	}
+
+	.footer-col:nth-child(2) {
+		margin-right: 5%;
+		width: 9.5%;
+	}
+
+	.footer-col:nth-child(3) {
+		margin-right: 5%;
+	}
+
+	.footer-col:nth-child(5) {
+		margin-right: 5%;
+		width: 9.5%;
+	}
+
+	.footer-col:nth-child(6) {
+		margin-right: 5%;
+		width: 9.5%;
 	}
 
 	.footer-col-next {
@@ -227,8 +256,6 @@
 	float: left;
 	font-size: 14px;
 	line-height: 25px;
-	margin-top: 45px;
-	padding-top: 43px;
 	width: 100%;
 }
 
@@ -236,7 +263,6 @@
 	.footer-legal {
 		border-top: 0;
 		margin-top: 0;
-		padding-top: 35px;
 	}
 }
 
@@ -252,7 +278,7 @@
 
 .footer-logo {
 	display: block;
-	margin-top: 5px;
+	margin-top: -32px;
 	margin-bottom: 7px;
 }
 
@@ -293,8 +319,7 @@
 .footer-slogan {
 	// font-size: 14px;
 	line-height: 25px;
-	margin: 0 0 35px;
-	width: 140px;
+	width: 162px;
 }
 
 .footer-slogan strong {
