@@ -7,7 +7,6 @@
 
 	p {
 		font-size: 16px;
-		color: #828893;
 		line-height: 26px;
 	}
 }
@@ -111,7 +110,7 @@
 				line-height: 40px;
 				height: 40px;
 				@include border-radius(50%);
-				background-color: $color1;
+				background-color: $color7;
 				color: $color3;
 			}
 		}

@@ -4,14 +4,14 @@
 
 .section-title {
 	position: relative;
-	background-color: $color1;
+	background-color: $color7;
 	padding-bottom: 25px;
 	padding-top: 120px;
 
 	h2 {
 		padding-top: 0;
 		margin-bottom: 0;
-		color: $color3;
+		color: $white;
 		font-size: 36px;
 		font-weight: 500;
 		line-height: 1.8;
@@ -26,12 +26,12 @@
 			display: inline-block;
 
 			a {
-				color: $color3;
+				color: $white;
 			}
 		}
 
 		.breadcrumb-item::before {
-			color: $color3;
+			color: $white;
 		}
 	}
 }

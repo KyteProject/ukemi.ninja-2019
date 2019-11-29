@@ -87,13 +87,28 @@ const Footer = () => {
 					<section className="footer-col">
 						<div className="footer-col-wrap">
 							<h6 className="footer-col-title">Follow</h6>
-							<a href="https://www.instagram.com/UkemiProject/" target="_blank" className="footer-link">
+							<a
+								href="https://www.instagram.com/UkemiProject/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="footer-link"
+							>
 								Instagram
 							</a>
-							<a href="https://twitter.com/UkemiProject/" target="_blank" className="footer-link">
+							<a
+								href="https://twitter.com/UkemiProject/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="footer-link"
+							>
 								Twitter
 							</a>
-							<a href="https://www.Facebook.com/UkemiProject/" target="_blank" className="footer-link">
+							<a
+								href="https://www.Facebook.com/UkemiProject/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="footer-link"
+							>
 								Facebook
 							</a>
 						</div>

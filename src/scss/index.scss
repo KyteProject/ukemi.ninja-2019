@@ -1,5 +1,4 @@
 @import './variables';
-@import '../scss/responsive.scss';
 @import './../../node_modules/bootstrap/scss/bootstrap';
 
 @import '../scss/components/main';
@@ -7,9 +6,12 @@
 @import '../scss/components/footer';
 @import '../scss/components/navigation';
 @import '../scss/components/title-section';
+@import '../scss/components/CTA2';
 @import '../scss/components/widgets';
 
 @import '../scss/pages/about';
 @import '../scss/pages/contact';
 @import '../scss/pages/blog';
 @import '../scss/pages/post';
+
+@import '../scss/responsive.scss';

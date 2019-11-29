@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import MainLayout from '../layout';
 import config from '../../data/siteConfig';
 import { MetaData } from '../components/meta';
+import { CTA2 } from '../components/CTA2';
 
 const Index = () => {
 	return (
@@ -18,6 +19,8 @@ const Index = () => {
 					incidunt, consequatur veritatis.
 				</p>
 			</div>
+
+			<CTA2 />
 		</MainLayout>
 	);
 };

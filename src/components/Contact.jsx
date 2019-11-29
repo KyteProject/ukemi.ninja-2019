@@ -18,7 +18,6 @@ const Contact = () => {
 						Voluptatibus cum blanditiis laborum esse mollitia placeat, officia sit eveniet, neque est alias
 						consequuntur eligendi ab facilis?
 					</p>
-					<hr />
 				</Container>
 			</section>
 
