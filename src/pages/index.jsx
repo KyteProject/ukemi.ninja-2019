@@ -4,6 +4,7 @@ import MainLayout from '../layout';
 import config from '../../data/siteConfig';
 import { MetaData } from '../components/meta';
 import { CTA2 } from '../components/CTA2';
+import { RecentPosts } from '../components/RecentPosts';
 
 const Index = () => {
 	return (
@@ -19,7 +20,7 @@ const Index = () => {
 					incidunt, consequatur veritatis.
 				</p>
 			</div>
-
+			<RecentPosts />
 			<CTA2 />
 		</MainLayout>
 	);

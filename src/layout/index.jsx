@@ -9,8 +9,10 @@ import Footer from '../components/Footer';
 import { TitleSection } from '../components/TitleSection';
 
 import('../scss/index.scss');
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const MainLayout = ({ data, children, bodyClass }) => {
+const MainLayout = ( { data, children, bodyClass  } ) => {
 	return (
 		<React.Fragment>
 			<Helmet>

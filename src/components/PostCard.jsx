@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { readingTime as readingTimeHelper } from '@tryghost/helpers';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 import { FaCalendarAlt } from 'react-icons/fa';
 import { FaUserAlt } from 'react-icons/fa';
-import { FaCommentDots } from 'react-icons/fa';
 import { FaRegClock } from 'react-icons/fa';
 
 const PostCard = ( { post } ) => {

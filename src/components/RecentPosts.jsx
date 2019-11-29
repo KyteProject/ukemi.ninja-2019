@@ -1,0 +1,55 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Container } from 'react-bootstrap';
+import Slider from 'react-slick';
+import PostSliderCard from './PostSliderCard';
+
+export const RecentPosts = () => {
+	const data = useStaticQuery( graphql`
+		query LatestPostsQuery {
+			allGhostPost(limit: 9, sort: { order: DESC, fields: published_at }) {
+				edges {
+					node {
+						published_at
+						slug
+						url
+						excerpt
+						title
+						feature_image
+						primary_tag {
+							name
+							url
+						}
+						primary_author {
+							slug
+							name
+						}
+					}
+				}
+			}
+		}
+	` );
+
+	const settings = {
+		arrows: false,
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 3,
+		slidesToScroll: 3
+	};
+
+	const posts = data.allGhostPost.edges;
+
+	return (
+		<section className="recent-posts">
+			{/* img */}
+			<Container>
+				<Slider className="recent-slider" {...settings}>
+					{posts.map( ( { node } ) => <PostSliderCard key={node.id} post={node} /> )}
+				</Slider>
+			</Container>
+		</section>
+	);
+};
