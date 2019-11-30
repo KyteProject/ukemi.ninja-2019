@@ -46,3 +46,19 @@ ul {
 	font-size: 20px;
 	color: $color1;
 }
+
+.block-title {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.block-title-text {
+	margin: 0;
+	color: $color1;
+	font-size: 60px;
+	font-weight: 900;
+	line-height: 1em;
+	margin-bottom: -100px;
+	margin-top: -50px;
+	font-family: $font-title;
+}

@@ -1,10 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import MainLayout from '../layout';
-import config from '../../data/siteConfig';
-import { MetaData } from '../components/meta';
-import { CTA2 } from '../components/CTA2';
-import { RecentPosts } from '../components/RecentPosts';
+import MainLayout from './../layout';
+import config from './../../data/siteConfig';
+import { MetaData } from './../components/meta';
+import { CTA2 } from './../components/CTA2';
+import { RecentPosts } from './../components/RecentPosts';
+import { ServicesSlider } from './../components/ServicesSlider';
 
 const Index = () => {
 	return (
@@ -20,6 +21,7 @@ const Index = () => {
 					incidunt, consequatur veritatis.
 				</p>
 			</div>
+			<ServicesSlider />
 			<RecentPosts />
 			<CTA2 />
 		</MainLayout>

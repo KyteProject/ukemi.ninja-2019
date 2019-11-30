@@ -43,13 +43,26 @@ export const RecentPosts = () => {
 	const posts = data.allGhostPost.edges;
 
 	return (
-		<section className="recent-posts">
-			{/* img */}
-			<Container>
-				<Slider className="recent-slider" {...settings}>
-					{posts.map( ( { node } ) => <PostSliderCard key={node.id} post={node} /> )}
-				</Slider>
-			</Container>
-		</section>
+		<React.Fragment>
+			<section className="recent-title">
+				<Container>
+					<div className="block-title">
+						<h2 className="block-title-text">
+							Discover our <br />
+							recent articles
+						</h2>
+					</div>
+				</Container>
+			</section>
+
+			<section className="recent-posts">
+				{/* img */}
+				<Container>
+					<Slider className="recent-slider" {...settings}>
+						{posts.map( ( { node } ) => <PostSliderCard key={node.id} post={node} /> )}
+					</Slider>
+				</Container>
+			</section>
+		</React.Fragment>
 	);
 };

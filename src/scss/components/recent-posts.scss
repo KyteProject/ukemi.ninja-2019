@@ -1,3 +1,10 @@
+.recent-title {
+	padding: 128px 0;
+	position: relative;
+	padding-top: 120px;
+	padding-bottom: 0;
+}
+
 .recent-posts {
 	padding-top: 0;
 	position: relative;
@@ -32,7 +39,6 @@
 		padding-top: 50px;
 		padding-bottom: 50px;
 		background-color: $white;
-		font-family: $font-secondary;
 
 		.card-subtitle {
 			margin-top: 10px;
@@ -46,7 +52,6 @@
 }
 
 .content .post-title {
-	font-family: $font;
 	font-size: 24px;
 	font-weight: 700;
 	color: $color1;

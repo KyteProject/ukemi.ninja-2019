@@ -67,7 +67,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-google-fonts',
 			options: {
-				fonts: [ 'Muli', 'Alice', 'Quattrocento Sans' ],
+				fonts: [ 'Muli', 'Alice', 'Quattrocento Sans', 'Rokkit' ],
 				display: 'swap'
 			}
 		},
