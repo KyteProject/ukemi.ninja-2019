@@ -212,3 +212,37 @@ export const ghostSettingsFields = graphql`
 		}
 	}
 `;
+
+export const strapiProjectFields = graphql`
+	fragment StrapiProjectFields on StrapiProjects {
+		brief
+		name
+		objective
+		slug
+		partners
+		clients
+		date
+		created_at
+		id
+		updated_at
+		images {
+			url
+			id
+			name
+			created_at
+			mime
+			provider
+			size
+			updated_at
+			ext
+		}
+		project_image {
+			absolutePath
+			publicURL
+			size
+			uid
+			modifiedTime
+			extension
+		}
+	}
+`;

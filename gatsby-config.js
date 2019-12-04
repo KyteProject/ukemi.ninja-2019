@@ -42,12 +42,16 @@ module.exports = {
 				name: 'images'
 			}
 		},
-		// {
-		// 	resolve: 'gatsby-source-filesystem',
-		// 	options: {
-		// 		path: `${__dirname}/src/`
-		// 	}
-		// },
+		{
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: 'http://localhost:8777',
+        contentTypes: [
+          'projects'
+        ],
+        queryLimit: 1000
+      }
+    },
 		{
 			resolve: 'gatsby-source-ghost',
 			options: process.env.NODE_ENV === 'development' ? ghostConfig.development : ghostConfig.production

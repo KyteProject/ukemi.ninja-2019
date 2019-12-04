@@ -50,6 +50,24 @@ exports.createPages = async( { graphql, actions } ) => {
 					}
 				}
 			}
+			allStrapiProjects {
+				edges {
+					node {
+						brief
+						name
+						objective
+						slug
+						partners
+						clients
+						date
+						images {
+							url
+							id
+							name
+						}
+					}
+				}
+			}
 		}
 	` );
 
@@ -62,14 +80,16 @@ exports.createPages = async( { graphql, actions } ) => {
 	const tags = result.data.allGhostTag.edges,
 		authors = result.data.allGhostAuthor.edges,
 		pages = result.data.allGhostPage.edges,
-		posts = result.data.allGhostPost.edges;
+		posts = result.data.allGhostPost.edges,
+		projects = result.data.allStrapiProjects.edges;
 
 	// Load templates
 	const tagsTemplate = path.resolve( './src/templates/tag.jsx' ),
 		authorTemplate = path.resolve( './src/templates/author.jsx' ),
 		indexTemplate = path.resolve( './src/templates/index.jsx' ),
 		pageTemplate = path.resolve( './src/templates/page.jsx' ),
-		postTemplate = path.resolve( './src/templates/post.jsx' );
+		postTemplate = path.resolve( './src/templates/post.jsx' ),
+		projectTemplate = path.resolve( './src/templates/project.jsx' );
 
 	// Create tag pages
 	tags.forEach( ( { node } ) => {
@@ -155,6 +175,19 @@ exports.createPages = async( { graphql, actions } ) => {
 		createPage( {
 			path: node.url,
 			component: postTemplate,
+			context: {
+				slug: node.slug
+			}
+		} );
+	} );
+
+	// Create post pages
+	projects.forEach( ( { node } ) => {
+		node.url = `projects/${node.slug}/`;
+
+		createPage( {
+			path: node.url,
+			component: projectTemplate,
 			context: {
 				slug: node.slug
 			}
