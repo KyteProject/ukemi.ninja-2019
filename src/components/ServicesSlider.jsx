@@ -1,6 +1,8 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Slider from 'react-slick';
+import { GiJumpAcross, GiAcrobatic, GiPublicSpeaker, GiTeacher, GiTeamIdea, GiToolbox, GiHammerNails } from 'react-icons/gi';
+import { FiMonitor } from 'react-icons/fi';
 
 export const ServicesSlider = () => {
 	const settings = {
@@ -14,72 +16,102 @@ export const ServicesSlider = () => {
 
 	return (
 		<section className="section-services-slider">
-			<Container fluid className="text-center">
+			<Container className="text-center">
 				<div className="block-title">
-					<h2 className="block-title-text">Discover our services</h2>
+					<h2 className="block-title-text">Explore our services</h2>
 				</div>
-				<Slider className="services-slider" {...settings}>
-					<div className="service-item">
-						<div className="service-box">
-							<div className="service-icon">
-								<i className="kipso-icon-targeting" />
+				<Row className="services-group">
+					<Col sm={6} md={4} xl={4}>
+						<div className="service-item">
+							<div className="service-item-content">
+								<div className="service-item-header">
+										<FiMonitor size={80}/>
+								</div>
+								<div className="service-item-body">
+										<h3>3D Models & Websites</h3>
+										<p className="mb-0">
+												Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque
+										</p>
+								</div>
 							</div>
-							<h3 className="service-box-title">
-								<a href="#">Park Design</a>
-							</h3>
 						</div>
-					</div>
-					<div className="service-item">
-						<div className="service-box">
-							<div className="service-icon">
-								<i className="kipso-icon-targeting" />
+					</Col>
+					<Col sm={6} md={4} xl={4}>
+						<div className="service-item">
+							<div className="service-item-content">
+								<div className="service-item-header">
+										<GiHammerNails size={80} />
+								</div>
+								<div className="service-item-body">
+										<h3>Bespoke Equipment</h3>
+										<p className="mb-0">
+												Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque
+										</p>
+								</div>
 							</div>
-							<h3 className="service-box-title">
-								<a href="#">Bespoke Equipment</a>
-							</h3>
 						</div>
-					</div>
-					<div className="service-item">
-						<div className="service-box">
-							<div className="service-icon">
-								<i className="kipso-icon-targeting" />
+					</Col>
+					<Col sm={6} md={4} xl={4}>
+						<div className="service-item">
+							<div className="service-item-content">
+								<div className="service-item-header">
+										<GiTeamIdea size={80} />
+								</div>
+								<div className="service-item-body">
+										<h3>Consultation</h3>
+										<p className="mb-0">
+												Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque
+										</p>
+								</div>
 							</div>
-							<h3 className="service-box-title">
-								<a href="#">Event Planning</a>
-							</h3>
 						</div>
-					</div>
-					<div className="service-item">
-						<div className="service-box">
-							<div className="service-icon">
-								<i className="kipso-icon-targeting" />
+					</Col>
+					<Col sm={6} md={4} xl={4}>
+						<div className="service-item">
+							<div className="service-item-content">
+								<div className="service-item-header">
+										<GiPublicSpeaker size={80 }/>
+								</div>
+								<div className="service-item-body">
+										<h3>Events & Presentations</h3>
+										<p className="mb-0">
+												Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque
+										</p>
+								</div>
 							</div>
-							<h3 className="service-box-title">
-								<a href="#">Consultation</a>
-							</h3>
 						</div>
-					</div>
-					<div className="service-item">
-						<div className="service-box">
-							<div className="service-icon">
-								<i className="kipso-icon-targeting" />
+					</Col>
+					<Col sm={6} md={4} xl={4}>
+						<div className="service-item">
+							<div className="service-item-content">
+								<div className="service-item-header">
+										<GiJumpAcross size={80} />
+								</div>
+								<div className="service-item-body">
+										<h3>Park Design</h3>
+										<p className="mb-0">
+												Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque
+										</p>
+								</div>
 							</div>
-							<h3 className="service-box-title">
-								<a href="#">Presentations</a>
-							</h3>
 						</div>
-					</div>
-					<div className="service-item">
-						<div className="service-box">
-							<div className="service-icon">
-								<i className="kipso-icon-targeting" />
+					</Col>
+					<Col sm={6} md={4} xl={4}>
+						<div className="service-item">
+							<div className="service-item-content">
+								<div className="service-item-header">
+										<GiTeacher size={80} />
+								</div>
+								<div className="service-item-body">
+										<h3>Workshops</h3>
+										<p className="mb-0">
+												Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque
+										</p>
+								</div>
 							</div>
-							<h3 className="service-box-title">
-								<a href="#">Workshops</a>
-							</h3>
 						</div>
-					</div>
-				</Slider>
+					</Col>
+				</Row>
 			</Container>
 		</section>
 	);
