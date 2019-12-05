@@ -1,11 +1,24 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Nav, Container } from 'react-bootstrap';
 
 import config from '../../data/siteConfig';
 
 const Footer = () => {
-	const url = config.siteRss,
+	const data = useStaticQuery( graphql`
+		query ProjectsQuery {
+			allStrapiProjects(limit: 9, sort: { order: ASC, fields: name }) {
+				edges {
+					node {
+						name
+						slug
+					}
+				}
+			}
+		}
+	` );
+	const projects = data.allStrapiProjects.edges,
+		url = config.siteRss,
 		{ copyright } = config;
 
 	return (
@@ -51,6 +64,7 @@ const Footer = () => {
 						<div className="footer-col-wrap">
 							<h6 className="footer-col-title">Services</h6>
 							<div className="footer-nav-list">
+								
 								<a href="/" className="footer-link" data-footer-link="1">
 									Park & Equipment Design
 								</a>
@@ -68,18 +82,9 @@ const Footer = () => {
 						<div className="footer-col-wrap">
 							<h6 className="footer-col-title">Projects</h6>
 							<div className="footer-nav-list">
-								<a href="/" className="footer-link" data-footer-link="1">
-									The Greatest Park
-								</a>
-								<a href="/about" className="footer-link" data-footer-link="2">
-									Ukemi Card Game
-								</a>
-								<a href="/blog" className="footer-link" data-footer-link="3">
-									Parkour Van
-								</a>
-								<a href="/shop" className="footer-link" data-footer-link="4">
-									Fucked Knee eBook
-								</a>
+								{projects.map( ( { node } ) => (
+									<Link to={`/projects/${node.slug}`} className="footer-link">{node.name}</Link>
+									) )}
 							</div>
 						</div>
 					</div>
