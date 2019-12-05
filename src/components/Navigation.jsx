@@ -1,8 +1,23 @@
 import React, { useState } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Nav, NavDropdown, Navbar, Container } from 'react-bootstrap';
 
 const Navigation = () => {
-	const [ navOpen, setNavOpen ] = useState( false ),
+	const data = useStaticQuery( graphql`
+		query NavProjectsQuery {
+			allStrapiProjects(limit: 9, sort: { order: ASC, fields: name }) {
+				edges {
+					node {
+						name
+						slug
+					}
+				}
+			}
+		}
+	` );
+	
+	const projects = data.allStrapiProjects.edges,
+		[ navOpen, setNavOpen ] = useState( false ),
 		toggle = () => setNavOpen( !navOpen );
 
 	return (
@@ -35,10 +50,9 @@ const Navigation = () => {
 						<NavDropdown title="Projects" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/projects">Overview</NavDropdown.Item>
 							<NavDropdown.Divider />
-							<NavDropdown.Item href="/projects/gpnb">The Greatest Park Never Build</NavDropdown.Item>
-							<NavDropdown.Item href="/projects/cards">Ukemi Card Game</NavDropdown.Item>
-							<NavDropdown.Item href="/projects/mobile-parkour-van">Parkour Van</NavDropdown.Item>
-							<NavDropdown.Item href="/projects/fucked-knee-ebook">Fucked Knee eBook</NavDropdown.Item>
+							{projects.map( ( { node } ) => (
+									<NavDropdown.Item href={`/projects/${node.slug}`}>{node.name}</NavDropdown.Item>
+									) )}
 						</NavDropdown>
 						<Nav.Item>
 							<Nav.Link href="/shop">Shop</Nav.Link>
