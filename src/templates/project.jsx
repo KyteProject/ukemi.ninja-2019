@@ -87,16 +87,20 @@ const Project = ( { data, location } ) => {
 	);
 };
 
-// Post.propTypes = {
-// 	data: PropTypes.shape( {
-// 		ghostPost: PropTypes.shape( {
-// 			title: PropTypes.string.isRequired,
-// 			html: PropTypes.string.isRequired,
-// 			feature_image: PropTypes.string
-// 		} ).isRequired
-// 	} ).isRequired,
-// 	location: PropTypes.object.isRequired
-// };
+Project.propTypes = {
+	data: PropTypes.shape( {
+		strapiProjects: PropTypes.shape( {
+			name: PropTypes.string.isRequired,
+			slug: PropTypes.string.isRequired,
+			brief: PropTypes.string.isRequired,
+			clients: PropTypes.string,
+			partners: PropTypes.string,
+			objective: PropTypes.string.isRequired,
+			date: PropTypes.string.isRequired
+		} ).isRequired
+	} ).isRequired,
+	location: PropTypes.object.isRequired
+};
 
 export default Project;
 
