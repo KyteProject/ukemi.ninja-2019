@@ -10,6 +10,7 @@ const PostSliderCard = ( { post } ) => {
 		published = new Date( `${post.published_at}` ).toDateString();
 
 	return (
+		<Col>
 			<Card className="latest-item">
 				<div className="image">
 					{post.feature_image && (
@@ -39,6 +40,7 @@ const PostSliderCard = ( { post } ) => {
 					<Card.Link href={url}>Read More →</Card.Link>
 				</Card.Body>
 			</Card>
+		</Col>
 	);
 };
 

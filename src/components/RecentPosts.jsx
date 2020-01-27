@@ -74,11 +74,8 @@ export const RecentPosts = () => {
 			<section className="recent-posts">
 				{/* img */}
 				<Container>
-
 					<Slider className="recent-slider" {...settings}>
-					<Row>
 						{posts.map( ( { node } ) => <PostSliderCard key={node.id} post={node} /> )}
-					</Row>
 					</Slider>
 				</Container>
 			</section>

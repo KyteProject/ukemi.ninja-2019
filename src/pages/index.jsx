@@ -22,7 +22,7 @@ const Index = () => {
 				</p>
 			</div>
 			<ServicesSlider />
-			{/* <RecentPosts /> */}
+			<RecentPosts />
 			<CTA2 />
 		</MainLayout>
 	);
