@@ -7,7 +7,7 @@ export const TitleSection = ( { location, sub, crumbLabel } ) => {
 			<Container>
 				<Row>
 					<Col lg="12">
-						<div className="text-center">
+						<div>
 							<h2>{crumbLabel}</h2>
 
 							<Breadcrumb>

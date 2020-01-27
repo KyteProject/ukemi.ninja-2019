@@ -15,7 +15,7 @@ const Post = ( { data, location } ) => {
 		<React.Fragment>
 			<MainLayout>
 				<MetaData data={data} location={location} type="article" />
-				<TitleSection location={location} sub={{ slug: 'blog', label: 'Blog' }} crumbLabel={post.title} />
+				{/* <TitleSection location={location} sub={{ slug: 'blog', label: 'Blog' }} crumbLabel={post.title} /> */}
 				<Helmet>
 					<style type="text/css">{`${post.codeinjection_styles}`}</style>
 				</Helmet>
