@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Slider from 'react-slick';
 import { GiJumpAcross, GiAcrobatic, GiPublicSpeaker, GiTeacher, GiTeamIdea, GiToolbox, GiHammerNails } from 'react-icons/gi';
 import { FiMonitor } from 'react-icons/fi';
 
@@ -21,41 +20,14 @@ export const ServicesSlider = () => {
 					<h2 className="block-title-text">Explore our services</h2>
 				</div>
 				<Row className="services-group">
-					<Col sm={6} md={4} xl={4}>
+
+				<Col sm={6} md={4} xl={4}>
 						<div className="service-item">
 							<div className="service-item-content">
 								<div className="service-item-header">
-										<FiMonitor size={80}/>
-								</div>
-								<div className="service-item-body">
-										<h3>3D Models & Websites</h3>
-										<p className="mb-0">
-												Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque
-										</p>
-								</div>
-							</div>
-						</div>
-					</Col>
-					<Col sm={6} md={4} xl={4}>
-						<div className="service-item">
-							<div className="service-item-content">
-								<div className="service-item-header">
-										<GiHammerNails size={80} />
-								</div>
-								<div className="service-item-body">
-										<h3>Bespoke Equipment</h3>
-										<p className="mb-0">
-												Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque
-										</p>
-								</div>
-							</div>
-						</div>
-					</Col>
-					<Col sm={6} md={4} xl={4}>
-						<div className="service-item">
-							<div className="service-item-content">
-								<div className="service-item-header">
-										<GiTeamIdea size={80} />
+									<div className="icon">
+											<GiTeamIdea size={80} />
+									</div>
 								</div>
 								<div className="service-item-body">
 										<h3>Consultation</h3>
@@ -66,11 +38,48 @@ export const ServicesSlider = () => {
 							</div>
 						</div>
 					</Col>
+
 					<Col sm={6} md={4} xl={4}>
 						<div className="service-item">
 							<div className="service-item-content">
 								<div className="service-item-header">
+									<div className="icon">
+										<FiMonitor size={80}/>
+									</div>
+								</div>
+								<div className="service-item-body">
+										<h3>Digital Design</h3>
+										<p className="mb-0">
+												Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque
+										</p>
+								</div>
+							</div>
+						</div>
+					</Col>
+					<Col sm={6} md={4} xl={4}>
+						<div className="service-item">
+							<div className="service-item-content">
+								<div className="service-item-header">
+									<div className="icon">
+										<GiHammerNails size={80} />
+									</div>
+								</div>
+								<div className="service-item-body">
+										<h3>Equipment Design</h3>
+										<p className="mb-0">
+												Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque
+										</p>
+								</div>
+							</div>
+						</div>
+					</Col>
+					<Col sm={6} md={4} xl={4}>
+						<div className="service-item">
+							<div className="service-item-content">
+								<div className="service-item-header">
+								<div className="icon">
 										<GiPublicSpeaker size={80 }/>
+									</div>
 								</div>
 								<div className="service-item-body">
 										<h3>Events & Presentations</h3>
@@ -85,7 +94,9 @@ export const ServicesSlider = () => {
 						<div className="service-item">
 							<div className="service-item-content">
 								<div className="service-item-header">
+								<div className="icon">
 										<GiJumpAcross size={80} />
+								</div>
 								</div>
 								<div className="service-item-body">
 										<h3>Park Design</h3>
@@ -100,7 +111,9 @@ export const ServicesSlider = () => {
 						<div className="service-item">
 							<div className="service-item-content">
 								<div className="service-item-header">
+								<div className="icon">
 										<GiTeacher size={80} />
+								</div>
 								</div>
 								<div className="service-item-body">
 										<h3>Workshops</h3>

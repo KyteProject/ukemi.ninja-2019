@@ -1,8 +1,14 @@
 /**************************
 	Navigtion
 ***************************/
-.navbar {
+.header-navigation {
 	font-family: $font-secondary;
+	background-color: transparent;
+	margin-bottom: 0;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	position: relative;
 }
 
 .navbar-brand {

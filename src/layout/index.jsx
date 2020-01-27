@@ -19,14 +19,17 @@ const MainLayout = ( { data, children, bodyClass  } ) => {
 				<html lang="en" />
 				<body className={bodyClass} />
 			</Helmet>
-
-			<div className="viewport">
-				<div className="viewport-top">
-					<Navigation />
-					<main>{children}</main>
-				</div>
-				<div className="viewport-bottom">
-					<Footer />
+			<div className="page-wrapper">
+				<div className="viewport">
+					<div className="viewport-top">
+					<header className="site-header">
+						<Navigation />
+					</header>
+						<main>{children}</main>
+					</div>
+					<div className="viewport-bottom">
+						<Footer />
+					</div>
 				</div>
 			</div>
 		</React.Fragment>

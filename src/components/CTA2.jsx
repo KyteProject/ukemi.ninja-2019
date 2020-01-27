@@ -6,7 +6,7 @@ export const CTA2 = () => {
 	return (
 		<section className="cta-two">
 			<Container fluid>
-				<Row className="no-gutters">
+				<Row className="cta-group">
 					<Col lg={6} className="cta-bg-pink">
 						<div className="cta-two-single">
 							<div className="cta-two-icon">

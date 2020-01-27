@@ -21,8 +21,8 @@ const Navigation = () => {
 		toggle = () => setNavOpen( !navOpen );
 
 	return (
-		<Navbar expand="lg" className="fixed-top sticky">
-			<Container>
+		<Navbar expand="lg" className="fixed-top sticky header-navigation">
+			<Container className="clearfix">
 				<Navbar.Brand href="/">
 					<img src="/logos/ukemi-logo.svg" alt="Ukemi Project text logo" />
 				</Navbar.Brand>
@@ -38,15 +38,9 @@ const Navigation = () => {
 						<Nav.Item>
 							<Nav.Link href="/blog">Blog</Nav.Link>
 						</Nav.Item>
-						<NavDropdown title="Services" id="basic-nav-dropdown">
-							<NavDropdown.Item href="/services">Overview</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item href="/services/park-design">Park & Equiptment Design</NavDropdown.Item>
-							<NavDropdown.Item href="/services/events">Events & Shows</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.4">
-								Consultation, Presentations & Workshops
-							</NavDropdown.Item>
-						</NavDropdown>
+						<Nav.Item>
+							<Nav.Link href="/services">Services</Nav.Link>
+						</Nav.Item>
 						<NavDropdown title="Projects" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/projects">Overview</NavDropdown.Item>
 							<NavDropdown.Divider />

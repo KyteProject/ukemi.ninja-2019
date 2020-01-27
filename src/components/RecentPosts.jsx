@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Slider from 'react-slick';
 import PostSliderCard from './PostSliderCard';
 
@@ -37,7 +37,23 @@ export const RecentPosts = () => {
 		infinite: true,
 		speed: 500,
 		slidesToShow: 3,
-		slidesToScroll: 3
+		slidesToScroll: 3,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 770,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
 	};
 
 	const posts = data.allGhostPost.edges;
@@ -58,8 +74,11 @@ export const RecentPosts = () => {
 			<section className="recent-posts">
 				{/* img */}
 				<Container>
+
 					<Slider className="recent-slider" {...settings}>
+					<Row>
 						{posts.map( ( { node } ) => <PostSliderCard key={node.id} post={node} /> )}
+					</Row>
 					</Slider>
 				</Container>
 			</section>

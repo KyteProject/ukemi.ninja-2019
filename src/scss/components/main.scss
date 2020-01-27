@@ -32,6 +32,18 @@ ul {
 	list-style: none;
 }
 
+.page-wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	min-width: 300px;
+	overflow: hidden;
+}
+
+.site-header {
+	position: relative;
+}
+
 .title {
 	font-size: 42px;
 	color: $color1;

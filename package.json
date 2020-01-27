@@ -23,6 +23,7 @@
 		"gatsby-plugin-sitemap": "^2.2.3",
 		"gatsby-source-filesystem": "^2.1.5",
 		"gatsby-source-ghost": "^3.4.4",
+		"gatsby-source-shopware-channel": "^0.0.2",
 		"gatsby-source-strapi": "^0.0.10",
 		"gatsby-transformer-sharp": "^2.2.4",
 		"netlify-cms-app": "^2.9.7",

@@ -89,7 +89,7 @@ const Footer = () => {
 						</div>
 					</div>
 
-					<section className="footer-col">
+					<div className="footer-col">
 						<div className="footer-col-wrap">
 							<h6 className="footer-col-title">Follow</h6>
 							<a
@@ -117,9 +117,9 @@ const Footer = () => {
 								Facebook
 							</a>
 						</div>
-					</section>
+					</div>
 
-					<section className="footer-col footer-col-next">
+					<div className="footer-col footer-col-next">
 						<div className="footer-col-wrap">
 							<h6 className="footer-col-title">Legal</h6>
 							<a href="/terms" className="footer-link">
@@ -129,7 +129,7 @@ const Footer = () => {
 								Privacy
 							</a>
 						</div>
-					</section>
+					</div>
 
 					<small className="footer-legal">{copyright}</small>
 				</Nav>

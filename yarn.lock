@@ -6158,6 +6158,13 @@ gatsby-source-ghost@^3.4.4:
     gatsby-node-helpers "^0.3.0"
     qs "6.9.0"
 
+gatsby-source-shopware-channel@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-source-shopware-channel/-/gatsby-source-shopware-channel-0.0.2.tgz#188bcca9298c4ac9a31cae25868487b508ef43f1"
+  integrity sha512-+KIGE2oYKGQn/5zmsxiIWBjBr+F/Yh0P4lnvhA3B4AB+/FbdAVV4oRB9kEPWh7klq0u+lGW3jNm7g8niutPJkA==
+  dependencies:
+    node-fetch "^2.6.0"
+
 gatsby-source-strapi@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/gatsby-source-strapi/-/gatsby-source-strapi-0.0.10.tgz#a41477ddcccff8c634062e85c5df8f0eab42043e"
