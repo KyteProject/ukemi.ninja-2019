@@ -1,210 +1,210 @@
 /* eslint-disable no-nested-ternary */
 
-const path = require( 'path' );
-const { paginate } = require( 'gatsby-awesome-pagination' );
-const { postsPerPage } = require( './data/siteConfig' );
+const path = require("path");
+const { paginate } = require("gatsby-awesome-pagination");
+const { postsPerPage } = require("./data/siteConfig");
 
-exports.createPages = async( { graphql, actions } ) => {
-	const { createPage } = actions;
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
 
-	const result = await graphql( `
-		{
-			allGhostPost(sort: { order: ASC, fields: published_at }) {
-				edges {
-					node {
-						slug
-					}
-				}
-			}
-			allGhostTag(sort: { order: ASC, fields: name }) {
-				edges {
-					node {
-						slug
-						url
-						postCount
-					}
-				}
-			}
-			allGhostAuthor(sort: { order: ASC, fields: name }) {
-				edges {
-					node {
-						slug
-						url
-						postCount
-					}
-				}
-			}
-			allGhostPage(sort: { order: ASC, fields: published_at }) {
-				edges {
-					node {
-						slug
-						url
-					}
-				}
-			}
-			allGhostPage(sort: { order: ASC, fields: published_at }) {
-				edges {
-					node {
-						slug
-						url
-					}
-				}
-			}
-			allStrapiProjects {
-				edges {
-					node {
-						brief
-						name
-						objective
-						slug
-						partners
-						clients
-						date
-						images {
-							url
-							id
-							name
-						}
-					}
-				}
-			}
-		}
-	` );
+  const result = await graphql(`
+    {
+      allGhostPost(sort: { order: ASC, fields: published_at }) {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+      allGhostTag(sort: { order: ASC, fields: name }) {
+        edges {
+          node {
+            slug
+            url
+            postCount
+          }
+        }
+      }
+      allGhostAuthor(sort: { order: ASC, fields: name }) {
+        edges {
+          node {
+            slug
+            url
+            postCount
+          }
+        }
+      }
+      allGhostPage(sort: { order: ASC, fields: published_at }) {
+        edges {
+          node {
+            slug
+            url
+          }
+        }
+      }
+      allGhostPage(sort: { order: ASC, fields: published_at }) {
+        edges {
+          node {
+            slug
+            url
+          }
+        }
+      }
+      allStrapiProjects {
+        edges {
+          node {
+            brief
+            name
+            objective
+            slug
+            partners
+            clients
+            date
+            images {
+              url
+              id
+              name
+            }
+          }
+        }
+      }
+    }
+  `);
 
-	// Check for any errors
-	if ( result.errors ) {
-		throw new Error( result.errors );
-	}
+  // Check for any errors
+  if (result.errors) {
+    throw new Error(result.errors);
+  }
 
-	// Extract query results
-	const tags = result.data.allGhostTag.edges,
-		authors = result.data.allGhostAuthor.edges,
-		pages = result.data.allGhostPage.edges,
-		posts = result.data.allGhostPost.edges,
-		projects = result.data.allStrapiProjects.edges;
+  // Extract query results
+  const tags = result.data.allGhostTag.edges;
+  const authors = result.data.allGhostAuthor.edges;
+  const pages = result.data.allGhostPage.edges;
+  const posts = result.data.allGhostPost.edges;
+  const projects = result.data.allStrapiProjects.edges;
 
-	// Load templates
-	const tagsTemplate = path.resolve( './src/templates/tag.jsx' ),
-		authorTemplate = path.resolve( './src/templates/author.jsx' ),
-		indexTemplate = path.resolve( './src/templates/index.jsx' ),
-		pageTemplate = path.resolve( './src/templates/page.jsx' ),
-		postTemplate = path.resolve( './src/templates/post.jsx' ),
-		projectTemplate = path.resolve( './src/templates/project.jsx' );
+  // Load templates
+  const tagsTemplate = path.resolve("./src/templates/tag.jsx");
+  const authorTemplate = path.resolve("./src/templates/author.jsx");
+  const indexTemplate = path.resolve("./src/templates/index.jsx");
+  const pageTemplate = path.resolve("./src/templates/page.jsx");
+  const postTemplate = path.resolve("./src/templates/post.jsx");
+  const projectTemplate = path.resolve("./src/templates/project.jsx");
 
-	// Create tag pages
-	tags.forEach( ( { node } ) => {
-		const totalPosts = node.postCount !== null ? node.postCount : 0,
-			numberOfPages = Math.ceil( totalPosts / postsPerPage );
+  // Create tag pages
+  tags.forEach(({ node }) => {
+    const totalPosts = node.postCount !== null ? node.postCount : 0;
+    const numberOfPages = Math.ceil(totalPosts / postsPerPage);
 
-		node.url = `blog/tag/${node.slug}/`;
+    node.url = `blog/tag/${node.slug}/`;
 
-		Array.from( { length: numberOfPages } ).forEach( ( _, i ) => {
-			const currentPage = i + 1,
-				prevPageNumber = currentPage <= 1 ? null : currentPage - 1,
-				nextPageNumber = currentPage + 1 > numberOfPages ? null : currentPage + 1,
-				nextPagePath = nextPageNumber ? `${node.url}page/${nextPageNumber}/` : null,
-				previousPagePath = prevPageNumber	? prevPageNumber === 1 ? node.url : `${node.url}page/${prevPageNumber}/` : null; // prettier-ignore
+    Array.from({ length: numberOfPages }).forEach((_, i) => {
+      const currentPage = i + 1;
+      const prevPageNumber = currentPage <= 1 ? null : currentPage - 1;
+      const nextPageNumber = currentPage + 1 > numberOfPages ? null : currentPage + 1;
+      const nextPagePath = nextPageNumber ? `${node.url}page/${nextPageNumber}/` : null;
+      const previousPagePath = prevPageNumber	? prevPageNumber === 1 ? node.url : `${node.url}page/${prevPageNumber}/` : null; // prettier-ignore
 
-			createPage( {
-				path: i === 0 ? node.url : `${node.url}page/${i + 1}/`,
-				component: tagsTemplate,
-				context: {
-					slug: node.slug,
-					limit: postsPerPage,
-					skip: i * postsPerPage,
-					numberOfPages: numberOfPages,
-					humanPageNumber: currentPage,
-					prevPageNumber: prevPageNumber,
-					nextPageNumber: nextPageNumber,
-					previousPagePath: previousPagePath,
-					nextPagePath: nextPagePath
-				}
-			} );
-		} );
-	} );
+      createPage({
+        path: i === 0 ? node.url : `${node.url}page/${i + 1}/`,
+        component: tagsTemplate,
+        context: {
+          slug: node.slug,
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numberOfPages,
+          humanPageNumber: currentPage,
+          prevPageNumber,
+          nextPageNumber,
+          previousPagePath,
+          nextPagePath,
+        },
+      });
+    });
+  });
 
-	// Create author pages
-	authors.forEach( ( { node } ) => {
-		const totalPosts = node.postCount !== null ? node.postCount : 0,
-			numberOfPages = Math.ceil( totalPosts / postsPerPage );
+  // Create author pages
+  authors.forEach(({ node }) => {
+    const totalPosts = node.postCount !== null ? node.postCount : 0;
+    const numberOfPages = Math.ceil(totalPosts / postsPerPage);
 
-		node.url = `blog/author/${node.slug}/`;
+    node.url = `blog/author/${node.slug}/`;
 
-		Array.from( { length: numberOfPages } ).forEach( ( _, i ) => {
-			const currentPage = i + 1,
-				prevPageNumber = currentPage <= 1 ? null : currentPage - 1,
-				nextPageNumber = currentPage + 1 > numberOfPages ? null : currentPage + 1,
-				nextPagePath = nextPageNumber ? `${node.url}page/${nextPageNumber}/` : null,
-				previousPagePath = prevPageNumber ? prevPageNumber === 1 ? node.url : `${node.url}page/${prevPageNumber}/` : null; // prettier-ignore
+    Array.from({ length: numberOfPages }).forEach((_, i) => {
+      const currentPage = i + 1;
+      const prevPageNumber = currentPage <= 1 ? null : currentPage - 1;
+      const nextPageNumber = currentPage + 1 > numberOfPages ? null : currentPage + 1;
+      const nextPagePath = nextPageNumber ? `${node.url}page/${nextPageNumber}/` : null;
+      const previousPagePath = prevPageNumber ? prevPageNumber === 1 ? node.url : `${node.url}page/${prevPageNumber}/` : null; // prettier-ignore
 
-			createPage( {
-				path: i === 0 ? node.url : `${node.url}page/${i + 1}/`,
-				component: authorTemplate,
-				context: {
-					slug: node.slug,
-					limit: postsPerPage,
-					skip: i * postsPerPage,
-					numberOfPages: numberOfPages,
-					humanPageNumber: currentPage,
-					prevPageNumber: prevPageNumber,
-					nextPageNumber: nextPageNumber,
-					previousPagePath: previousPagePath,
-					nextPagePath: nextPagePath
-				}
-			} );
-		} );
-	} );
+      createPage({
+        path: i === 0 ? node.url : `${node.url}page/${i + 1}/`,
+        component: authorTemplate,
+        context: {
+          slug: node.slug,
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numberOfPages,
+          humanPageNumber: currentPage,
+          prevPageNumber,
+          nextPageNumber,
+          previousPagePath,
+          nextPagePath,
+        },
+      });
+    });
+  });
 
-	// Create pages
-	pages.forEach( ( { node } ) => {
-		node.url = `blog/${node.slug}/`;
+  // Create pages
+  pages.forEach(({ node }) => {
+    node.url = `blog/${node.slug}/`;
 
-		createPage( {
-			path: node.url,
-			component: pageTemplate,
-			context: {
-				slug: node.slug
-			}
-		} );
-	} );
+    createPage({
+      path: node.url,
+      component: pageTemplate,
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
 
-	// Create post pages
-	posts.forEach( ( { node } ) => {
-		node.url = `blog/${node.slug}/`;
+  // Create post pages
+  posts.forEach(({ node }) => {
+    node.url = `blog/${node.slug}/`;
 
-		createPage( {
-			path: node.url,
-			component: postTemplate,
-			context: {
-				slug: node.slug
-			}
-		} );
-	} );
+    createPage({
+      path: node.url,
+      component: postTemplate,
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
 
-	// Create post pages
-	projects.forEach( ( { node } ) => {
-		node.url = `projects/${node.slug}/`;
+  // Create post pages
+  projects.forEach(({ node }) => {
+    node.url = `projects/${node.slug}/`;
 
-		createPage( {
-			path: node.url,
-			component: projectTemplate,
-			context: {
-				slug: node.slug
-			}
-		} );
-	} );
+    createPage({
+      path: node.url,
+      component: projectTemplate,
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
 
-	// Create pagination
-	paginate( {
-		createPage,
-		items: posts,
-		itemsPerPage: postsPerPage,
-		component: indexTemplate,
-		pathPrefix: ( { pageNumber } ) => {
-			if ( pageNumber === 0 ) {
-				return '/blog/';
-			}
-			return '/blog/page';
-		}
-	} );
+  // Create pagination
+  paginate({
+    createPage,
+    items: posts,
+    itemsPerPage: postsPerPage,
+    component: indexTemplate,
+    pathPrefix: ({ pageNumber }) => {
+      if (pageNumber === 0) {
+        return "/blog/";
+      }
+      return "/blog/page";
+    },
+  });
 };
