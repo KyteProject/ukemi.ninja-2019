@@ -6,6 +6,7 @@ import { MetaData } from "../components/meta";
 import CTA2 from "../components/CTA2";
 import RecentPosts from "../components/RecentPosts";
 import ServicesSlider from "../components/ServicesSlider";
+import Roadmap from "../components/Roadmap";
 
 const Index = ({ location }) => {
   return (
@@ -20,10 +21,12 @@ const Index = ({ location }) => {
           nostrum facere asperiores culpa accusamus a eligendi neque officia dolor mollitia odit
           fugit distinctio incidunt, consequatur veritatis.
         </p>
+
+        <ServicesSlider />
+        <Roadmap />
+        <RecentPosts />
+        <CTA2 />
       </div>
-      <ServicesSlider />
-      <RecentPosts />
-      <CTA2 />
     </MainLayout>
   );
 };

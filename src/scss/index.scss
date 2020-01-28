@@ -1,20 +1,21 @@
-@import './variables';
-@import './../../node_modules/bootstrap/scss/bootstrap';
+@import "./variables";
+@import "./../../node_modules/bootstrap/scss/bootstrap";
 
-@import '../scss/components/main';
-@import '../scss/components/buttons';
-@import '../scss/components/footer';
-@import '../scss/components/navigation';
-@import '../scss/components/title-section';
-@import '../scss/components/recent-posts';
-@import '../scss/components/service-slider';
-@import '../scss/components/CTA2';
-@import '../scss/components/widgets';
+@import "../scss/components/main";
+@import "../scss/components/buttons";
+@import "../scss/components/footer";
+@import "../scss/components/navigation";
+@import "../scss/components/title-section";
+@import "../scss/components/recent-posts";
+@import "../scss/components/roadmap";
+@import "../scss/components/service-slider";
+@import "../scss/components/CTA2";
+@import "../scss/components/widgets";
 
-@import '../scss/pages/about';
-@import '../scss/pages/contact';
-@import '../scss/pages/blog';
-@import '../scss/pages/post';
-@import '../scss/pages/projects';
+@import "../scss/pages/about";
+@import "../scss/pages/contact";
+@import "../scss/pages/blog";
+@import "../scss/pages/post";
+@import "../scss/pages/projects";
 
-@import '../scss/responsive.scss';
+@import "../scss/responsive.scss";

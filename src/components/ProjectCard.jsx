@@ -3,8 +3,6 @@ import { Link } from "gatsby";
 import { Card, Col } from "react-bootstrap";
 
 const ProjectCard = ({ project }) => {
-  console.log(project);
-
   return (
     <Col lg={4}>
       <Card className="project-single">
