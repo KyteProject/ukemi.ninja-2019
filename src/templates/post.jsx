@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import MainLayout from '../layout';
 import { MetaData } from '../components/meta';
-import { TitleSection } from '../components/TitleSection';
+// import { TitleSection } from '../components/TitleSection';
 
 const Post = ( { data, location } ) => {
 	const post = data.ghostPost;

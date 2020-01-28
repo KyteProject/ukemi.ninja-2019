@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Breadcrumb } from 'react-bootstrap';
 
-export const TitleSection = ( { location, sub, crumbLabel } ) => {
+export const TitleSection = ( { sub, crumbLabel } ) => {
 	return (
 		<section className="section-title">
 			<Container>

@@ -1,18 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { Link, StaticQuery, graphql } from 'gatsby';
 
-import config from '../../data/siteConfig';
 import Navigation from './../components/Navigation';
 import Footer from '../components/Footer';
-import { TitleSection } from '../components/TitleSection';
 
-import('../scss/index.scss');
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import '../scss/index.scss';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const MainLayout = ( { data, children, bodyClass  } ) => {
+const MainLayout = ( { children, bodyClass } ) => {
 	return (
 		<React.Fragment>
 			<Helmet>
@@ -39,9 +36,9 @@ const MainLayout = ( { data, children, bodyClass  } ) => {
 MainLayout.propTypes = {
 	children: PropTypes.node.isRequired,
 	bodyClass: PropTypes.string,
-	data: PropTypes.shape({
-		allGhostSettings: PropTypes.object,
-	}),
+	data: PropTypes.shape( {
+		allGhostSettings: PropTypes.object
+	} )
 };
 
 export default MainLayout;

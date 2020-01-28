@@ -1,18 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { GiJumpAcross, GiAcrobatic, GiPublicSpeaker, GiTeacher, GiTeamIdea, GiToolbox, GiHammerNails } from 'react-icons/gi';
+import { GiJumpAcross, GiPublicSpeaker, GiTeacher, GiTeamIdea, GiHammerNails } from 'react-icons/gi';
 import { FiMonitor } from 'react-icons/fi';
 
 export const ServicesSlider = () => {
-	const settings = {
-		arrows: false,
-		dots: false,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 6,
-		slidesToScroll: 1
-	};
-
 	return (
 		<section className="section-services-slider">
 			<Container className="text-center">

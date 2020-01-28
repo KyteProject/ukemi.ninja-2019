@@ -18,7 +18,7 @@ const Footer = () => {
 		}
 	` );
 	const projects = data.allStrapiProjects.edges,
-		url = config.siteRss,
+		// url = config.siteRss,
 		{ copyright } = config;
 
 	return (
@@ -83,7 +83,7 @@ const Footer = () => {
 							<h6 className="footer-col-title">Projects</h6>
 							<div className="footer-nav-list">
 								{projects.map( ( { node } ) => (
-									<Link to={`/projects/${node.slug}`} className="footer-link">{node.name}</Link>
+									<Link key={node.slug} to={`/projects/${node.slug}`} className="footer-link">{node.name}</Link>
 									) )}
 							</div>
 						</div>

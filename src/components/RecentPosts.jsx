@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Slider from 'react-slick';
 import PostSliderCard from './PostSliderCard';
 

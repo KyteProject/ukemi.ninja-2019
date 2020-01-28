@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { GiThreeFriends, GiConqueror } from 'react-icons/gi';
 
 export const CTA2 = () => {
@@ -20,9 +20,9 @@ export const CTA2 = () => {
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br />Quasi, commodi
 									voluptate consequatur.
 								</p>
-								<a href="#" className="thm-btn cta-two-btn">
+								<Button href="#" className="thm-btn cta-two-btn">
 									Contact Us
-								</a>
+								</Button>
 							</div>
 						</div>
 					</Col>
@@ -39,9 +39,9 @@ export const CTA2 = () => {
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />Vero unde cumque iure
 									aut minima provident?
 								</p>
-								<a href="#" className="thm-btn cta-two-btn">
+								<Button as="a" href="#" className="thm-btn cta-two-btn">
 									Get Involved
-								</a>
+								</Button>
 							</div>
 						</div>
 					</Col>

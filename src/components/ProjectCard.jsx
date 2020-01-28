@@ -2,10 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Card, Col } from 'react-bootstrap';
 
-import { FaCalendarAlt } from 'react-icons/fa';
-import { FaUserAlt } from 'react-icons/fa';
-import { FaRegClock } from 'react-icons/fa';
-
 const ProjectCard = ( { project } ) => {
   console.log( project );
   
@@ -24,15 +20,15 @@ const ProjectCard = ( { project } ) => {
           <span className="project-single-cat">{project.category}</span>
 
           <Link to={`projects/${project.slug}`} className="project-single-title">
-					  <h3>{project.name}</h3>
-				  </Link>
+            <h3>{project.name}</h3>
+          </Link>
 
           <Card.Subtitle className="project-single-meta">
             {/*  */}
           </Card.Subtitle>
 
           <Card.Text>{project.objective}</Card.Text>
-				  <Card.Link href={`projects/${project.slug}`}>Read More →</Card.Link>
+          <Card.Link href={`projects/${project.slug}`}>Read More →</Card.Link>
         </Card.Body>
       </Card>
     </Col>

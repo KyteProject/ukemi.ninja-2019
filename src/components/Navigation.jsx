@@ -45,7 +45,7 @@ const Navigation = () => {
 							<NavDropdown.Item href="/projects">Overview</NavDropdown.Item>
 							<NavDropdown.Divider />
 							{projects.map( ( { node } ) => (
-									<NavDropdown.Item href={`/projects/${node.slug}`}>{node.name}</NavDropdown.Item>
+									<NavDropdown.Item key={node.slug} href={`/projects/${node.slug}`}>{node.name}</NavDropdown.Item>
 									) )}
 						</NavDropdown>
 						<Nav.Item>
