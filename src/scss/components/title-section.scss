@@ -3,34 +3,39 @@
 ***************************/
 
 .section-title {
-	position: relative;
-	background-color: $color7;
-	padding-bottom: 25px;
-	padding-top: 25px;
+  position: relative;
+  background-color: $color7;
+  padding-bottom: 25px;
+  padding-top: 25px;
 
-	h2 {
-		padding-top: 0;
-		margin-bottom: 0;
-		color: $white;
-		font-size: 36px;
-		font-weight: 500;
-		line-height: 1.8;
-	}
+  h2 {
+    padding-top: 0;
+    margin-bottom: 0;
+    color: $white;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.8;
+  }
 
-	.breadcrumb {
-		background-color: transparent;
-		display: block;
-		position: relative;
-		li {
-			display: inline-block;
+  .breadcrumb {
+    background-color: transparent;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 15px;
+    padding-left: 15px;
 
-			a {
-				color: $white;
-			}
-		}
+    li {
+      display: inline-block;
 
-		.breadcrumb-item::before {
-			color: $white;
-		}
-	}
+      a {
+        color: $white;
+      }
+    }
+
+    .breadcrumb-item::before {
+      color: $white;
+    }
+  }
 }

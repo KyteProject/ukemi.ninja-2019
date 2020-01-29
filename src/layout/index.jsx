@@ -16,17 +16,11 @@ const MainLayout = ({ children, bodyClass }) => {
         <body className={bodyClass} />
       </Helmet>
       <div className="page-wrapper">
-        <div className="viewport">
-          <div className="viewport-top">
-            <header className="site-header">
-              <Navigation />
-            </header>
-            <main>{children}</main>
-          </div>
-          <div className="viewport-bottom">
-            <Footer />
-          </div>
+        <div className="site-header">
+          <Navigation />
         </div>
+        <main>{children}</main>
+        <Footer />
       </div>
     </>
   );

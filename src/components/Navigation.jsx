@@ -21,44 +21,59 @@ const Navigation = () => {
   const toggle = () => setNavOpen(!navOpen);
 
   return (
-    <Navbar expand="lg" className="fixed-top sticky header-navigation">
-      <Container className="clearfix">
+    <Navbar collapseOnSelect expand="lg" sticky="top" className="header-navigation">
+      <Container>
         <Navbar.Brand href="/">
           <img src="/logos/ukemi-logo.svg" alt="Ukemi Project text logo" />
         </Navbar.Brand>
         <Navbar.Toggle
           onClick={toggle}
-          aria-controls="basic-navbar-nav"
+          aria-controls="responsive-navbar-nav"
           label="Toggle Navigation"
         />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
             <Nav.Item>
-              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/" className="nav-text">
+                Home
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/about" className="nav-text">
+                About
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/blog">Blog</Nav.Link>
+              <Nav.Link href="/blog" className="nav-text">
+                Blog
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/services">Services</Nav.Link>
+              <Nav.Link href="/services" className="nav-text">
+                Services
+              </Nav.Link>
             </Nav.Item>
-            <NavDropdown title="Projects" id="basic-nav-dropdown">
+            <NavDropdown title="Projects" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="/projects">Overview</NavDropdown.Item>
               <NavDropdown.Divider />
               {projects.map(({ node }) => (
-                <NavDropdown.Item key={node.slug} href={`/projects/${node.slug}`}>
+                <NavDropdown.Item
+                  key={node.slug}
+                  href={`/projects/${node.slug}`}
+                  className="nav-text">
                   {node.name}
                 </NavDropdown.Item>
               ))}
             </NavDropdown>
             <Nav.Item>
-              <Nav.Link href="/shop">Shop</Nav.Link>
+              <Nav.Link href="/shop" className="nav-text">
+                Shop
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link href="/contact" className="nav-text">
+                Contact
+              </Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

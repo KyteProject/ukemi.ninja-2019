@@ -33,7 +33,7 @@ ul {
 }
 
 .page-wrapper {
-  position: relative;
+  // position: relative;
   margin: 0 auto;
   width: 100%;
   min-width: 300px;
@@ -41,7 +41,7 @@ ul {
 }
 
 .site-header {
-  position: relative;
+  position: sticky;
 }
 
 .title {
