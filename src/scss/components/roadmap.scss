@@ -54,7 +54,7 @@
   content: "";
   width: 21px;
   height: 21px;
-  background-color: $color7;
+  background-color: $color-pink;
   border-radius: 50%;
 }
 
@@ -80,7 +80,7 @@
   content: "";
   width: 21px;
   height: 21px;
-  background-color: $color7;
+  background-color: $color-pink;
   border-radius: 50%;
 }
 
@@ -96,7 +96,7 @@
   content: "\f00c";
   width: 90px;
   height: 90px;
-  background-color: $color-pink;
+  background-color: $color7;
   border-radius: 50%;
 }
 
@@ -107,5 +107,6 @@
 }
 
 .steps-taken .steps-title span {
-  color: $color-lblue;
+  font-weight: 900;
+  color: $color7;
 }

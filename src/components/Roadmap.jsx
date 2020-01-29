@@ -26,13 +26,13 @@ const Roadmap = () => {
           <Row>
             <Col md={{ span: 4, offset: 1 }}>
               <div className="steps-img left-img">
-                <img src="images/steps/1.png" alt="image" />
+                <img src="images/steps/1.png" alt="Stage one" />
               </div>
             </Col>
             <Col md={{ span: 4, offset: 2 }}>
               <div className="steps-taken v1">
                 <h5 className="steps-title">
-                  Step 1 : <span>Get Plan</span>
+                  Step 1: <span>Get Plan</span>
                 </h5>
                 <p className="steps-content">
                   Proin et ipsum non neque interdum luctus a eu risus. Cras dolor justo, congue vel
@@ -47,7 +47,7 @@ const Roadmap = () => {
             <Col md={{ span: 4, offset: 1 }}>
               <div className="steps-taken">
                 <h5 className="steps-title">
-                  Step 2 : <span>Development</span>
+                  Step 2: <span>Development</span>
                 </h5>
                 <p className="steps-content">
                   Proin et ipsum non neque interdum luctus a eu risus. Cras dolor justo, congue vel
@@ -58,7 +58,7 @@ const Roadmap = () => {
             </Col>
             <Col md={{ span: 4, offset: 2 }}>
               <div className="steps-img right-img">
-                <img src="images/steps/2.png" alt="image" />
+                <img src="images/steps/2.png" alt="Stage two" />
               </div>
             </Col>
           </Row>
@@ -66,13 +66,13 @@ const Roadmap = () => {
           <Row>
             <Col md={{ span: 4, offset: 1 }}>
               <div className="steps-img left-img">
-                <img src="images/steps/3.png" alt="image" />
+                <img src="images/steps/3.png" alt="Stage three" />
               </div>
             </Col>
             <Col md={{ span: 4, offset: 2 }}>
               <div className="steps-taken">
                 <h5 className="steps-title">
-                  Step 3 : <span>Test</span>
+                  Step 3: <span>Test</span>
                 </h5>
                 <p className="steps-content">
                   Proin et ipsum non neque interdum luctus a eu risus. Cras dolor justo, congue vel
@@ -87,7 +87,7 @@ const Roadmap = () => {
             <Col md={{ span: 4, offset: 1 }}>
               <div className="steps-taken v2">
                 <h5 className="steps-title">
-                  Step 4 : <span>Launch</span>
+                  Step 4: <span>Launch</span>
                 </h5>
                 <p className="steps-content">
                   Proin et ipsum non neque interdum luctus a eu risus. Cras dolor justo, congue vel
@@ -98,7 +98,7 @@ const Roadmap = () => {
             </Col>
             <Col md={{ span: 4, offset: 2 }}>
               <div className="steps-img right-img">
-                <img src="images/steps/4.png" alt="image" />
+                <img src="images/steps/4.png" alt="Stage four" />
               </div>
             </Col>
           </Row>
