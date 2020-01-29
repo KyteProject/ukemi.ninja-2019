@@ -21,7 +21,7 @@ const CTA2 = () => {
                   <br />
                   Quasi, commodi voluptate consequatur.
                 </p>
-                <Button href="#" className="thm-btn cta-two-btn">
+                <Button href="#" className="thm-btn cta-btn-dark">
                   Contact Us
                 </Button>
               </div>
@@ -41,7 +41,7 @@ const CTA2 = () => {
                   <br />
                   Vero unde cumque iure aut minima provident?
                 </p>
-                <Button as="a" href="#" className="thm-btn cta-two-btn">
+                <Button as="a" href="#" className="thm-btn cta-btn-dark">
                   Get Involved
                 </Button>
               </div>
