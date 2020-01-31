@@ -15,7 +15,7 @@ const CTA2 = () => {
                 </span>
               </div>
               <div className="cta-two-content">
-                <h2 className="cta-two-title">Become a collaborator</h2>
+                <h2 className="cta-two-title">Collaborate with us</h2>
                 <p className="cta-two-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   <br />

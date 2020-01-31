@@ -1,78 +1,75 @@
-.recent-title {
-	padding: 128px 0;
-	position: relative;
-	padding-top: 120px;
-	padding-bottom: 0;
+.recent-blogs {
+  padding-top: 200px;
 }
 
 .recent-posts {
-	padding-top: 0;
-	position: relative;
-	background-color: $color7;
-	margin-top: 320px;
-	padding-top: 120px;
-	padding-bottom: 120px;
+  padding-top: 0;
+  position: relative;
+  background-color: $color7;
+  margin-top: 320px;
+  padding-top: 125px;
+  padding-bottom: 150px;
 }
 
 .recent-slider {
-	bottom: 243px;
-	margin-bottom: -245px;
+  bottom: 243px;
+  margin-bottom: -245px;
 }
 
 .latest-item {
-	-webkit-transition: all .4s ease;
-	transition: all .4s ease;
-	margin-right: 30px;
-	max-width: 358px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin-right: 30px;
+  max-width: 358px;
 
-	.image {
-		position: relative;
-	}
+  .image {
+    position: relative;
+  }
 
-	.image > img {
-		width: 100%;
-	}
+  .image > img {
+    width: 100%;
+  }
 
-	.content {
-		padding-left: 35px;
-		padding-right: 35px;
-		position: relative;
-		padding-top: 50px;
-		padding-bottom: 50px;
-		background-color: $white;
+  .content {
+    padding-left: 35px;
+    padding-right: 35px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $white;
 
-		.card-subtitle {
-			margin-top: 10px;
-		}
-	}
+    .card-subtitle {
+      margin-top: 10px;
+    }
+  }
 }
 
 .latest-item:hover {
-	-webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
-	box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
 }
 
 .content .post-title {
-	font-size: 24px;
-	font-weight: 700;
-	color: $color1;
-	margin: 0;
-	margin-bottom: 10px;
-	-webkit-transition: all .4s ease;
-	transition: all .4s ease;
+  font-size: 24px;
+  font-weight: 700;
+  color: $color1;
+  margin: 0;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .content .post-title:hover {
-	text-decoration: none;
-	color: $color-pink;
+  text-decoration: none;
+  color: $color-pink;
 }
 
 .content .card-link {
-	color: $color1;
-	-webkit-transition: all .4s ease;
-	transition: all .4s ease;
+  color: $color1;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .content .card-link:hover {
-	color: $color7;
+  color: $color7;
 }

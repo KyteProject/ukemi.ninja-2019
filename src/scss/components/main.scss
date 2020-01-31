@@ -33,7 +33,6 @@ ul {
 }
 
 .page-wrapper {
-  // position: relative;
   margin: 0 auto;
   width: 100%;
   min-width: 300px;
@@ -46,7 +45,7 @@ ul {
 
 .title {
   font-size: 42px;
-  color: $color1;
+  color: $color7;
   line-height: 46px;
   margin-bottom: 25px;
   font-weight: 500;
@@ -66,7 +65,7 @@ ul {
 
 .block-title-text {
   margin: 0;
-  color: $color1;
+  color: $color7;
   font-size: 60px;
   font-weight: 900;
   line-height: 1em;

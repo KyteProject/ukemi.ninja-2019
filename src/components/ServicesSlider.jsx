@@ -40,7 +40,7 @@ const ServicesSlider = () => {
             <div className="service-item">
               <div className="service-item-content">
                 <div className="service-item-header">
-                  <div className="icon">
+                  <div className="icon icon-two">
                     <FiMonitor size={80} />
                   </div>
                 </div>
@@ -76,7 +76,7 @@ const ServicesSlider = () => {
             <div className="service-item">
               <div className="service-item-content">
                 <div className="service-item-header">
-                  <div className="icon">
+                  <div className="icon icon-two">
                     <GiPublicSpeaker size={80} />
                   </div>
                 </div>
@@ -112,7 +112,7 @@ const ServicesSlider = () => {
             <div className="service-item">
               <div className="service-item-content">
                 <div className="service-item-header">
-                  <div className="icon">
+                  <div className="icon icon-two">
                     <GiTeacher size={80} />
                   </div>
                 </div>

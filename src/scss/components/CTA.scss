@@ -19,12 +19,22 @@
   flex-direction: column;
   height: 100%;
   padding-left: 135px;
+  padding-right: 135px;
   padding-top: 50px;
   padding-bottom: 50px;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
 
+// .right-align {
+//   // padding-left: 0;
+//   padding-right: 135px;
+//   // float: right;
+// }
+
 .cta-two-icon {
-  margin-right: 60px;
+  // margin-right: 60px;
 }
 
 .cta-two-icon span {
@@ -86,4 +96,60 @@
   color: $white;
   margin-top: 0px;
   margin-bottom: 30px;
+}
+
+.cta-socials {
+  padding-top: 35px;
+  padding-bottom: 60px;
+  background-color: $color7;
+}
+
+.cta-socials-title {
+  color: $white;
+  margin: 0;
+  margin-top: 25px;
+}
+
+.cta-social-icons {
+  list-style: none;
+}
+
+.cta-social-icons > li {
+  display: inline-block;
+  margin: 5px 20px;
+}
+
+.cta-social-icons > li > a {
+  display: block;
+  color: $white;
+}
+
+.cta-social-icons > li > a:hover {
+  svg {
+    transition: all 0.5s ease;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+}
+
+.cta-social-icons > li > a.facebook:hover {
+  color: #4c66a4;
+}
+.cta-social-icons > li > a.github:hover {
+  color: #37d64c;
+}
+.cta-social-icons > li > a.instagram:hover {
+  color: #fd5949;
+}
+.cta-social-icons > li > a.linkedin:hover {
+  color: #0073b2;
+}
+.cta-social-icons > li > a.twitter:hover {
+  color: #2fc2ef;
+}
+.cta-social-icons > li > a.youtube:hover {
+  color: #cc181e;
 }

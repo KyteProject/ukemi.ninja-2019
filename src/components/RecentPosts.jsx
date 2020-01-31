@@ -59,7 +59,7 @@ const RecentPosts = () => {
 
   return (
     <>
-      <section className="recent-title">
+      <section className="recent-blogs">
         <Container>
           <div className="block-title">
             <h2 className="block-title-text">
@@ -68,17 +68,17 @@ const RecentPosts = () => {
             </h2>
           </div>
         </Container>
-      </section>
 
-      <section className="recent-posts">
-        {/* img */}
-        <Container>
-          <Slider className="recent-slider" {...settings}>
-            {posts.map(({ node }) => (
-              <PostSliderCard key={node.id} post={node} />
-            ))}
-          </Slider>
-        </Container>
+        <div className="recent-posts">
+          {/* img */}
+          <Container>
+            <Slider className="recent-slider" {...settings}>
+              {posts.map(({ node }) => (
+                <PostSliderCard key={node.id} post={node} />
+              ))}
+            </Slider>
+          </Container>
+        </div>
       </section>
     </>
   );
