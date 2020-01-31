@@ -63,8 +63,8 @@ const RecentPosts = () => {
         <Container>
           <div className="block-title">
             <h2 className="block-title-text">
-              Discover our <br />
-              recent articles
+              Discover Our <br />
+              Recent Articles
             </h2>
           </div>
         </Container>

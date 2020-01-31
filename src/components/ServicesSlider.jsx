@@ -14,7 +14,7 @@ const ServicesSlider = () => {
     <section className="section-services-slider">
       <Container className="text-center">
         <div className="block-title">
-          <h2 className="block-title-text">Explore our services</h2>
+          <h2 className="block-title-text">Explore Our Services</h2>
         </div>
         <Row className="services-group">
           <Col sm={6} md={4} xl={4}>
@@ -63,7 +63,7 @@ const ServicesSlider = () => {
                   </div>
                 </div>
                 <div className="service-item-body">
-                  <h3>Equipment Design</h3>
+                  <h3>Equipment</h3>
                   <p className="mb-0">
                     Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris
                     vel neque

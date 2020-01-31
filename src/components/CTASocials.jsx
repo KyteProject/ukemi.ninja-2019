@@ -16,7 +16,7 @@ const CTASocials = () => {
         <Row>
           <Col md={{ span: 8, offset: 2 }} sm={{ span: 10, offset: 1 }} className="text-center">
             <div className="block-title">
-              <h2 className="block-title-text cta-socials-title">Follow us</h2>
+              <h2 className="block-title-text cta-socials-title">Follow Us</h2>
             </div>
             <ul className="cta-social-icons">
               <li>
