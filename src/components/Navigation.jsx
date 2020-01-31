@@ -21,7 +21,7 @@ const Navigation = () => {
   const toggle = () => setNavOpen(!navOpen);
 
   return (
-    <Navbar collapseOnSelect expand="lg" sticky="top" className="header-navigation">
+    <Navbar collapseOnSelect expand="lg" fixed="top" className="header-navigation bg-white">
       <Container>
         <Navbar.Brand href="/">
           <img src="/logos/ukemi-logo.svg" alt="Ukemi Project text logo" />
@@ -32,7 +32,7 @@ const Navigation = () => {
           label="Toggle Navigation"
         />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="ml-auto">
             <Nav.Item>
               <Nav.Link href="/" className="nav-text">
                 Home

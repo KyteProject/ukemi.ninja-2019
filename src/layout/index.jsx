@@ -16,10 +16,8 @@ const MainLayout = ({ children, bodyClass }) => {
         <body className={bodyClass} />
       </Helmet>
       <div className="page-wrapper">
-        <div className="site-header">
-          <Navigation />
-        </div>
-        <main>{children}</main>
+        <Navigation />
+        <main className="content-wrapper">{children}</main>
         <Footer />
       </div>
     </>

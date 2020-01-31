@@ -60,24 +60,24 @@ const About = () => {
                 voluptas explicabo nulla nesciunt placeat sint sapiente?
               </p>
 
-              <span className="subtitle">Our Experience</span>
+              <span className="subtitle">Together We Have:</span>
               <Row className="bottom-text">
                 <Col md={4}>
                   <div>
-                    <span>43</span>
-                    <p>Years of Parkour (combined)</p>
+                    <span>46</span>
+                    <p>Years of Parkour</p>
                   </div>
                 </Col>
                 <Col md={4}>
                   <div>
-                    <span>17</span>
+                    <span>18</span>
                     <p>Years of Friendship</p>
                   </div>
                 </Col>
                 <Col md={4}>
                   <div>
-                    <span>1.5</span>
-                    <p>Years of Ukemi</p>
+                    <span>12</span>
+                    <p>Years of Coaching</p>
                   </div>
                 </Col>
               </Row>
