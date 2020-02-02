@@ -6,6 +6,7 @@ import {
   GiTeacher,
   GiTeamIdea,
   GiHammerNails,
+  GiAcrobatic,
 } from "react-icons/gi";
 import { FiMonitor } from "react-icons/fi";
 
@@ -41,11 +42,11 @@ const ServicesSlider = () => {
               <div className="service-item-content">
                 <div className="service-item-header">
                   <div className="icon icon-two">
-                    <FiMonitor size={80} />
+                    <GiAcrobatic size={80} />
                   </div>
                 </div>
                 <div className="service-item-body">
-                  <h3>Digital Design</h3>
+                  <h3>Performances</h3>
                   <p className="mb-0">
                     Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris
                     vel neque
