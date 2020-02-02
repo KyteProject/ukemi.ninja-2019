@@ -32,6 +32,19 @@ ul {
   list-style: none;
 }
 
+a {
+  color: $color-pink;
+  transition: all 0.5s;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none !important;
+  outline: none !important;
+
+  &:hover {
+    color: $color-lblue;
+  }
+}
+
 .page-wrapper {
   margin: 0 auto;
   width: 100%;

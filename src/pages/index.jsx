@@ -5,6 +5,7 @@ import config from "../../data/siteConfig";
 import { MetaData } from "../components/meta";
 import CTA2 from "../components/CTA2";
 import RecentPosts from "../components/RecentPosts";
+import FeaturedProjects from '../components/FeaturedProjects'
 import ServicesSlider from "../components/ServicesSlider";
 import Roadmap from "../components/Roadmap";
 import CTASocials from "../components/CTASocials";
@@ -23,7 +24,7 @@ const Index = ({ location }) => {
           nostrum facere asperiores culpa accusamus a eligendi neque officia dolor mollitia odit
           fugit distinctio incidunt, consequatur veritatis.
         </p>
-
+        <FeaturedProjects />
         <ServicesSlider />
         <CTASocials />
         <Roadmap />
