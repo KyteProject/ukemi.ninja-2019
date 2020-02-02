@@ -35,3 +35,16 @@
     box-shadow: 0 000;
   }
 }
+
+.cta-btn-blue {
+  color: $white;
+  background-color: $color7;
+  border-color: $color7;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-lblue;
+    border-color: $color-lblue;
+  }
+}

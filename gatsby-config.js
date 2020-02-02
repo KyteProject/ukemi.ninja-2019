@@ -83,6 +83,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-transition-link",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",

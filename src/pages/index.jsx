@@ -8,6 +8,7 @@ import RecentPosts from "../components/RecentPosts";
 import ServicesSlider from "../components/ServicesSlider";
 import Roadmap from "../components/Roadmap";
 import CTASocials from "../components/CTASocials";
+import CTAEmail from "../components/CTAEmail";
 
 const Index = ({ location }) => {
   return (
@@ -26,6 +27,7 @@ const Index = ({ location }) => {
         <ServicesSlider />
         <CTASocials />
         <Roadmap />
+        <CTAEmail />
         <RecentPosts />
         <CTA2 />
       </div>
