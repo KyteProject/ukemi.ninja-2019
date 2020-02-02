@@ -1,0 +1,59 @@
+.landing {
+  background: $color7;
+  background: -webkit-linear-gradient(to right, $color-lblue, $color-pink);
+  background: linear-gradient(to right, $color-lblue, $color-pink);
+  opacity: 0.8;
+  margin: 0 0 240px;
+  padding: 0;
+  position: relative;
+  height: 700px;
+}
+
+.landing-content {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.landing-content {
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-25%);
+  -webkit-transform: translateY(-25%);
+}
+
+.home-title {
+  line-height: 1.2;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 70px;
+  font-family: $font-head;
+  // letter-spacing: 0.2rem;
+}
+
+.home-sub-title {
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 600px;
+  font-family: $font-secondary;
+}
+
+.bg-overlay {
+  background: $color7;
+  background: -webkit-linear-gradient(to right, $color-pink, $color7);
+  background: linear-gradient(to right, $color-pink, $color7);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  opacity: 0.8;
+}
+
+.landing-btn {
+  margin-top: 2em;
+}
