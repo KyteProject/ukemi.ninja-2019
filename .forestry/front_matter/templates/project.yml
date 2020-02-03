@@ -25,15 +25,21 @@ fields:
     time_format: 
     display_utc: false
 - name: clients
-  type: tag_list
-  default: []
-  label: Client(s)
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Clients
   description: List of clients
 - name: partners
-  type: tag_list
-  default: []
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
   label: Partners
-  description: Project partners and collaborators
+  description: List of project partners and collaborators
 - name: objective
   type: textarea
   default: ''
