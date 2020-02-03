@@ -1,6 +1,7 @@
 ---
 clients: []
-partners: []
+partners:
+- Parkour Outreach
 name: Test project 1
 slug: test-1
 date: 2020-02-02T00:00:00Z
