@@ -9,7 +9,11 @@ const ProjectCard = ({ project }) => {
         <div className="project-single-image">
           {project.project_image && (
             <Link to={project.slug}>
-              <Card.Img variant="top" src={project.project_image.publicURL} alt={project.name} />
+              <Card.Img
+                variant="top"
+                src={project.project_image.replace("/src/images", "")}
+                alt={project.name}
+              />
             </Link>
           )}
         </div>

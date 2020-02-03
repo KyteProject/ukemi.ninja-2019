@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Container, Row, Col, Card, CardColumns } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
@@ -9,7 +8,7 @@ import { MetaData } from "../components/meta";
 import TitleSection from "../components/TitleSection";
 
 const Project = ({ data, location }) => {
-  const project = data.strapiProjects;
+  const project = data.markdownRemark.frontmatter;
 
   return (
     <>
@@ -30,7 +29,7 @@ const Project = ({ data, location }) => {
                 <div className="project-brief">
                   <ReactMarkdown source={project.brief} />
                 </div>
-                <div className="project-tags">{/*  */}</div>
+                {/* <div className="project-tags" /> */}
               </Col>
               <Col md={{ span: 4, offset: 1 }} className="project-details">
                 <div className="detail-block">
@@ -68,10 +67,10 @@ const Project = ({ data, location }) => {
             </Row>
             {/* eslint-disable react/jsx-indent */}
             <CardColumns className="ts-gallery ts-column-count-4">
-              {project.images
-                ? project.images.map((image) => (
-                    <Card className="ts-gallery-item" key={image.id}>
-                      <Card.Img src={`http://localhost:8777${image.url}`} alt={image.name} />
+              {project.project_gallery
+                ? project.project_gallery.map((image) => (
+                    <Card className="ts-gallery-item" key={image}>
+                      <Card.Img src={`${image.replace("/static", "")}`} />
                     </Card>
                   ))
                 : null}
@@ -83,36 +82,25 @@ const Project = ({ data, location }) => {
   );
 };
 
-Project.propTypes = {
-  data: PropTypes.shape({
-    strapiProjects: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      slug: PropTypes.string.isRequired,
-      brief: PropTypes.string.isRequired,
-      clients: PropTypes.string,
-      partners: PropTypes.string,
-      objective: PropTypes.string.isRequired,
-      date: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
-
 export default Project;
 
-export const query = graphql`
-  query ProjectTemplate($slug: String!) {
-    strapiProjects(slug: { eq: $slug }) {
-      name
-      slug
-      brief
-      clients
-      partners
-      objective
-      date(formatString: "MMMM, YYYY")
-      images {
-        id
+export const pageQuery = graphql`
+  query ProjectBySlug($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      frontmatter {
+        objective
+        partners
+        slug
         name
-        url
+        category
+        date(formatString: "MMMM, YYYY")
+        brief
+        featured
+        featured_image
+        project_gallery
+        project_image
       }
     }
   }

@@ -9,6 +9,16 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
       allGhostPost(sort: { order: ASC, fields: published_at }) {
         edges {
           node {
@@ -50,24 +60,6 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allStrapiProjects {
-        edges {
-          node {
-            brief
-            name
-            objective
-            slug
-            partners
-            clients
-            date
-            images {
-              url
-              id
-              name
-            }
-          }
-        }
-      }
     }
   `);
 
@@ -81,7 +73,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const authors = result.data.allGhostAuthor.edges;
   const pages = result.data.allGhostPage.edges;
   const posts = result.data.allGhostPost.edges;
-  const projects = result.data.allStrapiProjects.edges;
+  const projects = result.data.allMarkdownRemark.edges;
 
   // Load templates
   const tagsTemplate = path.resolve("./src/templates/tag.jsx");
@@ -90,6 +82,18 @@ exports.createPages = async ({ graphql, actions }) => {
   const pageTemplate = path.resolve("./src/templates/page.jsx");
   const postTemplate = path.resolve("./src/templates/post.jsx");
   const projectTemplate = path.resolve("./src/templates/project.jsx");
+
+  // Create Project pages
+  projects.forEach(({ node }) => {
+    createPage({
+      path: `projects/${node.frontmatter.slug}`,
+      component: projectTemplate,
+      context: {
+        slug: node.frontmatter.slug,
+        id: node.id,
+      },
+    });
+  });
 
   // Create tag pages
   tags.forEach(({ node }) => {
@@ -175,19 +179,6 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: node.url,
       component: postTemplate,
-      context: {
-        slug: node.slug,
-      },
-    });
-  });
-
-  // Create post pages
-  projects.forEach(({ node }) => {
-    node.url = `projects/${node.slug}/`;
-
-    createPage({
-      path: node.url,
-      component: projectTemplate,
       context: {
         slug: node.slug,
       },

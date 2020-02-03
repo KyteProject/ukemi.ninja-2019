@@ -6,21 +6,20 @@ const FeaturedProjects = () => {
   const data = useStaticQuery(
     graphql`
       query FeaturedProjectsQuery {
-        allStrapiProjects(
-          sort: { order: DESC, fields: updated_at }
-          limit: 2
-          filter: { featured: { eq: 1 } }
+        allMarkdownRemark(
+          sort: { fields: frontmatter___date, order: DESC }
+          filter: { frontmatter: { featured: { eq: true } } }
         ) {
           edges {
             node {
-              name
-              objective
-              slug
-              date
-              project_image {
-                publicURL
+              id
+              frontmatter {
+                name
+                objective
+                slug
+                date
+                featured_image
               }
-              featured
             }
           }
         }
@@ -28,7 +27,7 @@ const FeaturedProjects = () => {
     `
   );
 
-  const projects = data.allStrapiProjects.edges;
+  const projects = data.allMarkdownRemark.edges;
 
   return (
     <section className="featured-projects">
@@ -39,49 +38,53 @@ const FeaturedProjects = () => {
           </div>
         </Row>
 
-        <Row className="mt-4 pt-4 vertical-content">
-          <Col lg={6} className="mt-3 mb-3">
-            <div>
-              {projects[0].node.project_image && (
-                <img
-                  src={projects[0].node.project_image.publicURL}
-                  alt={projects[0].node.name}
-                  className="img-fluid mx-auto d-block"
-                />
-              )}
-            </div>
-          </Col>
-          <Col lg={6} className="mt-3 text-center">
-            <div className="features-desc">
-              <h2>{projects[0].node.name}</h2>
-              <div className="features-border mx-auto mt-3" />
-              <p className="text-muted mt-4">{projects[0].node.objective}</p>
-              <Link to={`projects/${projects[0].node.slug}`}>Read more →</Link>
-            </div>
-          </Col>
-        </Row>
+        {projects.length > 0 && (
+          <Row className="mt-4 pt-4 vertical-content">
+            <Col lg={6} className="mt-3 mb-3">
+              <div>
+                {projects[0].node.frontmatter.project_image && (
+                  <img
+                    src={projects[0].node.frontmatter.project_image}
+                    alt={projects[0].node.frontmatter.name}
+                    className="img-fluid mx-auto d-block"
+                  />
+                )}
+              </div>
+            </Col>
+            <Col lg={6} className="mt-3 text-center">
+              <div className="features-desc">
+                <h2>{projects[0].node.frontmatter.name}</h2>
+                <div className="features-border mx-auto mt-3" />
+                <p className="text-muted mt-4">{projects[0].node.frontmatter.objective}</p>
+                <Link to={`projects/${projects[0].node.frontmatter.slug}`}>Read more →</Link>
+              </div>
+            </Col>
+          </Row>
+        )}
 
-        <Row className="mt-5 vertical-content">
-          <Col lg={6} className="mt-3 mb-3">
-            <div className="features-desc text-center">
-              <h2>{projects[1].node.name}</h2>
-              <div className="features-border mx-auto mt-3" />
-              <p className="text-muted mt-4">{projects[1].node.objective}</p>
-              <Link to={`projects/${projects[1].node.slug}`}>Read more →</Link>
-            </div>
-          </Col>
-          <Col lg={6} className="mt-3 text-center">
-            <div>
-              {projects[1].node.project_image && (
-                <img
-                  src={projects[1].node.project_image.publicURL}
-                  alt={projects[1].node.name}
-                  className="img-fluid mx-auto d-block"
-                />
-              )}
-            </div>
-          </Col>
-        </Row>
+        {projects.length > 1 && (
+          <Row className="mt-5 vertical-content">
+            <Col lg={6} className="mt-3 mb-3">
+              <div className="features-desc text-center">
+                <h2>{projects[1].node.frontmatter.name}</h2>
+                <div className="features-border mx-auto mt-3" />
+                <p className="text-muted mt-4">{projects[1].node.frontmatter.objective}</p>
+                <Link to={`projects/${projects[1].node.frontmatter.slug}`}>Read more →</Link>
+              </div>
+            </Col>
+            <Col lg={6} className="mt-3 text-center">
+              <div>
+                {projects[1].node.frontmatter.project_image && (
+                  <img
+                    src={projects[1].node.frontmatter.project_image}
+                    alt={projects[1].node.frontmatter.name}
+                    className="img-fluid mx-auto d-block"
+                  />
+                )}
+              </div>
+            </Col>
+          </Row>
+        )}
       </Container>
     </section>
   );

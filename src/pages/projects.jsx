@@ -11,18 +11,17 @@ const Projects = ({ location }) => {
   const data = useStaticQuery(
     graphql`
       query AllProjectsQuery {
-        allStrapiProjects(limit: 9, sort: { order: DESC, fields: updated_at }) {
+        allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
           edges {
             node {
               id
-              updated_at
-              name
-              objective
-              slug
-              date
-              category
-              project_image {
-                publicURL
+              frontmatter {
+                date
+                name
+                project_image
+                slug
+                objective
+                category
               }
             }
           }
@@ -31,7 +30,7 @@ const Projects = ({ location }) => {
     `
   );
 
-  const projects = data.allStrapiProjects.edges;
+  const projects = data.allMarkdownRemark.edges;
 
   return (
     <MainLayout>
@@ -41,9 +40,12 @@ const Projects = ({ location }) => {
         <section className="projects-page">
           <Container>
             <Row>
-              {projects.map(({ node }) => (
-                <ProjectCard key={node.id} project={node} />
-              ))}
+              {projects.length > 0
+                ? /* prettier-ignore */
+                  projects.map(({ node }) =>
+                    <ProjectCard key={node.id} project={node.frontmatter} />
+                )
+                : null}
             </Row>
           </Container>
         </section>

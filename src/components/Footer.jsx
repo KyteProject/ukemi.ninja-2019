@@ -5,19 +5,25 @@ import { Nav, Container } from "react-bootstrap";
 import config from "../../data/siteConfig";
 
 const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query ProjectsQuery {
-      allStrapiProjects(limit: 9, sort: { order: ASC, fields: name }) {
-        edges {
-          node {
-            name
-            slug
+  const data = useStaticQuery(
+    graphql`
+      query AllFooterProjectsQuery {
+        allMarkdownRemark(sort: { fields: frontmatter___name, order: ASC }) {
+          edges {
+            node {
+              id
+              frontmatter {
+                name
+                slug
+              }
+            }
           }
         }
       }
-    }
-  `);
-  const projects = data.allStrapiProjects.edges;
+    `
+  );
+
+  const projects = data.allMarkdownRemark.edges;
   // url = config.siteRss,
   const { copyright } = config;
 
@@ -82,11 +88,17 @@ const Footer = () => {
             <div className="footer-col-wrap">
               <h6 className="footer-col-title">Projects</h6>
               <div className="footer-nav-list">
-                {projects.map(({ node }) => (
-                  <Link key={node.slug} to={`/projects/${node.slug}`} className="footer-link">
-                    {node.name}
-                  </Link>
-                ))}
+                {projects.length >= 1
+                  ? /* prettier-ignore */
+                    projects.map(({ node }) => (
+                      <Link
+                        key={node.id}
+                        to={`/projects/${node.frontmatter.slug}`}
+                        className="footer-link">
+                        {node.frontmatter.name}
+                      </Link>
+                  ))
+                  : null}
               </div>
             </div>
           </div>

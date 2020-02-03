@@ -1,10 +1,32 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import { Container, Row, Col } from "react-bootstrap";
+
 import CTASocials from "./CTASocials";
 import CTAEmail from "./CTAEmail";
 import CTA from "./CTA";
 
 const About = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      team: file(relativePath: { eq: "about-team.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      story: file(relativePath: { eq: "about-story.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className="about-section">
       <section className="about">
@@ -32,8 +54,13 @@ const About = () => {
                 quo, ipsam rerum animi harum laboriosam voluptate.
               </p>
             </Col>
-            <Col md={6} className="img-right">
-              <img src="/images/about-team.svg" alt="Ukemi team" />
+            <Col lg md={6} className="img-right">
+              {/* <img src="/images/about-team.svg" alt="Ukemi team" /> */}
+              <Img
+                fixed={data.team.childImageSharp.fluid}
+                alt="Ukemi team"
+                className="image-team"
+              />
             </Col>
           </Row>
         </Container>
@@ -43,7 +70,8 @@ const About = () => {
         <Container>
           <Row>
             <Col lg md={6}>
-              <img src="/images/about-story.svg" alt="Ukemi Back Story" />
+              {/* <img src="/images/about-story.svg" alt="Ukemi Back Story" /> */}
+              <Img fluid={data.story.childImageSharp.fluid} alt="Ukemi backstory" />
             </Col>
 
             <Col lg md={6} className="mx-auto pl-5">

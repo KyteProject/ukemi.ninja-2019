@@ -44,11 +44,45 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-strapi",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        apiURL: "http://localhost:8777",
-        contentTypes: ["projects"],
-        queryLimit: 1000,
+        name: `projects`,
+        path: path.join(__dirname, "src", "content", "projects"),
+      },
+    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `projects`,
+    //     path: `${__dirname}/src/content/posts`,
+    //   },
+    // },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          // {
+          //   resolve: "gatsby-remark-normalize-paths",
+          //   options: {
+          //     pathFields: ["featured_image", "project_image", "project_gallery"],
+          //   },
+          // },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          "gatsby-remark-prismjs",
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
+        ],
       },
     },
     {

@@ -3,20 +3,24 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Nav, NavDropdown, Navbar, Container } from "react-bootstrap";
 
 const Navigation = () => {
-  const data = useStaticQuery(graphql`
-    query NavProjectsQuery {
-      allStrapiProjects(limit: 9, sort: { order: ASC, fields: name }) {
-        edges {
-          node {
-            name
-            slug
+  const data = useStaticQuery(
+    graphql`
+      query AllNavigationProjectsQuery {
+        allMarkdownRemark(sort: { fields: frontmatter___name, order: ASC }) {
+          edges {
+            node {
+              id
+              frontmatter {
+                name
+                slug
+              }
+            }
           }
         }
       }
-    }
-  `);
-
-  const projects = data.allStrapiProjects.edges;
+    `
+  );
+  const projects = data.allMarkdownRemark.edges;
   const [navOpen, setNavOpen] = useState(false);
   const toggle = () => setNavOpen(!navOpen);
 
@@ -56,14 +60,17 @@ const Navigation = () => {
             <NavDropdown title="Projects" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="/projects">Overview</NavDropdown.Item>
               <NavDropdown.Divider />
-              {projects.map(({ node }) => (
-                <NavDropdown.Item
-                  key={node.slug}
-                  href={`/projects/${node.slug}`}
-                  className="nav-text">
-                  {node.name}
-                </NavDropdown.Item>
-              ))}
+              {projects.length > 0
+                ? /* prettier-ignore */
+                  projects.map(({ node }) => (
+                    <NavDropdown.Item
+                      key={node.id}
+                      href={`/projects/${node.frontmatter.slug}`}
+                      className="nav-text">
+                      {node.frontmatter.name}
+                    </NavDropdown.Item>
+                  ))
+                : null}
             </NavDropdown>
             <Nav.Item>
               <Nav.Link href="/shop" className="nav-text">
