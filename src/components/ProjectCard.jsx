@@ -28,7 +28,7 @@ const ProjectCard = ({ project }) => {
           <Card.Subtitle className="project-single-meta">{/*  */}</Card.Subtitle>
 
           <Card.Text>{project.objective}</Card.Text>
-          <Card.Link href={`projects/${project.slug}`}>Read More →</Card.Link>
+          <Card.Link href={`${project.slug}`}>Read More →</Card.Link>
         </Card.Body>
       </Card>
     </Col>
