@@ -70,7 +70,7 @@ const Project = ({ data, location }) => {
               {project.project_gallery
                 ? project.project_gallery.map((image) => (
                     <Card className="ts-gallery-item" key={image}>
-                      <Card.Img src={`${image.replace("/src/images", "")}`} />
+                      <Card.Img src={`${image.replace("/static", "")}`} />
                     </Card>
                   ))
                 : null}

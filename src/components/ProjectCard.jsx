@@ -8,10 +8,10 @@ const ProjectCard = ({ project }) => {
       <Card className="project-single">
         <div className="project-single-image">
           {project.project_image && (
-            <Link to={project.slug}>
+            <Link to={`projects/${project.slug}`}>
               <Card.Img
                 variant="top"
-                src={project.project_image.replace("/src/images", "")}
+                src={project.project_image.replace("/static", "")}
                 alt={project.name}
               />
             </Link>

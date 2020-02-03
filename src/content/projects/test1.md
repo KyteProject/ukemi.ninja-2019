@@ -16,13 +16,12 @@ brief: |-
 
   Culpa, recusandae!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolores, quaerat esse nihil omnis porro assumenda unde repudiandae corrupti repellat illo cum hic perferendis quos dolorem laboriosam voluptatum? Culpa, recusandae!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolores, quaerat esse nihil omnis porro assumenda unde repudiandae corrupti repellat illo cum hic perferendis quos dolorem laboriosam voluptatum? Culpa, recusandae!
 featured: true
-featured_image: "/src/images/uploads/mc-mock-holder.png"
-project_image: "/src/images/uploads/mc-mock-gloss.jpg"
+featured_image: "/static/images/uploads/mc-mock-holder.png"
+project_image: "/static/images/uploads/mc-mock-gloss.jpg"
 project_gallery:
-  - "/src/images/uploads/1382349091553-1.jpg"
-  - "/src/images/uploads/1375119768512.gif"
-  - "/src/images/uploads/1372660599992.jpg"
-  - "/src/images/uploads/1383415724465.jpg"
-  - "/src/images/uploads/1377077672881.jpg"
-#
+  - "/static/images/uploads/1382349091553-1.jpg"
+  - "/static/images/uploads/1375119768512.gif"
+  - "/static/images/uploads/1372660599992.jpg"
+  - "/static/images/uploads/1383415724465.jpg"
+  - "/static/images/uploads/1377077672881.jpg"
 ---
