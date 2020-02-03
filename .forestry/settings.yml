@@ -6,9 +6,11 @@ webhook_url:
 sections:
 - type: directory
   path: src/content/projects
-  label: projects
+  label: Projects
   create: all
   match: "**/*"
+  templates:
+  - project
 - type: directory
   path: src/content/posts
   label: Posts
