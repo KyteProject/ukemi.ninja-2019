@@ -1,4 +1,84 @@
 ---
 label: Project
 hide_body: false
-fields: []
+display_field: name
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+  description: Project name
+- name: slug
+  type: text
+  config:
+    required: true
+  label: Slug
+  description: URL slug
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: true
+    date_format: DD/MM/YYYY
+    time_format: 
+    display_utc: false
+- name: clients
+  type: tag_list
+  default: []
+  label: Client(s)
+  description: List of clients
+- name: partners
+  type: tag_list
+  default: []
+  label: Partners
+  description: Project partners and collaborators
+- name: objective
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+    min: '200'
+    max: '400'
+  label: Objective
+  description: A short description of the project objective
+- name: brief
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+    min: '1000'
+  label: Brief
+  description: The project brief/full write-up
+- name: featured
+  type: boolean
+  label: Featured
+  description: Should this project be featured on the home page?
+- name: featured_image
+  type: file
+  config:
+    maxSize: 250
+  label: Featured Image
+  description: Image to be shown if featured
+  hidden: false
+  showOnly:
+    field: featured
+    value: true
+- name: project_image
+  type: file
+  config:
+    maxSize: 250
+  label: Project Image
+  description: The main project image
+- name: project_gallery
+  type: image_gallery
+  config: {}
+  label: Project Gallery
+  description: Project images 8 Max!
