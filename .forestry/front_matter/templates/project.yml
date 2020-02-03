@@ -76,6 +76,7 @@ fields:
   - name: featured_image
     type: file
     config:
+      required: true
       maxSize: 250
     label: Featured Image
     description: Image to be shown if featured
@@ -86,6 +87,7 @@ fields:
   - name: project_image
     type: file
     config:
+      required: true
       maxSize: 250
     label: Project Image
     description: The main project image
