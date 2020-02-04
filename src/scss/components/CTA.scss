@@ -120,18 +120,19 @@
 }
 
 .cta-social-icons > li > a {
+  transition: all 0s;
   display: block;
   color: $color14;
 }
 
 .cta-social-icons > li > a:hover {
   svg {
-    transition: all 0.5s ease;
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
+    transition: all 0.4s linear;
   }
 }
 
