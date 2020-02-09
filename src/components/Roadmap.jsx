@@ -1,7 +1,42 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Roadmap = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      one: file(relativePath: { eq: "steps/1.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed_noBase64
+          }
+        }
+      }
+      two: file(relativePath: { eq: "steps/2.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed_noBase64
+          }
+        }
+      }
+      three: file(relativePath: { eq: "steps/3.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed_noBase64
+          }
+        }
+      }
+      four: file(relativePath: { eq: "steps/4.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed_noBase64
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <section className="roadmap">
       <Container>
@@ -26,7 +61,7 @@ const Roadmap = () => {
           <Row>
             <Col md={{ span: 4, offset: 1 }}>
               <div className="steps-img left-img">
-                <img src="images/steps/1.png" alt="Stage one" />
+                <Img fixed={data.one.childImageSharp.fixed} alt="Stage one" />
               </div>
             </Col>
             <Col md={{ span: 4, offset: 2 }}>
@@ -58,7 +93,7 @@ const Roadmap = () => {
             </Col>
             <Col md={{ span: 4, offset: 2 }}>
               <div className="steps-img right-img">
-                <img src="images/steps/2.png" alt="Stage two" />
+                <Img fixed={data.two.childImageSharp.fixed} alt="Stage two" />
               </div>
             </Col>
           </Row>
@@ -66,7 +101,7 @@ const Roadmap = () => {
           <Row>
             <Col md={{ span: 4, offset: 1 }}>
               <div className="steps-img left-img">
-                <img src="images/steps/3.png" alt="Stage three" />
+                <Img fixed={data.three.childImageSharp.fixed} alt="Stage three" />
               </div>
             </Col>
             <Col md={{ span: 4, offset: 2 }}>
@@ -98,7 +133,7 @@ const Roadmap = () => {
             </Col>
             <Col md={{ span: 4, offset: 2 }}>
               <div className="steps-img right-img">
-                <img src="images/steps/4.png" alt="Stage four" />
+                <Img fixed={data.four.childImageSharp.fixed} alt="Stage four" />
               </div>
             </Col>
           </Row>

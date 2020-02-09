@@ -12,15 +12,15 @@ const About = () => {
     query {
       team: file(relativePath: { eq: "about-team.png" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_noBase64
+          fixed {
+            ...GatsbyImageSharpFixed_noBase64
           }
         }
       }
       story: file(relativePath: { eq: "about-story.png" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_noBase64
+          fixed {
+            ...GatsbyImageSharpFixed_noBase64
           }
         }
       }
@@ -55,12 +55,12 @@ const About = () => {
               </p>
             </Col>
             <Col lg md={6} className="img-right">
-              {/* <img src="/images/about-team.svg" alt="Ukemi team" /> */}
-              <Img
-                fixed={data.team.childImageSharp.fluid}
+              <img src="images/about-team.png" alt="Ukemi team" />
+              {/* <Img
+                fixed={data.team.childImageSharp.fixed}
                 alt="Ukemi team"
                 className="image-team"
-              />
+              /> */}
             </Col>
           </Row>
         </Container>
@@ -70,8 +70,8 @@ const About = () => {
         <Container>
           <Row>
             <Col lg md={6}>
-              {/* <img src="/images/about-story.svg" alt="Ukemi Back Story" /> */}
-              <Img fluid={data.story.childImageSharp.fluid} alt="Ukemi backstory" />
+              <img src="images/about-story.png" alt="Ukemi Back Story" />
+              {/* <Img fixed={data.story.childImageSharp.fixed} alt="Ukemi backstory" /> */}
             </Col>
 
             <Col lg md={6} className="mx-auto pl-5">

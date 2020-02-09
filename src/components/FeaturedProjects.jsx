@@ -28,6 +28,7 @@ const FeaturedProjects = () => {
   );
 
   const projects = data.allMarkdownRemark.edges;
+  console.log(projects);
 
   return (
     <section className="featured-projects">
@@ -42,9 +43,9 @@ const FeaturedProjects = () => {
           <Row className="mt-4 pt-4 vertical-content">
             <Col lg={6} className="mt-3 mb-3">
               <div>
-                {projects[0].node.frontmatter.project_image && (
+                {projects[0].node.frontmatter.featured_image && (
                   <img
-                    src={projects[0].node.frontmatter.project_image}
+                    src={projects[0].node.frontmatter.featured_image.replace("/static", " ")}
                     alt={projects[0].node.frontmatter.name}
                     className="img-fluid mx-auto d-block"
                   />
@@ -74,9 +75,9 @@ const FeaturedProjects = () => {
             </Col>
             <Col lg={6} className="mt-3 text-center">
               <div>
-                {projects[1].node.frontmatter.project_image && (
+                {projects[1].node.frontmatter.featured_image && (
                   <img
-                    src={projects[1].node.frontmatter.project_image}
+                    src={projects[1].node.frontmatter.featured_image.replace("/static", " ")}
                     alt={projects[1].node.frontmatter.name}
                     className="img-fluid mx-auto d-block"
                   />
