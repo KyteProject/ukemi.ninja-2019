@@ -67,7 +67,7 @@ const Contact = () => {
                 </div>
                 <h2 className="title">Contact Info</h2>
                 <p className="text">
-                  founders@ukemi.ninja
+                  hello@ukemi.ninja
                   <br />
                   support@ukemi.ninja
                 </p>

@@ -39,8 +39,6 @@ const Footer = () => {
               <span className="text-white">受け身</span>
               <br />
               Movement inspired design specialists.
-              <br />
-              <strong>Be Dauntless.</strong>
             </p>
           </div>
 

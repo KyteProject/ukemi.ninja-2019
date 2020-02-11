@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
+import { GoProject } from "react-icons/go";
+import { GiNinjaHead, GiCardPlay } from "react-icons/gi";
 
 const FeaturedProjects = () => {
   const data = useStaticQuery(
@@ -52,7 +54,10 @@ const FeaturedProjects = () => {
                 )}
               </div>
             </Col>
-            <Col lg={6} className="mt-3 text-center">
+            <Col lg={6} className="mt-3">
+              <div className="featured-icon">
+                <GiCardPlay />
+              </div>
               <div className="features-desc">
                 <h2>{projects[0].node.frontmatter.name}</h2>
                 <div className="features-border mx-auto mt-3" />
@@ -66,14 +71,17 @@ const FeaturedProjects = () => {
         {projects.length > 1 && (
           <Row className="mt-5 vertical-content">
             <Col lg={6} className="mt-3 mb-3">
-              <div className="features-desc text-center">
+              <div className="featured-icon">
+                <GiNinjaHead />
+              </div>
+              <div className="features-desc">
                 <h2>{projects[1].node.frontmatter.name}</h2>
                 <div className="features-border mx-auto mt-3" />
                 <p className="text-muted mt-4">{projects[1].node.frontmatter.objective}</p>
                 <Link to={`projects/${projects[1].node.frontmatter.slug}`}>Read more →</Link>
               </div>
             </Col>
-            <Col lg={6} className="mt-3 text-center">
+            <Col lg={6} className="mt-3">
               <div>
                 {projects[1].node.frontmatter.featured_image && (
                   <img

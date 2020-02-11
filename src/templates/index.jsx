@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 
 import MainLayout from "../layout";
@@ -36,10 +36,16 @@ const Index = ({ data, location, pageContext }) => {
                     <h4 className="widget-title">
                       <span>Categories</span>
                     </h4>
-                    <div className="widget-content">
-                      {cats.map(({ node }) => (
-                        <CategoryItem key={node.id} item={node} />
-                      ))}
+                    <div className="tag-list">
+                      <ul>
+                        {cats.map(({ node }) => (
+                          <li>
+                            <Link key={node.id} to={`/blog/tag/${node.slug}`}>
+                              {node.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </aside>
                   <aside className="widget widget-tags">
