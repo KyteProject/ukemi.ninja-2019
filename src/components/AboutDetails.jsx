@@ -1,16 +1,13 @@
 import React from "react";
 import { Container, Row, Col, Figure } from "react-bootstrap";
 
-import CTASocials from "./CTASocials";
-import CTAEmail from "./CTAEmail";
-
-const About = () => {
+const AboutDetails = () => {
   return (
     <>
-      <section className="about-section">
+      <section className="about-details">
         <Container className="inner">
-          <Row>
-            <Col md={6} className="pt-2">
+          <Row className="align-items-center service-row">
+            <Col lg={6}>
               <h1 className="title">
                 we are <strong>UKEMI</strong>.
               </h1>
@@ -32,25 +29,20 @@ const About = () => {
                 quo, ipsam rerum animi harum laboriosam voluptate.
               </p>
             </Col>
-            <Col lg md={6}>
+            <Col lg={6} className="service-body-r">
               <Figure>
                 <Figure.Image src="/images/group-jump2912194@2x.png" alt="Group jumping" />
               </Figure>
             </Col>
           </Row>
-        </Container>
-      </section>
 
-      <section className="story">
-        <Container>
-          <Row>
-            <Col lg md={6}>
+          <Row className="align-items-center">
+            <Col lg={6}>
               <Figure>
                 <Figure.Image src="/images/group-reading2868867@2x.png" alt="Group reading books" />
               </Figure>
             </Col>
-
-            <Col lg md={6} className="mx-auto pl-5">
+            <Col lg={6} className="service-body">
               <h2 className="title text-left">
                 a lifelong <strong>TEAM</strong>.
               </h2>
@@ -93,10 +85,8 @@ const About = () => {
           </Row>
         </Container>
       </section>
-      <CTASocials />
-      <CTAEmail />
     </>
   );
 };
 
-export default About;
+export default AboutDetails;

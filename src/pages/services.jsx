@@ -7,13 +7,13 @@ import TitleSection from "../components/TitleSection";
 import LetsTalk from "../components/LetsTalk";
 import FAQ from "../components/FAQ";
 import Brands from "../components/Brands";
+import ServiceDetails from "../components/ServiceDetails";
 
 const services = ({ location }) => {
   return (
     <MainLayout>
       <MetaData title="Services" location={location} />
       <TitleSection location={location} crumbLabel="Services" />
-
       <Container className="inner">
         <h2 className="title text-center">Our Services</h2>
         <h3 className="subtitle text-center">
@@ -33,6 +33,7 @@ const services = ({ location }) => {
           </Col>
         </Row>
       </Container>
+      <ServiceDetails />
       <Brands />
       <FAQ />
       <LetsTalk />

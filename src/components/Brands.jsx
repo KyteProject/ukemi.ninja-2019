@@ -50,7 +50,7 @@ const Brands = () => {
   return (
     <>
       <section className="brands">
-        <Container className="inner">
+        <Container className="inner pt-0">
           <h2 className="subtitle text-center"> Brands we've worked with</h2>
           <Slider className="brands-slider" {...settings}>
             {brands.map(({ node }) => (

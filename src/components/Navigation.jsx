@@ -44,12 +44,7 @@ const Navigation = () => {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/about" className="nav-text">
-                About
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/blog" className="nav-text">
-                Blog
+                About Us
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -75,6 +70,11 @@ const Navigation = () => {
             <Nav.Item>
               <Nav.Link href="/shop" className="nav-text">
                 Shop
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/blog" className="nav-text">
+                Blog
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
