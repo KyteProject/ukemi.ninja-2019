@@ -57,6 +57,19 @@ a {
   padding-top: 86px;
 }
 
+.fill-dark {
+  fill: $color7;
+}
+
+.fill-grey {
+  fill: $light;
+}
+
+.fill-default {
+  fill: $white;
+  background-color: $light;
+}
+
 .title {
   font-size: 42px;
   color: $color7;

@@ -116,8 +116,6 @@ const About = () => {
           </Row>
         </Container>
       </section>
-
-      <CTA />
       <CTASocials />
       <CTAEmail />
     </div>

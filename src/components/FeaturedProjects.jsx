@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
-import { GoProject } from "react-icons/go";
 import { GiNinjaHead, GiCardPlay } from "react-icons/gi";
 
 const FeaturedProjects = () => {
@@ -30,7 +29,6 @@ const FeaturedProjects = () => {
   );
 
   const projects = data.allMarkdownRemark.edges;
-  console.log(projects);
 
   return (
     <section className="featured-projects">

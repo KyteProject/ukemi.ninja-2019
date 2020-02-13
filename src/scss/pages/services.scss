@@ -1,0 +1,55 @@
+.inner {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.figure {
+  margin: 0;
+  padding: 0;
+}
+
+.lets-talk-text {
+  padding-left: 3rem;
+}
+
+.lets-talk-text h2 {
+  font-size: 1rem;
+  line-height: 1.1rem;
+  margin-bottom: 1.05rem;
+  text-transform: uppercase;
+}
+
+.lets-talk-text h3 {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: normal;
+  margin-top: 0;
+  color: $color7;
+  letter-spacing: normal;
+  margin-bottom: 0.8rem;
+}
+
+.lets-talk-text p {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.faq {
+  // background-color: $light;
+}
+
+.faq h2 {
+  color: $color7;
+  font-size: 2rem;
+  line-height: 1.1rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.faq h3 {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 2.5rem;
+}

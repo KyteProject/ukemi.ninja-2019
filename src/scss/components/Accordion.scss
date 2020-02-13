@@ -1,0 +1,84 @@
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 5px 20px 0px !important;
+  transition: all 200ms ease-in-out;
+}
+
+.accordion .card {
+  background-clip: border-box;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 1rem;
+}
+.accordion .card {
+  border-radius: 0.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.accordion .card-title {
+  margin-bottom: 0;
+}
+.accordion .card-text:last-child {
+  margin-bottom: 0;
+}
+.accordion .card-body {
+  padding: 0 1.25rem 1rem 2.5rem;
+}
+.accordion .card-header {
+  background: none;
+  border: 0;
+}
+
+.accordion .card-header button {
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 700;
+  border: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transition: all 200ms ease-in-out;
+}
+.accordion .card-header button {
+  color: var(--color-default);
+}
+.accordion .card-header button.collapsed {
+  color: #404040;
+}
+.accordion .card-header button:hover {
+  color: var(--color-default);
+}
+.accordion .card-header > * {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.25rem;
+}
+.accordion .card-header button:before {
+  font-family: "FontAwesome";
+  content: "\f054";
+  font-size: 1rem;
+  font-weight: normal;
+  width: 1.5rem;
+  display: inline-block;
+  vertical-align: -2px;
+  color: var(--color-default);
+}
+.accordion .card-header button:focus:before {
+  content: "\f078";
+}
+.accordion.simple .card {
+  background: none;
+  border-radius: 0;
+  margin-bottom: 0.1rem;
+}
+.accordion.simple .card-header,
+.accordion.simple .card-block,
+.accordion.simple .card-body {
+  padding: 0;
+}
+.accordion.simple .card-body {
+  padding-left: 1.5rem;
+}
+.accordion.simple .card-header {
+  margin-bottom: 0.8rem;
+}
