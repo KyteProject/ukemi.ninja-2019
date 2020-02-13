@@ -24,25 +24,24 @@ const Brands = () => {
   const brands = data.allFile.edges;
 
   const settings = {
-    arrows: false,
-    dots: false,
+    className: "center",
     infinite: true,
-    speed: 300,
+    centerPadding: "60px",
     slidesToShow: 5,
-    slidesToScroll: 1,
+    autoplay: true,
+    speed: 300,
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 770,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
         },
       },
     ],
@@ -51,21 +50,12 @@ const Brands = () => {
   return (
     <>
       <section className="brands">
-        {/* <Container>
-          <div className="block-title">
-            <h2 className="block-title-text">
-              Discover Our <br />
-              Recent Articles
-            </h2>
-          </div>
-        </Container> */}
-
         <Container className="inner">
           <h2 className="subtitle text-center"> Brands we've worked with</h2>
           <Slider className="brands-slider" {...settings}>
             {brands.map(({ node }) => (
               <div key={node.id}>
-                <Img fixed={node.childImageSharp.fixed} />
+                <Img fixed={node.childImageSharp.fixed} className="brands-image" />
               </div>
             ))}
           </Slider>

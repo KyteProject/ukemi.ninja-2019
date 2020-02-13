@@ -8,9 +8,13 @@
   padding: 0;
 }
 
-// .figure > .service-image {
-//   margin-top: -2rem;
-// }
+.brands-image img {
+  opacity: 0.8;
+  transition: all 200ms ease-in-out;
+}
+.brands-image img:hover {
+  opacity: 1;
+}
 
 .lets-talk-text {
   padding-left: 3rem;

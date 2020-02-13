@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Figure, Image } from "react-bootstrap";
+import { Container, Row, Col, Figure } from "react-bootstrap";
 
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
