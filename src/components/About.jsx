@@ -68,6 +68,7 @@ const About = () => {
               </p>
 
               <span className="subtitle">Together We Have:</span>
+              <br className="d-none d-lg-block" />
               <Row className="bottom-text">
                 <Col md={4}>
                   <div>
