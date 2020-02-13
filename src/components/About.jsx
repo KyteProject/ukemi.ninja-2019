@@ -1,36 +1,14 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Figure } from "react-bootstrap";
 
 import CTASocials from "./CTASocials";
 import CTAEmail from "./CTAEmail";
-import CTA from "./CTA";
 
 const About = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      team: file(relativePath: { eq: "about-team.png" }) {
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed_noBase64
-          }
-        }
-      }
-      story: file(relativePath: { eq: "about-story.png" }) {
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed_noBase64
-          }
-        }
-      }
-    }
-  `);
-
   return (
-    <div className="about-section">
-      <section className="about">
-        <Container>
+    <>
+      <section className="about-section">
+        <Container className="inner">
           <Row>
             <Col md={6} className="pt-2">
               <h1 className="title">
@@ -54,13 +32,10 @@ const About = () => {
                 quo, ipsam rerum animi harum laboriosam voluptate.
               </p>
             </Col>
-            <Col lg md={6} className="img-right">
-              <img src="images/about-team.png" alt="Ukemi team" />
-              {/* <Img
-                fixed={data.team.childImageSharp.fixed}
-                alt="Ukemi team"
-                className="image-team"
-              /> */}
+            <Col lg md={6}>
+              <Figure>
+                <Figure.Image src="/images/group-jump2912194@2x.png" alt="Group jumping" />
+              </Figure>
             </Col>
           </Row>
         </Container>
@@ -70,8 +45,9 @@ const About = () => {
         <Container>
           <Row>
             <Col lg md={6}>
-              <img src="images/about-story.png" alt="Ukemi Back Story" />
-              {/* <Img fixed={data.story.childImageSharp.fixed} alt="Ukemi backstory" /> */}
+              <Figure>
+                <Figure.Image src="/images/group-reading2868867@2x.png" alt="Group reading books" />
+              </Figure>
             </Col>
 
             <Col lg md={6} className="mx-auto pl-5">
@@ -118,7 +94,7 @@ const About = () => {
       </section>
       <CTASocials />
       <CTAEmail />
-    </div>
+    </>
   );
 };
 
