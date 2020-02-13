@@ -27,7 +27,12 @@ const LetsTalk = () => {
                 urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Aenean lacinia
                 bibendum nulla sed consectetur.
               </p>
-              <Button as="a">Get Started</Button> <Button as="a">Contact Us</Button>
+              <Button as="a" className="cta-btn-blue" href="#">
+                Get Started
+              </Button>{" "}
+              <Button as="a" href="#" className="cta-btn-pink">
+                Contact Us
+              </Button>
             </Col>
           </Row>
         </Container>
