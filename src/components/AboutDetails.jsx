@@ -46,8 +46,6 @@ const AboutDetails = () => {
               <h2 className="title text-left">
                 a lifelong <strong>TEAM</strong>.
               </h2>
-
-              <span className="subtitle">Our Story</span>
               <p className="about-text">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis nam maxime
                 autem assumenda ea, recusandae vitae similique accusantium id nobis, voluptatibus
@@ -60,25 +58,18 @@ const AboutDetails = () => {
               </p>
 
               <span className="subtitle">Together We Have:</span>
-              <br className="d-none d-lg-block" />
-              <Row className="bottom-text">
-                <Col md={4}>
-                  <div>
-                    <span>46</span>
-                    <p>Years of Parkour</p>
-                  </div>
+              <Row className="counter">
+                <Col md={4} className="text-center">
+                  <h3>46</h3>
+                  <p>Years of Parkour</p>
                 </Col>
-                <Col md={4}>
-                  <div>
-                    <span>18</span>
-                    <p>Years of Friendship</p>
-                  </div>
+                <Col md={4} className="text-center">
+                  <h3>18</h3>
+                  <p>Years of Friendship</p>
                 </Col>
-                <Col md={4}>
-                  <div>
-                    <span>12</span>
-                    <p>Years of Coaching</p>
-                  </div>
+                <Col md={4} className="text-center">
+                  <h3>16</h3>
+                  <p>Years of Coaching</p>
                 </Col>
               </Row>
             </Col>

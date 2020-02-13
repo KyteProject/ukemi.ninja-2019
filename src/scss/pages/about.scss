@@ -1,54 +1,21 @@
 /**************************
 	About
 ***************************/
-.about-section {
-  .about-text {
-    font-size: 16px;
-    color: #828893;
-    line-height: 26px;
-  }
-
-  .story {
-    padding-bottom: 100px;
-
-    .bottom-text {
-      margin-top: 25px;
-
-      span {
-        text-align: center;
-        margin-bottom: 10px;
-        display: block;
-        color: #1c3547;
-        font-weight: 700;
-        font-size: 26px;
-      }
-
-      p {
-        text-align: center;
-        display: block;
-      }
-    }
-  }
-
-  .cta {
-    background-color: $color-lblue;
-    padding-bottom: 50px;
-    padding-top: 50px;
-  }
-
-  .cta-text {
-    span {
-      color: $white;
-      display: block;
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      font-size: 32px;
-    }
-  }
+.counter {
+  margin-top: 1rem;
 }
 
-.image-team > picture > img {
-  position: relative !important;
+.counter h3 {
+  font-size: 2.3rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  color: $color7;
+}
+
+.counter p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  line-height: 1.1rem;
+  color: $color7;
 }
