@@ -1,8 +1,10 @@
 import React from "react";
-import Contact from "../components/Contact";
+
+import { MetaData } from "../components/meta";
 import MainLayout from "../layout";
 import TitleSection from "../components/TitleSection";
-import { MetaData } from "../components/meta";
+import ContactForm from "../components/contact/ContactForm";
+import ContactDetails from "../components/contact/ContactDetails";
 
 const contact = ({ location }) => {
   return (
@@ -10,7 +12,8 @@ const contact = ({ location }) => {
       <div className="contact-container">
         <MetaData title="Contact Us" location={location} />
         <TitleSection location={location} crumbLabel="Contact" />
-        <Contact />
+        <ContactDetails />
+        <ContactForm />
       </div>
     </MainLayout>
   );

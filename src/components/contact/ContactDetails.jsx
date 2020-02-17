@@ -1,10 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
-
 import { TiLocationOutline, TiSocialAtCircular, TiMail } from "react-icons/ti";
 
-const Contact = () => {
+const ContactDetails = () => {
   return (
     <>
       <section className="contact-section">
@@ -76,35 +75,8 @@ const Contact = () => {
           </Row>
         </Container>
       </section>
-
-      <section className="contact-form">
-        <Container>
-          <h2 className="title text-center">
-            Send us a<br />
-            message
-          </h2>
-          <Form action="#" className="contact-one__form">
-            <Row>
-              <Col lg={6}>
-                <Form.Control type="text" placeholder="Your Name" />
-              </Col>
-              <Col lg={6}>
-                <Form.Control type="email" placeholder="Email Address" />
-              </Col>
-              <Col lg={12}>
-                <Form.Control as="textarea" rows="3" placeholder="Write Message" />
-                <div className="text-center">
-                  <Button type="submit" className="contact-one__btn thm-btn">
-                    Submit Comment
-                  </Button>
-                </div>
-              </Col>
-            </Row>
-          </Form>
-        </Container>
-      </section>
     </>
   );
 };
 
-export default Contact;
+export default ContactDetails;

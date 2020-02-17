@@ -91,13 +91,6 @@ module.exports = {
         process.env.NODE_ENV === "development" ? ghostConfig.development : ghostConfig.production,
     },
     {
-      resolve: "gatsby-source-shopware-channel",
-      options: {
-        host: process.env.SHOPWARE_ACCESS_URL,
-        accessKey: process.env.SHOPWARE_ACCESS_KEY,
-      },
-    },
-    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: config.googleAnalyticsID,
