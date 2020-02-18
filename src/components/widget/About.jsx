@@ -14,8 +14,9 @@ const About = () => {
     <div className="sidebox widget">
       <h3 className="widget-title">About Us</h3>
       <p>
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum. Nulla
-        vitae elit libero, a pharetra augue. Donec id elit.
+        We post all our thoughts and experiences on our journey to reclaim the city. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Aspernatur, illo fugit exercitationem dolor
+        harum itaque sapiente nostrum?
       </p>
       <ul className="social social-color social-s">
         <li>
