@@ -1,11 +1,6 @@
 /**************************
 	Blog
 ***************************/
-.blog-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
 .blog-summary {
   text-align: left;
 
@@ -100,10 +95,139 @@
   }
 }
 
-.blog-sidebar {
-  position: relative;
-  overflow: visible;
-  box-sizing: border-box;
-  min-height: 1px;
-  margin-bottom: -60px;
+.sidebar {
+  padding-left: 35px;
+}
+
+.sidebar a:not(.hover):not(.btn):not(.badge) {
+  color: inherit;
+}
+
+.sidebox:first-child {
+  margin-top: 0;
+}
+
+.sidebox {
+  margin-top: 50px;
+  display: block;
+}
+
+.widget-title {
+  font-size: 1.4rem;
+  color: $color7;
+  font-weight: 900;
+  line-height: 1.3rem;
+}
+
+.social {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social,
+.social.social-s {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.social li {
+  display: inline-block;
+  margin: 0 0.75rem 0 0;
+}
+
+.social li a svg {
+  opacity: 0.8;
+  transition: all 200ms ease-in-out;
+}
+
+.social li a svg:hover {
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.social svg {
+  vertical-align: -2px;
+}
+
+.sidebar a:not(.hover):not(.btn):not(.badge) {
+  color: inherit;
+}
+
+.social svg[class*="github"],
+.color-s-github,
+.color-s-github:hover {
+  color: #4073a6;
+}
+
+.social svg[class*="facebook"],
+.color-s-facebook,
+.color-s-facebook:hover {
+  color: #4470cf;
+}
+
+.social svg[class*="instagram"],
+.color-s-instagram,
+.color-s-instagram:hover {
+  color: #d53581;
+}
+
+.social svg[class*="linkedin"],
+.color-s-linkedin,
+.color-s-linkedin:hover {
+  color: #3393c1;
+}
+
+.social svg[class*="pinterest"],
+.color-s-pinterest,
+.color-s-pinterest:hover {
+  color: #c53942;
+}
+
+.social svg[class*="twitter"],
+.color-s-twitter,
+.color-s-twitter:hover {
+  color: #5daed5;
+}
+
+.social svg[class*="youtube"],
+.color-s-youtube,
+.color-s-youtube:hover {
+  color: #c8312b;
+}
+
+.image-list {
+  padding: 0;
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+.image-list li {
+  clear: both;
+  margin-bottom: 1rem;
+  display: block;
+  overflow: hidden;
+}
+
+.image-list figure {
+  float: left;
+}
+
+.image-list .list-post-content {
+  margin-left: 100px;
+  margin-bottom: 0;
+}
+
+.post-title {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.featured-post-icon {
+  margin-right: 0.2rem;
+  vertical-align: -2px;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }

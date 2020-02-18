@@ -4,15 +4,15 @@ import { graphql, Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 
 import MainLayout from "../layout";
-import Pagination from "../components/blog/Pagination";
-import PostCard from "../components/blog/PostCard";
-import CategoryItem from "../components/blog/CategoryItem";
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
+import Pagination from "../components/blog/Pagination";
+import PostCard from "../components/blog/PostCard";
+import About from "../components/widget/About";
+import Featured from "../components/widget/Featured";
 
 const Index = ({ data, location, pageContext }) => {
   const posts = data.allGhostPost.edges;
-  const cats = data.allGhostTag.edges;
 
   return (
     <>
@@ -20,44 +20,21 @@ const Index = ({ data, location, pageContext }) => {
         <MetaData location={location} />
         <TitleSection location={location} crumbLabel="Blog" />
 
-        <section id="blog" className="blog-section">
-          <Container>
+        <section id="blog">
+          <Container className="inner">
             <Row>
-              <Col lg={9} md={9}>
+              <Col lg={8}>
                 <div className="blog-content">
                   {posts.map(({ node }) => (
                     <PostCard key={node.id} post={node} />
                   ))}
                 </div>
               </Col>
-              <Col lg={3} md={3}>
-                <div className="blog-sidebar">
-                  <aside className="widget widget-tags">
-                    <h4 className="widget-title">
-                      <span>Categories</span>
-                    </h4>
-                    <div className="tag-list">
-                      <ul>
-                        {cats.map(({ node }) => (
-                          <li>
-                            <Link key={node.id} to={`/blog/tag/${node.slug}`}>
-                              {node.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </aside>
-                  <aside className="widget widget-tags">
-                    <h4 className="widget-title">
-                      <span>Popular Posts</span>
-                    </h4>
-                    <div className="widget-content">
-                      <p>...Coming soon</p>
-                    </div>
-                  </aside>
-                </div>
-              </Col>
+              <aside className="col-lg-4 sidebar">
+                <About />
+                <Featured />
+                {/*  */}
+              </aside>
             </Row>
           </Container>
         </section>
