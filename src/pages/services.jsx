@@ -3,7 +3,7 @@ import { Container, Row, Col, Figure } from "react-bootstrap";
 
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
-import TitleSection from "../components/TitleSection";
+import TitleSection from "../components/common/TitleSection";
 import LetsTalk from "../components/services/LetsTalk";
 import FAQ from "../components/services/FAQ";
 import Brands from "../components/services/Brands";

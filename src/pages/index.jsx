@@ -6,12 +6,12 @@ import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import Landing from "../components/Landing";
 import FeaturedProjects from "../components/FeaturedProjects";
-import ServicesSlider from "../components/ServicesSlider";
+import ServicesSlider from "../components/services/ServicesSlider";
 import Roadmap from "../components/Roadmap";
-import RecentPosts from "../components/RecentPosts";
-import CTA2 from "../components/CTA2";
-import CTASocials from "../components/CTASocials";
-import CTAEmail from "../components/CTAEmail";
+import RecentPosts from "../components/blog/RecentPosts";
+import CTA2 from "../components/common/CTA2";
+import CTASocials from "../components/common/CTASocials";
+import CTAEmail from "../components/common/CTAEmail";
 
 const Index = ({ location }) => {
   return (

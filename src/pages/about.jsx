@@ -2,10 +2,10 @@ import React from "react";
 
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
-import TitleSection from "../components/TitleSection";
-import CTASocials from "../components/CTASocials";
+import TitleSection from "../components/common/TitleSection";
+import CTASocials from "../components/common/CTASocials";
 import Brands from "../components/services/Brands";
-import InDevelopment from "../components/InDevelopment";
+import InDevelopment from "../components/common/InDevelopment";
 import AboutDetails from "../components/AboutDetails";
 
 const about = ({ location }) => {

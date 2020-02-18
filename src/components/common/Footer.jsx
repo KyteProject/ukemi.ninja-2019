@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { Nav, Container } from "react-bootstrap";
 
-import config from "../../data/siteConfig";
+import config from "../../../data/siteConfig";
 
 const Footer = () => {
   const data = useStaticQuery(

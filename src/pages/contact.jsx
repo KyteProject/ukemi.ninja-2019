@@ -2,7 +2,7 @@ import React from "react";
 
 import { MetaData } from "../components/meta";
 import MainLayout from "../layout";
-import TitleSection from "../components/TitleSection";
+import TitleSection from "../components/common/TitleSection";
 import ContactForm from "../components/contact/ContactForm";
 import ContactDetails from "../components/contact/ContactDetails";
 

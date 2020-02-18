@@ -4,11 +4,11 @@ import { graphql, Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 
 import MainLayout from "../layout";
-import Pagination from "../components/Pagination";
-import PostCard from "../components/PostCard";
-import CategoryItem from "../components/CategoryItem";
+import Pagination from "../components/blog/Pagination";
+import PostCard from "../components/blog/PostCard";
+import CategoryItem from "../components/blog/CategoryItem";
 import { MetaData } from "../components/meta";
-import TitleSection from "../components/TitleSection";
+import TitleSection from "../components/common/TitleSection";
 
 const Index = ({ data, location, pageContext }) => {
   const posts = data.allGhostPost.edges;

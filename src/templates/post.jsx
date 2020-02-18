@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
-import TitleSection from "../components/TitleSection";
+import TitleSection from "../components/common/TitleSection";
 
 const Post = ({ data, location }) => {
   const post = data.ghostPost;

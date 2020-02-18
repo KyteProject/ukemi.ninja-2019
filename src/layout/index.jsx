@@ -1,8 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
+import Navigation from "../components/common/Navigation";
+import Footer from "../components/common/Footer";
 
 import "../scss/index.scss";
 import "slick-carousel/slick/slick.css";

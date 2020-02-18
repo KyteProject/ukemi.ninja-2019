@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
-import TitleSection from "../components/TitleSection";
+import TitleSection from "../components/common/TitleSection";
 
 const Project = ({ data, location }) => {
   const project = data.markdownRemark.frontmatter;

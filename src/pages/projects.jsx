@@ -5,7 +5,7 @@ import { Container, Row } from "react-bootstrap";
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import ProjectCard from "../components/ProjectCard";
-import TitleSection from "../components/TitleSection";
+import TitleSection from "../components/common/TitleSection";
 
 const Projects = ({ location }) => {
   const data = useStaticQuery(

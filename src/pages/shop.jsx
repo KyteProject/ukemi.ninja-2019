@@ -2,8 +2,8 @@ import React from "react";
 import MainLayout from "../layout";
 
 import { MetaData } from "../components/meta";
-import TitleSection from "../components/TitleSection";
-import InDevelopment from "../components/InDevelopment";
+import TitleSection from "../components/common/TitleSection";
+import InDevelopment from "../components/common/InDevelopment";
 
 const shop = ({ location }) => {
   return (

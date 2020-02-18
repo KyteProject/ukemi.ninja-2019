@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
 import MainLayout from "../layout";
-import Pagination from "../components/Pagination";
+import Pagination from "../components/blog/Pagination";
 import { MetaData } from "../components/meta";
 
 const Tag = ({ data, location, pageContext }) => {
