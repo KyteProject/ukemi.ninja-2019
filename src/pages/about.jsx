@@ -4,7 +4,7 @@ import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/TitleSection";
 import CTASocials from "../components/CTASocials";
-import Brands from "../components/Brands";
+import Brands from "../components/services/Brands";
 import InDevelopment from "../components/InDevelopment";
 import AboutDetails from "../components/AboutDetails";
 

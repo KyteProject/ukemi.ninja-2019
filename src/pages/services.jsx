@@ -4,10 +4,10 @@ import { Container, Row, Col, Figure } from "react-bootstrap";
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/TitleSection";
-import LetsTalk from "../components/LetsTalk";
-import FAQ from "../components/FAQ";
-import Brands from "../components/Brands";
-import ServiceDetails from "../components/ServiceDetails";
+import LetsTalk from "../components/services/LetsTalk";
+import FAQ from "../components/services/FAQ";
+import Brands from "../components/services/Brands";
+import ServiceDetails from "../components/services/ServiceDetails";
 
 const services = ({ location }) => {
   return (
@@ -22,7 +22,7 @@ const services = ({ location }) => {
         </h3>
 
         <Row>
-          <Col>
+          <Col lg={{ span: 10, offset: 1 }}>
             <Figure>
               <Figure.Image
                 src="/images/teamwork1@2x.png"
@@ -30,6 +30,27 @@ const services = ({ location }) => {
                 className="service-image"
               />
             </Figure>
+          </Col>
+        </Row>
+
+        <Row className="text-center">
+          <Col md={4}>
+            <h5>Digital Design</h5>
+            <p className="mb-15">
+              Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam.
+            </p>
+          </Col>
+          <Col md={4}>
+            <h5>Product Creation</h5>
+            <p className="mb-15">
+              Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam.
+            </p>
+          </Col>
+          <Col md={4}>
+            <h5>Community Arts Development</h5>
+            <p className="mb-15">
+              Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam.
+            </p>
           </Col>
         </Row>
       </Container>
