@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { Container, Row, Col, Figure } from "react-bootstrap";
-import { GoCalendar } from "react-icons/go";
+import { GoCalendar, GoPerson } from "react-icons/go";
 
 const Featured = () => {
   const data = useStaticQuery(graphql`
@@ -49,6 +49,10 @@ const Featured = () => {
                   <span className="date">
                     <GoCalendar className="featured-post-icon" />
                     12 Nov 2017
+                  </span>{" "}
+                  <span className="featured-post-author">
+                    <GoPerson className="featured-post-icon" />
+                    {node.primary_author.name}
                   </span>
                 </div>
               </div>
