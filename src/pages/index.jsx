@@ -6,7 +6,7 @@ import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import Landing from "../components/Landing";
 import FeaturedProjects from "../components/FeaturedProjects";
-import ServicesSlider from "../components/services/ServicesSlider";
+import ServicesSlider from "../components/ServiceOverview";
 import Roadmap from "../components/Roadmap";
 import RecentPosts from "../components/blog/RecentPosts";
 import CTA2 from "../components/common/CTA2";

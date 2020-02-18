@@ -8,12 +8,11 @@ import {
   GiHammerNails,
   GiAcrobatic,
 } from "react-icons/gi";
-import { FiMonitor } from "react-icons/fi";
 
 const ServicesSlider = () => {
   return (
     <section className="section-services-slider">
-      <Container className="text-center">
+      <Container className="inner text-center">
         <div className="block-title">
           <h2 className="block-title-text">Explore Our Services</h2>
         </div>

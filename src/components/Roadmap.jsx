@@ -39,7 +39,7 @@ const Roadmap = () => {
 
   return (
     <section className="roadmap">
-      <Container>
+      <Container className="inner">
         <Row>
           <Col md={12}>
             <div className="block-title">
