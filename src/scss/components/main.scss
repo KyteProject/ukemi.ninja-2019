@@ -60,6 +60,9 @@ a {
 .fill-dark {
   fill: $color7;
 }
+.fill-white {
+  fill: $white;
+}
 
 .fill-dark-r {
   fill: $white;
@@ -73,6 +76,10 @@ a {
 .fill-default {
   fill: $white;
   background-color: $light;
+}
+
+.divider svg {
+  vertical-align: bottom;
 }
 
 .title {

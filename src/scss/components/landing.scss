@@ -1,39 +1,13 @@
 .landing {
-  background: $color7;
-  background: -webkit-linear-gradient(to right, $color-lblue, $color-pink);
-  background: linear-gradient(to right, $color-lblue, $color-pink);
-  opacity: 0.8;
-  margin: 0 0 240px;
-  padding: 0;
-  position: relative;
-  height: 700px;
-}
-
-.landing-content {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-}
-
-.landing-content {
-  color: #ffffff;
-  position: relative;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-25%);
-  -webkit-transform: translateY(-25%);
+  background-image: url(/images/bg27.jpg) !important;
 }
 
 .home-title {
   line-height: 1.2;
   font-weight: 600;
-  color: #ffffff;
+  color: $white;
   font-size: 70px;
   font-family: $font-head;
-  // letter-spacing: 0.2rem;
 }
 
 .home-sub-title {
@@ -43,17 +17,67 @@
   font-family: $font-secondary;
 }
 
-.bg-overlay {
-  background: $color7;
-  background: -webkit-linear-gradient(to right, $color-pink, $color7);
-  background: linear-gradient(to right, $color-pink, $color7);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  opacity: 0.8;
-}
-
 .landing-btn {
   margin-top: 2em;
+}
+
+.landing-content {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.image-wrapper {
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+.image-wrapper:not(.mobile) {
+  background-attachment: fixed !important;
+}
+.image-wrapper.bg-auto {
+  background-size: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll !important;
+}
+.image-wrapper.bg-full {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll !important;
+}
+.image-wrapper:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--rgb-dark), 0.5);
+}
+.image-wrapper.rounded:before {
+  border-radius: 0.2rem !important;
+}
+.image-wrapper.gradient-overlay:before {
+  background: none;
+  background-image: linear-gradient(
+    135deg,
+    rgba(111, 63, 124, 0.55) 0%,
+    rgba(88, 73, 170, 0.55) 100%
+  );
+}
+.image-wrapper.no-overlay:before {
+  display: none;
+}
+.image-wrapper:not(.no-overlay) * {
+  position: relative;
+  z-index: 2;
+}
+.image-wrapper .cbp-nav-controls,
+.image-wrapper .tparrows {
+  position: absolute;
+}
+.h-100vh {
+  height: 100vh;
 }
