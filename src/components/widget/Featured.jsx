@@ -1,7 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { Container, Row, Col, Figure } from "react-bootstrap";
+import { Figure } from "react-bootstrap";
 import { GoCalendar, GoPerson } from "react-icons/go";
 
 const Featured = () => {
@@ -26,7 +25,7 @@ const Featured = () => {
   return (
     <>
       <div className="sidebox widget">
-        <h3 className="widget-title">Popular Posts</h3>
+        <h3 className="widget-title">Featured Posts</h3>
         <ul className="image-list">
           {posts.map(({ node }) => (
             <li key={node.id}>
