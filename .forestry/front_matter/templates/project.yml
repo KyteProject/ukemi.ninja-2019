@@ -96,3 +96,5 @@ fields:
   config: {}
   label: Project Gallery
   description: Project images 8 Max!
+pages:
+- src/content/projects/the-movement-card.md
