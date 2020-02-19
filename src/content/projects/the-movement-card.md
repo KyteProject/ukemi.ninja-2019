@@ -1,5 +1,5 @@
 ---
-name: The Movement Card
+name: Movement Card
 slug: movement-card
 date: 2019-10-17T23:00:00Z
 category: Ukemi
