@@ -2,14 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Figure } from "react-bootstrap";
+import { GoCalendar, GoPerson, GoClock } from "react-icons/go";
+import { readingTime as readingTimeHelper } from "@tryghost/helpers";
 
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
+import Sidebar from "../components/blog/Sidebar";
 
 const Post = ({ data, location }) => {
   const post = data.ghostPost;
+  const url = `/blog/${post.slug}`;
+  const published = new Date(`${post.published_at}`).toDateString();
+  const readingTime = readingTimeHelper(post);
 
   return (
     <>
@@ -24,28 +30,33 @@ const Post = ({ data, location }) => {
           <style type="text/css">{`${post.codeinjection_styles}`}</style>
         </Helmet>
 
-        <Container>
-          <Row className="row-centered">
-            <Col lg={12} md={12}>
-              <article className="post-content">
-                {post.feature_image ? (
-                  <figure className="post-feature-image">
-                    <img src={post.feature_image} alt={post.title} />
-                  </figure>
-                ) : null}
-                <section className="post-full-content">
-                  <h1 className="content-title">
-                    <strong>{post.title}</strong>
-                  </h1>
-
-                  {/* The main post content */}
-                  <section
-                    className="content-body load-external-scripts"
-                    dangerouslySetInnerHTML={{ __html: post.html }}
-                  />
-                </section>
+        <Container className="inner blog-post">
+          <Row>
+            <Col lg={8}>
+              <article className="blog">
+                <div className="post">
+                  {post.feature_image ? (
+                    <Figure className="feature-image">
+                      <Figure.Image src={post.feature_image} alt={post.title} rounded />
+                    </Figure>
+                  ) : null}
+                  <section className="full-content">
+                    <h1 className="content-title text-center">{post.title}</h1>
+                    <div className="meta text-center">
+                      <GoCalendar size={24} className="blog-icon" /> <span>{published}</span>
+                      <GoPerson size={24} className="blog-icon" />
+                      <span>By {post.primary_author.name}</span>
+                      <GoClock size={24} className="blog-icon" /> <span>{readingTime}</span>
+                    </div>
+                    <section
+                      className="content-body load-external-scripts"
+                      dangerouslySetInnerHTML={{ __html: post.html }}
+                    />
+                  </section>
+                </div>
               </article>
             </Col>
+            <Sidebar />
           </Row>
         </Container>
       </MainLayout>

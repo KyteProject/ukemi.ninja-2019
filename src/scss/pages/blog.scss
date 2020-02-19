@@ -220,7 +220,6 @@
   padding-top: 0;
 }
 
-
 .image-list figure {
   float: left;
 }
@@ -246,4 +245,31 @@
 
 .tag-list li {
   display: inline-block;
+}
+
+.blog-post {
+  padding-top: 4rem !important;
+}
+
+.blog .post {
+  margin-bottom: 2.5rem;
+}
+
+.blog .post .meta {
+  font-size: 0.9rem;
+  line-height: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.3rem;
+}
+
+.blog .post span {
+  margin-right: 2rem;
+}
+
+.blog .post .meta .blog-icon {
+  margin-right: 0.2rem;
+  vertical-align: -6px;
 }
