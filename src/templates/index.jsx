@@ -3,14 +3,12 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 
+import Sidebar from "../components/blog/Sidebar";
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
 import Pagination from "../components/blog/Pagination";
 import PostCard from "../components/blog/PostCard";
-import About from "../components/widget/About";
-import Featured from "../components/widget/Featured";
-import Tags from "../components/widget/Tags";
 
 const Index = ({ data, location, pageContext }) => {
   const posts = data.allGhostPost.edges;
@@ -31,11 +29,7 @@ const Index = ({ data, location, pageContext }) => {
                   ))}
                 </div>
               </Col>
-              <aside className="col-lg-4 sidebar">
-                <About />
-                <Featured />
-                <Tags />
-              </aside>
+              <Sidebar />
             </Row>
           </Container>
         </section>
