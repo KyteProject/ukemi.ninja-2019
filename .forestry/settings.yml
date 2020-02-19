@@ -5,13 +5,6 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: directory
-  path: src/content/posts
-  label: Posts
-  create: documents
-  match: "**/*"
-  templates:
-  - blog
-- type: directory
   path: src/content/projects
   label: Projects
   create: all
@@ -27,6 +20,8 @@ build:
   preview_env:
   - GHOST_API_URL=https://ghost.ukemi.ninja
   - GHOST_CONTENT_API_KEY=e5037d855bbb0bce6d260da37f
+  - DEV_GHOST_API_URL=https://ghost.ukemi.ninja
+  - DEV_GHOST_CONTENT_API_KEY=e5037d855bbb0bce6d260da37f
   preview_output_directory: public
   install_dependencies_command: npm install
   preview_docker_image: node:10
