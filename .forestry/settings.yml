@@ -19,7 +19,7 @@ sections:
   templates:
   - project
 upload_dir: projects
-public_path: https://s3-eu-west-2.amazonaws.com/ukemi-website
+public_path: ukemi-website.s3.eu-west-2.amazonaws.com
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
