@@ -18,7 +18,7 @@ sections:
   match: "**/*"
   templates:
   - project
-upload_dir: projects
+upload_dir: ''
 public_path: https://s3-eu-west-2.amazonaws.com/ukemi-website
 front_matter_path: ''
 use_front_matter_path: 
