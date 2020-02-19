@@ -96,6 +96,3 @@ fields:
   config: {}
   label: Project Gallery
   description: Project images 8 Max!
-pages:
-- src/content/projects/test1.md
-- src/content/projects/testz.md
