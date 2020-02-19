@@ -24,6 +24,9 @@ front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
 build:
+  preview_env:
+  - GHOST_API_URL=https://ghost.ukemi.ninja
+  - GHOST_CONTENT_API_KEY=e5037d855bbb0bce6d260da37f
   preview_output_directory: public
   install_dependencies_command: npm install
   preview_docker_image: node:10
