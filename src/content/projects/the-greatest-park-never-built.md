@@ -1,5 +1,5 @@
 ---
-name: The Greatest Park Never Built
+name: Greatest Park Never Built
 slug: the-greatest-park-never-built
 date: 2020-02-19T00:00:00Z
 category: Ukemi
