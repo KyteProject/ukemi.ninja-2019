@@ -17,8 +17,9 @@ const services = ({ location }) => {
       <Container className="inner">
         <h2 className="title text-center">Our Services</h2>
         <h3 className="subtitle text-center">
-          Vestibulum cursus felis sed massa tempus rutrum. <br className="d-none d-lg-block" />
-          Aenean rutrum elit non quam pharetra blandit.
+          Our aim is to tackle health and safety culture,
+          <br className="d-none d-lg-block" />
+          to encourage play, and demystify fitness and movement.
         </h3>
 
         <Row>

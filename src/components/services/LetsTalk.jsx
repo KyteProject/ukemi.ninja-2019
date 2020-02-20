@@ -17,21 +17,21 @@ const LetsTalk = () => {
               </Figure>
             </Col>
             <Col lg={6} className="lets-talk-text">
-              <h2 className="lets-talk-title">Let's Talk</h2>
+              <h2 className="lets-talk-title">Let&apos;s Talk</h2>
               <h3 className="">
-                Let's make something great together. If you got any questions, don't hesitate to get
-                in touch with us.
+                Let&apos;s make something great together. If you have any questions, don&apos;t
+                hesitate to get in touch!
               </h3>
               <p>
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget
-                urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Aenean lacinia
-                bibendum nulla sed consectetur.
+                At Ukemi we lead some great community projects that are by the Parkour community and
+                for the Parkour community. These are free at the point of access and you can learn
+                more on our projects page.
               </p>
-              <Button as="a" className="cta-btn-blue" href="#">
-                Get Started
-              </Button>{" "}
-              <Button as="a" href="#" className="cta-btn-pink">
+              <Button as="a" className="cta-btn-blue" href="/contact">
                 Contact Us
+              </Button>{" "}
+              <Button as="a" href="/projects" className="cta-btn-pink">
+                View Our Projects
               </Button>
             </Col>
           </Row>

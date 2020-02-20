@@ -12,21 +12,18 @@ const AboutDetails = () => {
                 we are <strong>UKEMI</strong>.
               </h1>
               <p className="about-text">
-                Ukemi promote activity in highly urbanised areas and encourage a healthier society
+                Ukemi promotes activity in highly urbanised areas and encourages a healthier society
                 through digital design, product creation, and community arts development.
               </p>
-
               <p className="about-text">
-                We create experiences in response to, and in collaboration with, communities in
-                order to reclaim the city for free and open activity. Our aim is to tackle health
-                and safety culture, to encourage play, and to demystify movement and make it more
-                accessible through our products and services.
+                Each founder has practised Parkour for over a decade and this is the lens in which
+                we see the world and project our ideas onto. We create experiences in response to
+                and in collaboration with communities to reclaim the city for free and open
+                activity.
               </p>
-
               <p className="about-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis et quas eius
-                voluptatum, sint placeat atque soluta dolorum doloribus sequi illo quasi numquam
-                quo, ipsam rerum animi harum laboriosam voluptate.
+                Our aim is to tackle health and safety culture to encourage play and demystify
+                fitness and movement to make it more accessible through our products and services.
               </p>
             </Col>
             <Col lg={6} className="service-body-r">
@@ -47,21 +44,24 @@ const AboutDetails = () => {
                 a lifelong <strong>TEAM</strong>.
               </h2>
               <p className="about-text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis nam maxime
-                autem assumenda ea, recusandae vitae similique accusantium id nobis, voluptatibus
-                architecto, quasi nostrum? Doloremque beatae sapiente alias sunt!
+                We met in 2006 as early adopters of the parkour discipline. We experienced the
+                growth of the Scottish scene together and everything that came with it - travelling,
+                running classes, putting on national events, creating web resources and performing.
               </p>
-              <p className="about-text pb-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta reiciendis molestias
-                odit nihil distinctio. Maxime in enim et odit animi, temporibus minus voluptates
-                voluptas explicabo nulla nesciunt placeat sint sapiente?
+              <p className="about-text">
+                No longer content to simply see the city differently we now want to change it into
+                something better. ⁣⁣After over 15 years years of training and growing up together we
+                pulled together our skill sets and began applying our traceur vision beyond the
+                practice itself.
               </p>
+
+              <p className="about-text">⁣⁣Here’s to the future of cities, movement and play.⁣</p>
 
               <span className="subtitle">Together We Have:</span>
               <Row className="counter">
                 <Col md={4} className="text-center">
                   <h3>46</h3>
-                  <p>Years of Parkour</p>
+                  <p>Years of Combined Parkour</p>
                 </Col>
                 <Col md={4} className="text-center">
                   <h3>18</h3>
@@ -69,7 +69,7 @@ const AboutDetails = () => {
                 </Col>
                 <Col md={4} className="text-center">
                   <h3>16</h3>
-                  <p>Years of Coaching</p>
+                  <p>Years of Combined Coaching</p>
                 </Col>
               </Row>
             </Col>
