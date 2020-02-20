@@ -27,16 +27,6 @@
   text-align: center;
 }
 
-// .right-align {
-//   // padding-left: 0;
-//   padding-right: 135px;
-//   // float: right;
-// }
-
-.cta-two-icon {
-  // margin-right: 60px;
-}
-
 .cta-two-icon span {
   background-color: $white;
   width: 156px;
@@ -81,21 +71,17 @@
 }
 
 .cta-two-title {
-  font-size: 50px;
+  font-size: 2.5rem;
   color: $white;
   font-weight: bold;
-  margin-top: 25px;
-  margin-bottom: 25px;
   line-height: normal;
 }
 
-.cta-two-text {
-  margin: 0;
-  font-size: 16px;
-  line-height: 24px;
-  color: $white;
-  margin-top: 0px;
-  margin-bottom: 30px;
+.cta-two-button {
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  border: 0;
+  font-size: 1.2rem;
 }
 
 .cta-socials {
@@ -161,8 +147,8 @@
 }
 
 .cta-email {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   position: relative;
 }
 

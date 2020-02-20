@@ -16,12 +16,7 @@ const CTA2 = () => {
               </div>
               <div className="cta-two-content">
                 <h2 className="cta-two-title">Collaborate With Us</h2>
-                <p className="cta-two-text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  <br />
-                  Quasi, commodi voluptate consequatur.
-                </p>
-                <Button href="#" className="thm-btn cta-btn-dark">
+                <Button href="#" className="thm-btn btn-dark cta-two-button">
                   Contact Us
                 </Button>
               </div>
@@ -36,12 +31,7 @@ const CTA2 = () => {
               </div>
               <div className="cta-two-content">
                 <h2 className="cta-two-title">Join Our Community</h2>
-                <p className="cta-two-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  <br />
-                  Vero unde cumque iure aut minima provident?
-                </p>
-                <Button as="a" href="#" className="thm-btn cta-btn-dark">
+                <Button as="a" href="#" className="thm-btn btn-dark cta-two-button">
                   Get Involved
                 </Button>
               </div>

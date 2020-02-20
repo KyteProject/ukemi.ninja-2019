@@ -39,11 +39,10 @@ const CTAEmail = () => {
           </Row>
           <Row className="justify-content-center">
             <Col lg={6}>
-              <div className="text-center mt-5 mb-4">
-                <h6 className="text-muted font-weight-normal">
-                  Subscribe To Our Newsletter For New Content,{" "}
-                  <span className="d-block mt-2">Updates And Giveaways!</span>
-                </h6>
+              <div className="text-center mt-4 mb-4">
+                <h5 className="text-muted font-weight-normal">
+                  Subscribe to our mailing list for new products, updates, and sales!
+                </h5>
               </div>
               <div className="text-center subscribe-form mt-4">
                 <Form>

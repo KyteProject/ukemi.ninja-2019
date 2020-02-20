@@ -8,12 +8,10 @@ import { readingTime as readingTimeHelper } from "@tryghost/helpers";
 
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
-import TitleSection from "../components/common/TitleSection";
 import Sidebar from "../components/blog/Sidebar";
 
 const Post = ({ data, location }) => {
   const post = data.ghostPost;
-  const url = `/blog/${post.slug}`;
   const published = new Date(`${post.published_at}`).toDateString();
   const readingTime = readingTimeHelper(post);
 
