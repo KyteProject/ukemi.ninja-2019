@@ -100,22 +100,13 @@ const Footer = () => {
 
           <Col className="col-6" md={3} lg={{ span: 2, order: 4 }}>
             <div className="widget">
-              <h5 className="footer-title">Follow</h5>
+              <h5 className="footer-title">Shop</h5>
               <ul className="list-unstyled mb-0">
-                {userLinks.length > 0
-                  ? /* prettier-ignore */
-                    userLinks.map(( item ) => (
-                      <li key={item.label}>
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="footer-link">
-                          {item.label}
-                        </a>
-                      </li>
-                  ))
-                  : null}
+                <li>
+                  <Link to="/shop" className="footer-link">
+                    Ukemi Card Game
+                  </Link>
+                </li>
               </ul>
             </div>
           </Col>
