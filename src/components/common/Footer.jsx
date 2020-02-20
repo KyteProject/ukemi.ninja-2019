@@ -26,8 +26,6 @@ const Footer = () => {
   const projects = data.allMarkdownRemark.edges;
   const { copyright, userLinks } = config;
 
-  console.log(userLinks);
-
   return (
     <footer className="footer">
       <Container>

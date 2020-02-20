@@ -9,6 +9,10 @@ import {
   AiOutlineYoutube,
 } from "react-icons/ai";
 
+import config from "../../../data/siteConfig";
+
+const { userLinks } = config;
+
 const About = () => {
   return (
     <div className="sidebox widget">
@@ -20,33 +24,33 @@ const About = () => {
       </p>
       <ul className="social social-color social-s">
         <li>
-          <a href="https://twitter.com/UkemiProject">
-            <AiOutlineTwitter size={28} className="s-twitter" />
-          </a>
-        </li>
-        <li>
-          <a href="https://facebook.com/UkemiProject">
+          <a href={userLinks.find((el) => el.label === "Facebook").url}>
             <AiOutlineFacebook size={28} className="s-facebook" />
           </a>
         </li>
         <li>
-          <a href="https://instagram.com/UkemiProject">
+          <a href={userLinks.find((el) => el.label === "GitHub").url}>
+            <AiOutlineGithub size={28} className="s-github" />
+          </a>
+        </li>
+        <li>
+          <a href={userLinks.find((el) => el.label === "Instagram").url}>
             <AiOutlineInstagram size={28} className="s-instagram" />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href={userLinks.find((el) => el.label === "LinkedIn").url}>
             <AiOutlineLinkedin size={28} className="s-linkedin" />
           </a>
         </li>
         <li>
-          <a href="https://youtube.com/ukemiproject">
-            <AiOutlineYoutube size={28} className="s-youtube" />
+          <a href={userLinks.find((el) => el.label === "Twitter").url}>
+            <AiOutlineTwitter size={28} className="s-twitter" />
           </a>
         </li>
         <li>
-          <a href="https://github.com/ukemi-project">
-            <AiOutlineGithub size={28} className="s-github" />
+          <a href={userLinks.find((el) => el.label === "Youtube").url}>
+            <AiOutlineYoutube size={28} className="s-youtube" />
           </a>
         </li>
       </ul>

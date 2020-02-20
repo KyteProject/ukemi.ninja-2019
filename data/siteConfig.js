@@ -15,16 +15,12 @@ const config = {
   dateFormat: "DD/MM/YYYY", // Date format for display.
   userLinks: [
     {
-      label: "GitHub",
-      url: "https://github.com/ukemi-project",
-    },
-    {
-      label: "Twitter",
-      url: "https://twitter.com/UkemiProject",
-    },
-    {
       label: "Facebook",
       url: "https://www.facebook.com/UkemiProject",
+    },
+    {
+      label: "GitHub",
+      url: "https://github.com/ukemi-project",
     },
     {
       label: "Instagram",
@@ -33,6 +29,14 @@ const config = {
     {
       label: "LinkedIn",
       url: "https://www.linkedin.com/company/19003676/",
+    },
+    {
+      label: "Twitter",
+      url: "https://twitter.com/UkemiProject",
+    },
+    {
+      label: "Youtube",
+      url: "#",
     },
   ],
   copyright: "Copyright © 2019. Ukemi",

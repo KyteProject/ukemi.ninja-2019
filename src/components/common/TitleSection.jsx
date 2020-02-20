@@ -8,8 +8,6 @@ const TitleSection = ({ sub, crumbLabel }) => {
         <Row>
           <Col lg="12">
             <div>
-              <h2>{crumbLabel}</h2>
-
               <Breadcrumb>
                 <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                 {sub && <Breadcrumb.Item href={`/${sub.slug}`}>{sub.label}</Breadcrumb.Item>}

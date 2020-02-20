@@ -9,6 +9,7 @@ import { readingTime as readingTimeHelper } from "@tryghost/helpers";
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import Sidebar from "../components/blog/Sidebar";
+import TitleSection from "../components/common/TitleSection";
 
 const Post = ({ data, location }) => {
   const post = data.ghostPost;
@@ -22,6 +23,11 @@ const Post = ({ data, location }) => {
         <Helmet>
           <style type="text/css">{`${post.codeinjection_styles}`}</style>
         </Helmet>
+        <TitleSection
+          location={location}
+          sub={{ slug: "blog", label: "Blog" }}
+          crumbLabel={post.title}
+        />
 
         <Container className="inner blog-post">
           <Row>
