@@ -41,7 +41,7 @@ const Brands = () => {
       {
         breakpoint: 770,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],

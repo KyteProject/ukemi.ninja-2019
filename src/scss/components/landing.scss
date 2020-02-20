@@ -6,15 +6,25 @@
   line-height: 1.2;
   font-weight: 600;
   color: $white;
-  font-size: 70px;
+  font-size: 5rem;
   font-family: $font-head;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
 }
 
 .home-sub-title {
-  font-size: 17px;
+  color: $white;
+  line-height: 1.5em;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+}
+
+.home-text {
+  font-size: 1.25rem;
   line-height: 1.8;
   max-width: 600px;
   font-family: $font-secondary;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
 }
 
 .landing-btn {

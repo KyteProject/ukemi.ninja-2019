@@ -19,7 +19,7 @@ h5,
 h6 {
   font-family: $font-secondary;
   margin-bottom: 10px;
-  line-height: 24px;
+  line-height: 2rem;
   font-weight: 700;
 }
 
@@ -36,7 +36,6 @@ ul {
 a {
   color: $color-pink;
   transition: all 0.5s;
-  font-size: 15px;
   font-weight: 600;
   text-decoration: none !important;
   outline: none !important;

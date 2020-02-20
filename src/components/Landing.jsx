@@ -11,11 +11,12 @@ const Landing = () => {
           <Row className="justify-content-center landing-content">
             <Col sm={10} className="text-center">
               <h1 className="home-title text-white">Learn • Play • Create</h1>
-              <p className="pt-4 home-sub-title text-white mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
+              <h3 className="home-sub-title">Specialists in Movement Inspired Design</h3>
+              <p className="home-text text-white mx-auto">
+                We create products, design activity landscapes and pursue community arts
+                development.
               </p>
-              <Button className="btn-white landing-btn">Visit Shop</Button>
+              <Button className="btn-white landing-btn">Visit Our Shop</Button>
             </Col>
           </Row>
         </Container>

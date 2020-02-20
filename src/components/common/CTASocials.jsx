@@ -9,6 +9,10 @@ import {
   AiOutlineYoutube,
 } from "react-icons/ai";
 
+import config from "../../../data/siteConfig";
+
+const { userLinks } = config;
+
 const CTASocials = () => {
   return (
     <>
@@ -21,6 +25,7 @@ const CTASocials = () => {
           <path d="M0,20S35-1,137,0C232.52,1,240,33,352,25c111.47-8,177-45.61,367-8,202,40,256-6,351-5V44H0Z" />
         </svg>
       </div>
+
       <section className="cta-socials text-center">
         <Container>
           <Row>
@@ -30,32 +35,38 @@ const CTASocials = () => {
               </div>
               <ul className="cta-social-icons">
                 <li>
-                  <a className="facebook" href="#">
+                  <a
+                    className="facebook"
+                    href={userLinks.find((el) => el.label === "Facebook").url}>
                     <AiOutlineFacebook size={42} />
                   </a>
                 </li>
                 <li>
-                  <a className="github" href="#">
+                  <a className="github" href={userLinks.find((el) => el.label === "GitHub").url}>
                     <AiOutlineGithub size={42} />
                   </a>
                 </li>
                 <li>
-                  <a className="instagram" href="#">
+                  <a
+                    className="instagram"
+                    href={userLinks.find((el) => el.label === "Instagram").url}>
                     <AiOutlineInstagram size={42} />
                   </a>
                 </li>
                 <li>
-                  <a className="linkedin" href="#">
+                  <a
+                    className="linkedin"
+                    href={userLinks.find((el) => el.label === "LinkedIn").url}>
                     <AiOutlineLinkedin size={42} />
                   </a>
                 </li>
                 <li>
-                  <a className="twitter" href="#">
+                  <a className="twitter" href={userLinks.find((el) => el.label === "Twitter").url}>
                     <AiOutlineTwitter size={42} />
                   </a>
                 </li>
                 <li>
-                  <a className="youtube" href="#">
+                  <a className="youtube" href={userLinks.find((el) => el.label === "Youtube").url}>
                     <AiOutlineYoutube size={42} />
                   </a>
                 </li>
@@ -64,6 +75,7 @@ const CTASocials = () => {
           </Row>
         </Container>
       </section>
+
       <div className="divider">
         <svg
           xmlns="http://www.w3.org/2000/svg"
