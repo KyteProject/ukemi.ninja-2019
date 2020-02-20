@@ -24,8 +24,9 @@ const Footer = () => {
   );
 
   const projects = data.allMarkdownRemark.edges;
-  // url = config.siteRss,
-  const { copyright } = config;
+  const { copyright, userLinks } = config;
+
+  console.log(userLinks);
 
   return (
     <footer className="footer">
@@ -52,31 +53,17 @@ const Footer = () => {
                 <a href="/about" className="footer-link" data-footer-link="2">
                   About
                 </a>
-                <a href="/blog" className="footer-link" data-footer-link="3">
-                  Blog
+                <a href="/services" className="footer-link" data-footer-link="3">
+                  Services
                 </a>
                 <a href="/shop" className="footer-link" data-footer-link="4">
                   Shop
                 </a>
-                <a href="/contact" className="footer-link" data-footer-link="5">
+                <a href="/blog" className="footer-link" data-footer-link="5">
+                  Blog
+                </a>
+                <a href="/contact" className="footer-link" data-footer-link="6">
                   Contact
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="footer-col">
-            <div className="footer-col-wrap">
-              <h6 className="footer-col-title">Services</h6>
-              <div className="footer-nav-list">
-                <a href="/" className="footer-link" data-footer-link="1">
-                  Park & Equipment Design
-                </a>
-                <a href="/" className="footer-link" data-footer-link="2">
-                  Events & Shows
-                </a>
-                <a href="/" className="footer-link" data-footer-link="3">
-                  Consultation, Presentation & Workshops
                 </a>
               </div>
             </div>
@@ -104,39 +91,19 @@ const Footer = () => {
           <div className="footer-col">
             <div className="footer-col-wrap">
               <h6 className="footer-col-title">Follow</h6>
-              <a
-                href="https://www.instagram.com/UkemiProject/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link">
-                Instagram
-              </a>
-              <a
-                href="https://twitter.com/UkemiProject/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link">
-                Twitter
-              </a>
-              <a
-                href="https://www.Facebook.com/UkemiProject/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link">
-                Facebook
-              </a>
-            </div>
-          </div>
-
-          <div className="footer-col footer-col-next">
-            <div className="footer-col-wrap">
-              <h6 className="footer-col-title">Legal</h6>
-              <a href="/terms" className="footer-link">
-                Terms
-              </a>
-              <a href="/privacy" className="footer-link">
-                Privacy
-              </a>
+              {userLinks.length > 0
+                ? /* prettier-ignore */
+                  userLinks.map(( item ) => (
+                    <a
+                      key={item.label}
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="footer-link">
+                      {item.label}
+                    </a>
+                  ))
+                : null}
             </div>
           </div>
 

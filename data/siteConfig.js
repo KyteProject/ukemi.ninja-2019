@@ -16,18 +16,23 @@ const config = {
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/KyteProject",
-      iconClassName: "fa fa-github",
+      url: "https://github.com/ukemi-project",
     },
     {
       label: "Twitter",
       url: "https://twitter.com/UkemiProject",
-      iconClassName: "fa fa-twitter",
     },
     {
-      label: "Email",
-      url: "mailto:support@ukemi.ninja",
-      iconClassName: "fa fa-envelope",
+      label: "Facebook",
+      url: "https://www.facebook.com/UkemiProject",
+    },
+    {
+      label: "Instagram",
+      url: "https://www.instagram.com/UkemiProject/",
+    },
+    {
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/company/19003676/",
     },
   ],
   copyright: "Copyright © 2019. Ukemi",
