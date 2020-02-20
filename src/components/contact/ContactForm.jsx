@@ -2,6 +2,7 @@ import React from "react";
 import { Formik } from "formik";
 import { string, object } from "yup";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { respond } from "../../../node_modules/xstate/lib/actions";
 
 const schema = object({
   firstName: string().required(),
@@ -14,6 +15,33 @@ const schema = object({
     .max(13),
   message: string().required(),
 });
+
+const sendDataToLambda = (values) => {
+  const endpoint = process.env.GATSBY_CONTACT_FORM_ENDPOINT;
+  const key = process.env.GATSBY_CONTACT_FORM_KEY;
+
+  const myHeaders = new Headers();
+  myHeaders.append("x-api-key", key);
+
+  const body = {
+    firstName: values.firstName,
+    secondName: values.secondName,
+    email: values.email,
+    message: values.message,
+    phone: values.phone,
+  };
+
+  const lambdaRequest = new Request(endpoint, {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: myHeaders,
+    mode: "cors",
+  });
+
+  fetch(lambdaRequest)
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+};
 
 const ContactForm = () => {
   return (
@@ -31,7 +59,9 @@ const ContactForm = () => {
 
               <Formik
                 validationSchema={schema}
-                onSubmit={console.log}
+                onSubmit={(values) => {
+                  sendDataToLambda(values);
+                }}
                 initialValues={{
                   firstName: "",
                   secondName: "",
