@@ -113,6 +113,11 @@ const ContactForm = () => {
                         </Button>
                       </Form.Group>
                     </Form.Row>
+                    <Form.Row>
+                      <Col md={12}>
+                        <p className="text-muted">* These fields are required</p>
+                      </Col>
+                    </Form.Row>
                   </Form>
                 )}
               </Formik>

@@ -133,35 +133,6 @@
   border-color: $color-pink;
 }
 
-// .contact-form {
-//   padding-top: 120px;
-//   padding-bottom: 120px;
-// }
-
-// .contact-form h2 {
-//   font-size: 60px;
-//   font-weight: bold;
-//   line-height: 1;
-//   padding-bottom: 20px;
-// }
-
-// .contact-form input,
-// .contact-form textarea {
-//   border: none;
-//   outline: none;
-//   width: 100%;
-//   display: block;
-//   background-color: $color17;
-//   height: 77px;
-//   padding-left: 40px;
-//   margin-bottom: 10px;
-// }
-
-// .contact-form textarea {
-//   height: 211px;
-//   padding-top: 25px;
-// }
-
 .form-row {
   margin-right: -10px;
   margin-left: -10px;
@@ -181,6 +152,7 @@ select,
 textarea,
 textarea.form-control,
 input[type="text"],
+input[type="textarea"],
 input[type="password"],
 input[type="datetime"],
 input[type="datetime-local"],
@@ -214,4 +186,16 @@ input[type="color"],
   -webkit-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+
+textarea,
+textarea.form-control,
+input[type="textarea"] {
+  height: 8rem;
+  line-height: 1.4rem;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  resize: vertical;
+  font-weight: inherit;
 }
