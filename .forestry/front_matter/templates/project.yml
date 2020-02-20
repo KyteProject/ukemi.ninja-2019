@@ -97,7 +97,6 @@ fields:
   label: Project Gallery
   description: Project images 8 Max!
 pages:
-- src/content/projects/test1234.md
 - src/content/projects/the-greatest-park-never-built.md
 - src/content/projects/the-movement-card.md
 - src/content/projects/ukemi-card-game.md
