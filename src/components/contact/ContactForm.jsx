@@ -2,7 +2,6 @@ import React from "react";
 import { Formik } from "formik";
 import { string, object } from "yup";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
-import { respond } from "../../../node_modules/xstate/lib/actions";
 
 const schema = object({
   firstName: string().required(),
@@ -69,7 +68,7 @@ const ContactForm = () => {
                   phone: "",
                   message: "",
                 }}>
-                {({ handleSubmit, handleChange, handleBlur, values, touched, isValid, errors }) => (
+                {({ handleSubmit, handleChange, values, errors }) => (
                   <Form noValidate onSubmit={handleSubmit}>
                     <Form.Row>
                       <Form.Group as={Col} md={6} controlId="validationName1">
