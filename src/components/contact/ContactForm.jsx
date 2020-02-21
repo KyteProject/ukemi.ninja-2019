@@ -51,9 +51,8 @@ const ContactForm = () => {
             <Col md={{ span: 10, offset: 1 }} lg={{ span: 8, offset: 2 }}>
               <h2 className="title text-center">Send us a message</h2>
               <p className="text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores necessitatibus
-                harum facere quis repudiandae assumenda adipisci velit vel, recusandae aliquam ab,
-                deleniti maiores consequuntur eligendi! Unde asperiores eos ex placeat.
+                Use the form bellow to send us your enquiry, we&apos;ll get back to you as soon as
+                possible!
               </p>
 
               <Formik

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { TiLocationOutline, TiSocialAtCircular, TiMail } from "react-icons/ti";
 
@@ -10,9 +10,10 @@ const ContactDetails = () => {
         <Container className="text-center">
           <h1 className="title">Get in touch!</h1>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quaerat quod unde sit.
-            Voluptatibus cum blanditiis laborum esse mollitia placeat, officia sit eveniet, neque
-            est alias consequuntur eligendi ab facilis?
+            If you want to hire us, work with us, collaborate or even just chat then we&apos;d love
+            to hear from you.
+            <br />
+            We are always looking for more people to connect with!
           </p>
         </Container>
       </section>
