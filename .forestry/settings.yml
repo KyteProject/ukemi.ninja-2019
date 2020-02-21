@@ -12,7 +12,7 @@ sections:
   templates:
   - project
 upload_dir: src/images/uploads
-public_path: uploads
+public_path: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
