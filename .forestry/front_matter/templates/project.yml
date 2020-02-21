@@ -97,6 +97,7 @@ fields:
   label: Project Gallery
   description: Project images 8 Max!
 pages:
+- src/content/projects/aim-van-design.md
 - src/content/projects/the-greatest-park-never-built.md
 - src/content/projects/the-movement-card.md
 - src/content/projects/ukemi-card-game.md
