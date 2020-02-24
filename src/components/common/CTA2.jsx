@@ -16,7 +16,7 @@ const CTA2 = () => {
               </div>
               <div className="cta-two-content">
                 <h2 className="cta-two-title">Collaborate With Us</h2>
-                <Button href="#" className="thm-btn btn-dark cta-two-button">
+                <Button href="/contact" className="thm-btn btn-dark cta-two-button">
                   Contact Us
                 </Button>
               </div>
@@ -31,7 +31,7 @@ const CTA2 = () => {
               </div>
               <div className="cta-two-content">
                 <h2 className="cta-two-title">Join Our Community</h2>
-                <Button as="a" href="#" className="thm-btn btn-dark cta-two-button">
+                <Button as="a" href="/contact" className="thm-btn btn-dark cta-two-button">
                   Get Involved
                 </Button>
               </div>
