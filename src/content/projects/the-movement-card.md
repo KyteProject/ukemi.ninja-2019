@@ -1,7 +1,7 @@
 ---
 name: Movement Card
 slug: movement-card
-date: 2019-10-17T23:00:00Z
+date: 2019-10-17T23:00:00.000+00:00
 category: Ukemi
 clients: []
 partners:
@@ -10,23 +10,20 @@ objective: Movement Card aims to educate and inform all who have interactions wi
   people moving in the public domain. Whether that's you, your friends, the security
   guard, or even a police officer. With a Movement Card you have an instant educational
   resource at your disposal.
-brief: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit et adipisci
-  perspiciatis illo aspernatur architecto officia voluptates. Nihil odio animi fugit
-  officia! Sequi suscipit aut aspernatur velit delectus expedita natus.\n\n  \nLorem
-  ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptates alias atque,
-  incidunt omnis nostrum, iure labore aliquam aspernatur cum odio veniam vero commodi
-  ad obcaecati. Deleniti quibusdam fugit repudiandae?  \nLorem ipsum dolor sit amet,
-  consectetur adipisicing elit. Optio libero cupiditate sint earum cumque quam veritatis,
-  dignissimos quibusdam ad accusantium fugiat assumenda eius neque possimus reiciendis.
-  Itaque sint vel sunt!\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit.
-  Odit et adipisci perspiciatis illo aspernatur architecto officia voluptates. Nihil
-  odio animi fugit officia! Sequi suscipit aut aspernatur velit delectus expedita
-  natus.\n\n  \nLorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptates
-  alias atque, incidunt omnis nostrum, iure labore aliquam aspernatur cum odio veniam
-  vero commodi ad obcaecati. Deleniti quibusdam fugit repudiandae?  \nLorem ipsum
-  dolor sit amet, consectetur adipisicing elit. Optio libero cupiditate sint earum
-  cumque quam veritatis, dignissimos quibusdam ad accusantium fugiat assumenda eius
-  neque possimus reiciendis. Itaque sint vel sunt!"
+brief: |-
+  The [Movement Card](https://mvmnt-card.com/) aims to educate and inform all who have interactions with people moving in the public domain. Whether that’s you, your friends, the security guard, or even a police officer – with a Movement Card, you have an instant educational resource at your fingertips.
+
+  The goal is to collaborate with communities to replicate the card in other countries worldwide, enabling everybody to know their ‘right to their city’.
+
+  It allows those with limited rights to take legislative examples from other countries for use as a starting point to improve their freedom of movement.
+
+  You can learn more about the Movement Card and find out how to get involved by visiting our site, reading our blog or joining the Movement Card Discord community.
+
+  [**https://mvmnt-card.com/**](https://mvmnt-card.com/ "https://mvmnt-card.com/")
+
+  [**https://discordapp.com/invite/7aYRk8P**](https://mvmnt-card.com/ "https://mvmnt-card.com/")
+
+  [**https://ukemi.ninja/blog/movement-card-right-to-the-city/**](https://mvmnt-card.com/ "https://mvmnt-card.com/")
 featured: true
 featured_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/sleek mock
   1.png
