@@ -28,8 +28,7 @@ const ServicesSlider = () => {
                 <div className="service-item-body">
                   <h3>Consultation</h3>
                   <p className="mb-0">
-                    Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris
-                    vel neque
+                    We can provide expert advice on any project focused on movement.
                   </p>
                 </div>
               </div>
@@ -46,10 +45,7 @@ const ServicesSlider = () => {
                 </div>
                 <div className="service-item-body">
                   <h3>Performances</h3>
-                  <p className="mb-0">
-                    Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris
-                    vel neque
-                  </p>
+                  <p className="mb-0">We have build our own performance team available for hire.</p>
                 </div>
               </div>
             </div>
@@ -64,10 +60,7 @@ const ServicesSlider = () => {
                 </div>
                 <div className="service-item-body">
                   <h3>Equipment</h3>
-                  <p className="mb-0">
-                    Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris
-                    vel neque
-                  </p>
+                  <p className="mb-0">We build bespoke parkour and movement equipment.</p>
                 </div>
               </div>
             </div>
@@ -83,8 +76,7 @@ const ServicesSlider = () => {
                 <div className="service-item-body">
                   <h3>Events & Presentations</h3>
                   <p className="mb-0">
-                    Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris
-                    vel neque
+                    We have delivered presentations and managed large spectator events.
                   </p>
                 </div>
               </div>
@@ -101,8 +93,7 @@ const ServicesSlider = () => {
                 <div className="service-item-body">
                   <h3>Park Design</h3>
                   <p className="mb-0">
-                    Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris
-                    vel neque
+                    We can design you the next generation of activity landscape or parkour park.
                   </p>
                 </div>
               </div>
@@ -119,8 +110,8 @@ const ServicesSlider = () => {
                 <div className="service-item-body">
                   <h3>Workshops</h3>
                   <p className="mb-0">
-                    Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris
-                    vel neque
+                    We can host and deliver movement workshops and provide parkour coaches for your
+                    event.
                   </p>
                 </div>
               </div>
