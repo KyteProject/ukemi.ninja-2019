@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Container, Row, Col, Button, Card, Accordion } from "react-bootstrap";
 
 const FAQ = () => {
@@ -29,65 +30,52 @@ const FAQ = () => {
                   <Card.Header>
                     <h5>
                       <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                        Can I Do Something?
+                        Where can I buy a copy of the Ukemi Card Game?
                       </Accordion.Toggle>
                     </h5>
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                      fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
-                      fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                      ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
+                      You can get a copy by visiting our <Link to="/shop">store</Link>. It's also
+                      available on{" "}
+                      <a
+                        href="https://www.amazon.co.uk/Ukemi-Project-Card-Game/dp/B07N2Z8N7T"
+                        rel="no-follow">
+                        Amazon
+                      </a>{" "}
+                      and{" "}
+                      <a href="https://www.etsy.com/uk/shop/UkemiProject" rel="no-follow">
+                        Etsy
+                      </a>
+                      .
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
                 <Card className="shadow">
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                      What is the something of something?
+                      How can I collaborate with Ukemi?
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
                     <Card.Body>
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                      fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
-                      fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                      ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
+                      We are always on the lookout for new partners, clients, and collaborators.
+                      Visit our <Link to="/contact">Contact</Link> page for details.
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
                 <Card className="shadow">
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                      Can I Do Something?
+                      How much does a custom piece of equipment or park cost?
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="2">
                     <Card.Body>
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                      fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
-                      fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                      ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Card>
-                <Card className="shadow">
-                  <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                      What is the something of something?
-                    </Accordion.Toggle>
-                  </Card.Header>
-                  <Accordion.Collapse eventKey="3">
-                    <Card.Body>
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                      fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
-                      fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                      ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
+                      Ukemi provides equipment and park solutions from design, to creation and
+                      installation. The initial consultation is free. Just give us an email by
+                      visiting the <Link to="/contact">Contact</Link> section and we will arrange a
+                      call.
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
@@ -99,65 +87,41 @@ const FAQ = () => {
                   <Card.Header>
                     <h5>
                       <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                        Can I Do Something?
+                        Where are you based?
                       </Accordion.Toggle>
                     </h5>
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                      fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
-                      fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                      ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
+                      Our services extend worldwide but we are based in Scotland.
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
                 <Card className="shadow">
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                      What is the something of something?
+                      I’d like to support Ukemi. How can I do this?
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
                     <Card.Body>
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                      fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
-                      fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                      ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
+                      The easiest way to support Ukemi is by following our social media and getting
+                      in on the action. You can also join our Facebook community group by clicking
+                      here.
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
                 <Card className="shadow">
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                      Can I Do Something?
+                      What are you doing for the community?
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="2">
                     <Card.Body>
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                      fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
-                      fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                      ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Card>
-                <Card className="shadow">
-                  <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                      What is the something of something?
-                    </Accordion.Toggle>
-                  </Card.Header>
-                  <Accordion.Collapse eventKey="3">
-                    <Card.Body>
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                      fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
-                      fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                      ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
+                      Ukemi have a variety of projects that benefit the community such as the
+                      Movement Card and Greatest Park Never Built. You can get involved by visiting
+                      the project pages or joining our Facebook community group by clicking here.
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
