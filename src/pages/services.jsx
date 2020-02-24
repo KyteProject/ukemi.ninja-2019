@@ -37,20 +37,16 @@ const services = ({ location }) => {
         <Row className="text-center">
           <Col md={4}>
             <h5>Digital Design</h5>
-            <p className="mb-15">
-              Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam.
-            </p>
+            <p className="mb-15">Experts in digital design, we turn ideas into something visual.</p>
           </Col>
           <Col md={4}>
             <h5>Product Creation</h5>
-            <p className="mb-15">
-              Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam.
-            </p>
+            <p className="mb-15">We create physical products to enrich the lives of all movers!</p>
           </Col>
           <Col md={4}>
             <h5>Community Arts Development</h5>
             <p className="mb-15">
-              Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam.
+              We engage with local communities to bring movement to economically challenged areas.
             </p>
           </Col>
         </Row>
