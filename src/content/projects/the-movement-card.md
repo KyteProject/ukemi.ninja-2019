@@ -25,8 +25,7 @@ brief: |-
 
   [**https://ukemi.ninja/blog/movement-card-right-to-the-city/**](https://mvmnt-card.com/ "https://mvmnt-card.com/")
 featured: true
-featured_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/sleek mock
-  1.png
+featured_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/mc-mock-holder.png
 project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/sleek mock
   1.png
 project_gallery:
