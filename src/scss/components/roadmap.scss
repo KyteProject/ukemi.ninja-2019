@@ -1,111 +1,131 @@
-.roadmap {
-  clear: both;
-  display: block;
-  position: relative;
-  padding: 150px 0;
-  padding-bottom: 150px;
+// .roadmap {
+//   clear: both;
+//   display: block;
+//   position: relative;
+//   padding: 150px 0;
+//   padding-bottom: 150px;
+// }
+
+// .roadmap-title {
+//   margin-bottom: 50px;
+// }
+
+// .desc {
+//   margin-bottom: 15px;
+// }
+
+// .flat-divider {
+//   width: 100%;
+//   position: relative;
+//   height: 128px;
+// }
+
+// .flat-steps-taken {
+//   position: relative;
+// }
+
+// .flat-steps-taken:before {
+//   position: absolute;
+//   left: 50%;
+//   top: -82px;
+//   content: "";
+//   width: 1px;
+//   height: 117%;
+//   background-color: #eeeeee;
+// }
+
+// .steps-img.left-img {
+//   float: right;
+// }
+
+// .steps-img {
+//   position: relative;
+// }
+
+// .steps-img img {
+//   width: 200px;
+//   height: 200px;
+//   border-radius: 50%;
+// }
+
+// .steps-img:before {
+//   position: absolute;
+//   content: "";
+//   width: 21px;
+//   height: 21px;
+//   background-color: $color-pink;
+//   border-radius: 50%;
+// }
+
+// .steps-img.left-img:before {
+//   right: -126px;
+//   top: 90px;
+// }
+
+// .steps-img.right-img:before {
+//   left: -125px;
+//   top: 90px;
+// }
+
+// .steps-taken {
+//   margin-top: 25px;
+//   position: relative;
+// }
+
+// .steps-taken.v1:before {
+//   position: absolute;
+//   top: -128px;
+//   left: -125px;
+//   content: "";
+//   width: 21px;
+//   height: 21px;
+//   background-color: $color-pink;
+//   border-radius: 50%;
+// }
+
+// .steps-taken.v2:before {
+//   position: absolute;
+//   top: 260px;
+//   right: -160px;
+//   font-family: "FontAwesome";
+//   text-align: center;
+//   line-height: 90px;
+//   font-size: 24px;
+//   color: #fff;
+//   content: "\f00c";
+//   width: 90px;
+//   height: 90px;
+//   background-color: $color-pink;
+//   border-radius: 50%;
+// }
+
+// .steps-taken .steps-title {
+//   font-weight: 400;
+//   padding-bottom: 17px;
+//   letter-spacing: 1px;
+// }
+
+// .steps-taken .steps-title span {
+//   font-weight: 900;
+//   color: $color7;
+// }
+
+.accordion.simple .card {
+  background: none;
+  border-radius: 0;
+  margin-bottom: 0.1rem;
 }
 
-.roadmap-title {
-  margin-bottom: 50px;
+.accordion .simple .card-header {
+  margin-bottom: 0.8rem;
 }
 
-.desc {
-  margin-bottom: 15px;
+.accordion .simple .card-header,
+.accordion .simple .card-block,
+.accordion .simple .card-body {
+  padding: 0;
 }
 
-.flat-divider {
-  width: 100%;
-  position: relative;
-  height: 128px;
-}
-
-.flat-steps-taken {
-  position: relative;
-}
-
-.flat-steps-taken:before {
-  position: absolute;
-  left: 50%;
-  top: -82px;
-  content: "";
-  width: 1px;
-  height: 117%;
-  background-color: #eeeeee;
-}
-
-.steps-img.left-img {
-  float: right;
-}
-
-.steps-img {
-  position: relative;
-}
-
-.steps-img img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-
-.steps-img:before {
-  position: absolute;
-  content: "";
-  width: 21px;
-  height: 21px;
-  background-color: $color-pink;
-  border-radius: 50%;
-}
-
-.steps-img.left-img:before {
-  right: -126px;
-  top: 90px;
-}
-
-.steps-img.right-img:before {
-  left: -125px;
-  top: 90px;
-}
-
-.steps-taken {
-  margin-top: 25px;
-  position: relative;
-}
-
-.steps-taken.v1:before {
-  position: absolute;
-  top: -128px;
-  left: -125px;
-  content: "";
-  width: 21px;
-  height: 21px;
-  background-color: $color-pink;
-  border-radius: 50%;
-}
-
-.steps-taken.v2:before {
-  position: absolute;
-  top: 260px;
-  right: -160px;
-  font-family: "FontAwesome";
-  text-align: center;
-  line-height: 90px;
-  font-size: 24px;
-  color: #fff;
-  content: "\f00c";
-  width: 90px;
-  height: 90px;
-  background-color: $color-pink;
-  border-radius: 50%;
-}
-
-.steps-taken .steps-title {
-  font-weight: 400;
-  padding-bottom: 17px;
-  letter-spacing: 1px;
-}
-
-.steps-taken .steps-title span {
-  font-weight: 900;
-  color: $color7;
+.roadmap-img {
+  max-height: 550px;
 }
