@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Nav, NavDropdown, Navbar, Container } from "react-bootstrap";
+import { Nav, NavDropdown, Navbar, Container, Image } from "react-bootstrap";
 
 const Navigation = () => {
   const data = useStaticQuery(
@@ -28,7 +28,7 @@ const Navigation = () => {
     <Navbar collapseOnSelect expand="lg" fixed="top" className="header-navigation bg-white">
       <Container>
         <Navbar.Brand href="/">
-          <img src="/logos/ukemi-logo.svg" alt="Ukemi Project text logo" />
+          <Image src="/images/text-logotext-logo.png" alt="Ukemi Project text logo" />
         </Navbar.Brand>
         <Navbar.Toggle
           onClick={toggle}
