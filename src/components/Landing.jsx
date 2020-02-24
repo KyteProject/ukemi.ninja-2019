@@ -16,7 +16,9 @@ const Landing = () => {
                 We create products, design activity landscapes and pursue community arts
                 development.
               </p>
-              <Button className="btn-white landing-btn">Visit Our Shop</Button>
+              <Button as="a" href="/shop" className="btn-white landing-btn">
+                Visit Our Shop
+              </Button>
             </Col>
           </Row>
         </Container>
