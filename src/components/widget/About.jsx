@@ -18,9 +18,12 @@ const About = () => {
     <div className="sidebox widget">
       <h3 className="widget-title">About Us</h3>
       <p>
-        We post all our thoughts and experiences on our journey to reclaim the city. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Aspernatur, illo fugit exercitationem dolor
-        harum itaque sapiente nostrum?
+        In the pursuit of multifunctional movement-centric design, Ukemi has extended beyond its
+        initial inquiry of the city.
+      </p>
+      <p>
+        We are opting to create products, equipment, theatre and events that tip their hat to this
+        mantra - aiming to bridge the gap between fitness and play under the umbrella of movement.
       </p>
       <ul className="social social-color social-s">
         <li>
