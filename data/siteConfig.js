@@ -6,7 +6,8 @@ const config = {
   siteIcon: "favicon.png", // TODO
   siteUrl: "https://ukemi.ninja",
   pathPrefix: "",
-  siteDescription: "Ukemi project blah", // TODO
+  siteDescription:
+    "Ukemi promotes activity in highly urbanised areas and encourages a healthier society through digital design, product creation, and community arts development.",
   siteRss: "/rss.xml",
   siteFBAppID: "", // TODO
   googleAnalyticsID: "", // TODO
