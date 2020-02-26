@@ -4,8 +4,9 @@ import { Container, Row } from "react-bootstrap";
 
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/projects/ProjectCard";
 import TitleSection from "../components/common/TitleSection";
+import PageTitle from "../components/common/PageTitle";
 
 const Projects = ({ location }) => {
   const data = useStaticQuery(
@@ -37,8 +38,15 @@ const Projects = ({ location }) => {
       <MetaData title="Projects" location={location} />
       <div className="projects-container">
         <TitleSection location={location} crumbLabel="Projects" />
-        <section className="projects-page">
-          <Container>
+        <PageTitle
+          title="Project Portfolio"
+          subTitle={[
+            "Here are some of the projects we have worked on.",
+            "If you'd like to hire us we'd love to hear from you!",
+          ]}
+        />
+        <section>
+          <Container className="inner">
             <Row>
               {projects.length > 0
                 ? /* prettier-ignore */
