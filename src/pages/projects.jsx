@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Button } from "react-bootstrap";
 
 import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
@@ -32,6 +32,29 @@ const Projects = ({ location }) => {
   );
 
   const projects = data.allMarkdownRemark.edges;
+  const categories = ["all"];
+
+  projects.forEach(({ node }) => {
+    categories.push(node.frontmatter.category);
+  });
+
+  const [filterCat, setFilterCat] = React.useState("all");
+  const [filterProjects, setFilterProjects] = React.useState(projects);
+  const handleClick = (event) => {
+    setFilterCat(event.target.attributes.value.value.toLowerCase());
+  };
+
+  React.useEffect(() => {
+    if (filterCat === "all") {
+      return setFilterProjects(projects);
+    }
+
+    const results = projects.filter((project) =>
+      project.node.frontmatter.category.toLowerCase().includes(filterCat)
+    );
+
+    return setFilterProjects(results);
+  }, [filterCat]);
 
   return (
     <MainLayout>
@@ -46,15 +69,28 @@ const Projects = ({ location }) => {
           ]}
         />
         <section>
-          <Container className="inner">
-            <Row>
-              {projects.length > 0
-                ? /* prettier-ignore */
-                  projects.map(({ node }) =>
-                    <ProjectCard key={node.id} project={node.frontmatter} />
+          <Container className="inner pt-5">
+            <div className="filter text-center">
+              <ul>
+                {categories.map((cat) => (
+                  <li key={cat}>
+                    <Button as="a" value={cat} onClick={handleClick}>
+                      {cat}
+                    </Button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="tiles text-center gallery-wrapper">
+              <Row>
+                {projects.length > 0
+                  ? /* prettier-ignore */
+                    filterProjects.map(({ node }) =>
+                      <ProjectCard key={node.id} project={node.frontmatter} />
                 )
-                : null}
-            </Row>
+                  : null}
+              </Row>
+            </div>
           </Container>
         </section>
       </div>

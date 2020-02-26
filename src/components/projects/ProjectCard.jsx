@@ -4,7 +4,7 @@ import { Card, Col } from "react-bootstrap";
 
 const ProjectCard = ({ project }) => {
   return (
-    <Col lg={4}>
+    <Col lg={4} md={6}>
       <Card className="project-single">
         <div className="project-single-image">
           {project.project_image && (
