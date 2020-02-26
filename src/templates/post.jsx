@@ -10,6 +10,7 @@ import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import Sidebar from "../components/blog/Sidebar";
 import TitleSection from "../components/common/TitleSection";
+import PostAuthor from "../components/blog/PostAuthor";
 
 const Post = ({ data, location }) => {
   const post = data.ghostPost;
@@ -57,6 +58,7 @@ const Post = ({ data, location }) => {
             </Col>
             <Sidebar />
           </Row>
+          <PostAuthor data={post.primary_author} />
         </Container>
       </MainLayout>
     </>
