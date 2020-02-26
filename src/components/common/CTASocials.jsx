@@ -16,7 +16,7 @@ const { userLinks } = config;
 const CTASocials = () => {
   return (
     <>
-      <div className="divider">
+      {/* <div className="divider">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="fill-dark"
@@ -24,7 +24,7 @@ const CTASocials = () => {
           viewBox="0 0 1070 44.03">
           <path d="M0,20S35-1,137,0C232.52,1,240,33,352,25c111.47-8,177-45.61,367-8,202,40,256-6,351-5V44H0Z" />
         </svg>
-      </div>
+      </div> */}
 
       <section className="cta-socials text-center">
         <Container>
@@ -76,7 +76,7 @@ const CTASocials = () => {
         </Container>
       </section>
 
-      <div className="divider">
+      {/* <div className="divider">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="fill-dark-r"
@@ -84,7 +84,7 @@ const CTASocials = () => {
           viewBox="0 0 1070 44.03">
           <path d="M0,20S35-1,137,0C232.52,1,240,33,352,25c111.47-8,177-45.61,367-8,202,40,256-6,351-5V44H0Z" />
         </svg>
-      </div>
+      </div> */}
     </>
   );
 };
