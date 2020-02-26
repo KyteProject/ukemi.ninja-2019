@@ -1,42 +1,7 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
 import { Container, Row, Col, Figure, Accordion, Button, Card } from "react-bootstrap";
 
 const Roadmap = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      one: file(relativePath: { eq: "steps/1.png" }) {
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed_noBase64
-          }
-        }
-      }
-      two: file(relativePath: { eq: "steps/2.png" }) {
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed_noBase64
-          }
-        }
-      }
-      three: file(relativePath: { eq: "steps/3.png" }) {
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed_noBase64
-          }
-        }
-      }
-      four: file(relativePath: { eq: "steps/4.png" }) {
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed_noBase64
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <section className="roadmap">
       <Container className="inner">
@@ -51,7 +16,7 @@ const Roadmap = () => {
             </Figure>
           </Col>
           <Col lg={6} className="pr-60 pr-md-15">
-            <h2 className="title">We've broken down our roadmap for 2020 into 3 stages.</h2>
+            <h2 className="title">We&apos;ve broken down our roadmap for 2020 into 3 stages.</h2>
 
             <Accordion defaultActiveKey="0" className="simple">
               <Card>

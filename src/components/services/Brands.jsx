@@ -51,7 +51,7 @@ const Brands = () => {
     <>
       <section className="brands">
         <Container className="inner pt-0">
-          <h2 className="subtitle text-center"> Brands we've worked with</h2>
+          <h2 className="subtitle text-center"> Brands we&apos;ve worked with</h2>
           <Slider className="brands-slider" {...settings}>
             {brands.map(({ node }) => (
               <div key={node.id}>

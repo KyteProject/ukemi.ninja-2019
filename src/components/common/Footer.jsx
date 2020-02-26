@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import { Nav, Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 
 import config from "../../../data/siteConfig";
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Button } from "react-bootstrap";
-import { GoCalendar, GoPerson } from "react-icons/go";
 
 const Tags = () => {
   const data = useStaticQuery(graphql`

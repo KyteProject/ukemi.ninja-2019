@@ -19,7 +19,7 @@ const FAQ = () => {
         <Container className="inner">
           <h2>FAQ</h2>
           <h3>
-            If you don't see an answer to your question,
+            If you don&apos;t see an answer to your question,
             <br className="d-none d-lg-block" />
             you can send us an email from our contact form
           </h3>
@@ -36,8 +36,8 @@ const FAQ = () => {
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                      You can get a copy by visiting our <Link to="/shop">store</Link>. It's also
-                      available on{" "}
+                      You can get a copy by visiting our <Link to="/shop">store</Link>. It&apos;s
+                      also available on{" "}
                       <a
                         href="https://www.amazon.co.uk/Ukemi-Project-Card-Game/dp/B07N2Z8N7T"
                         rel="no-follow">
