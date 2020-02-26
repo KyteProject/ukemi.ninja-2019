@@ -1,10 +1,18 @@
 import React from "react";
+import { Container } from "react-bootstrap";
+
 import MainLayout from "../layout";
 
 const NotFoundPage = () => (
   <MainLayout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <>
+      <section className="in-development">
+        <Container className="text-center">
+          <h2 className="title">404 Page Not Found</h2>
+          <p>Thanks for checking out this section, we are working hard to bring it to you soon!</p>
+        </Container>
+      </section>
+    </>
   </MainLayout>
 );
 
