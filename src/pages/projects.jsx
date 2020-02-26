@@ -81,7 +81,7 @@ const Projects = ({ location }) => {
                 ))}
               </ul>
             </div>
-            <div className="tiles text-center gallery-wrapper">
+            <Container className="tiles text-center gallery-wrapper">
               <Row>
                 {projects.length > 0
                   ? /* prettier-ignore */
@@ -90,7 +90,7 @@ const Projects = ({ location }) => {
                 )
                   : null}
               </Row>
-            </div>
+            </Container>
           </Container>
         </section>
       </div>

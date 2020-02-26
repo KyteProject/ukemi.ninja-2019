@@ -4,7 +4,7 @@ import { Col, Figure } from "react-bootstrap";
 
 const ProjectCard = ({ project }) => {
   return (
-    <Col lg={4} md={6}>
+    <Col lg={4} md={6} className="gallery-item">
       <div className="box shadow p-30">
         <Figure className="main overlay">
           <Link to={`projects/${project.slug}`}>

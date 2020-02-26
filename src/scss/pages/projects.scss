@@ -120,12 +120,14 @@
   border-top: 3px solid rgba(0, 0, 0, 0.04);
 }
 
-.ts-gallery {
+.ts-gallery,
+.gallery-wrapper {
   position: relative;
   overflow: hidden;
 }
 
-.ts-gallery .ts-gallery-item {
+.ts-gallery .ts-gallery-item,
+.gallery-item {
   border-radius: 0;
   border: 0;
   background-color: transparent;
@@ -177,7 +179,6 @@
   border-radius: 1.5rem;
   background-color: $light;
 }
-
 .filter ul li a:hover {
   color: $white;
   background-color: $color7 !important;
@@ -185,7 +186,6 @@
 .filter ul li a.active {
   color: $white;
   background-color: $color7;
-  // box-shadow: var(--shadow) !important;
 }
 .filter ul li a.active:hover {
   background-color: $color7 !important;
@@ -202,4 +202,8 @@
 .box-title {
   color: $color7;
   font-size: 1.5rem;
+}
+
+.gallery-item {
+  margin-bottom: 1rem;
 }
