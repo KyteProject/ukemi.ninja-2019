@@ -5,12 +5,12 @@ const AboutDetails = () => {
   return (
     <>
       <section className="about-details">
-        <Container className="inner">
+        <Container className="inner pt-5">
           <Row className="align-items-center service-row">
             <Col lg={6}>
-              <h1 className="title">
+              <h2 className="title">
                 we are <strong>UKEMI</strong>.
-              </h1>
+              </h2>
               <p className="about-text">
                 Ukemi promotes activity in highly urbanised areas and encourages a healthier society
                 through digital design, product creation, and community arts development.

@@ -3,14 +3,7 @@ import { Container, Row, Col, Figure } from "react-bootstrap";
 
 const ServiceHeader = () => {
   return (
-    <Container className="inner">
-      <h2 className="title text-center">Our Services</h2>
-      <h3 className="subtitle text-center">
-        Our aim is to tackle health and safety culture,
-        <br className="d-none d-lg-block" />
-        to encourage play, and demystify fitness and movement.
-      </h3>
-
+    <Container className="inner pt-0">
       <Row>
         <Col lg={{ span: 10, offset: 1 }}>
           <Figure>

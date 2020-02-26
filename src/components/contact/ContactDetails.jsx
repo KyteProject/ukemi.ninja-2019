@@ -6,18 +6,6 @@ import { TiLocationOutline, TiSocialAtCircular, TiMail } from "react-icons/ti";
 const ContactDetails = () => {
   return (
     <>
-      <section className="contact-section">
-        <Container className="text-center">
-          <h1 className="title">Get in touch!</h1>
-          <p>
-            If you want to hire us, work with us, collaborate or even just chat then we&apos;d love
-            to hear from you.
-            <br />
-            We are always looking for more people to connect with!
-          </p>
-        </Container>
-      </section>
-
       <section className="contact-info">
         <Container>
           <Row>
