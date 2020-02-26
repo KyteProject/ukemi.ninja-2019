@@ -190,3 +190,16 @@
 .filter ul li a.active:hover {
   background-color: $color7 !important;
 }
+
+.box {
+  border-radius: 0.2rem;
+}
+
+.box-content {
+  padding: 1.5rem;
+}
+
+.box-title {
+  color: $color7;
+  font-size: 1.5rem;
+}
