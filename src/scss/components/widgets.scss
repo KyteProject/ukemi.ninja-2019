@@ -41,6 +41,18 @@
   color: inherit;
 }
 
+.social svg[class*="website"],
+.color-s-github,
+.color-s-github:hover {
+  color: #606e6c;
+}
+
+.social svg[class*="email"],
+.color-s-github,
+.color-s-github:hover {
+  color: #a9baca;
+}
+
 .social svg[class*="github"],
 .color-s-github,
 .color-s-github:hover {

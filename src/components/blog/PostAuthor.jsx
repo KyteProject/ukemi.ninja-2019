@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Figure } from "react-bootstrap";
 
 import { AiOutlineFacebook, AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
+import { GoGlobe } from "react-icons/go";
 
 const PostAuthor = ({ data }) => {
   return (
@@ -10,7 +11,7 @@ const PostAuthor = ({ data }) => {
         <Row>
           <Col md={4}>
             <Figure>
-              <Figure.Image rounded src={data.profile_image} />
+              <Figure.Image rounded src={data.profile_image} alt={data.name} />
             </Figure>
           </Col>
           <Col md={8}>
@@ -29,8 +30,13 @@ const PostAuthor = ({ data }) => {
                 </a>
               </li>
               <li>
-                <a href={data.email}>
+                <a href="hello@ukemi.ninja">
                   <AiOutlineMail size={32} className="s-email" />
+                </a>
+              </li>
+              <li>
+                <a href="https://ukemi.ninja">
+                  <GoGlobe size={32} className="s-website" />
                 </a>
               </li>
             </ul>
