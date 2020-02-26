@@ -6,9 +6,9 @@ category: Products
 clients: []
 partners:
 - Sam Mcfarlane
-objective: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, doloribus
-  autem? Assumenda, eaque. Non cumque illum sequi expedita eos ea tempora? Exercitationem
-  laboriosam totam nisi aliquid neque provident amet tempore?
+objective: Ukemi is a random chance movement game that improves the player's ability
+  to assess risk and develop quality movement. The base movements are derived from
+  the disciplines of parkour, freerunning and broader movement culture.
 brief: |-
   Ukemi is a random chance movement game that improves the player's ability to assess risk and develop quality movement. The base movements are derived from the disciplines of parkour, freerunning and broader movement culture. The game works best with 2-4 people.
 
