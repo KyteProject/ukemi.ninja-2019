@@ -1430,6 +1430,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.5.0.tgz#4e498dbf355795a611a87ae5ef811a8660d42662"
   integrity sha512-Onhn+z72D2O2Pb2ql2xukJ55rglumsVo1H6Fmyi8mlU9SvKdBk/pUSUAiBY/d9bAOF7VVWajX3sths/+g6ZiAQ==
 
+"@types/node@>=8.1.0":
+  version "13.7.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.7.6.tgz#cb734a7c191472ae6a2b3a502b4dfffcea974113"
+  integrity sha512-eyK7MWD0R1HqVTp+PtwRgFeIsemzuj4gBFSQxfPHY5iMjS7474e5wq+VFgTcdpyHeNxyKSaetYAjdMLJlKoWqA==
+
 "@types/node@^7.0.11":
   version "7.10.9"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.10.9.tgz#4343e3b009f8cf5e1ed685e36097b74b4101e880"
@@ -5973,6 +5978,11 @@ gatsby-plugin-sitemap@^2.2.3:
     pify "^3.0.0"
     sitemap "^1.13.0"
 
+gatsby-plugin-stripe@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-stripe/-/gatsby-plugin-stripe-1.2.4.tgz#02b105b7a405dc5bdf165b085cb41478c69276fb"
+  integrity sha512-g2mj5llTjzIhGQ6fxLLjaTlQWP0ntu62+AnJ2Ff9EDEXm5+5TGrCL4T7Q3on3d0HNK/7gkGPPVVSlRCNOKq4vA==
+
 gatsby-plugin-transition-link@^1.17.7:
   version "1.17.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-transition-link/-/gatsby-plugin-transition-link-1.17.7.tgz#59262ba241331f6aed79031849340de725498614"
@@ -6065,6 +6075,27 @@ gatsby-remark-smartypants@^2.1.21:
     retext-smartypants "^3.0.3"
     unist-util-visit "^1.4.1"
 
+gatsby-source-filesystem@2.1.48:
+  version "2.1.48"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.48.tgz#85bd83b953278a7597be38b2e8cd9c69de32fa64"
+  integrity sha512-m1RIYDoV9rhMe2p0ZJA1ae4IIX+iIJCMpNnQiQVtTf+mfihiWyDAdi4lsWzJUxPt8FQwDgUG7GzY3sAoGctvzQ==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+    better-queue "^3.8.10"
+    bluebird "^3.7.2"
+    chokidar "3.3.0"
+    file-type "^12.4.0"
+    fs-extra "^8.1.0"
+    gatsby-core-utils "^1.0.28"
+    got "^8.3.2"
+    md5-file "^3.2.3"
+    mime "^2.4.4"
+    pretty-bytes "^5.3.0"
+    progress "^2.0.3"
+    read-chunk "^3.2.0"
+    valid-url "^1.0.9"
+    xstate "^4.7.2"
+
 gatsby-source-filesystem@^2.1.5:
   version "2.1.46"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.46.tgz#ab90c4520f0664218c7334dbec6cd90acc85cf9d"
@@ -6096,6 +6127,14 @@ gatsby-source-ghost@^3.4.4:
     cheerio "1.0.0-rc.3"
     gatsby-node-helpers "^0.3.0"
     qs "6.9.0"
+
+gatsby-source-stripe@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-source-stripe/-/gatsby-source-stripe-3.0.6.tgz#bccf4d1cb34634401e874c5183a3c756ffd34514"
+  integrity sha512-ATWaISKDLopKegvXX66YGqltTN5qcmuaoqZEfez8vprEgg8GocX3ppPeSxdF0cqokQzD6xwL/2hP+5bKvvhLFg==
+  dependencies:
+    gatsby-source-filesystem "2.1.48"
+    stripe "8.20.0"
 
 gatsby-telemetry@^1.1.47:
   version "1.1.47"
@@ -11005,6 +11044,11 @@ qs@6.9.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.0.tgz#d1297e2a049c53119cb49cca366adbbacc80b409"
   integrity sha512-27RP4UotQORTpmNQDX8BHPukOnBP3p1uUJY5UnDhaJB+rMt9iMsok724XL+UHU23bEFOHRMQ2ZhI99qOWUMGFA==
 
+qs@^6.6.0:
+  version "6.9.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.1.tgz#20082c65cb78223635ab1a9eaca8875a29bf8ec9"
+  integrity sha512-Cxm7/SS/y/Z3MHWSxXb8lIFqgqBowP5JMlTUFyJN88y0SGQhVmZnqFK/PeuMX9LzUyWsqqhNxIyg0jlzq946yA==
+
 qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
@@ -12981,6 +13025,14 @@ strip-outer@^1.0.0:
   integrity sha512-k55yxKHwaXnpYGsOzg4Vl8+tDrWylxDEpknGjhTiZB8dFRU5rTo9CAzeycivxV3s+zlTKwrs6WxMxR95n26kwg==
   dependencies:
     escape-string-regexp "^1.0.2"
+
+stripe@8.20.0:
+  version "8.20.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.20.0.tgz#23cdac18762b4bd2126a699e96569d67a44fd40b"
+  integrity sha512-DJQmdffrPBV8aWU4F8646e47rSYWZ/ZbVv6E98xOdcZVB5jo3nB0iGR+c5L2CeWBsvgpleWoxmGyE9fjYCTswg==
+  dependencies:
+    "@types/node" ">=8.1.0"
+    qs "^6.6.0"
 
 style-loader@^0.23.1:
   version "0.23.1"

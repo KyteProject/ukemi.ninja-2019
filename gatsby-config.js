@@ -91,6 +91,14 @@ module.exports = {
         process.env.NODE_ENV === "development" ? ghostConfig.development : ghostConfig.production,
     },
     {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ["Product", "Sku"],
+        secretKey: process.env.GATSBY_STRIPE_KEY,
+        downloadFiles: true,
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: config.googleAnalyticsID,
@@ -114,6 +122,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-stripe",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-manifest",

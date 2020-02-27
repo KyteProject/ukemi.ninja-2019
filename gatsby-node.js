@@ -60,6 +60,18 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allStripeSku {
+        edges {
+          node {
+            id
+            product {
+              metadata {
+                slug
+              }
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -74,6 +86,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const pages = result.data.allGhostPage.edges;
   const posts = result.data.allGhostPost.edges;
   const projects = result.data.allMarkdownRemark.edges;
+  const products = result.data.allStripeSku.edges;
 
   // Load templates
   const tagsTemplate = path.resolve("./src/templates/tag.jsx");
@@ -82,6 +95,18 @@ exports.createPages = async ({ graphql, actions }) => {
   const pageTemplate = path.resolve("./src/templates/page.jsx");
   const postTemplate = path.resolve("./src/templates/post.jsx");
   const projectTemplate = path.resolve("./src/templates/project.jsx");
+  const productTemplate = path.resolve("./src/templates/product.jsx");
+
+  // Create Shop Product pages
+  products.forEach(({ node }) => {
+    createPage({
+      path: `shop/${node.product.metadata.slug}`,
+      component: productTemplate,
+      context: {
+        id: node.id,
+      },
+    });
+  });
 
   // Create Project pages
   projects.forEach(({ node }) => {
