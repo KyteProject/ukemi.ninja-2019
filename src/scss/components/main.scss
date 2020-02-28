@@ -50,10 +50,14 @@ a {
   width: 100%;
   min-width: 300px;
   overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 }
 
 .content-wrapper {
   padding-top: 86px;
+  flex-grow: 1;
 }
 
 .fill-dark {

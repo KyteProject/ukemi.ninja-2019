@@ -161,6 +161,15 @@
       margin-top: 0;
     }
   }
+
+  .table-cart > thead > tr > th,
+  .table-cart > tbody > tr > th,
+  .table-cart > tfoot > tr > th,
+  .table-cart > thead > tr > td,
+  .table-cart > tbody > tr > td,
+  .table-cart > tfoot > tr > td {
+    padding: 20px 0;
+  }
 }
 
 // @media only screen and (min-width: 576px) and (max-width: 768px) {

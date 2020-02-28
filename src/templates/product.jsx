@@ -1,36 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
-import { Formik } from "formik";
-import { Container, Row, Col, Button, Form, InputGroup } from "react-bootstrap";
+import { Container, Row, Col, Button, Form, InputGroup, Figure } from "react-bootstrap";
 import { useCart } from "react-use-cart";
-import { number, object } from "yup";
 
 import { MetaData } from "../components/meta";
-
-const schema = object({
-  quantity: number()
-    .integer()
-    .required()
-    .positive()
-    .min(1)
-    .max(15),
-});
-
-const formatPrice = (amount, currency) => {
-  const price = (amount / 100).toFixed(2);
-  const numberFormat = new Intl.NumberFormat(["en-US"], {
-    style: "currency",
-    currency,
-    currencyDisplay: "symbol",
-  });
-  return numberFormat.format(price);
-};
+import { formatPrice } from "../utils/cart-helpers";
 
 const Product = ({ data, location }) => {
   const product = data.stripeSku;
   const [quantity, setQuantity] = useState(1);
   const { addItem } = useCart();
+  const productImage = product.localFiles[0].publicURL;
 
   return (
     <>
@@ -39,7 +20,9 @@ const Product = ({ data, location }) => {
       <Container className="inner">
         <Row>
           <Col lg={6} className="mb-0">
-            <h1>product images slider</h1>
+            <Figure>
+              <Figure.Image src={productImage} />
+            </Figure>
           </Col>
           <aside className="col-lg-6 sidebar product">
             <h1 className="product-title">{product.product.name}</h1>
@@ -74,15 +57,18 @@ const Product = ({ data, location }) => {
                 <Button
                   className="cta-btn-pink"
                   onClick={() =>
-                    addItem({
-                      id: product.product.id,
-                      price: product.price,
-                      image: product.localFiles.publicURL,
-                      name: product.product.name,
-                      summary: product.product.metadata.short_summary,
-                    })
+                    addItem(
+                      {
+                        id: product.product.id,
+                        price: product.price,
+                        image: productImage,
+                        name: product.product.name,
+                        summary: product.product.metadata.short_summary,
+                      },
+                      quantity
+                    )
                   }>
-                  Buy Now
+                  Add to Cart
                 </Button>
               </Form.Group>
             </Form>

@@ -41,8 +41,11 @@ const shop = ({ location }) => {
     <>
       <MetaData title="Shop" location={location} />
       <TitleSection location={location} crumbLabel="Shop" />
-      <PageTitle title="Ukemi Store" />
-      <Container className="inner">
+      <PageTitle
+        title="Ukemi Store"
+        subTitle={["Check out some of our unique parkour, freerunning, and movement products!"]}
+      />
+      <Container className="inner pt-5">
         <div className="grid grid-view boxed">
           <div className="tiles">
             <Row>

@@ -2,15 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { Col, Figure } from "react-bootstrap";
 
-const formatPrice = (amount, currency) => {
-  const price = (amount / 100).toFixed(2);
-  const numberFormat = new Intl.NumberFormat(["en-US"], {
-    style: "currency",
-    currency,
-    currencyDisplay: "symbol",
-  });
-  return numberFormat.format(price);
-};
+import { formatPrice } from "../../utils/cart-helpers";
 
 const ListItem = ({ item }) => {
   return (

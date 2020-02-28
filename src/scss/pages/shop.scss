@@ -1,17 +1,17 @@
 .item-quantity {
+  background-color: $light;
   border: 0;
   border-radius: 1.25rem;
+  display: inline-block;
   padding: 0 5px;
   margin: 0;
-  margin-bottom: 1rem;
 }
 
 .item-quantity .qty {
   border: 0;
-  border-radius: 1.25rem;
-  width: 8rem;
+  background: none;
+  width: 60px;
   text-align: center;
-  background: $light;
   height: 48px;
   line-height: 1;
 }
@@ -20,11 +20,82 @@
   color: $color7;
 }
 
-// .item-quantity .form-label {
-//   margin-right: 1rem;
-//   color: $color7;
-// }
-
 .item-buy {
   padding: 0;
+}
+
+.table-cart {
+  margin-bottom: 2rem;
+}
+
+.table-cart > thead > tr > th,
+.table-cart > tbody > tr > th,
+.table-cart > tfoot > tr > th,
+.table-cart > thead > tr > td,
+.table-cart > tbody > tr > td,
+.table-cart > tfoot > tr > td {
+  padding: 20px 0;
+}
+
+.table tbody {
+  border-bottom: 1px solid #dbdcde;
+}
+
+.item-quantity input {
+  border: 0;
+  background: none;
+  height: 48px;
+  line-height: 1;
+}
+
+th {
+  font-weight: 500;
+}
+.table-bordered td,
+.table-bordered th,
+.table td,
+.table th,
+.table thead th {
+  border-color: #dbdcde;
+}
+.table-dark td,
+.table-dark th,
+.table-dark thead th {
+  border-color: #3c4248;
+}
+.table-cart > table > thead > tr > th,
+.table-cart > table > tbody > tr > th,
+.table-cart > table > tfoot > tr > th,
+.table-cart > table > thead > tr > td,
+.table-cart > table > tbody > tr > td,
+.table-cart > table > tfoot > tr > td {
+  vertical-align: middle;
+}
+.table thead th {
+  border-bottom-width: 1px;
+  font-size: 1rem;
+  font-weight: 900;
+}
+.table tbody {
+  border-bottom: 1px solid #dbdcde;
+}
+.pricing .table tbody {
+  border-bottom: 0;
+}
+.table-cart th,
+.table-cart td strong {
+  font-size: 0.85rem;
+}
+.table-cart .cart-remove {
+  font-size: 0.6rem;
+}
+.table-cart .cart-remove a {
+  color: inherit;
+}
+.table-cart .cart-remove a:hover {
+  color: $color7;
+}
+.table-cart img {
+  max-width: 70px;
+  height: auto;
 }
