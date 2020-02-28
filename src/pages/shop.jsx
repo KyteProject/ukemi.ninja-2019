@@ -6,6 +6,8 @@ import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
 import InDevelopment from "../components/common/InDevelopment";
+import PageTitle from '../components/common/PageTitle';
+import ListItem from "../components/shop/ListItem";
 
 const shop = ({ location }) => {
   const data = useStaticQuery(
@@ -14,19 +16,20 @@ const shop = ({ location }) => {
         allStripeSku(filter: { active: { eq: true } }) {
           edges {
             node {
-              id
+              currency
               product {
-                id
-                attributes
-                created
+                name
                 metadata {
                   slug
-                  version
-                  summary
+                  short_summary
                 }
-                name
-                shippable
+                id
               }
+              price
+              localFiles {
+                publicURL
+              }
+              id
             }
           }
         }
@@ -39,17 +42,22 @@ const shop = ({ location }) => {
   return (
     <MainLayout>
       <MetaData title="Shop" location={location} />
-
-      <div className="shop-container">
-        <TitleSection location={location} crumbLabel="Shop" />
-        <InDevelopment />
-        {products.length > 0
-          ? /* prettier-ignore */
-            products.map(({node}) =>
-              <Link key={node.product.id} to={`shop/${node.product.metadata.slug}`}>{node.product.name}</Link>
-              )
-          : null}
-      </div>
+      <TitleSection location={location} crumbLabel="Shop" />
+      <PageTitle title="Ukemi Store" />
+      <Container className="inner">
+        <div className="grid grid-view boxed">
+          <div className="tiles">
+            <Row>
+              {products.length > 0
+                ? /* prettier-ignore */
+                  products.map(({node}) =>
+                    <ListItem key={node.id} item={node} />
+                  )
+              : null}
+            </Row>
+          </div>
+        </div>
+      </Container>
     </MainLayout>
   );
 };

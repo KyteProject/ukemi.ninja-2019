@@ -111,7 +111,6 @@ export const productQuery = graphql`
         active
         attributes
         metadata {
-          version
           slug
           summary
         }
