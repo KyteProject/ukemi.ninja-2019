@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import MainLayout from "../layout";
 import Pagination from "../components/blog/Pagination";
 import { MetaData } from "../components/meta";
 
@@ -14,22 +13,20 @@ const Tag = ({ data, location, pageContext }) => {
     <>
       <MetaData data={data} location={location} type="series" />
 
-      <MainLayout>
-        <div className="container">
-          <header className="tag-header">
-            <h1>{tag.name}</h1>
-            {tag.description ? <p>{tag.description}</p> : null}
-          </header>
-          <section className="post-feed">
-            {posts.map(({ node }) => (
-              // The tag below includes the markup for each post - components/common/PostCard.js
-              <div key={node.id} post={node} />
-            ))}
-          </section>
+      <div className="container">
+        <header className="tag-header">
+          <h1>{tag.name}</h1>
+          {tag.description ? <p>{tag.description}</p> : null}
+        </header>
+        <section className="post-feed">
+          {posts.map(({ node }) => (
+            // The tag below includes the markup for each post - components/common/PostCard.js
+            <div key={node.id} post={node} />
+          ))}
+        </section>
 
-          <Pagination pageContext={pageContext} />
-        </div>
-      </MainLayout>
+        <Pagination pageContext={pageContext} />
+      </div>
     </>
   );
 };
