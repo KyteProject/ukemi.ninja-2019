@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import { Formik } from "formik";
 import { Container, Row, Col, Button, Form, InputGroup } from "react-bootstrap";
+import { useCart } from "react-use-cart";
 import { number, object } from "yup";
 
 import { MetaData } from "../components/meta";
@@ -27,19 +28,9 @@ const formatPrice = (amount, currency) => {
 };
 
 const Product = ({ data, location }) => {
-  const stripe = window.Stripe("pk_test_Tf5INqWkBuFwsb6e1VgryonW00lYTyGxDO");
   const product = data.stripeSku;
-
-  const redirectToCheckout = async (values) => {
-    const { error } = await stripe.redirectToCheckout({
-      items: [{ sku: product.id, quantity: parseInt(values.quantity, 10) }],
-      successUrl: `http://localhost:8000/page-2/`,
-      cancelUrl: `http://localhost:8000/`,
-    });
-    if (error) {
-      console.warn("Error:", error);
-    }
-  };
+  const [quantity, setQuantity] = useState(1);
+  const { addItem } = useCart();
 
   return (
     <>
@@ -55,54 +46,46 @@ const Product = ({ data, location }) => {
             <h4>{formatPrice(product.price, product.currency)}</h4>
             <p>{product.product.metadata.summary}</p>
             <p>{`<product rating>`}</p>
-            <Formik
-              validationSchema={schema}
-              onSubmit={(values) => {
-                redirectToCheckout(values);
-              }}
-              initialValues={{
-                quantity: 1,
-              }}>
-              {({ handleSubmit, handleChange, values, errors }) => (
-                <Form noValidate onSubmit={handleSubmit}>
-                  <Form.Row>
-                    <InputGroup
-                      as={Col}
-                      md={4}
-                      controlId="validationQuantity"
-                      className="item-quantity">
-                      <InputGroup.Prepend>
-                        <InputGroup.Text id="inputGroup-sizing-default">Quantity</InputGroup.Text>
-                      </InputGroup.Prepend>
-                      <Form.Control
-                        as="select"
-                        name="quantity"
-                        value={values.quantity}
-                        onChange={handleChange}
-                        isInvalid={!!errors.quantity}
-                        className="qty">
-                        <option>{1}</option>
-                        <option>{2}</option>
-                        <option>{3}</option>
-                        <option>{4}</option>
-                        <option>{5}</option>
-                        <option>{6}</option>
-                        <option>{7}</option>
-                        <option>{8}</option>
-                        <option>{9}</option>
-                        <option>{10}</option>
-                      </Form.Control>
-                      <Form.Control.Feedback type="invalid">{errors.message}</Form.Control.Feedback>
-                    </InputGroup>
-                  </Form.Row>
-                  <Form.Group as={Col} md={3} className="item-buy">
-                    <Button type="submit" className="cta-btn-pink">
-                      Buy Now
-                    </Button>
-                  </Form.Group>
-                </Form>
-              )}
-            </Formik>
+            <Form>
+              <Form.Row>
+                <InputGroup as={Col} md={4} className="item-quantity">
+                  <InputGroup.Prepend>
+                    <InputGroup.Text id="inputGroup-sizing-default">Quantity</InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <Form.Control
+                    as="select"
+                    name="quantity"
+                    value={quantity}
+                    onChange={({ target: { value } }) => setQuantity(parseInt(value, 10))}
+                    className="qty">
+                    {new Array(10)
+                      .fill(0)
+                      .map((v, k) => k + 1)
+                      .map((i) => ({ value: i, label: i }))
+                      .map(({ value, label }) => (
+                        <option key={value} value={value}>
+                          {label}
+                        </option>
+                      ))}
+                  </Form.Control>
+                </InputGroup>
+              </Form.Row>
+              <Form.Group as={Col} md={3} className="item-buy">
+                <Button
+                  className="cta-btn-pink"
+                  onClick={() =>
+                    addItem({
+                      id: product.product.id,
+                      price: product.price,
+                      image: product.localFiles.publicURL,
+                      name: product.product.name,
+                      summary: product.product.metadata.short_summary,
+                    })
+                  }>
+                  Buy Now
+                </Button>
+              </Form.Group>
+            </Form>
           </aside>
         </Row>
       </Container>
@@ -121,17 +104,22 @@ export const productQuery = graphql`
       currency
       active
       product {
+        id
         active
         attributes
         metadata {
           slug
           summary
+          short_summary
         }
         name
         object
         shippable
         type
         updated
+      }
+      localFiles {
+        publicURL
       }
     }
   }
