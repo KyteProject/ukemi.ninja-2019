@@ -50,23 +50,10 @@ module.exports = {
         path: path.join(__dirname, "src", "content", "projects"),
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `projects`,
-    //     path: `${__dirname}/src/content/posts`,
-    //   },
-    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          // {
-          //   resolve: "gatsby-remark-normalize-paths",
-          //   options: {
-          //     pathFields: ["featured_image", "project_image", "project_gallery"],
-          //   },
-          // },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -105,12 +92,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-nprogress",
-      options: {
-        color: config.themeColor,
-      },
-    },
-    {
       resolve: "gatsby-plugin-google-fonts",
       options: {
         fonts: ["Muli", "Alice", "Quattrocento Sans", "Rokkit"],
@@ -118,7 +99,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-transition-link",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",

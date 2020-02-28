@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import { Formik } from "formik";
-import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Container, Row, Col, Button, Form, InputGroup } from "react-bootstrap";
 import { number, object } from "yup";
 
 import MainLayout from "../layout";
@@ -33,7 +33,7 @@ const Product = ({ data, location }) => {
 
   const redirectToCheckout = async (values) => {
     const { error } = await stripe.redirectToCheckout({
-      items: [{ sku: product.id, quantity: values.quantity }],
+      items: [{ sku: product.id, quantity: parseInt(values.quantity, 10) }],
       successUrl: `http://localhost:8000/page-2/`,
       cancelUrl: `http://localhost:8000/`,
     });
@@ -68,20 +68,38 @@ const Product = ({ data, location }) => {
                 {({ handleSubmit, handleChange, values, errors }) => (
                   <Form noValidate onSubmit={handleSubmit}>
                     <Form.Row>
-                      <Form.Group as={Col} md={12} controlId="validationQuantity">
+                      <InputGroup
+                        as={Col}
+                        md={4}
+                        controlId="validationQuantity"
+                        className="item-quantity">
+                        <InputGroup.Prepend>
+                          <InputGroup.Text id="inputGroup-sizing-default">Quantity</InputGroup.Text>
+                        </InputGroup.Prepend>
                         <Form.Control
-                          type="number"
+                          as="select"
                           name="quantity"
                           value={values.quantity}
                           onChange={handleChange}
                           isInvalid={!!errors.quantity}
-                        />
+                          className="qty">
+                          <option>{1}</option>
+                          <option>{2}</option>
+                          <option>{3}</option>
+                          <option>{4}</option>
+                          <option>{5}</option>
+                          <option>{6}</option>
+                          <option>{7}</option>
+                          <option>{8}</option>
+                          <option>{9}</option>
+                          <option>{10}</option>
+                        </Form.Control>
                         <Form.Control.Feedback type="invalid">
                           {errors.message}
                         </Form.Control.Feedback>
-                      </Form.Group>
+                      </InputGroup>
                     </Form.Row>
-                    <Form.Group as={Col} md={3}>
+                    <Form.Group as={Col} md={3} className="item-buy">
                       <Button type="submit" className="cta-btn-pink">
                         Buy Now
                       </Button>

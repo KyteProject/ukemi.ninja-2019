@@ -1,0 +1,30 @@
+.item-quantity {
+  border: 0;
+  border-radius: 1.25rem;
+  padding: 0 5px;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.item-quantity .qty {
+  border: 0;
+  border-radius: 1.25rem;
+  width: 8rem;
+  text-align: center;
+  background: $light;
+  height: 48px;
+  line-height: 1;
+}
+
+.item-quantity .input-group-prepend .input-group-text {
+  color: $color7;
+}
+
+// .item-quantity .form-label {
+//   margin-right: 1rem;
+//   color: $color7;
+// }
+
+.item-buy {
+  padding: 0;
+}
