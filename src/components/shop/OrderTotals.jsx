@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { useCart } from "react-use-cart";
-import { Col } from "react-bootstrap";
 
 import { formatPrice } from "../../utils/cart-helpers";
 import CheckoutContext from "../../context/Checkout";
@@ -10,7 +9,7 @@ const OrderTotals = () => {
   const { orderTotal, shipping, discount } = useContext(CheckoutContext);
 
   return (
-    <Col md={6}>
+    <>
       <h3>Order Total</h3>
       <div className="table-responsive">
         <table className="table table-order">
@@ -42,7 +41,7 @@ const OrderTotals = () => {
           </tbody>
         </table>
       </div>
-    </Col>
+    </>
   );
 };
 

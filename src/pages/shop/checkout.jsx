@@ -11,7 +11,7 @@ const cart = ({ location }) => {
       <MetaData title="Shop Checkout" location={location} />
       <TitleSection
         location={location}
-        crumbLabel="Shop Checkout"
+        crumbLabel="Checkout"
         sub={{ slug: "shop", label: "Shop" }}
       />
       <PageTitle title="Shop Checkout" subTitle={["lorem ipsum doler intep posrt sioflglf sdlf"]} />

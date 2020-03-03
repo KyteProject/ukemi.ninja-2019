@@ -50,7 +50,9 @@ const Cart = () => {
               Enter any valid coupon or promo code here to redeem your discount.
             </p>
           </Col>
-          <OrderTotals />
+          <Col md={6}>
+            <OrderTotals />
+          </Col>
           <Col>
             <div className="text-md-right">
               <a className="btn" href="/shop/checkout">
