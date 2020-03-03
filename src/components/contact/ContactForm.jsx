@@ -11,7 +11,7 @@ const schema = object({
     .required(),
   phone: string()
     .min(11)
-    .max(13),
+    .max(15),
   message: string().required(),
 });
 

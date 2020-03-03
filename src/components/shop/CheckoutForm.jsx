@@ -1,7 +1,8 @@
 import React from "react";
+import ShippingForm from "./ShippingForm";
 
 const CheckoutForm = () => {
-  return " ";
+  return <ShippingForm />;
 };
 
 export default CheckoutForm;

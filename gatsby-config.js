@@ -86,6 +86,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-custom-api`,
+      options: {
+        url: "https://restcountries.eu/rest/v2/all?fields=name;alpha2Code;",
+        rootKey: "restCountries",
+        schemas: {
+          countries: `
+          name: String
+          alpha2Code: String
+          `,
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: config.googleAnalyticsID,
