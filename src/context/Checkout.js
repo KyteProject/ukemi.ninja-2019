@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer, useState } from "react";
 import { useCart } from "react-use-cart";
 
 const CheckoutContext = createContext();
@@ -44,7 +44,7 @@ function reducer(state, { payload, type }) {
   }
 }
 
-function CheckoutProvider({ children }) {
+const CheckoutProvider = ({ children }) => {
   const { cartTotal } = useCart();
   const [state, dispatch] = useReducer(reducer, {
     allowPayment: false,
@@ -53,6 +53,7 @@ function CheckoutProvider({ children }) {
     success: false,
     shipping: 0,
     tax: 0,
+    discount: 0,
   });
 
   const checkoutError = (payload) => {
@@ -71,15 +72,13 @@ function CheckoutProvider({ children }) {
     dispatch({ type: "CHECKOUT_SUCCESS" });
   };
 
-  const orderTotal = cartTotal + state.tax + state.shipping;
+  const orderTotal = cartTotal - state.discount + state.shipping;
 
   const updateShipping = (payload) => {
     dispatch({ type: "CHECKOUT_UPDATE_SHIPPING", payload });
   };
 
-  const updateTax = (payload) => {
-    dispatch({ type: "CHECKOUT_UPDATE_TAX", payload });
-  };
+  const updateDiscount = () => {};
 
   return (
     <CheckoutContext.Provider
@@ -91,11 +90,11 @@ function CheckoutProvider({ children }) {
         checkoutSuccess,
         orderTotal,
         updateShipping,
-        updateTax,
+        updateDiscount,
       }}>
-      {children}
+      <>{children}</>
     </CheckoutContext.Provider>
   );
-}
+};
 
 export { CheckoutProvider, CheckoutContext as default };
