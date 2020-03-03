@@ -18,6 +18,13 @@ const Cart = () => {
             <CheckoutList />
             <OrderTotals />
           </Col>
+          <Col>
+            <div className="text-md-right">
+              <a className="btn" href="#">
+                Place Order
+              </a>
+            </div>
+          </Col>
         </Row>
       </Container>
     </CheckoutProvider>
