@@ -1,15 +1,14 @@
 import React, { useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { useFormikContext } from "formik";
 
-import LoadingSVG from "../../svg/loading.svg";
 import CheckoutContext from "../../context/Checkout";
 
-const ShippingForm = () => {
+const BillingForm = () => {
   const data = useStaticQuery(
     graphql`
-      query ShippingCountries {
+      query BillingCountries {
         allRestCountries {
           edges {
             node {
@@ -34,70 +33,70 @@ const ShippingForm = () => {
       <Form.Group>
         <Form.Control
           type="text"
-          name="shippingName"
-          value={values.name}
+          name="billingName"
+          value={values.billingName}
           onChange={handleChange}
-          isInvalid={touched.shippingName && !!errors.shippingName}
+          isInvalid={touched.billingName && !!errors.billingName}
           disabled={disableInput}
           placeholder="Recipient Name *"
         />
-        <Form.Control.Feedback type="valid">{errors.shippingName}</Form.Control.Feedback>
+        <Form.Control.Feedback type="valid">{errors.billingName}</Form.Control.Feedback>
       </Form.Group>
       <Form.Group>
         <Form.Control
           type="text"
-          name="shippingAddress1"
-          value={values.shippingAddress1}
+          name="billingAddress1"
+          value={values.billingAddress1}
           onChange={handleChange}
-          isInvalid={!!errors.shippingAddress1}
+          isInvalid={!!errors.billingAddress1}
           disabled={disableInput}
           placeholder="Address Line 1 *"
         />
-        <Form.Control.Feedback type="invalid">{errors.shippingAddress1}</Form.Control.Feedback>
+        <Form.Control.Feedback type="invalid">{errors.billingAddress1}</Form.Control.Feedback>
       </Form.Group>
       <Form.Group>
         <Form.Control
           type="text"
-          name="shippingAddress2"
-          value={values.shippingAddress2}
+          name="billingAddress2"
+          value={values.billingAddress2}
           onChange={handleChange}
-          isInvalid={!!errors.shippingAddress2}
+          isInvalid={!!errors.billingAddress2}
           disabled={disableInput}
           placeholder="Address Line 2"
         />
-        <Form.Control.Feedback type="invalid">{errors.shippingAddress2}</Form.Control.Feedback>
+        <Form.Control.Feedback type="invalid">{errors.billingAddress2}</Form.Control.Feedback>
       </Form.Group>
       <Form.Group>
         <Form.Control
           type="text"
-          name="shippingTown"
-          value={values.shippingTown}
+          name="billingTown"
+          value={values.billingTown}
           onChange={handleChange}
-          isInvalid={!!errors.shippingTown}
+          isInvalid={!!errors.billingTown}
           disabled={disableInput}
           placeholder="Town *"
         />
-        <Form.Control.Feedback type="invalid">{errors.shippingTown}</Form.Control.Feedback>
+        <Form.Control.Feedback type="invalid">{errors.billingTown}</Form.Control.Feedback>
       </Form.Group>
       <Form.Group>
         <Form.Control
           type="text"
-          name="shippingCounty"
-          value={values.shippingCounty}
+          name="billingCounty"
+          value={values.billingCounty}
           onChange={handleChange}
-          isInvalid={!!errors.shippingCounty}
+          isInvalid={!!errors.billingCounty}
           disabled={disableInput}
           placeholder="County/State *"
         />
-        <Form.Control.Feedback type="invalid">{errors.shippingCounty}</Form.Control.Feedback>
+        <Form.Control.Feedback type="invalid">{errors.billingCounty}</Form.Control.Feedback>
       </Form.Group>
       <Form.Group>
         <Form.Control
           type="select"
-          name="shippingCountry"
-          value={values.shippingCountry}
+          name="billingCountry"
+          value={values.billingCountry}
           onChange={handleChange}
-          isInvalid={!!errors.shippingCountry}
+          isInvalid={!!errors.billingCountry}
           disabled={disableInput}
           placeholder="Country *"
           as="select">
@@ -105,40 +104,22 @@ const ShippingForm = () => {
             <option key={country.node.alpha2Code}>{country.node.name}</option>
           ))}
         </Form.Control>
-        <Form.Control.Feedback type="invalid">{errors.shippingCountry}</Form.Control.Feedback>
+        <Form.Control.Feedback type="invalid">{errors.billingCountry}</Form.Control.Feedback>
       </Form.Group>
       <Form.Group>
         <Form.Control
           type="text"
-          name="shippingPostcode"
-          value={values.shippingPostcode}
+          name="billingPostcode"
+          value={values.billingPostcode}
           onChange={handleChange}
-          isInvalid={!!errors.shippingPostcode}
+          isInvalid={!!errors.billingPostcode}
           disabled={disableInput}
           placeholder="Postcode/ZIP *"
         />
-        <Form.Control.Feedback type="invalid">{errors.shippingPostcode}</Form.Control.Feedback>
+        <Form.Control.Feedback type="invalid">{errors.billingPostcode}</Form.Control.Feedback>
       </Form.Group>
-
-      {!allowPayment && (
-        <>
-          <Form.Group>
-            <Form.Check
-              type="checkbox"
-              name="seperateBilling"
-              disabled={disableInput}
-              onChange={handleChange}
-              label="Use different billing address?"
-            />
-          </Form.Group>
-
-          <Button type="submit" disabled={disableInput}>
-            {checkoutProcessing ? <LoadingSVG /> : "Calculate shipping"}
-          </Button>
-        </>
-      )}
     </>
   );
 };
 
-export default ShippingForm;
+export default BillingForm;

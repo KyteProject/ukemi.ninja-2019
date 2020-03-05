@@ -7,15 +7,21 @@ import ShippingForm from "./ShippingForm";
 import BillingForm from "./BillingForm";
 
 const schema = object({
-  name: string().required(),
+  shippingName: string().required(),
   shippingAddress1: string().required(),
   shippingAddress2: string(),
-  shippingAddress3: string(),
   shippingTown: string().required(),
   shippingCounty: string().required(),
   shippingCountry: string().required(),
   shippingPostcode: string().required(),
   serperateBilling: bool(),
+  billingName: string().required(),
+  billingAddress1: string().required(),
+  billingAddress2: string(),
+  billingTown: string().required(),
+  billingCounty: string().required(),
+  billingCountry: string().required(),
+  billingPostcode: string().required(),
 });
 
 const CheckoutForm = () => {
@@ -27,10 +33,9 @@ const CheckoutForm = () => {
         console.log(`bleep cart`, values);
       }}
       initialValues={{
-        name: "",
+        shippingName: "",
         shippingAddress1: "",
         shippingAddress2: "",
-        shippingAddress3: "",
         shippingTown: "",
         shippingCounty: "",
         shippingCountry: "",
