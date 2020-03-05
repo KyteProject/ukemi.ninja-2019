@@ -30,12 +30,12 @@ const ShippingForm = () => {
 
   return (
     <>
-      <h3>Shipping</h3>
+      <h3>Shipping Address</h3>
       <Form.Group>
         <Form.Control
           type="text"
           name="shippingName"
-          value={values.name}
+          value={values.shippingName}
           onChange={handleChange}
           isInvalid={touched.shippingName && !!errors.shippingName}
           disabled={disableInput}
@@ -125,7 +125,7 @@ const ShippingForm = () => {
           <Form.Group>
             <Form.Check
               type="checkbox"
-              name="seperateBilling"
+              name="separateBilling"
               disabled={disableInput}
               onChange={handleChange}
               label="Use different billing address?"

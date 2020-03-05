@@ -28,8 +28,8 @@ const BillingForm = () => {
   const disableInput = allowPayment || checkoutProcessing;
 
   return (
-    <>
-      <h3>Shipping</h3>
+    <div className="pt-4">
+      <h3>Billing Address</h3>
       <Form.Group>
         <Form.Control
           type="text"
@@ -118,7 +118,7 @@ const BillingForm = () => {
         />
         <Form.Control.Feedback type="invalid">{errors.billingPostcode}</Form.Control.Feedback>
       </Form.Group>
-    </>
+    </div>
   );
 };
 
