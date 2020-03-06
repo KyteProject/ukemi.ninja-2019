@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
-import { navigate } from "gatsby";
+import { navigate, graphql, useStaticQuery } from "gatsby";
 import { Form } from "react-bootstrap";
 import { Formik } from "formik";
 import { string, object } from "yup";
 import { useStripe, useElements } from "@stripe/react-stripe-js";
 import { useCart } from "react-use-cart";
+import { toast } from "react-toastify";
 
+import config from "../../../data/siteConfig";
 import CheckoutContext from "../../context/Checkout";
 import ShippingForm from "./ShippingForm";
 import BillingForm from "./BillingForm";
+import { requestShippingPrice } from "../../utils/cart-helpers";
 
 const schema = object({
   shippingName: string().required(),
@@ -28,7 +31,22 @@ const schema = object({
 });
 
 const CheckoutForm = () => {
-  const { emptyCart, items } = useCart();
+  const data = useStaticQuery(
+    graphql`
+      query Countries {
+        allRestCountries {
+          edges {
+            node {
+              alpha2Code
+              name
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const { emptyCart, cartTotal, items } = useCart();
   const {
     allowPayment,
     checkoutPayment,
@@ -41,8 +59,12 @@ const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
 
-  const handleCheckoutError = () => {
-    console.log("error");
+  const handleCheckoutError = ({ message = "Unable to process order. Please try again" }) => {
+    checkoutError({ message });
+
+    toast.error(message, {
+      className: "bg-red",
+    });
   };
 
   const handleCheckoutSuccess = () => {
@@ -52,10 +74,44 @@ const CheckoutForm = () => {
   };
 
   const calculateShipping = async (values) => {
+    const { postageSender } = config;
+    const countries = data.allRestCountries.edges;
+    const activeCountry = countries.find((country) => country.node.name === values.shippingCountry);
+
     try {
       // shipping API
+      const input = {
+        origin: postageSender.country,
+        destination: activeCountry.node.alpha2Code,
+        boxes: items.map(({ item: id, height, length, weight, width, quantity }) => ({
+          id,
+          height: height * quantity,
+          length: length * quantity,
+          width: width * quantity,
+          weight: weight * quantity,
+        })),
+        goods_value: cartTotal / 100,
+        sender: {
+          name: postageSender.name,
+          address1: postageSender.address1,
+          address2: postageSender.address2,
+          town: postageSender.town,
+          county: postageSender.county,
+          postcode: postageSender.postcode,
+        },
+        recipient: {
+          name: values.shippingName,
+          address1: values.shippingAddress1,
+          address2: values.shippingAddress2,
+          town: values.shippingTown,
+          county: values.shippingCounty,
+          postcode: values.shippingPostcode,
+        },
+      };
 
-      checkoutPayment();
+      await requestShippingPrice(input);
+
+      // checkoutPayment();
     } catch (err) {
       handleCheckoutError(err);
     }
@@ -68,7 +124,7 @@ const CheckoutForm = () => {
   return (
     <Formik
       validationSchema={schema}
-      onSubmit={() => (allowPayment ? submitOrder() : calculateShipping())}
+      onSubmit={(values) => (allowPayment ? submitOrder() : calculateShipping(values))}
       initialValues={{
         shippingName: "",
         shippingAddress1: "",

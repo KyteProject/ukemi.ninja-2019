@@ -64,6 +64,11 @@ const Product = ({ data, location }) => {
                         image: productImage,
                         name: product.product.name,
                         summary: product.product.metadata.short_summary,
+                        // TODO: plug in variables from coontent API
+                        width: 6.1,
+                        height: 3.6,
+                        length: 8.9,
+                        weight: 0.3,
                       },
                       quantity
                     )
