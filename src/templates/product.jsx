@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import { Container, Row, Col, Button, Form, InputGroup, Figure } from "react-bootstrap";

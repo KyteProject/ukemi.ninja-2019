@@ -10,10 +10,10 @@ const ShippingForm = () => {
   const data = useStaticQuery(
     graphql`
       query ShippingCountries {
-        allRestCountries {
+        allCountries {
           edges {
             node {
-              alpha2Code
+              alpha3Code
               name
             }
           }
@@ -24,7 +24,7 @@ const ShippingForm = () => {
 
   const { handleChange, values, errors, touched } = useFormikContext();
   const { allowPayment, processing: checkoutProcessing } = useContext(CheckoutContext);
-  const countries = data.allRestCountries.edges;
+  const countries = data.allCountries.edges;
 
   const disableInput = allowPayment || checkoutProcessing;
 
@@ -102,7 +102,7 @@ const ShippingForm = () => {
           placeholder="Country *"
           as="select">
           {countries.map((country) => (
-            <option key={country.node.alpha2Code}>{country.node.name}</option>
+            <option key={country.node.alpha3Code}>{country.node.name}</option>
           ))}
         </Form.Control>
         <Form.Control.Feedback type="invalid">{errors.shippingCountry}</Form.Control.Feedback>

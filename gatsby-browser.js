@@ -1,11 +1,11 @@
 import React from "react";
 import { CartProvider } from "react-use-cart";
-import { GraphQLClient, ClientContext } from "graphql-hooks";
 import { ToastContainer } from "react-toastify";
 
 import StripeProvider from "./src/components/shop/StripeProvider";
-import { handleItemAdded, handleItemUpdated, handleItemRemoved } from "./src/utils/cart-helpers";
 import MainLayout from "./src/layout/index";
+
+import { handleItemAdded, handleItemUpdated, handleItemRemoved } from "./src/utils/cart-helpers";
 
 const toastOptions = {
   position: "top-right",
@@ -15,10 +15,6 @@ const toastOptions = {
   closeButton: false,
   autoClose: 2000,
 };
-
-const client = new GraphQLClient({
-  url: "/.netlify/functions/graphql",
-});
 
 const randomCartId = () =>
   Math.random()
@@ -55,16 +51,14 @@ export const wrapPageElement = ({ element, props }) => {
 export const wrapRootElement = ({ element }) => {
   return (
     <StripeProvider>
-      <ClientContext.Provider value={client}>
-        <CartProvider
-          id={randomCartId()}
-          onItemAdd={handleItemAdded}
-          onItemUpdate={handleItemUpdated}
-          onItemRemove={handleItemRemoved}>
-          {element}
-        </CartProvider>
-        <ToastContainer {...toastOptions} />
-      </ClientContext.Provider>
+      <CartProvider
+        id={randomCartId()}
+        onItemAdd={handleItemAdded}
+        onItemUpdate={handleItemUpdated}
+        onItemRemove={handleItemRemoved}>
+        {element}
+      </CartProvider>
+      <ToastContainer {...toastOptions} />
     </StripeProvider>
   );
 };

@@ -34,10 +34,10 @@ const CheckoutForm = () => {
   const data = useStaticQuery(
     graphql`
       query Countries {
-        allRestCountries {
+        allCountries {
           edges {
             node {
-              alpha2Code
+              alpha3Code
               name
             }
           }
@@ -75,14 +75,14 @@ const CheckoutForm = () => {
 
   const calculateShipping = async (values) => {
     const { postageSender } = config;
-    const countries = data.allRestCountries.edges;
+    const countries = data.allCountries.edges;
     const activeCountry = countries.find((country) => country.node.name === values.shippingCountry);
 
     try {
       // shipping API
       const input = {
         origin: postageSender.country,
-        destination: activeCountry.node.alpha2Code,
+        destination: activeCountry.node.alpha3Code,
         boxes: items.map(({ item: id, height, length, weight, width, quantity }) => ({
           id,
           height: height * quantity,

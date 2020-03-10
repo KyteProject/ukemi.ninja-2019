@@ -88,12 +88,14 @@ module.exports = {
     {
       resolve: `gatsby-source-custom-api`,
       options: {
-        url: "https://restcountries.eu/rest/v2/all?fields=name;alpha2Code;",
-        rootKey: "restCountries",
+        url: "https://restcountries.eu/rest/v2/all?fields=name;alpha2Code;alpha3Code;name;",
+        rootKey: "countries",
         schemas: {
           countries: `
           name: String
+          name: String
           alpha2Code: String
+          alpha3Code: String
           `,
         },
       },
