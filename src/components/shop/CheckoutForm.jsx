@@ -79,37 +79,31 @@ const CheckoutForm = () => {
     const activeCountry = countries.find((country) => country.node.name === values.shippingCountry);
 
     try {
-      // shipping API
-      const input = {
-        origin: postageSender.country,
-        destination: activeCountry.node.alpha3Code,
-        boxes: items.map(({ item: id, height, length, weight, width, quantity }) => ({
+      const quoteInput = {
+        Parcels: items.map(({ item: id, height, length, weight, width, quantity }) => ({
           id,
-          height: height * quantity,
-          length: length * quantity,
-          width: width * quantity,
-          weight: weight * quantity,
+          Height: height * quantity,
+          Length: length * quantity,
+          Width: width * quantity,
+          Weight: weight * quantity,
+          Value: cartTotal / 100,
         })),
-        goods_value: cartTotal / 100,
-        sender: {
-          name: postageSender.name,
-          address1: postageSender.address1,
-          address2: postageSender.address2,
-          town: postageSender.town,
-          county: postageSender.county,
-          postcode: postageSender.postcode,
+        CollectionAddress: {
+          Town: postageSender.town,
+          Country: postageSender.country,
+          Postcode: postageSender.postcode,
         },
-        recipient: {
-          name: values.shippingName,
-          address1: values.shippingAddress1,
-          address2: values.shippingAddress2,
-          town: values.shippingTown,
-          county: values.shippingCounty,
-          postcode: values.shippingPostcode,
+        DeliveryAddress: {
+          Property: values.shippingAddress1,
+          Town: values.shippingTown,
+          Postcode: values.shippingPostcode,
+          Country: activeCountry.node.alpha3Code,
         },
       };
 
-      await requestShippingPrice(input);
+      const quotes = await requestShippingPrice(quoteInput);
+
+      console.log(quotes);
 
       // checkoutPayment();
     } catch (err) {

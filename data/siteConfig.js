@@ -52,7 +52,7 @@ const config = {
     address2: "",
     town: "Aberdeen",
     county: "Aberdeenshire",
-    country: "GB",
+    country: "GBR",
     postcode: "AB24 5EG",
   },
 };
