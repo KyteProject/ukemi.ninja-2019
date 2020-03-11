@@ -14,6 +14,7 @@ export const formatPrice = (amount, currency) => {
     currency,
     currencyDisplay: "symbol",
   });
+
   return numberFormat.format(price);
 };
 
@@ -22,9 +23,6 @@ export const requestShippingPrice = async (input) => {
     const post = bent("POST", process.env.GATSBY_SHIPPING_API_ENDPOINT, "json", 200);
     const headers = { "x-api-key": process.env.GATSBY_SHIPPING_API_KEY };
     const body = JSON.stringify(input);
-
-    console.log(input);
-
     const response = await post("calculateShipping", body, headers);
 
     return response;

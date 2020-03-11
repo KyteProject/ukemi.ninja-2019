@@ -102,10 +102,18 @@ const CheckoutForm = () => {
       };
 
       const quotes = await requestShippingPrice(quoteInput);
+      quotes.sort((a, b) => {
+        return a.TotalPrice - b.TotalPrice;
+      });
 
-      console.log(quotes);
+      if (quotes.length < 1) {
+        return handleCheckoutError(
+          "We are unable to ship to this location at this time. Please contact support."
+        );
+      }
 
-      // checkoutPayment();
+      updateShipping(quotes[0].TotalPrice * 100);
+      checkoutPayment();
     } catch (err) {
       handleCheckoutError(err);
     }
