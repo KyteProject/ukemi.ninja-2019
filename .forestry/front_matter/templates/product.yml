@@ -117,3 +117,4 @@ fields:
   label: Shipping Info
 pages:
 - src/content/products/large-wooden-parkour-cube.md
+- src/content/products/medium-wooden-parkour-box.md
