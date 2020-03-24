@@ -1,4 +1,101 @@
 ---
 label: product
 hide_body: true
-fields: []
+fields:
+- name: stripe_id
+  type: text
+  config:
+    required: true
+  label: Stripe ID
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+- name: price
+  type: number
+  label: Price
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: '0'
+    max: 
+    step: 
+    required: true
+- name: weight
+  type: number
+  label: Weight
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: height
+  type: number
+  label: Height
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: width
+  type: number
+  label: Width
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: length
+  type: number
+  label: Length
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: short_description
+  type: text
+  config:
+    required: true
+  label: Short Description
+- name: main_image
+  type: file
+  config:
+    maxSize: 250
+  label: Main Image
+- name: additional_images
+  type: image_gallery
+  config: {}
+  label: Additional Images
+- name: details
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Details
+- name: shipping_info
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Shipping Info
