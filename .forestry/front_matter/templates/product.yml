@@ -88,11 +88,11 @@ fields:
   config:
     required: true
   label: Short Description
-- name: main_image
+- name: thumbnail
   type: file
   config:
     maxSize: 250
-  label: Main Image
+  label: Thumbnail
 - name: additional_images
   type: image_gallery
   config: {}
