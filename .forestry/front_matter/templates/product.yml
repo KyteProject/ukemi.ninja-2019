@@ -12,6 +12,22 @@ fields:
   config:
     required: true
   label: Name
+- name: category
+  type: select
+  default: Parkour Equipment
+  config:
+    required: true
+    options:
+    - Parkour Equipment
+    - Clothing
+    - Games
+    - Other
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
 - name: price
   type: number
   label: Price
