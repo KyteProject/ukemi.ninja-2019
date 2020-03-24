@@ -93,10 +93,10 @@ fields:
   config:
     maxSize: 250
   label: Thumbnail
-- name: additional_images
+- name: product_images
   type: image_gallery
   config: {}
-  label: Additional Images
+  label: Product Images
 - name: details
   type: textarea
   default: ''
