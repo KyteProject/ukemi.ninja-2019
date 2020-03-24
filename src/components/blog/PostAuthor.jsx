@@ -5,8 +5,6 @@ import { AiOutlineFacebook, AiOutlineInstagram, AiOutlineMail } from "react-icon
 import { GoGlobe } from "react-icons/go";
 
 const PostAuthor = ({ data }) => {
-  console.log(data);
-
   return (
     <>
       <Container className="inner post-author">
