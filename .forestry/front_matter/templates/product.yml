@@ -1,5 +1,5 @@
 ---
-label: product
+label: Product
 hide_body: true
 fields:
 - name: stripe_id
