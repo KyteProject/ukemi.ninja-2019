@@ -5,6 +5,8 @@ import { AiOutlineFacebook, AiOutlineInstagram, AiOutlineMail } from "react-icon
 import { GoGlobe } from "react-icons/go";
 
 const PostAuthor = ({ data }) => {
+  console.log(data);
+
   return (
     <>
       <Container className="inner post-author">
@@ -20,7 +22,7 @@ const PostAuthor = ({ data }) => {
             <p className="mb-10"> {data.bio}</p>
             <ul className="social social-color social-s">
               <li>
-                <a href={data.facebook}>
+                <a href={`https://facebook.com/${data.facebook}`}>
                   <AiOutlineFacebook size={32} className="s-facebook" />
                 </a>
               </li>
@@ -30,7 +32,7 @@ const PostAuthor = ({ data }) => {
                 </a>
               </li>
               <li>
-                <a href="hello@ukemi.ninja">
+                <a href="mailto:hello@ukemi.ninja">
                   <AiOutlineMail size={32} className="s-email" />
                 </a>
               </li>

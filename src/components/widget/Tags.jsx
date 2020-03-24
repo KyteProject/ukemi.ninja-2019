@@ -27,7 +27,7 @@ const Tags = () => {
         <ul className="list-unstyled tag-list">
           {tags.map(({ node }) => (
             <li key={node.id}>
-              <Button as="a" href={`tag/${node.slug}`} className="btn-tag">
+              <Button as="a" href="#" className="btn-tag">
                 {node.name}
               </Button>
             </li>
