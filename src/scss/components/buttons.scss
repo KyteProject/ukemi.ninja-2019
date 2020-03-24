@@ -116,3 +116,23 @@
   padding: 0.25rem;
   border: 0;
 }
+
+.btn-link {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  cursor: pointer;
+  margin: 0 !important;
+
+  svg {
+    color: $color5;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color7;
+      border: none;
+    }
+  }
+}
