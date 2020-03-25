@@ -6,7 +6,25 @@ const { postsPerPage } = require("../../../data/siteConfig");
 const createPages = async ({ graphql, actions: { createPage } }) => {
   const result = await graphql(`
     {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+      allProjects: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1000
+        filter: { fileAbsolutePath: { regex: "/(/content/projects)/.*\\\\.md$/" } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+      allProducts: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1000
+        filter: { fileAbsolutePath: { regex: "/(/content/products)/.*\\\\.md$/" } }
+      ) {
         edges {
           node {
             id
@@ -45,8 +63,8 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
 
   // Extract query results
   const posts = result.data.allGhostPost.edges;
-  const projects = result.data.allMarkdownRemark.edges;
-  const products = result.data.allStripeSku.edges;
+  const projects = result.data.allProjects.edges;
+  const products = result.data.allProducts.edges;
 
   // Load templates
   const indexTemplate = path.resolve("./src/templates/index.jsx");
@@ -57,9 +75,10 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
   // Create Shop Product pages
   products.forEach(({ node }) => {
     createPage({
-      path: `shop/${node.product.metadata.slug}`,
+      path: `shop/${node.frontmatter.slug}`,
       component: productTemplate,
       context: {
+        slug: node.frontmatter.slug,
         id: node.id,
       },
     });

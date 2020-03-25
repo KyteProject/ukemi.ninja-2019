@@ -2,14 +2,13 @@
 category: Parkour Equipment
 stripe_id: prod_GoNxLBCleA3IRt
 name: Large Wooden Parkour Cube
-price: 2700
+slug: large-wooden-parkour-cube
+price: 27000
 weight: 5000
 height: 1000
 width: 1000
 length: 1000
-short_description: Large wooden cube perfect for learning vaults or jumps. Very strong
-  timber frame and plywood shell means it's strong enough to hack all basic Parkour
-  movements and can handle a weight of up to 10 people.
+short_description: Large wooden cube perfect for learning vaults or jumps.
 thumbnail: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_thumb.jpg
 product_images:
   - https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_1.jpg

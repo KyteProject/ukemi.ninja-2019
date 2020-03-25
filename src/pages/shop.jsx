@@ -1,6 +1,6 @@
 import React from "react";
-import { graphql, useStaticQuery, Link } from "gatsby";
-import { Container, Row, Button } from "react-bootstrap";
+import { graphql, useStaticQuery } from "gatsby";
+import { Container, Row } from "react-bootstrap";
 
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
@@ -11,23 +11,31 @@ const shop = ({ location }) => {
   const data = useStaticQuery(
     graphql`
       query AllProductsQuery {
-        allStripeSku(filter: { active: { eq: true } }) {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+          filter: { fileAbsolutePath: { regex: "/(/content/products)/.*\\\\.md$/" } }
+        ) {
           edges {
             node {
-              currency
-              product {
-                name
-                metadata {
-                  slug
-                  short_summary
-                }
-                id
-              }
-              price
-              localFiles {
-                publicURL
-              }
               id
+              frontmatter {
+                slug
+                weight
+                width
+                details
+                height
+                length
+                name
+                price
+                category
+                product_images
+                shipping_info
+                short_description
+                stripe_id
+                thumbnail
+              }
+              html
             }
           }
         }
@@ -35,7 +43,7 @@ const shop = ({ location }) => {
     `
   );
 
-  const products = data.allStripeSku.edges;
+  const products = data.allMarkdownRemark.edges;
 
   return (
     <>
@@ -52,7 +60,7 @@ const shop = ({ location }) => {
               {products.length > 0
                 ? /* prettier-ignore */
                   products.map(({node}) =>
-                    <ListItem key={node.id} item={node} />
+                    <ListItem key={node.id} item={node.frontmatter} />
                   )
                 : null}
             </Row>

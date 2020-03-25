@@ -8,10 +8,10 @@ import { MetaData } from "../components/meta";
 import { formatPrice } from "../utils/cart-helpers";
 
 const Product = ({ data, location }) => {
-  const product = data.stripeSku;
+  const product = data.markdownRemark.frontmatter;
   const [quantity, setQuantity] = useState(1);
   const { addItem } = useCart();
-  const productImage = product.localFiles[0].publicURL;
+  const productImage = product.product_images[0];
 
   return (
     <>
@@ -25,9 +25,9 @@ const Product = ({ data, location }) => {
             </Figure>
           </Col>
           <aside className="col-lg-6 sidebar product">
-            <h1 className="product-title">{product.product.name}</h1>
-            <h4>{formatPrice(product.price, product.currency)}</h4>
-            <p>{product.product.metadata.summary}</p>
+            <h1 className="product-title">{product.name}</h1>
+            <h4>{formatPrice(product.price, "GBP")}</h4>
+            <p>{product.short_description}</p>
             <p>{`<product rating>`}</p>
             <Form>
               <Form.Row>
@@ -59,16 +59,15 @@ const Product = ({ data, location }) => {
                   onClick={() =>
                     addItem(
                       {
-                        id: product.product.id,
+                        id: product.stripe_id,
                         price: product.price,
-                        image: productImage,
-                        name: product.product.name,
-                        summary: product.product.metadata.short_summary,
-                        // TODO: plug in variables from coontent API
-                        width: 6.1,
-                        height: 3.6,
-                        length: 8.9,
-                        weight: 0.3,
+                        image: product.thumbnail,
+                        name: product.name,
+                        summary: product.short_summary,
+                        width: product.width,
+                        height: product.height,
+                        length: product.length,
+                        weight: product.weight,
                       },
                       quantity
                     )
@@ -87,30 +86,25 @@ const Product = ({ data, location }) => {
 export default Product;
 
 export const productQuery = graphql`
-  query($id: String!) {
-    stripeSku(id: { eq: $id }) {
+  query ProductBySlug($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       id
-      price
-      image
-      currency
-      active
-      product {
-        id
-        active
-        attributes
-        metadata {
-          slug
-          summary
-          short_summary
-        }
+      html
+      frontmatter {
+        slug
+        weight
+        width
+        details
+        height
+        length
         name
-        object
-        shippable
-        type
-        updated
-      }
-      localFiles {
-        publicURL
+        price
+        category
+        product_images
+        shipping_info
+        short_description
+        stripe_id
+        thumbnail
       }
     }
   }

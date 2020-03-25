@@ -4,6 +4,8 @@ import { useCart } from "react-use-cart";
 import { Nav, NavDropdown, Navbar, Container, Image, Button, Link } from "react-bootstrap";
 import { FiShoppingCart, FiSearch, FiHelpCircle, FiMenu } from "react-icons/fi";
 
+import CartItem from "../shop/CartItem";
+
 const Navigation = () => {
   const data = useStaticQuery(
     graphql`
@@ -80,17 +82,17 @@ const Navigation = () => {
                 />
               </Nav.Item>
               <Nav.Item className="dropdown cart-dropdown position-static">
-                <Button as={Link} onClick={toggleCart} className="btn-link">
+                <Button as={Link} href="/shop/cart" className="btn-link">
                   <FiShoppingCart size={26} />
                 </Button>
-                {cartOpen && (
+                {/* {cartOpen && (
                   <div className="dropdown-menu dropdown-menu-right cart-dropdown-menu show">
                     <h5>Shopping Cart</h5>
                     <ul className="image-list">
                       {!isEmpty ? items.map(CartItem) : <p>Your cart is empty!</p>}
                     </ul>
                   </div>
-                )}
+                )} */}
               </Nav.Item>
               <Nav.Item>
                 <Button as={Link} onClick={toggleSearch} className="btn-link">
@@ -135,11 +137,16 @@ const Navigation = () => {
                   Services
                 </Nav.Link>
               </Nav.Item>
-              <NavDropdown title="Projects" id="collapsible-nav-dropdown">
+              <Nav.Item>
+                <Nav.Link href="/projects" className="nav-text">
+                  Projects
+                </Nav.Link>
+              </Nav.Item>
+              {/* <NavDropdown title="Projects" id="collapsible-nav-dropdown">
                 <NavDropdown.Item href="/projects">Overview</NavDropdown.Item>
                 <NavDropdown.Divider />
                 {projects.length > 0
-                  ? /* prettier-ignore */
+                  ? 
                     projects.map(({ node }) => (
                       <NavDropdown.Item
                         key={node.id}
@@ -149,7 +156,7 @@ const Navigation = () => {
                       </NavDropdown.Item>
                   ))
                   : null}
-              </NavDropdown>
+              </NavDropdown> */}
               <Nav.Item>
                 <Nav.Link href="/shop" className="nav-text">
                   Shop
