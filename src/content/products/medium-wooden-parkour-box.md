@@ -12,7 +12,7 @@ short_description: " Medium size wooden cube perfect for learning vaults or jump
   basic Parkour movements and can handle a weight of up to 10 people."
 thumbnail: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/medium_cube_thumbnail.jpg
 product_images:
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/medium_cube_1.jpg
+  - https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/medium_cube_1.jpg
 details: |-
   Dimensions (LxWxH): 1m x 1m x 700mm
   Weight: Unknown
@@ -22,5 +22,4 @@ details: |-
 shipping_info: |-
   Shipping: £15 Scotland/£30 UK
   Dispatch Time: 1 week
-
 ---

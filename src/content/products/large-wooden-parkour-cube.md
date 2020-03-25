@@ -12,7 +12,7 @@ short_description: Large wooden cube perfect for learning vaults or jumps. Very 
   movements and can handle a weight of up to 10 people.
 thumbnail: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_thumb.jpg
 product_images:
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_1.jpg
+  - https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_1.jpg
 details: |
   Large Wooden Parkour Cube
   Dimensions (LxWxH): 1m x 1m x 1m
@@ -23,5 +23,4 @@ details: |
 shipping_info: |-
   Shipping: £15 Scotland/£30 UK
   Dispatch Time: 1 week
-
 ---
