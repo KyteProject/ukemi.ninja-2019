@@ -5,6 +5,13 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: directory
+  path: src/content/products
+  label: Products
+  create: all
+  match: "**/*"
+  templates:
+  - product
+- type: directory
   path: src/content/projects
   label: Projects
   create: all
