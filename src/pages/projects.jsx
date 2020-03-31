@@ -2,7 +2,6 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Container, Row, Button } from "react-bootstrap";
 
-import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import ProjectCard from "../components/projects/ProjectCard";
 import TitleSection from "../components/common/TitleSection";

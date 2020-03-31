@@ -40,7 +40,39 @@ const trustAllScripts = () => {
   }
 };
 
+const loader = {
+  start: () => {
+    const parent = document.querySelector("body");
+    const loading = document.createElement("div");
+    loading.className = "preloader";
+    loading.id = "preloader";
+    loading.innerHTML = `<div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+    </div>`;
+
+    parent.appendChild(loading);
+  },
+  stop: () => {
+    const element = document.querySelector("#preloader");
+    if (element) element.classList.add("preloader-deactivate");
+  },
+};
+
+export const onClientEntry = () => {
+  loader.start();
+};
+
+export const onInitialClientRender = () => {
+  loader.stop();
+};
+
+export const onRouteUpdateDelayed = () => {
+  loader.start();
+};
+
 export const onRouteUpdate = () => {
+  loader.stop();
   trustAllScripts();
 };
 

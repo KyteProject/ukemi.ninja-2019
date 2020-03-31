@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Figure } from "react-bootstrap";
 import { formatPrice } from "../../utils/cart-helpers";
 
@@ -11,9 +10,7 @@ const CheckoutItem = ({ id, name, quantity, price, image }) => {
       <tr>
         <td className="cart-thumbnail">
           <Figure>
-            <Link to="#">
-              <Figure.Image src={image} alt="" rounded />
-            </Link>
+            <Figure.Image src={image} alt="" rounded />
           </Figure>
         </td>
         <td className="cart-description">

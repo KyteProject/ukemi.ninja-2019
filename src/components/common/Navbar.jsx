@@ -1,62 +1,27 @@
 import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { useCart } from "react-use-cart";
-import { Nav, NavDropdown, Navbar, Container, Image, Button, Link } from "react-bootstrap";
+import { Link } from "gatsby";
+import { Nav, Navbar, Container, Button } from "react-bootstrap";
 import { FiShoppingCart, FiSearch, FiHelpCircle, FiMenu } from "react-icons/fi";
 
-import CartItem from "../shop/CartItem";
-
 const Navigation = () => {
-  const data = useStaticQuery(
-    graphql`
-      query AllNavigationProjQuery {
-        allMarkdownRemark(sort: { fields: frontmatter___name, order: ASC }) {
-          edges {
-            node {
-              id
-              frontmatter {
-                name
-                slug
-              }
-            }
-          }
-        }
-      }
-    `
-  );
-
-  const projects = data.allMarkdownRemark.edges;
   const [navOpen, setNavOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [offCanvasOpen, setOffCanvasOpen] = useState(false);
-  const toggle = () => setNavOpen(!navOpen);
   const toggleNav = () => {
     setNavOpen(!navOpen);
-    setCartOpen(false);
-    setSearchOpen(false);
-    setOffCanvasOpen(false);
-  };
-  const toggleCart = () => {
-    setNavOpen(false);
-    setCartOpen(!cartOpen);
     setSearchOpen(false);
     setOffCanvasOpen(false);
   };
   const toggleSearch = () => {
     setNavOpen(false);
-    setCartOpen(false);
     setSearchOpen(!searchOpen);
     setOffCanvasOpen(false);
   };
   const toggleOffCanvas = () => {
     setNavOpen(false);
-    setCartOpen(false);
     setSearchOpen(false);
     setOffCanvasOpen(!offCanvasOpen);
   };
-  const { items } = useCart();
-  const { isEmpty } = useCart();
 
   return (
     <>
@@ -82,20 +47,12 @@ const Navigation = () => {
                 />
               </Nav.Item>
               <Nav.Item className="dropdown cart-dropdown position-static">
-                <Button as={Link} href="/shop/cart" className="btn-link">
+                <Button as={Link} to="/shop/cart" className="btn-link">
                   <FiShoppingCart size={26} />
                 </Button>
-                {/* {cartOpen && (
-                  <div className="dropdown-menu dropdown-menu-right cart-dropdown-menu show">
-                    <h5>Shopping Cart</h5>
-                    <ul className="image-list">
-                      {!isEmpty ? items.map(CartItem) : <p>Your cart is empty!</p>}
-                    </ul>
-                  </div>
-                )} */}
               </Nav.Item>
               <Nav.Item>
-                <Button as={Link} onClick={toggleSearch} className="btn-link">
+                <Button onClick={toggleSearch} className="btn-link">
                   <FiSearch size={26} />
                 </Button>
                 {searchOpen && (
@@ -113,62 +70,47 @@ const Navigation = () => {
                 )}
               </Nav.Item>
               <Nav.Item>
-                <Button as={Link} onClick={toggleOffCanvas} className="btn-link">
+                <Button onClick={toggleOffCanvas} className="btn-link">
                   <FiHelpCircle size={26} />
                 </Button>
               </Nav.Item>
             </Nav>
-            <Navbar.Collapse className="offcanvas-nav"></Navbar.Collapse>
+            <Navbar.Collapse className="offcanvas-nav" />
           </div>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
               <Nav.Item>
-                <Nav.Link href="/" className="nav-text">
+                <Nav.Link as={Link} to="/" className="nav-text">
                   Home
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="/about" className="nav-text">
+                <Nav.Link as={Link} to="/about" className="nav-text">
                   About Us
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="/services" className="nav-text">
+                <Nav.Link as={Link} to="/services" className="nav-text">
                   Services
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="/projects" className="nav-text">
+                <Nav.Link as={Link} to="/projects" className="nav-text">
                   Projects
                 </Nav.Link>
               </Nav.Item>
-              {/* <NavDropdown title="Projects" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="/projects">Overview</NavDropdown.Item>
-                <NavDropdown.Divider />
-                {projects.length > 0
-                  ? 
-                    projects.map(({ node }) => (
-                      <NavDropdown.Item
-                        key={node.id}
-                        href={`/projects/${node.frontmatter.slug}`}
-                        className="nav-text">
-                        {node.frontmatter.name}
-                      </NavDropdown.Item>
-                  ))
-                  : null}
-              </NavDropdown> */}
               <Nav.Item>
-                <Nav.Link href="/shop" className="nav-text">
+                <Nav.Link as={Link} to="/shop" className="nav-text">
                   Shop
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="/blog" className="nav-text">
+                <Nav.Link as={Link} to="/blog" className="nav-text">
                   Blog
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="/contact" className="nav-text">
+                <Nav.Link as={Link} to="/contact" className="nav-text">
                   Contact
                 </Nav.Link>
               </Nav.Item>
