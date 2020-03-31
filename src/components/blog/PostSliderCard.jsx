@@ -36,7 +36,9 @@ const PostSliderCard = ({ post }) => {
             </ul>
           </Card.Subtitle>
           <Card.Text>{post.excerpt}</Card.Text>
-          <Card.Link href={url}>Read More →</Card.Link>
+          <Card.Link as={Link} to={url}>
+            Read More →
+          </Card.Link>
         </Card.Body>
       </Card>
     </Col>

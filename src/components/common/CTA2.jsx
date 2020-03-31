@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { GiThreeFriends, GiConqueror } from "react-icons/gi";
 
@@ -16,7 +17,7 @@ const CTA2 = () => {
               </div>
               <div className="cta-two-content">
                 <h2 className="cta-two-title">Collaborate With Us</h2>
-                <Button href="/contact" className="thm-btn btn-dark cta-two-button">
+                <Button as={Link} to="/contact" className="thm-btn btn-dark cta-two-button">
                   Contact Us
                 </Button>
               </div>
@@ -31,7 +32,7 @@ const CTA2 = () => {
               </div>
               <div className="cta-two-content">
                 <h2 className="cta-two-title">Join Our Community</h2>
-                <Button as="a" href="/contact" className="thm-btn btn-dark cta-two-button">
+                <Button as={Link} to="/contact" className="thm-btn btn-dark cta-two-button">
                   Get Involved
                 </Button>
               </div>

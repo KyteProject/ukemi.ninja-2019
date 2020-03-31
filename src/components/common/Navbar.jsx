@@ -27,7 +27,7 @@ const Navigation = () => {
     <>
       <Navbar collapseOnSelect expand="lg" fixed>
         <Container className="flex-row justify-content-center">
-          <Navbar.Brand href="/">
+          <Navbar.Brand as={Link} to="/">
             <img
               src="/images/text-logotext-logo.png"
               alt="Ukemi Project text logo"

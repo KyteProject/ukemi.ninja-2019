@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "gatsby";
 import { useCart } from "react-use-cart";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Button } from "react-bootstrap";
 
 import { CheckoutProvider } from "../../context/Checkout";
 import CartItem from "./CartItem";
@@ -38,9 +39,9 @@ const Cart = () => {
           </Col>
           <Col>
             <div className="text-md-right">
-              <a className="btn" href="/shop/checkout">
+              <Button as={Link} className="btn" to="/shop/checkout">
                 Proceed to Checkout
-              </a>
+              </Button>
             </div>
           </Col>
         </Row>
