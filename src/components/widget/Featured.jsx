@@ -47,11 +47,7 @@ const Featured = () => {
                 <div className="meta">
                   <span className="date">
                     <GoCalendar className="featured-post-icon" />
-                    12 Nov 2017
-                  </span>{" "}
-                  <span className="featured-post-author">
-                    <GoPerson className="featured-post-icon" />
-                    {node.primary_author.name}
+                    {new Date(`${node.published_at}`).toDateString()}
                   </span>
                 </div>
               </div>

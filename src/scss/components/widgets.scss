@@ -4,6 +4,20 @@
   font-weight: 900;
   line-height: 1.3rem;
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eeeeee;
+  text-transform: capitalize;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: $color-pink;
+    bottom: -1px;
+    left: 0;
+    width: 4rem;
+    height: 1px;
+  }
 }
 
 .social {
@@ -37,9 +51,9 @@
   vertical-align: -2px;
 }
 
-.sidebar a:not(.hover):not(.btn):not(.badge) {
-  color: inherit;
-}
+// .sidebar a:not(.hover):not(.btn):not(.badge) {
+//   color: inherit;
+// }
 
 .social svg[class*="website"],
 .color-s-github,
@@ -143,4 +157,16 @@
 
 .tag-list li {
   display: inline-block;
+}
+
+.post-title a {
+  color: $color7;
+
+  &:hover {
+    color: $color-pink;
+  }
+}
+
+.list-post-content h6 {
+  margin-bottom: 0;
 }
