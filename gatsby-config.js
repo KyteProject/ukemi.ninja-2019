@@ -97,12 +97,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-nprogress",
-      options: {
-        color: config.themeColor,
-      },
-    },
-    {
       resolve: "gatsby-plugin-google-fonts",
       options: {
         fonts: ["Muli", "Alice", "Quattrocento Sans", "Rokkit"],
