@@ -4,7 +4,7 @@ stripe_id: prod_Gy9fkUEZMLoLfg
 name: Medium Wooden Parkour Box
 slug: medium-wooden-parkour-cube
 price: 25000
-weight: 3000
+weight: 3
 height: 700
 width: 1000
 length: 1000

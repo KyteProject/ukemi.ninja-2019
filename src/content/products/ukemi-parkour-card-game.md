@@ -4,7 +4,7 @@ stripe_id: prod_Go5eZTw5GVQ5cX
 name: Ukemi Card Game
 slug: ukemi-parkour-card-game
 price: 1699
-weight: 235
+weight: 0.3
 height: 36
 width: 61
 length: 89

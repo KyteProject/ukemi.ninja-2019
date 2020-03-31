@@ -80,13 +80,13 @@ const CheckoutForm = () => {
 
     try {
       const quoteInput = {
-        Parcels: items.map(({ item: id, height, length, weight, width, quantity }) => ({
+        Parcels: items.map(({ item: id, height, length, weight, width, quantity, price }) => ({
           id,
-          Height: height * quantity,
-          Length: length * quantity,
-          Width: width * quantity,
+          Height: (height * quantity) / 100,
+          Length: (length * quantity) / 100,
+          Width: (width * quantity) / 100,
           Weight: weight * quantity,
-          Value: cartTotal / 100,
+          Value: price / 100,
         })),
         CollectionAddress: {
           Town: postageSender.town,

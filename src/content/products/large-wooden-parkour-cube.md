@@ -4,7 +4,7 @@ stripe_id: prod_GoNxLBCleA3IRt
 name: Large Wooden Parkour Cube
 slug: large-wooden-parkour-cube
 price: 27000
-weight: 5000
+weight: 5
 height: 1000
 width: 1000
 length: 1000
