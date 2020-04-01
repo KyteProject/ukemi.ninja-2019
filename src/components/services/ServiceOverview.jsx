@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "gatsby";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import {
   GiJumpAcross,
   GiPublicSpeaker,
@@ -11,111 +12,95 @@ import {
 
 const ServicesSlider = () => {
   return (
-    <section className="section-services-slider">
+    <section className="services-overview">
       <Container className="inner text-center">
         <div className="block-title">
           <h2 className="block-title-text">Explore Our Services</h2>
         </div>
-        <Row className="services-group">
-          <Col sm={6} md={4} xl={4}>
-            <div className="service-item">
-              <div className="service-item-content">
-                <div className="service-item-header">
-                  <div className="icon">
-                    <GiTeamIdea size={80} />
-                  </div>
-                </div>
-                <div className="service-item-body">
-                  <h3>Consultation</h3>
-                  <p className="mb-0">
-                    We can provide expert advice on any project focused on movement.
-                  </p>
+        <Row className="services-list">
+          <Col sm={6} lg={4}>
+            <Card className="service-item-box">
+              <div className="box-header">
+                <div className="icon">
+                  <GiTeamIdea size={70} />
                 </div>
               </div>
-            </div>
+              <h3>
+                <Link to="/services">Consultation</Link>
+              </h3>
+              <p className="mb-0">
+                We can provide expert advice on any project focused on movement.
+              </p>
+            </Card>
           </Col>
-
-          <Col sm={6} md={4} xl={4}>
-            <div className="service-item">
-              <div className="service-item-content">
-                <div className="service-item-header">
-                  <div className="icon icon-two">
-                    <GiAcrobatic size={80} />
-                  </div>
-                </div>
-                <div className="service-item-body">
-                  <h3>Performances</h3>
-                  <p className="mb-0">We have build our own performance team available for hire.</p>
+          <Col sm={6} lg={4}>
+            <Card className="service-item-box">
+              <div className="box-header">
+                <div className="icon">
+                  <GiAcrobatic size={70} />
                 </div>
               </div>
-            </div>
+              <h3>
+                <Link to="/services">Performance</Link>
+              </h3>
+              <p className="mb-0">We have build our own performance team available for hire.</p>
+            </Card>
           </Col>
-          <Col sm={6} md={4} xl={4}>
-            <div className="service-item">
-              <div className="service-item-content">
-                <div className="service-item-header">
-                  <div className="icon">
-                    <GiHammerNails size={80} />
-                  </div>
-                </div>
-                <div className="service-item-body">
-                  <h3>Equipment</h3>
-                  <p className="mb-0">We build bespoke parkour and movement equipment.</p>
+          <Col sm={6} lg={4}>
+            <Card className="service-item-box">
+              <div className="box-header">
+                <div className="icon">
+                  <GiHammerNails size={70} />
                 </div>
               </div>
-            </div>
+              <h3>
+                <Link to="/services">Equipment</Link>
+              </h3>
+              <p className="mb-0">We build bespoke parkour and movement equipment.</p>
+            </Card>
           </Col>
-          <Col sm={6} md={4} xl={4}>
-            <div className="service-item">
-              <div className="service-item-content">
-                <div className="service-item-header">
-                  <div className="icon icon-two">
-                    <GiPublicSpeaker size={80} />
-                  </div>
-                </div>
-                <div className="service-item-body">
-                  <h3>Events & Presentations</h3>
-                  <p className="mb-0">
-                    We have delivered presentations and managed large spectator events.
-                  </p>
+          <Col sm={6} lg={4}>
+            <Card className="service-item-box">
+              <div className="box-header">
+                <div className="icon">
+                  <GiPublicSpeaker size={70} />
                 </div>
               </div>
-            </div>
+              <h3>
+                <Link to="/services">Events</Link>
+              </h3>
+              <p className="mb-0">
+                We have delivered presentations and managed large spectator events.
+              </p>
+            </Card>
           </Col>
-          <Col sm={6} md={4} xl={4}>
-            <div className="service-item">
-              <div className="service-item-content">
-                <div className="service-item-header">
-                  <div className="icon">
-                    <GiJumpAcross size={80} />
-                  </div>
-                </div>
-                <div className="service-item-body">
-                  <h3>Park Design</h3>
-                  <p className="mb-0">
-                    We can design you the next generation of activity landscape or parkour park.
-                  </p>
+          <Col sm={6} lg={4}>
+            <Card className="service-item-box">
+              <div className="box-header">
+                <div className="icon">
+                  <GiJumpAcross size={70} />
                 </div>
               </div>
-            </div>
+              <h3>
+                <Link to="/services">Park Design</Link>
+              </h3>
+              <p className="mb-0">
+                We can design you the next generation of activity landscape or parkour park.
+              </p>
+            </Card>
           </Col>
-          <Col sm={6} md={4} xl={4}>
-            <div className="service-item">
-              <div className="service-item-content">
-                <div className="service-item-header">
-                  <div className="icon icon-two">
-                    <GiTeacher size={80} />
-                  </div>
-                </div>
-                <div className="service-item-body">
-                  <h3>Workshops</h3>
-                  <p className="mb-0">
-                    We can host and deliver movement workshops and provide parkour coaches for your
-                    event.
-                  </p>
+          <Col sm={6} lg={4}>
+            <Card className="service-item-box">
+              <div className="box-header">
+                <div className="icon">
+                  <GiTeacher size={70} />
                 </div>
               </div>
-            </div>
+              <h3>
+                <Link to="/services">Workshops</Link>
+              </h3>
+              <p className="mb-0">We can deliver movement workshops and provide parkour coaches.</p>
+            </Card>
           </Col>
         </Row>
       </Container>
