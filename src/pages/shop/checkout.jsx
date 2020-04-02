@@ -14,7 +14,13 @@ const cart = ({ location }) => {
         crumbLabel="Checkout"
         sub={{ slug: "shop", label: "Shop" }}
       />
-      <PageTitle title="Shop Checkout" subTitle={["lorem ipsum doler intep posrt sioflglf sdlf"]} />
+      <PageTitle
+        title="Shop Checkout"
+        subTitle={[
+          "We've updated our store software, please contact us",
+          "at support@ukemi.ninja if you have any issues.",
+        ]}
+      />
       <Checkout />
     </>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Container, Row, Button } from "react-bootstrap";
 
@@ -38,16 +38,18 @@ const Projects = ({ location }) => {
   const categories = ["all"];
 
   projects.forEach(({ node }) => {
-    categories.push(node.frontmatter.category);
+    !categories.includes(node.frontmatter.category)
+      ? categories.push(node.frontmatter.category)
+      : null;
   });
 
-  const [filterCat, setFilterCat] = React.useState("all");
-  const [filterProjects, setFilterProjects] = React.useState(projects);
+  const [filterCat, setFilterCat] = useState("all");
+  const [filterProjects, setFilterProjects] = useState(projects);
   const handleClick = (event) => {
     setFilterCat(event.target.attributes.value.value.toLowerCase());
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (filterCat === "all") {
       return setFilterProjects(projects);
     }

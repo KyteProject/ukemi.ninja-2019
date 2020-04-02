@@ -3,8 +3,6 @@ import * as bent from "bent";
 
 export const handleItemAdded = (item) => toast.success(`${item.name} added to cart!`);
 
-export const handleItemUpdated = (item) => toast.success(`${item.name} updated!`);
-
 export const handleItemRemoved = () => toast.success(`Removed from cart`);
 
 export const formatPrice = (amount, currency) => {

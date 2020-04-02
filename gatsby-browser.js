@@ -10,7 +10,7 @@ import { handleItemAdded, handleItemUpdated, handleItemRemoved } from "./src/uti
 const toastOptions = {
   position: "bottom-center",
   draggable: false,
-  autoClose: 5000,
+  autoClose: 2000,
 };
 
 const randomCartId = () =>
