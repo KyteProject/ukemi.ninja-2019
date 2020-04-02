@@ -1,19 +1,11 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { GiPaperPlane, GiEnvelope, GiNewspaper } from "react-icons/gi";
+import { FaPlus } from "react-icons/fa";
 
 const CTAEmail = () => {
   return (
     <>
-      {/* <div className="divider">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="fill-grey"
-          preserveAspectRatio="none"
-          viewBox="0 0 1070 44.03">
-          <path d="M0,20S35-1,137,0C232.52,1,240,33,352,25c111.47-8,177-45.61,367-8,202,40,256-6,351-5V44H0Z" />
-        </svg>
-      </div> */}
       <section className="cta-email text-center bg-light">
         <Container>
           <Row className="justify-content-center">
@@ -22,11 +14,13 @@ const CTAEmail = () => {
                 <div className="col-4">
                   <div className="subscribe-icon sub-icon-color">
                     <GiNewspaper size={60} />
+                    <FaPlus size={20} className="plus" />
                   </div>
                 </div>
                 <div className="col-4">
                   <div className="subscribe-icon sub-icon-color">
                     <GiEnvelope size={60} />
+                    <FaPlus size={20} className="plus" />
                   </div>
                 </div>
                 <div className="col-4">
@@ -58,15 +52,6 @@ const CTAEmail = () => {
           </Row>
         </Container>
       </section>
-      {/* <div className="divider">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="fill-default"
-          preserveAspectRatio="none"
-          viewBox="0 0 1070 44.03">
-          <path d="M0,20S35-1,137,0C232.52,1,240,33,352,25c111.47-8,177-45.61,367-8,202,40,256-6,351-5V44H0Z" />
-        </svg>
-      </div> */}
     </>
   );
 };
