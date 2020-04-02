@@ -217,3 +217,19 @@
     border-color: transparent;
   }
 }
+
+.badge-cart {
+  text-transform: uppercase;
+  color: $white;
+  font-size: 0.55rem;
+  font-weight: 500;
+  line-height: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: 0.35rem;
+  background-color: $color-lblue;
+  margin-left: 2px;
+}

@@ -8,12 +8,9 @@ import MainLayout from "./src/layout/index";
 import { handleItemAdded, handleItemUpdated, handleItemRemoved } from "./src/utils/cart-helpers";
 
 const toastOptions = {
-  position: "top-right",
+  position: "bottom-center",
   draggable: false,
-  toastClassName: "bg-primary text-white text-center px-2 py-3 shadow-none rounded-lg",
-  progressClassName: "h-0",
-  closeButton: false,
-  autoClose: 2000,
+  autoClose: 5000,
 };
 
 const randomCartId = () =>

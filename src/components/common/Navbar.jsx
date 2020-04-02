@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { Nav, Navbar, Container, Button } from "react-bootstrap";
 import { FiShoppingCart, FiSearch, FiHelpCircle, FiMenu } from "react-icons/fi";
+import { useCart } from "react-use-cart";
 
 const Navigation = () => {
+  const { totalUniqueItems } = useCart();
   const [navOpen, setNavOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [offCanvasOpen, setOffCanvasOpen] = useState(false);
@@ -22,6 +24,8 @@ const Navigation = () => {
     setSearchOpen(false);
     setOffCanvasOpen(!offCanvasOpen);
   };
+
+  console.log(totalUniqueItems);
 
   return (
     <>
@@ -50,6 +54,7 @@ const Navigation = () => {
                 <Button as={Link} to="/shop/cart" className="btn-link">
                   <FiShoppingCart size={26} />
                 </Button>
+                {totalUniqueItems ? <span className="badge-cart">{totalUniqueItems}</span> : null}
               </Nav.Item>
               <Nav.Item>
                 <Button onClick={toggleSearch} className="btn-link">
