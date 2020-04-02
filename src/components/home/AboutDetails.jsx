@@ -28,7 +28,10 @@ const AboutDetails = () => {
             </Col>
             <Col lg={6} className="service-body-r">
               <Figure>
-                <Figure.Image src="/images/group-jump2912194@2x.png" alt="Group jumping" />
+                <Figure.Image src="/images/yug-group-pic.jpg" alt="Group YUG Picture" />
+                <Figure.Caption>
+                  Group Picture after the Ukemi Organised Parkour event, part of YUG 2018.
+                </Figure.Caption>
               </Figure>
             </Col>
           </Row>
@@ -36,7 +39,10 @@ const AboutDetails = () => {
           <Row className="align-items-center">
             <Col lg={6}>
               <Figure>
-                <Figure.Image src="/images/group-reading2868867@2x.png" alt="Group reading books" />
+                <Figure.Image src="/images/yug-team-pic.jpg" alt="Ukemi Team at YUG" />
+                <Figure.Caption>
+                  Ukemi Team enjoying the end of the Youth Urban Games.
+                </Figure.Caption>
               </Figure>
             </Col>
             <Col lg={6} className="service-body">
