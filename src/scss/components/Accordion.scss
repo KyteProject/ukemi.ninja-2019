@@ -53,19 +53,22 @@
   font-size: 0.95rem;
   line-height: 1.25rem;
 }
-.accordion .card-header button:before {
-  font-family: "FontAwesome";
-  content: "\f054";
-  font-size: 1rem;
-  font-weight: normal;
-  width: 1.5rem;
-  display: inline-block;
-  vertical-align: -2px;
-  color: var(--color-default);
-}
-.accordion .card-header button:focus:before {
-  content: "\f078";
-}
+
+// .accordion .card-header button:before {
+//   font-family: "FontAwesome";
+//   content: "\f054";
+//   font-size: 1rem;
+//   font-weight: normal;
+//   width: 1.5rem;
+//   display: inline-block;
+//   vertical-align: -2px;
+//   color: var(--color-default);
+// }
+
+// .accordion .card-header button:focus:before {
+//   content: "\f078";
+// }
+
 .accordion.simple .card {
   background: none;
   border-radius: 0;
@@ -81,4 +84,8 @@
 }
 .accordion.simple .card-header {
   margin-bottom: 0.8rem;
+}
+
+.accordion.simple svg {
+  color: $color7;
 }

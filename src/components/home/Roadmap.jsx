@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Figure, Accordion, Button, Card } from "react-bootstrap";
+import { GoChevronDown, GoChevronRight } from "react-icons/go";
 
 const Roadmap = () => {
+  const [accord1, setAccord1] = useState(true);
+  const [accord2, setAccord2] = useState(false);
+  const [accord3, setAccord3] = useState(false);
+
+  const toggleAccord1 = () => {
+    setAccord1(!accord1);
+    setAccord2(false);
+    setAccord3(false);
+  };
+  const toggleAccord2 = () => {
+    setAccord1(false);
+    setAccord2(!accord2);
+    setAccord3(false);
+  };
+  const toggleAccord3 = () => {
+    setAccord1(false);
+    setAccord2(false);
+    setAccord3(!accord3);
+  };
+
   return (
     <section className="roadmap">
       <Container className="inner">
@@ -22,8 +43,12 @@ const Roadmap = () => {
               <Card>
                 <Card.Header>
                   <h5 className="title">
-                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                      Stage 1
+                    <Accordion.Toggle
+                      as={Button}
+                      variant="link"
+                      eventKey="0"
+                      onClick={toggleAccord1}>
+                      {accord1 ? <GoChevronDown size={28} /> : <GoChevronRight size={28} />} Stage 1
                     </Accordion.Toggle>
                   </h5>
                 </Card.Header>
@@ -47,8 +72,12 @@ const Roadmap = () => {
               <Card>
                 <Card.Header>
                   <h5 className="title">
-                    <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                      Stage 2
+                    <Accordion.Toggle
+                      as={Button}
+                      variant="link"
+                      eventKey="1"
+                      onClick={toggleAccord2}>
+                      {accord2 ? <GoChevronDown size={28} /> : <GoChevronRight size={28} />} Stage 2
                     </Accordion.Toggle>
                   </h5>
                 </Card.Header>
@@ -74,8 +103,12 @@ const Roadmap = () => {
               <Card>
                 <Card.Header>
                   <h5 className="title">
-                    <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                      Stage 3
+                    <Accordion.Toggle
+                      as={Button}
+                      variant="link"
+                      eventKey="2"
+                      onClick={toggleAccord3}>
+                      {accord3 ? <GoChevronDown size={28} /> : <GoChevronRight size={28} />} Stage 3
                     </Accordion.Toggle>
                   </h5>
                 </Card.Header>
