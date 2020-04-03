@@ -1,12 +1,13 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-import Navigation from "../components/common/Navigation";
+import Navigation from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
 
 import "../scss/index.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const MainLayout = ({ children, bodyClass }) => {
   return (

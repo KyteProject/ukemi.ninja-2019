@@ -2,7 +2,6 @@ import React from "react";
 import Helmet from "react-helmet";
 
 import config from "../../data/siteConfig";
-import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import Landing from "../components/home/Landing";
 import FeaturedProjects from "../components/projects/FeaturedProjects";
@@ -15,7 +14,7 @@ import CTAEmail from "../components/common/CTAEmail";
 
 const Index = ({ location }) => {
   return (
-    <MainLayout>
+    <>
       <MetaData title="Movement Design Specialists" location={location} />
 
       <div className="index-container">
@@ -29,7 +28,7 @@ const Index = ({ location }) => {
         <RecentPosts />
         <CTA2 />
       </div>
-    </MainLayout>
+    </>
   );
 };
 

@@ -50,23 +50,17 @@ module.exports = {
         path: path.join(__dirname, "src", "content", "projects"),
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `projects`,
-    //     path: `${__dirname}/src/content/posts`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `products`,
+        path: path.join(__dirname, "src", "content", "products"),
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          // {
-          //   resolve: "gatsby-remark-normalize-paths",
-          //   options: {
-          //     pathFields: ["featured_image", "project_image", "project_gallery"],
-          //   },
-          // },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -91,6 +85,29 @@ module.exports = {
         process.env.NODE_ENV === "development" ? ghostConfig.development : ghostConfig.production,
     },
     {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ["Product", "Sku"],
+        secretKey: process.env.GATSBY_STRIPE_KEY,
+        downloadFiles: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-custom-api`,
+      options: {
+        url: "https://restcountries.eu/rest/v2/all?fields=name;alpha2Code;alpha3Code;name;",
+        rootKey: "countries",
+        schemas: {
+          countries: `
+          name: String
+          name: String
+          alpha2Code: String
+          alpha3Code: String
+          `,
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: config.googleAnalyticsID,
@@ -104,10 +121,10 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-transition-link",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-stripe",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-manifest",

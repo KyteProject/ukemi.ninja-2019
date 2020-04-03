@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { Nav, NavDropdown, Navbar, Container, Image } from "react-bootstrap";
 
 const Navigation = () => {
@@ -27,7 +27,7 @@ const Navigation = () => {
   return (
     <Navbar collapseOnSelect expand="lg" fixed="top" className="header-navigation bg-white">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to="/">
           <Image src="/images/text-logotext-logo.png" alt="Ukemi Project text logo" />
         </Navbar.Brand>
         <Navbar.Toggle

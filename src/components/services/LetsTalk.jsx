@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Container, Row, Col, Button, Figure } from "react-bootstrap";
 
 const LetsTalk = () => {
@@ -27,10 +28,10 @@ const LetsTalk = () => {
                 for the Parkour community. These are free at the point of access and you can learn
                 more on our projects page.
               </p>
-              <Button as="a" className="cta-btn-blue" href="/contact">
+              <Button as={Link} className="cta-btn-blue" to="/contact">
                 Contact Us
               </Button>{" "}
-              <Button as="a" href="/projects" className="cta-btn-pink">
+              <Button as={Link} to="/projects" className="cta-btn-pink">
                 View Our Projects
               </Button>
             </Col>

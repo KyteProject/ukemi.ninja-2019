@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 
 import Sidebar from "../components/blog/Sidebar";
-import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
 import Pagination from "../components/blog/Pagination";
@@ -15,26 +14,24 @@ const Index = ({ data, location, pageContext }) => {
 
   return (
     <>
-      <MainLayout>
-        <MetaData location={location} />
-        <TitleSection location={location} crumbLabel="Blog" />
+      <MetaData location={location} />
+      <TitleSection location={location} crumbLabel="Blog" />
 
-        <section id="blog">
-          <Container className="inner">
-            <Row>
-              <Col lg={8}>
-                <div className="blog-content">
-                  {posts.map(({ node }) => (
-                    <PostCard key={node.id} post={node} />
-                  ))}
-                </div>
-              </Col>
-              <Sidebar />
-            </Row>
-          </Container>
-        </section>
-        <Pagination pageContext={pageContext} />
-      </MainLayout>
+      <section id="blog">
+        <Container className="inner">
+          <Row>
+            <Col lg={8}>
+              <div className="blog-content">
+                {posts.map(({ node }) => (
+                  <PostCard key={node.id} post={node} />
+                ))}
+              </div>
+            </Col>
+            <Sidebar />
+          </Row>
+        </Container>
+      </section>
+      <Pagination pageContext={pageContext} />
     </>
   );
 };

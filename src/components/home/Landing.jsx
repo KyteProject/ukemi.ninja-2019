@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 const Landing = () => {
@@ -16,7 +17,7 @@ const Landing = () => {
                 We create products, design activity landscapes and pursue community arts
                 development.
               </p>
-              <Button as="a" href="/shop" className="btn-white landing-btn">
+              <Button as={Link} to="/shop" className="btn-white landing-btn">
                 Visit Our Shop
               </Button>
             </Col>

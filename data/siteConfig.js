@@ -46,6 +46,15 @@ const config = {
   postsPerPage: 12,
   shareImageWidth: 1000,
   shareImageHeight: 523,
+  postageSender: {
+    name: "Ukemi",
+    address1: "111 Constitution Street",
+    address2: "",
+    town: "Aberdeen",
+    county: "Aberdeenshire",
+    country: "GBR",
+    postcode: "AB24 5EG",
+  },
 };
 
 if (config.pathPrefix === "/") {

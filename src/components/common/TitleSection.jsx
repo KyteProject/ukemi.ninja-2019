@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 
 const TitleSection = ({ sub, crumbLabel }) => {
@@ -9,8 +10,14 @@ const TitleSection = ({ sub, crumbLabel }) => {
           <Col lg="12">
             <div>
               <Breadcrumb>
-                <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-                {sub && <Breadcrumb.Item href={`/${sub.slug}`}>{sub.label}</Breadcrumb.Item>}
+                <Link to="/" className="breadcrumb-item">
+                  Home
+                </Link>
+                {sub && (
+                  <Link to={`/${sub.slug}`} className="breadcrumb-item">
+                    {sub.label}
+                  </Link>
+                )}
                 <Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
               </Breadcrumb>
             </div>

@@ -1,6 +1,5 @@
 import React from "react";
 
-import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
 import CTASocials from "../components/common/CTASocials";
@@ -11,7 +10,7 @@ import PageTitle from "../components/common/PageTitle";
 
 const about = ({ location }) => {
   return (
-    <MainLayout>
+    <>
       <MetaData title="About Us" location={location} />
       <TitleSection location={location} crumbLabel="About Us" />
       <PageTitle title="About Us" />
@@ -19,7 +18,7 @@ const about = ({ location }) => {
       <Brands />
       <CTASocials />
       <InDevelopment />
-    </MainLayout>
+    </>
   );
 };
 

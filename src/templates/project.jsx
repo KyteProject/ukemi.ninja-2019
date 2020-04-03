@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import { Container, Row, Col, Card, CardColumns } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 
-import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
 
@@ -12,72 +11,70 @@ const Project = ({ data, location }) => {
 
   return (
     <>
-      <MainLayout>
-        <MetaData data={data} location={location} type="article" />
-        <TitleSection
-          location={location}
-          sub={{ slug: "projects", label: "Projects" }}
-          crumbLabel={project.name}
-        />
-        <section className="projects">
-          <Container>
-            <Row>
-              <Col md={7}>
-                <div className="title">
-                  <h1>{project.name}</h1>
+      <MetaData data={data} location={location} type="article" />
+      <TitleSection
+        location={location}
+        sub={{ slug: "projects", label: "Projects" }}
+        crumbLabel={project.name}
+      />
+      <section className="projects">
+        <Container>
+          <Row>
+            <Col md={7}>
+              <div className="title">
+                <h1>{project.name}</h1>
+              </div>
+              <div className="project-brief">
+                <ReactMarkdown source={project.brief} />
+              </div>
+              {/* <div className="project-tags" /> */}
+            </Col>
+            <Col md={{ span: 4, offset: 1 }} className="project-details">
+              <div className="detail-block">
+                <div className="subtitle">
+                  <h5>Objective</h5>
                 </div>
-                <div className="project-brief">
-                  <ReactMarkdown source={project.brief} />
-                </div>
-                {/* <div className="project-tags" /> */}
-              </Col>
-              <Col md={{ span: 4, offset: 1 }} className="project-details">
+                <div>{project.objective}</div>
+              </div>
+
+              {project.clients ? (
                 <div className="detail-block">
                   <div className="subtitle">
-                    <h5>Objective</h5>
+                    <h5>Clients</h5>
                   </div>
-                  <div>{project.objective}</div>
+                  <div>{project.clients}</div>
                 </div>
+              ) : null}
 
-                {project.clients ? (
-                  <div className="detail-block">
-                    <div className="subtitle">
-                      <h5>Clients</h5>
-                    </div>
-                    <div>{project.clients}</div>
-                  </div>
-                ) : null}
-
-                {project.partners ? (
-                  <div className="detail-block">
-                    <div className="subtitle">
-                      <h5>Partners</h5>
-                    </div>
-                    <div>{project.partners}</div>
-                  </div>
-                ) : null}
-
+              {project.partners ? (
                 <div className="detail-block">
                   <div className="subtitle">
-                    <h5>Date</h5>
+                    <h5>Partners</h5>
                   </div>
-                  <div>{project.date}</div>
+                  <div>{project.partners}</div>
                 </div>
-              </Col>
-            </Row>
-            {/* eslint-disable react/jsx-indent */}
-            <CardColumns className="ts-gallery ts-column-count-4">
-              {project.project_gallery
-                ? project.project_gallery.map((image) => (
-                    <Card className="ts-gallery-item" key={image}>
-                      <Card.Img src={`${image.replace("/static", "")}`} />
-                    </Card>
-                  ))
-                : null}
-            </CardColumns>
-          </Container>
-        </section>
-      </MainLayout>
+              ) : null}
+
+              <div className="detail-block">
+                <div className="subtitle">
+                  <h5>Date</h5>
+                </div>
+                <div>{project.date}</div>
+              </div>
+            </Col>
+          </Row>
+          {/* eslint-disable react/jsx-indent */}
+          <CardColumns className="ts-gallery ts-column-count-4">
+            {project.project_gallery
+              ? project.project_gallery.map((image) => (
+                  <Card className="ts-gallery-item" key={image}>
+                    <Card.Img src={`${image.replace("/static", "")}`} />
+                  </Card>
+                ))
+              : null}
+          </CardColumns>
+        </Container>
+      </section>
     </>
   );
 };

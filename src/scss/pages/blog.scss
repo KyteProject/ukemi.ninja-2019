@@ -5,28 +5,31 @@
   text-align: left;
 
   h3 {
-    color: $color11;
-    font-size: 20px;
+    color: $color7;
+    font-size: 1.8rem;
     margin-bottom: 0;
-    margin-top: 20px;
   }
 
   p {
-    line-height: 22px;
-    font-size: 15px;
+    line-height: 24px;
+    font-size: 1rem;
   }
 
   a {
     display: block;
-    color: $color1;
+    color: $color7;
+
+    &:hover {
+      color: $color-pink;
+    }
   }
 }
 
 .card-subtitle {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 
   ul li {
-    font-size: 13px;
+    font-size: 1rem;
     color: $color5;
     font-weight: 600;
     position: relative;
@@ -49,6 +52,8 @@
   margin: 0 0 40px 0;
   padding: 0;
   border: 1px solid $color15;
+  background-color: $light;
+  transition: 0.4s;
 
   img {
     @include border-radius(8px);
@@ -59,22 +64,20 @@
   }
 }
 
+.blog-item:hover {
+  box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+  background-color: #ffffff;
+}
+
 .blog-content {
   .card {
     border: none;
-
-    .card-body .card-title {
-      margin-bottom: 15px;
-    }
-
-    .blog-summary {
-      padding: 0;
-    }
   }
 }
 
 .blog-overlay {
-  background: $color2;
+  background: $color-pink;
   display: inline-block;
   border-radius: 0;
   font-size: 15px;
@@ -93,10 +96,6 @@
     font-size: 13px;
     display: block;
   }
-}
-
-.sidebar a:not(.hover):not(.btn):not(.badge) {
-  color: inherit;
 }
 
 .sidebox:first-child {

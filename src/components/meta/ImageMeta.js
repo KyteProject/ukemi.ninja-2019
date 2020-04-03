@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import PropTypes from "prop-types";
+
 import config from "../../../data/siteConfig";
 
 const ImageMeta = ({ image }) => {
@@ -17,10 +17,6 @@ const ImageMeta = ({ image }) => {
       <meta property="og:image:height" content={config.shareImageHeight} />
     </Helmet>
   );
-};
-
-ImageMeta.propTypes = {
-  image: PropTypes.string,
 };
 
 export default ImageMeta;

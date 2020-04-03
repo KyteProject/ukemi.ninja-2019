@@ -2,6 +2,7 @@
 @import "./../../node_modules/bootstrap/scss/bootstrap";
 
 @import "../scss/components/main";
+@import "../scss/components/loader";
 @import "../scss/components/buttons";
 @import "../scss/components/footer";
 @import "../scss/components/navigation";
@@ -21,5 +22,6 @@
 @import "../scss/pages/blog";
 @import "../scss/pages/post";
 @import "../scss/pages/projects";
+@import "../scss/pages/shop";
 
 @import "../scss/responsive.scss";

@@ -8,7 +8,26 @@ const Footer = () => {
   const data = useStaticQuery(
     graphql`
       query AllFooterProjectsQuery {
-        allMarkdownRemark(sort: { fields: frontmatter___name, order: ASC }) {
+        products: allMarkdownRemark(
+          sort: { fields: frontmatter___name, order: ASC }
+          limit: 5
+          filter: { fileAbsolutePath: { regex: "/(/content/products)/.*\\\\.md$/" } }
+        ) {
+          edges {
+            node {
+              id
+              frontmatter {
+                name
+                slug
+              }
+            }
+          }
+        }
+        projects: allMarkdownRemark(
+          sort: { fields: frontmatter___name, order: ASC }
+          limit: 5
+          filter: { fileAbsolutePath: { regex: "/(/content/projects)/.*\\\\.md$/" } }
+        ) {
           edges {
             node {
               id
@@ -23,7 +42,8 @@ const Footer = () => {
     `
   );
 
-  const projects = data.allMarkdownRemark.edges;
+  const projects = data.projects.edges;
+  const products = data.products.edges;
   const { copyright, userLinks } = config;
 
   return (
@@ -102,11 +122,18 @@ const Footer = () => {
             <div className="widget">
               <h5 className="footer-title">Shop</h5>
               <ul className="list-unstyled mb-0">
-                <li>
-                  <Link to="/shop" className="footer-link">
-                    Ukemi Card Game
-                  </Link>
-                </li>
+                {products.length >= 1
+                  ? /* prettier-ignore */
+                    products.map(({ node }) => (
+                      <li key={node.id}>
+                        <Link
+                          to={`/shop/${node.frontmatter.slug}`}
+                          className="footer-link">
+                          {node.frontmatter.name}
+                        </Link>
+                      </li>
+                  ))
+                  : null}
               </ul>
             </div>
           </Col>

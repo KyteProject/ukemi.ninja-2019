@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Container, Row, Button } from "react-bootstrap";
 
-import MainLayout from "../layout";
 import { MetaData } from "../components/meta";
 import ProjectCard from "../components/projects/ProjectCard";
 import TitleSection from "../components/common/TitleSection";
@@ -12,7 +11,11 @@ const Projects = ({ location }) => {
   const data = useStaticQuery(
     graphql`
       query AllProjectsQuery {
-        allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+          filter: { fileAbsolutePath: { regex: "/(/content/projects)/.*\\\\.md$/" } }
+        ) {
           edges {
             node {
               id
@@ -35,16 +38,18 @@ const Projects = ({ location }) => {
   const categories = ["all"];
 
   projects.forEach(({ node }) => {
-    categories.push(node.frontmatter.category);
+    !categories.includes(node.frontmatter.category)
+      ? categories.push(node.frontmatter.category)
+      : null;
   });
 
-  const [filterCat, setFilterCat] = React.useState("all");
-  const [filterProjects, setFilterProjects] = React.useState(projects);
+  const [filterCat, setFilterCat] = useState("all");
+  const [filterProjects, setFilterProjects] = useState(projects);
   const handleClick = (event) => {
     setFilterCat(event.target.attributes.value.value.toLowerCase());
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (filterCat === "all") {
       return setFilterProjects(projects);
     }
@@ -57,7 +62,7 @@ const Projects = ({ location }) => {
   }, [filterCat]);
 
   return (
-    <MainLayout>
+    <>
       <MetaData title="Projects" location={location} />
       <div className="projects-container">
         <TitleSection location={location} crumbLabel="Projects" />
@@ -94,7 +99,7 @@ const Projects = ({ location }) => {
           </Container>
         </section>
       </div>
-    </MainLayout>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import React from "react";
 import { Formik } from "formik";
 import { string, object } from "yup";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import * as bent from "bent";
 
 const schema = object({
   firstName: string().required(),
@@ -11,35 +12,22 @@ const schema = object({
     .required(),
   phone: string()
     .min(11)
-    .max(13),
+    .max(15),
   message: string().required(),
 });
 
 const sendDataToLambda = (values) => {
-  const endpoint = process.env.GATSBY_CONTACT_FORM_ENDPOINT;
-  const key = process.env.GATSBY_CONTACT_FORM_KEY;
-
-  const myHeaders = new Headers();
-  myHeaders.append("x-api-key", key);
-
-  const body = {
+  const post = bent("POST", process.env.GATSBY_CONTACT_FORM_ENDPOINT);
+  const headers = { "x-api-key": process.env.GATSBY_CONTACT_FORM_KEY };
+  const body = JSON.stringify({
     firstName: values.firstName,
     secondName: values.secondName,
     email: values.email,
     message: values.message,
     phone: values.phone,
-  };
-
-  const lambdaRequest = new Request(endpoint, {
-    method: "POST",
-    body: JSON.stringify(body),
-    headers: myHeaders,
-    mode: "cors",
   });
 
-  fetch(lambdaRequest)
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
+  return post("ContactFormLambda", body, headers);
 };
 
 const ContactForm = () => {

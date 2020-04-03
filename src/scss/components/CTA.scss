@@ -159,15 +159,11 @@
   color: $color7;
 }
 
-.subscribe-icon:after {
-  content: "\f067";
-  font-family: "FontAwesome";
+.subscribe-icon .plus {
   position: absolute;
-  font-size: 1.2rem;
-  right: 0;
-  color: $color14;
+  right: -5px;
   bottom: 50%;
-  -webkit-transform: translateY(50%);
+  color: $color14;
   transform: translateY(50%);
 }
 
