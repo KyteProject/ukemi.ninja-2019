@@ -2,120 +2,125 @@
 label: Product
 hide_body: true
 fields:
-- name: stripe_id
-  type: text
-  config:
+  - name: stripe_id
+    type: text
+    config:
+      required: true
+    label: Stripe ID
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Slug
+  - name: category
+    type: select
+    default: Parkour Equipment
+    config:
+      required: true
+      options:
+        - Parkour Equipment
+        - Clothing
+        - Games
+        - Other
+      source:
+        type: simple
+        section:
+        file:
+        path:
+    label: Category
+  - name: price
+    type: number
+    label: Price
+    description: ""
+    default: 0
     required: true
-  label: Stripe ID
-- name: name
-  type: text
-  config:
+    config:
+      min: "0"
+      max:
+      step:
+      required: true
+  - name: weight
+    type: number
+    label: Weight
+    description: ""
+    default: 0
     required: true
-  label: Name
-- name: category
-  type: select
-  default: Parkour Equipment
-  config:
+    config:
+      min:
+      max:
+      step:
+      required: true
+  - name: height
+    type: number
+    label: Height
+    description: ""
+    default: 0
     required: true
-    options:
-    - Parkour Equipment
-    - Clothing
-    - Games
-    - Other
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Category
-- name: price
-  type: number
-  label: Price
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: '0'
-    max: 
-    step: 
+    config:
+      min:
+      max:
+      step:
+      required: true
+  - name: width
+    type: number
+    label: Width
+    description: ""
+    default: 0
     required: true
-- name: weight
-  type: number
-  label: Weight
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
+    config:
+      min:
+      max:
+      step:
+      required: true
+  - name: length
+    type: number
+    label: Length
+    description: ""
+    default: 0
     required: true
-- name: height
-  type: number
-  label: Height
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
-    required: true
-- name: width
-  type: number
-  label: Width
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
-    required: true
-- name: length
-  type: number
-  label: Length
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
-    required: true
-- name: short_description
-  type: text
-  config:
-    required: true
-  label: Short Description
-- name: thumbnail
-  type: file
-  config:
-    maxSize: 250
-  label: Thumbnail
-- name: product_images
-  type: image_gallery
-  config: {}
-  label: Product Images
-- name: details
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Details
-- name: shipping_info
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Shipping Info
+    config:
+      min:
+      max:
+      step:
+      required: true
+  - name: short_description
+    type: text
+    config:
+      required: true
+    label: Short Description
+  - name: thumbnail
+    type: file
+    config:
+      maxSize: 250
+    label: Thumbnail
+  - name: product_images
+    type: image_gallery
+    config: {}
+    label: Product Images
+  - name: details
+    type: textarea
+    default: ""
+    config:
+      required: true
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Details
+  - name: shipping_info
+    type: textarea
+    default: ""
+    config:
+      required: true
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Shipping Info
 pages:
-- src/content/products/large-wooden-parkour-cube.md
-- src/content/products/medium-wooden-parkour-box.md
-- src/content/products/ukemi-parkour-card-game.md
+  - src/content/products/large-wooden-parkour-cube.md
+  - src/content/products/medium-wooden-parkour-box.md
+  - src/content/products/ukemi-parkour-card-game.md
