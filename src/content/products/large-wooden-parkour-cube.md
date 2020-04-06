@@ -12,11 +12,11 @@ short_description: Large wooden cube perfect for learning vaults or jumps.
 thumbnail: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_thumb.jpg
 product_images:
 - https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_1.jpg
-details: "**Large Wooden Parkour Cube**\n\nLength: 1 metre  \nWidth: 1 metre  \nHeight:
-  1 metre\n\nMaterials: Softwood Timber Frame / 18mm Hardwood Ply Shell \n\nLarge
-  wooden cube perfect for learning vaults or jumps. The very strong timber frame and
-  plywood shell mean that it is strong enough to withstand all basic Parkour movements
-  and can handle a weight of up to 10 people.\n\nAll of our parkour equipment is hand
+details: "**Large Wooden Parkour Cube**\n\nLength: 1 meter  \nWidth: 1 meter  \nHeight:
+  1 meter\n\nMaterials: Softwood Timber Frame / 18mm Hardwood Ply Shell\n\nLarge wooden
+  cube perfect for learning vaults or jumps. The very strong timber frame and plywood
+  shell mean that it is strong enough to withstand all basic Parkour movements and
+  can handle a weight of up to 10 people.\n\nAll of our parkour equipment is hand
   made in Scotland."
 shipping_info: |-
   Shipping of our parkour equipment is heavily dependant on the size of your order, we generate quotes separately. We will email you an invoice for the shipping and upon receipt of payment, we will send your items.
@@ -25,7 +25,7 @@ shipping_info: |-
 
   Dispatch time from the order is usually 1 week.
 
-  Please send us an email at sales@ukemi.ninja if you have any questions regarding this process.
+  Please send us an email at [sales@ukemi.ninja](mailto:sales@ukemi.ninja "sales@ukemi.ninja") if you have any questions regarding this process.
 enabled: true
 hidden: false
 
