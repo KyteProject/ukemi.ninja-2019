@@ -17,7 +17,8 @@ details: "**Large Wooden Parkour Cube**\n\nLength: 1 meter  \nWidth: 1 meter  \n
   cube perfect for learning vaults or jumps. The very strong timber frame and plywood
   shell mean that it is strong enough to withstand all basic Parkour movements and
   can handle a weight of up to 10 people.\n\nAll of our parkour equipment is hand
-  made in Scotland."
+  made in Scotland.\n\nCustom sizes and bespoke equipment are available, email us
+  at [sales@ukemi.ninja](mailto:sales@ukemi.ninja \"sales@ukemi.ninja\")."
 shipping_info: |-
   Shipping of our parkour equipment is heavily dependant on the size of your order, we generate quotes separately. We will email you an invoice for the shipping and upon receipt of payment, we will send your items.
 
