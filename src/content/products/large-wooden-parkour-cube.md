@@ -4,10 +4,10 @@ stripe_id: prod_GoNxLBCleA3IRt
 name: Large Wooden Parkour Cube
 slug: large-wooden-parkour-cube
 price: 27000
-weight: 5
-height: 1000
-width: 1000
-length: 1000
+weight: 0
+height: 0
+width: 0
+length: 0
 short_description: Large wooden cube perfect for learning vaults or jumps.
 thumbnail: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_thumb.jpg
 product_images:
