@@ -74,13 +74,18 @@ const CheckoutForm = () => {
   };
 
   const calculateShipping = async (values) => {
-    const { postageSender } = config;
-    const countries = data.allCountries.edges;
-    const activeCountry = countries.find((country) => country.node.name === values.shippingCountry);
-
     try {
+      const { postageSender } = config;
+      const countries = data.allCountries.edges;
+
+      const activeCountry = countries.find(
+        (country) => country.node.name === values.shippingCountry
+      );
+
+      const quoteItems = items.filter((item) => item.weight > 0);
+
       const quoteInput = {
-        Parcels: items.map(({ item: id, height, length, weight, width, quantity, price }) => ({
+        Parcels: quoteItems.map(({ item: id, height, length, weight, width, quantity, price }) => ({
           id,
           Height: (height * quantity) / 100,
           Length: (length * quantity) / 100,
@@ -107,9 +112,7 @@ const CheckoutForm = () => {
       });
 
       if (quotes.length < 1) {
-        return handleCheckoutError(
-          "We are unable to ship to this location at this time. Please contact support."
-        );
+        return handleCheckoutError("We are unable to ship to this location at this time.");
       }
 
       updateShipping(quotes[0].TotalPrice * 100);

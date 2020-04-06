@@ -67,14 +67,15 @@ exports.handler = async (event) => {
       (quote) =>
         (quote.Service.CourierName === "DPD" ||
           quote.Service.CourierName === "Parcelforce" ||
-          quote.Service.CourierName === "UPS") &&
+          quote.Service.CourierName === "UPS" ||
+          quote.Service.CourierName === "UPS Access Point") &&
         quote.Service.DeliveryType === "Door" &&
         quote.Service.CollectionType === "Shop"
     );
 
     const mappedQuotes = filteredQuotes.map(
-      ({ Service: { Name, Links }, TotalPrice, EstimatedDeliveryDate }) => ({
-        Service: { Name, Links },
+      ({ Service: { Name, CourierName }, TotalPrice, EstimatedDeliveryDate }) => ({
+        Service: { Name, CourierName },
         TotalPrice,
         EstimatedDeliveryDate,
       })

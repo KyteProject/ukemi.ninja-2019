@@ -25,8 +25,6 @@ const Navigation = () => {
     setOffCanvasOpen(!offCanvasOpen);
   };
 
-  console.log(totalUniqueItems);
-
   return (
     <>
       <Navbar collapseOnSelect expand="lg" fixed>
