@@ -29,4 +29,5 @@ shipping_info: |-
   Please send us an email at [sales@ukemi.ninja](mailto:sales@ukemi.ninja "sales@ukemi.ninja") if you have any questions regarding this process.
 enabled: true
 hidden: false
+shippable: false
 ---

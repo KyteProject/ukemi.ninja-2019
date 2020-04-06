@@ -24,4 +24,5 @@ details: Ukemi is a random chance movement game that improves the player's abili
 shipping_info: Shipped next day.
 enabled: true
 hidden: false
+shippable: true
 ---
