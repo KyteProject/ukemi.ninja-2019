@@ -4,14 +4,14 @@ stripe_id: prod_Gy9fkUEZMLoLfg
 name: Medium Wooden Parkour Box
 slug: medium-wooden-parkour-cube
 price: 25000
-weight: 3
-height: 700
-width: 1000
-length: 1000
+weight: 0
+height: 0
+width: 0
+length: 0
 short_description: Medium size wooden cube perfect for learning vaults or jumps.
 thumbnail: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/medium_cube_thumbnail.jpg
 product_images:
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/medium_cube_1.jpg
+  - https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/medium_cube_1.jpg
 details: "**Medium Wooden Parkour Box**\n\n**Length:** 1m  \n**Width:** 1m  \n**Height:**
   70cm\n\n**Materials:** Softwood Timber Frame / 18mm Hardwood Ply Shell\n\nMedium
   size wooden cube perfect for learning vaults or jumps. he very strong timber frame
@@ -29,5 +29,4 @@ shipping_info: |-
   Please send us an email at [sales@ukemi.ninja](mailto:sales@ukemi.ninja "sales@ukemi.ninja") if you have any questions regarding this process.
 enabled: true
 hidden: false
-
 ---

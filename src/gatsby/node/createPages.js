@@ -30,6 +30,7 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
             id
             frontmatter {
               slug
+              hidden
             }
           }
         }
@@ -74,14 +75,16 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
 
   // Create Shop Product pages
   products.forEach(({ node }) => {
-    createPage({
-      path: `shop/${node.frontmatter.slug}`,
-      component: productTemplate,
-      context: {
-        slug: node.frontmatter.slug,
-        id: node.id,
-      },
-    });
+    if (!node.frontmatter.hidden) {
+      createPage({
+        path: `shop/${node.frontmatter.slug}`,
+        component: productTemplate,
+        context: {
+          slug: node.frontmatter.slug,
+          id: node.id,
+        },
+      });
+    }
   });
 
   // Create Project pages
@@ -98,10 +101,8 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
 
   // Create post pages
   posts.forEach(({ node }) => {
-    const url = `blog/${node.slug}/`;
-
     createPage({
-      path: url,
+      path: `blog/${node.slug}/`,
       component: postTemplate,
       context: {
         slug: node.slug,

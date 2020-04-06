@@ -11,7 +11,7 @@ length: 0
 short_description: Large wooden cube perfect for learning vaults or jumps.
 thumbnail: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_thumb.jpg
 product_images:
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_1.jpg
+  - https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/1mx1m_cube_1.jpg
 details: "**Large Wooden Parkour Cube**\n\n**Length:** 1m  \n**Width:** 1m  \n**Height:**
   1m\n\n**Materials:** Softwood Timber Frame / 18mm Hardwood Ply Shell\n\nLarge wooden
   cube perfect for learning vaults or jumps. The very strong timber frame and plywood
@@ -29,5 +29,4 @@ shipping_info: |-
   Please send us an email at [sales@ukemi.ninja](mailto:sales@ukemi.ninja "sales@ukemi.ninja") if you have any questions regarding this process.
 enabled: true
 hidden: false
-
 ---

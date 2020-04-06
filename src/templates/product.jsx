@@ -59,26 +59,30 @@ const Product = ({ data, location }) => {
                   </InputGroup>
                 </Form.Row>
                 <Form.Group as={Col} md={3} className="item-buy">
-                  <Button
-                    className="cta-btn-pink"
-                    onClick={() =>
-                      addItem(
-                        {
-                          id: product.stripe_id,
-                          price: product.price,
-                          image: product.thumbnail,
-                          name: product.name,
-                          summary: product.short_summary,
-                          width: product.width,
-                          height: product.height,
-                          length: product.length,
-                          weight: product.weight,
-                        },
-                        quantity
-                      )
-                    }>
-                    Add to Cart
-                  </Button>
+                  {product.enabled ? (
+                    <Button
+                      className="cta-btn-pink"
+                      onClick={() =>
+                        addItem(
+                          {
+                            id: product.stripe_id,
+                            price: product.price,
+                            image: product.thumbnail,
+                            name: product.name,
+                            summary: product.short_summary,
+                            width: product.width,
+                            height: product.height,
+                            length: product.length,
+                            weight: product.weight,
+                          },
+                          quantity
+                        )
+                      }>
+                      Add to Cart
+                    </Button>
+                  ) : (
+                    <p>This product is unavailable</p>
+                  )}
                 </Form.Group>
               </Form>
             </div>
@@ -122,6 +126,7 @@ export const productQuery = graphql`
         short_description
         stripe_id
         thumbnail
+        enabled
       }
     }
   }
