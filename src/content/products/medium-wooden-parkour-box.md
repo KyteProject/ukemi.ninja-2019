@@ -8,10 +8,10 @@ weight: 3
 height: 700
 width: 1000
 length: 1000
-short_description: "Medium size wooden cube perfect for learning vaults or jumps."
+short_description: Medium size wooden cube perfect for learning vaults or jumps.
 thumbnail: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/medium_cube_thumbnail.jpg
 product_images:
-  - https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/medium_cube_1.jpg
+- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/medium_cube_1.jpg
 details: |-
   Dimensions (LxWxH): 1m x 1m x 700mm
   Weight: Unknown
@@ -21,4 +21,7 @@ details: |-
 shipping_info: |-
   Shipping: £15 Scotland/£30 UK
   Dispatch Time: 1 week
+enabled: true
+hidden: false
+
 ---
