@@ -8,6 +8,7 @@
   color: $color7;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  line-height: 2.7rem;
 }
 
 .product-info h4,
@@ -48,6 +49,10 @@
 
 .table tbody {
   border-bottom: 1px solid #dbdcde;
+}
+
+.table tbody > p {
+  margin-top: 1rem;
 }
 
 .item-quantity input {
@@ -130,4 +135,9 @@ th {
 .nav-tabs .nav-link.active {
   color: $color-pink;
   background: none;
+}
+
+.tab-content {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }

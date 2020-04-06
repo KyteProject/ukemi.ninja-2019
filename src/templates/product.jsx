@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { Container, Row, Col, Button, Form, InputGroup, Figure, Tabs, Tab } from "react-bootstrap";
 import { useCart } from "react-use-cart";
+import ReactMarkdown from "react-markdown";
 
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
@@ -85,13 +86,13 @@ const Product = ({ data, location }) => {
         </Row>
         <Tabs defaultActiveKey="details" id="product-tabs">
           <Tab eventKey="details" title="Product Details">
-            {product.details}
+            <ReactMarkdown source={product.details} />
           </Tab>
           <Tab eventKey="shipping" title="Shipping and Returns">
-            {product.shipping_info}
+            <ReactMarkdown source={product.shipping_info} />
           </Tab>
           <Tab eventKey="reviews" title="Reviews">
-            <p />
+            <p>Review functionality is in development.</p>
           </Tab>
         </Tabs>
       </Container>
