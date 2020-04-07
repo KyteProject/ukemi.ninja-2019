@@ -22,3 +22,5 @@ fields:
   type: boolean
   label: Featured
   default: true
+pages:
+- src/content/brands/access-parkour.md
