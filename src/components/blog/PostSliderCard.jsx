@@ -30,9 +30,6 @@ const PostSliderCard = ({ post }) => {
               <li>
                 <FaCalendarAlt size={15} /> {published}
               </li>
-              <li>
-                <FaUserAlt size={15} /> {post.primary_author.name}
-              </li>
             </ul>
           </Card.Subtitle>
           <Card.Text>{post.excerpt}</Card.Text>
