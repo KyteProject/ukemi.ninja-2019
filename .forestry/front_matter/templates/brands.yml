@@ -1,0 +1,33 @@
+---
+label: Brands
+hide_body: true
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+- name: website
+  type: text
+  config:
+    required: true
+  label: Website
+- name: brand_logo
+  type: file
+  config:
+    maxSize: 250
+  label: brand_logo
+  description: 200 x 100 px
+- name: featured
+  type: boolean
+  label: Featured
+  default: true
+pages:
+- src/content/brands/access-parkour.md
+- src/content/brands/aim-sports-academy.md
+- src/content/brands/parkour-generations.md
+- src/content/brands/parkour-outreach.md
+- src/content/brands/parkour-scotland.md
+- src/content/brands/parkour-uk.md
+- src/content/brands/scottish-canals.md
+- src/content/brands/sport-inspired.md
