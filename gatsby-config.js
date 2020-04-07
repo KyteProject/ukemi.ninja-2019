@@ -37,13 +37,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: path.join(__dirname, "src", "images"),
-        name: "images",
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,

@@ -6,8 +6,8 @@ const Brands = () => {
   const data = useStaticQuery(graphql`
     query BrandImages {
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
-        limit: 1000
+        limit: 20
+        sort: { order: ASC, fields: frontmatter___name }
         filter: {
           fileAbsolutePath: { regex: "/(/content/brands)/.*\\\\.md$/" }
           frontmatter: { featured: { eq: true } }
@@ -32,8 +32,8 @@ const Brands = () => {
   return (
     <>
       <section className="brands">
-        <h2 className="title">Collaborators, Clients & Partners</h2>
-        <Container className="inner pt-0">
+        <Container className="inner">
+          <h2 className="title">Clients & Collaborators</h2>
           <div className="brand-list">
             {brands.map(({ node }) => (
               <div className="brand-item" key={node.id}>
