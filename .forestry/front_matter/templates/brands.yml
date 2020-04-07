@@ -18,3 +18,7 @@ fields:
     maxSize: 250
   label: brand_logo
   description: 200 x 100 px
+- name: featured
+  type: boolean
+  label: Featured
+  default: true
