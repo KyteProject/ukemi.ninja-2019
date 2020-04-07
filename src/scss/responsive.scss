@@ -64,30 +64,6 @@
       font-size: 13px !important;
     }
 
-    // .navbar-collapse {
-    //   background-color: $white;
-    //   li {
-    //     a {
-    //       line-height: 20px !important;
-    //       padding: 12px 10px !important;
-    //     }
-    //     .social-media {
-    //       margin-left: 0 !important;
-    //     }
-    //   }
-    // }
-
-    // .navbar-toggler {
-    //   font-size: 22px;
-    //   line-height: 1;
-    //   color: $color1;
-    //   padding: 0;
-
-    //   span {
-    //     height: auto;
-    //   }
-    // }
-
     .about-section {
       .img-right {
         right: 0 !important;
@@ -112,27 +88,18 @@
       color: $white;
     }
 
-    // .navbar-expand-lg {
-    //   .navbar-nav {
-    //     li {
-    //       a {
-    //         color: $color5 !important;
-    //         &:after {
-    //           top: 0 !important;
-    //         }
-    //       }
-    //     }
-    //     .dropdown-menu {
-    //       box-shadow: none;
-    //     }
-    //   }
-    // }
+    .mosaic .item,
+    .mosaic .item.width2 {
+      width: 50%;
+      height: auto;
+    }
 
-    // .sticky {
-    //   .navbar-toggler {
-    //     color: $color1;
-    //   }
-    // }
+    .brands .brand-list .brand-item {
+      -ms-flex: 0 0 33.3333%;
+      -webkit-box-flex: 0;
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+    }
   }
 }
 
@@ -529,13 +496,12 @@
   .sidebar.left-sidebar {
     padding-right: 15px !important;
   }
-}
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .mosaic .item,
-  .mosaic .item.width2 {
-    width: 50%;
-    height: auto;
+  .brands .brand-list .brand-item {
+    a {
+      padding: 15px;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -583,89 +549,25 @@
     padding: 20px 0;
   }
 
-  // .nav-tabs.nav-pills .nav-link .icon {
-  //   display: inline-block;
-  // }
-
-  // .nav-tabs.nav-justified {
-  //   display: block !important;
-  // }
-
-  // .nav-tabs.nav-justified .nav-item {
-  //   flex-grow: 0;
-  //   margin-left: 0;
-  //   margin-right: 0;
-  //   display: block;
-  //   margin-bottom: 0.75rem;
-  //   width: 100%;
-  //   text-align: center !important;
-  // }
-
-  // .nav-tabs.nav-justified .nav-item .nav-link * {
-  //   display: inline !important;
-  // }
-
-  // .nav-tabs.nav-justified .nav-item .nav-link span {
-  //   padding-left: 0.5rem;
-  // }
-
-  // .nav-tabs.nav-justified .nav-item .nav-link .icon-svg img {
-  //   width: 2rem;
-  //   height: 2rem;
-  // }
-
-  // .nav-tabs.nav-pills {
-  //   display: block !important;
-  // }
-
-  // .nav-tabs.nav-pills .nav-item {
-  //   display: block !important;
-  // }
-
-  // .nav-tabs.nav-pills .nav-item + .nav-item {
-  //   margin-top: 1rem;
-  // }
-  // .nav-tabs.nav-pills .nav-link {
-  //   display: inline-block !important;
-  // }
-  // .nav-tabs.nav-pills .nav-link .icon {
-  //   display: inline-block !important;
-  // }
-  // .nav-tabs.nav-tabs-centered.nav-justified .nav-item {
-  //   text-align: left !important;
-  // }
-  // .nav-tabs.d-flex:not(.nav-pills) {
-  //   justify-content: flex-start !important;
-  // }
-  // #comments .user {
-  //   display: none;
-  // }
-  // #comments .message-inner {
-  //   margin-left: 0;
-  // }
-  // #comments ul.children {
-  //   padding: 0 0 0 25px;
-  // }
-
   .mosaic .item,
   .mosaic .item.width2 {
     width: 100%;
     height: auto;
   }
 
-  // .overflow-top.bleed-sm-s {
-  //   margin-top: -6rem;
-  // }
-  // .overflow-bottom {
-  //   margin-bottom: -7rem;
-  // }
+  .brands .brand-list .brand-item {
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
 
-  // .image-wrapper.bg-full {
-  //   background-size: cover !important;
-  // }
-  // .image-block-wrapper [class*="container"] .box {
-  //   padding: 4rem 3rem;
-  // }
+    &:nth-child(6) {
+      margin-left: 0;
+    }
+    a {
+      padding: 15px;
+    }
+  }
 }
 
 @media (max-width: 575.98px) {

@@ -1,19 +1,28 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { Container } from "react-bootstrap";
 import Img from "gatsby-image";
-import Slider from "react-slick";
+
+import PageTitle from "../common/PageTitle";
 
 const Brands = () => {
   const data = useStaticQuery(graphql`
     query BrandImages {
-      allFile(filter: { relativePath: { regex: "/brands/" } }) {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1000
+        filter: {
+          fileAbsolutePath: { regex: "/(/content/brands)/.*\\\\.md$/" }
+          frontmatter: { featured: { eq: true } }
+        }
+      ) {
         edges {
           node {
-            childImageSharp {
-              fixed(quality: 100, width: 200, height: 80) {
-                ...GatsbyImageSharpFixed_withWebp_noBase64
-              }
+            id
+            frontmatter {
+              name
+              website
+              brand_logo
             }
           }
         }
@@ -21,44 +30,26 @@ const Brands = () => {
     }
   `);
 
-  const brands = data.allFile.edges;
-
-  const settings = {
-    className: "center",
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 5,
-    autoplay: true,
-    speed: 300,
-    swipeToSlide: true,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 770,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
+  const brands = data.allMarkdownRemark.edges;
 
   return (
     <>
       <section className="brands">
+        <h2 className="title">Collaborators, Clients & Partners</h2>
         <Container className="inner pt-0">
-          <h2 className="subtitle text-center"> Brands we&apos;ve worked with</h2>
-          <Slider className="brands-slider" {...settings}>
+          <div className="brand-list">
             {brands.map(({ node }) => (
-              <div key={node.id}>
-                <Img fixed={node.childImageSharp.fixed} className="brands-image" />
+              <div className="brand-item" key={node.id}>
+                <a href={node.frontmatter.website}>
+                  <img
+                    src={node.frontmatter.brand_logo}
+                    className="brands-image"
+                    alt={node.frontmatter.name}
+                  />
+                </a>
               </div>
             ))}
-          </Slider>
+          </div>
         </Container>
       </section>
     </>
