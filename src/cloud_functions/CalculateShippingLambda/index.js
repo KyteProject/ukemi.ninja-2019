@@ -1,5 +1,5 @@
-const bent = require("bent");
-const formurlencoded = require("form-urlencoded").default;
+const bent = require("cloud_functions/CalculateShippingLambda/bent");
+const formurlencoded = require("cloud_functions/CalculateShippingLambda/form-urlencoded").default;
 
 const post = bent("POST", "https://www.parcel2go.com/", "json", 200);
 

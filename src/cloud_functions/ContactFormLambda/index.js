@@ -1,4 +1,4 @@
-const aws = require("aws-sdk");
+const aws = require("cloud_functions/ContactFormLambda/aws-sdk");
 
 const sesClient = new aws.SES({ region: "eu-central-1" });
 const sesConfirmedAddress = "enquiries@ukemi.ninja";
