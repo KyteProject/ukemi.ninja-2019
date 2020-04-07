@@ -17,7 +17,7 @@ const cart = ({ location }) => {
       <PageTitle
         title="Shop Checkout"
         subTitle={[
-          "We've updated our store, please contact us",
+          "We've updated our store, please contact us ",
           "at support@ukemi.ninja if you have any issues.",
         ]}
       />

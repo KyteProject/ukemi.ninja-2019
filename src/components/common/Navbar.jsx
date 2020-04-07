@@ -54,7 +54,7 @@ const Navigation = () => {
                 </Button>
                 {totalUniqueItems ? <span className="badge-cart">{totalUniqueItems}</span> : null}
               </Nav.Item>
-              <Nav.Item>
+              {/* <Nav.Item>
                 <Button onClick={toggleSearch} className="btn-link">
                   <FiSearch size={26} />
                 </Button>
@@ -71,7 +71,7 @@ const Navigation = () => {
                     </div>
                   </div>
                 )}
-              </Nav.Item>
+              </Nav.Item> */}
               <Nav.Item>
                 <Button onClick={toggleOffCanvas} className="btn-link">
                   <FiHelpCircle size={26} />
