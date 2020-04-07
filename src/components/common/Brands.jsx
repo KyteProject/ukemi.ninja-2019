@@ -1,9 +1,6 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import { Container } from "react-bootstrap";
-import Img from "gatsby-image";
-
-import PageTitle from "../common/PageTitle";
 
 const Brands = () => {
   const data = useStaticQuery(graphql`
