@@ -1,4 +1,20 @@
 ---
 label: Brands
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+- name: website
+  type: text
+  config:
+    required: true
+  label: Website
+- name: brand_logo
+  type: file
+  config:
+    maxSize: 250
+  label: brand_logo
+  description: 200 x 100 px
