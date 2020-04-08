@@ -31,17 +31,26 @@ const ContactDetails = () => {
                 <p>@UkemiProject</p>
                 <ul className="social-links">
                   <li>
-                    <a href="https://fb.me/UkemiProject" alt="Ukemi Project Facebook page">
+                    <a
+                      href="https://fb.me/UkemiProject"
+                      alt="Ukemi Project Facebook page"
+                      aria-label="Facebook">
                       <FaFacebookF size={24} />
                     </a>
                   </li>
                   <li>
-                    <a href="https://instagram.com/UkemiProject" alt="Ukemi Project Instagram page">
+                    <a
+                      href="https://instagram.com/UkemiProject"
+                      alt="Ukemi Project Instagram page"
+                      aria-label="Instagram">
                       <FaInstagram size={24} />
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/UkemiProject" alt="Ukemi Project Twitter page">
+                    <a
+                      href="https://twitter.com/UkemiProject"
+                      alt="Ukemi Project Twitter page"
+                      aria-label="Twitter">
                       <FaTwitter size={24} />
                     </a>
                   </li>

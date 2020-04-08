@@ -29,9 +29,15 @@ const CartItem = ({ id, name, quantity, price, image }) => {
         </td>
         <td className="cart-quantity">
           <div className="form-group item-quantity">
-            <input type="button" value="-" onClick={decrement} />{" "}
-            <input type="text" name="quantity" value={quantity} className="qty" />{" "}
-            <input type="button" value="+" onClick={increment} />
+            <input type="button" value="-" onClick={decrement} aria-label="Decrement" />{" "}
+            <input
+              type="text"
+              name="quantity"
+              value={quantity}
+              className="qty"
+              aria-label="Quantity"
+            />{" "}
+            <input type="button" value="+" onClick={increment} aria-label="Increment" />
           </div>
         </td>
         <td className="cart-subtotal">

@@ -10,15 +10,23 @@ const TitleSection = ({ sub, crumbLabel }) => {
           <Col lg="12">
             <div>
               <Breadcrumb>
-                <Link to="/" className="breadcrumb-item">
-                  Home
-                </Link>
-                {sub && (
-                  <Link to={`/${sub.slug}`} className="breadcrumb-item">
-                    {sub.label}
+                <li>
+                  <Link to="/" className="breadcrumb-item" aria-label="Home">
+                    Home
                   </Link>
+                </li>
+                {sub && (
+                  <li>
+                    <span className="crumb-seperator">/</span>
+                    <Link to={`/${sub.slug}`} className="breadcrumb-item" aria-label={sub.label}>
+                      {sub.label}
+                    </Link>
+                  </li>
                 )}
-                <Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
+                <Breadcrumb.Item active>
+                  <span className="crumb-seperator">/</span>
+                  {crumbLabel}
+                </Breadcrumb.Item>
               </Breadcrumb>
             </div>
           </Col>

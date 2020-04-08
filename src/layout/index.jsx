@@ -16,6 +16,7 @@ import favicon167 from "../../static/favicon/favicon-167.png";
 import favicon180 from "../../static/favicon/favicon-180.png";
 import favicon192 from "../../static/favicon/favicon-192.png";
 import favicon196 from "../../static/favicon/favicon-196.png";
+import favicon512 from "../../static/favicon/favicon-512.png";
 
 const MainLayout = ({ children, bodyClass }) => {
   return (
@@ -29,6 +30,7 @@ const MainLayout = ({ children, bodyClass }) => {
           { rel: "icon", type: "image/png", sizes: "180x180", href: `${favicon180}` },
           { rel: "icon", type: "image/png", sizes: "192x192", href: `${favicon192}` },
           { rel: "icon", type: "image/png", sizes: "196x196", href: `${favicon196}` },
+          { rel: "icon", type: "image/png", sizes: "512x512", href: `${favicon512}` },
           { rel: "shortcut icon", type: "image/png", href: `${favicon196}` },
         ]}>
         <html lang="en" />

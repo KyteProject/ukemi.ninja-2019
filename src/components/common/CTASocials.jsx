@@ -37,36 +37,48 @@ const CTASocials = () => {
                 <li>
                   <a
                     className="facebook"
-                    href={userLinks.find((el) => el.label === "Facebook").url}>
+                    href={userLinks.find((el) => el.label === "Facebook").url}
+                    aria-label="Facebook">
                     <AiOutlineFacebook size={42} />
                   </a>
                 </li>
                 <li>
-                  <a className="github" href={userLinks.find((el) => el.label === "GitHub").url}>
+                  <a
+                    className="github"
+                    href={userLinks.find((el) => el.label === "GitHub").url}
+                    aria-label="Github">
                     <AiOutlineGithub size={42} />
                   </a>
                 </li>
                 <li>
                   <a
                     className="instagram"
-                    href={userLinks.find((el) => el.label === "Instagram").url}>
+                    href={userLinks.find((el) => el.label === "Instagram").url}
+                    aria-label="Instagram">
                     <AiOutlineInstagram size={42} />
                   </a>
                 </li>
                 <li>
                   <a
                     className="linkedin"
-                    href={userLinks.find((el) => el.label === "LinkedIn").url}>
+                    href={userLinks.find((el) => el.label === "LinkedIn").url}
+                    aria-label="LinkedIn">
                     <AiOutlineLinkedin size={42} />
                   </a>
                 </li>
                 <li>
-                  <a className="twitter" href={userLinks.find((el) => el.label === "Twitter").url}>
+                  <a
+                    className="twitter"
+                    href={userLinks.find((el) => el.label === "Twitter").url}
+                    aria-label="Twitter">
                     <AiOutlineTwitter size={42} />
                   </a>
                 </li>
                 <li>
-                  <a className="youtube" href={userLinks.find((el) => el.label === "Youtube").url}>
+                  <a
+                    className="youtube"
+                    href={userLinks.find((el) => el.label === "Youtube").url}
+                    aria-label="Youtube">
                     <AiOutlineYoutube size={42} />
                   </a>
                 </li>

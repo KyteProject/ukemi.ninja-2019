@@ -66,6 +66,7 @@ const ContactForm = () => {
                           onChange={handleChange}
                           isInvalid={!!errors.firstName}
                           placeholder="First Name *"
+                          aria-label="First Name"
                         />
                         <Form.Control.Feedback type="invalid">
                           {errors.firstName}
@@ -79,6 +80,7 @@ const ContactForm = () => {
                           onChange={handleChange}
                           isInvalid={!!errors.secondName}
                           placeholder="Second Name *"
+                          aria-label="Second Name"
                         />
                         <Form.Control.Feedback type="invalid">
                           {errors.secondName}
@@ -94,6 +96,7 @@ const ContactForm = () => {
                           onChange={handleChange}
                           isInvalid={!!errors.email}
                           placeholder="Email *"
+                          aria-label="Enter Email"
                         />
                         <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>
                       </Form.Group>
@@ -105,6 +108,7 @@ const ContactForm = () => {
                           onChange={handleChange}
                           isInvalid={!!errors.phone}
                           placeholder="Phone"
+                          aria-label="Phone Number"
                         />
                         <Form.Control.Feedback type="invalid">{errors.phone}</Form.Control.Feedback>
                       </Form.Group>
@@ -118,13 +122,14 @@ const ContactForm = () => {
                           isInvalid={!!errors.message}
                           type="textarea"
                           placeholder="Message *"
+                          aria-label="Your message"
                         />
                         <Form.Control.Feedback type="invalid">
                           {errors.message}
                         </Form.Control.Feedback>
                       </Form.Group>
                       <Form.Group as={Col} md={12}>
-                        <Button type="submit" className="cta-btn-pink">
+                        <Button type="submit" className="cta-btn-pink" aria-label="Submit form">
                           Submit Form
                         </Button>
                       </Form.Group>

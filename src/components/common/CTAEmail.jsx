@@ -41,7 +41,11 @@ const CTAEmail = () => {
               <div className="text-center subscribe-form mt-4">
                 <Form>
                   <Form.Group as={Row} controlId="subscribeEmail">
-                    <Form.Control type="email" placeholder="Your Email Address..." />
+                    <Form.Control
+                      type="email"
+                      placeholder="Your Email Address..."
+                      aria-label="Enter Email"
+                    />
                     <Button size="lg" type="submit" className="cta-btn-blue">
                       Subscribe
                     </Button>

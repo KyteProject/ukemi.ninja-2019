@@ -27,32 +27,32 @@ const About = () => {
       </p>
       <ul className="social social-color social-s">
         <li>
-          <a href={userLinks.find((el) => el.label === "Facebook").url}>
+          <a href={userLinks.find((el) => el.label === "Facebook").url} aria-label="Facebook">
             <AiOutlineFacebook size={28} className="s-facebook" />
           </a>
         </li>
         <li>
-          <a href={userLinks.find((el) => el.label === "GitHub").url}>
+          <a href={userLinks.find((el) => el.label === "GitHub").url} aria-label="Github">
             <AiOutlineGithub size={28} className="s-github" />
           </a>
         </li>
         <li>
-          <a href={userLinks.find((el) => el.label === "Instagram").url}>
+          <a href={userLinks.find((el) => el.label === "Instagram").url} aria-label="Instagram">
             <AiOutlineInstagram size={28} className="s-instagram" />
           </a>
         </li>
         <li>
-          <a href={userLinks.find((el) => el.label === "LinkedIn").url}>
+          <a href={userLinks.find((el) => el.label === "LinkedIn").url} aria-label="LinkedIn">
             <AiOutlineLinkedin size={28} className="s-linkedin" />
           </a>
         </li>
         <li>
-          <a href={userLinks.find((el) => el.label === "Twitter").url}>
+          <a href={userLinks.find((el) => el.label === "Twitter").url} aria-label="Twitter">
             <AiOutlineTwitter size={28} className="s-twitter" />
           </a>
         </li>
         <li>
-          <a href={userLinks.find((el) => el.label === "Youtube").url}>
+          <a href={userLinks.find((el) => el.label === "Youtube").url} aria-label="Youtube">
             <AiOutlineYoutube size={28} className="s-youtube" />
           </a>
         </li>

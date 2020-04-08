@@ -49,7 +49,7 @@ const Navigation = () => {
                 />
               </Nav.Item>
               <Nav.Item className="dropdown cart-dropdown position-static">
-                <Button as={Link} to="/shop/cart" className="btn-link">
+                <Button as={Link} to="/shop/cart" className="btn-link" aria-label="Shopping Cart">
                   <FiShoppingCart size={26} />
                 </Button>
                 {totalUniqueItems ? <span className="badge-cart">{totalUniqueItems}</span> : null}
@@ -73,7 +73,7 @@ const Navigation = () => {
                 )}
               </Nav.Item> */}
               <Nav.Item>
-                <Button onClick={toggleOffCanvas} className="btn-link">
+                <Button onClick={toggleOffCanvas} className="btn-link" aria-label="Help Sidebar">
                   <FiHelpCircle size={26} />
                 </Button>
               </Nav.Item>

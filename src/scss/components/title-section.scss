@@ -9,19 +9,29 @@
     background-color: transparent;
     margin-bottom: 0;
     margin-top: 0.5rem;
+    font-size: 1.1rem;
 
     li {
       display: inline-block;
       font-style: italic;
 
       a {
-        color: $white;
+        color: $color-pink;
         font-style: normal;
+        font-weight: 300;
+        font-size: 1.1rem;
       }
     }
 
-    .breadcrumb-item::before {
+    .crumb-seperator {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
       color: $white;
+      font-size: 1.1rem;
+    }
+
+    .active {
+      color: $light;
     }
   }
 }
