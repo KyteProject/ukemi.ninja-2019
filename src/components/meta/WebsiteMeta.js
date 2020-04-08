@@ -1,6 +1,5 @@
 import React from "react";
 import Helmet from "react-helmet";
-import PropTypes from "prop-types";
 import _ from "lodash";
 import { StaticQuery, graphql } from "gatsby";
 import url from "url";
@@ -87,24 +86,6 @@ const WebsiteMeta = ({ data, settings, canonical, title, description, image, typ
       <ImageMeta image={shareImage} />
     </>
   );
-};
-
-WebsiteMeta.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string,
-    feature_image: PropTypes.string,
-    description: PropTypes.string,
-    bio: PropTypes.string,
-    profile_image: PropTypes.string,
-  }).isRequired,
-  settings: PropTypes.shape({
-    allGhostSettings: PropTypes.object.isRequired,
-  }).isRequired,
-  canonical: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  type: PropTypes.oneOf(["WebSite", "Series"]).isRequired,
 };
 
 const WebsiteMetaQuery = (props) => (

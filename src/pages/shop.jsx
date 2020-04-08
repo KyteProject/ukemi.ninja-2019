@@ -73,7 +73,7 @@ const Shop = ({ location }) => {
 
   return (
     <>
-      <MetaData title="Shop" location={location} />
+      <MetaData title="Shop" location={location} image="/images/og-index.png" />
       <TitleSection location={location} crumbLabel="Shop" />
       <PageTitle
         title="Ukemi Store"

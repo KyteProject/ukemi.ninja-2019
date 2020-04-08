@@ -11,7 +11,7 @@ import PageTitle from "../components/common/PageTitle";
 const about = ({ location }) => {
   return (
     <>
-      <MetaData title="About Us" location={location} />
+      <MetaData title="About Us" location={location} image="/images/og-index.png" />
       <TitleSection location={location} crumbLabel="About Us" />
       <PageTitle title="About Us" />
       <AboutDetails />

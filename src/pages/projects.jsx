@@ -63,7 +63,7 @@ const Projects = ({ location }) => {
 
   return (
     <>
-      <MetaData title="Projects" location={location} />
+      <MetaData title="Projects" location={location} image="/images/og-index.png" />
       <div className="projects-container">
         <TitleSection location={location} crumbLabel="Projects" />
         <PageTitle

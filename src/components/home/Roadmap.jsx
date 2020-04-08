@@ -33,6 +33,7 @@ const Roadmap = () => {
                 src="images/text-logo272196-P5IYZO-590@2x.png"
                 fluid={false}
                 className="roadmap-img"
+                alt="Curving Road with map pin markers."
               />
             </Figure>
           </Col>

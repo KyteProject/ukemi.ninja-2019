@@ -10,7 +10,7 @@ const contact = ({ location }) => {
   return (
     <>
       <div className="contact-container">
-        <MetaData title="Contact Us" location={location} />
+        <MetaData title="Contact Us" location={location} image="/images/og-index.png" />
         <TitleSection location={location} crumbLabel="Contact" />
         <PageTitle
           title="Get In Touch!"

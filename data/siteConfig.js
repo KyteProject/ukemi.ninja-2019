@@ -2,9 +2,10 @@ const config = {
   siteTitle: "Ukemi - Movement Design Specialists",
   siteTitleShort: "Ukemi Ltd.", // Short site title under 12 characters to prevent truncation.
   siteTitleAlt: "Ukemi - Movement Design", // Alternative site title for SEO.
-  siteLogo: "/logos/logo-1024.png", // TODO
-  siteIcon: "favicon.png", // TODO
+  siteLogo: "/favicon/favicon-196.png",
+  siteIcon: "/favicon/favicon-196.png",
   siteUrl: "https://ukemi.ninja",
+  defaultOGImage: "/images/og-index.png",
   pathPrefix: "",
   siteDescription:
     "Ukemi promotes activity in highly urbanised areas and encourages a healthier society through digital design, product creation, and community arts development.",
@@ -40,7 +41,7 @@ const config = {
       url: "#",
     },
   ],
-  copyright: "Copyright © 2019. Ukemi",
+  copyright: "Copyright © 2020. Ukemi",
   themeColor: "#c62828",
   backgroundColor: "#e0e0e0",
   postsPerPage: 12,

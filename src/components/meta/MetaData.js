@@ -28,7 +28,7 @@ const MetaData = ({ data, settings, title, description, image, location }) => {
   const metaTitle = title || config.siteTitle || ghostSettings.title;
   const metaDescription = description || config.siteDescription || ghostSettings.description;
 
-  let metaImage = image || ghostSettings.cover_image || null;
+  let metaImage = image || ghostSettings.cover_image || config.defaultOGImage || null;
 
   metaImage = image ? url.resolve(config.siteUrl, image) : null;
 

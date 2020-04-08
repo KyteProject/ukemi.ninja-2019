@@ -15,7 +15,11 @@ import CTAEmail from "../components/common/CTAEmail";
 const Index = ({ location }) => {
   return (
     <>
-      <MetaData title="Movement Design Specialists" location={location} />
+      <MetaData
+        title="Movement Design Specialists"
+        location={location}
+        image="/images/og-index.png"
+      />
 
       <div className="index-container">
         <Helmet title={config.siteTitle} />

@@ -8,7 +8,7 @@ import Cart from "../../components/shop/Cart";
 const cart = ({ location }) => {
   return (
     <>
-      <MetaData title="Shopping Cart" location={location} />
+      <MetaData title="Shopping Cart" location={location} image="/images/og-index.png" />
       <TitleSection
         location={location}
         crumbLabel="Shopping Cart"

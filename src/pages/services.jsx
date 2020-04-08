@@ -11,7 +11,7 @@ import PageTitle from "../components/common/PageTitle";
 const services = ({ location }) => {
   return (
     <>
-      <MetaData title="Services" location={location} />
+      <MetaData title="Services" location={location} image="/images/og-index.png" />
       <TitleSection location={location} crumbLabel="Services" />
       <PageTitle
         title="Our Services"

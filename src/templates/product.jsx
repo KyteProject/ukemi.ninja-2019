@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import { Container, Row, Col, Button, Form, InputGroup, Figure, Tabs, Tab } from "react-bootstrap";
 import { useCart } from "react-use-cart";
 import ReactMarkdown from "react-markdown";
+import Helmet from "react-helmet";
 
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
@@ -16,7 +17,12 @@ const Product = ({ data, location }) => {
 
   return (
     <>
-      <MetaData data={data} location={location} type="article" />
+      <MetaData
+        data={data}
+        location={location}
+        image={productImage}
+        title={`Shop | ${product.name}`}
+      />
       <TitleSection
         location={location}
         sub={{ slug: "shop", label: "Shop" }}
