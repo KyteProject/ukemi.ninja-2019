@@ -7,13 +7,13 @@ phases:
       - "npm install -g gatsby-cli"
   pre_build:
     commands:
-      - "yarn install --frozen-lockfile --production"
+      - "npm install"
   build:
     commands:
-      - "yarn run build"
+      - "npm run build"
   post_build:
     commands:
-      - "yarn run deploy"
+      - "npm run deploy"
 artifacts:
   base-directory: public
   files:
