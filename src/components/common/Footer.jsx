@@ -161,7 +161,7 @@ const Footer = () => {
           </Col>
 
           <Col sm={{ span: 12, order: 2 }} md={{ span: 12, order: 2 }} lg={{ span: 12, order: 6 }}>
-            <p className="footer-slogan">
+            <p className="footer-slogan text-darg-bg">
               <span className="text-white">受け身</span>
               <br />
               Movement inspired design specialists.

@@ -4,24 +4,6 @@ const urljoin = require("url-join");
 const path = require("path");
 const config = require("./data/siteConfig");
 
-const ghostConfig = {
-  production: {
-    apiUrl: process.env.GHOST_API_URL,
-    contentApiKey: process.env.GHOST_CONTENT_API_KEY,
-  },
-  development: {
-    apiUrl: process.env.DEV_GHOST_API_URL,
-    contentApiKey: process.env.DEV_GHOST_CONTENT_API_KEY,
-  },
-};
-
-const { apiUrl, contentApiKey } =
-  process.env.NODE_ENV === "development" ? ghostConfig.development : ghostConfig.production;
-
-if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
-  throw new Error("GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build.");
-}
-
 module.exports = {
   pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
@@ -81,8 +63,10 @@ module.exports = {
     },
     {
       resolve: "gatsby-source-ghost",
-      options:
-        process.env.NODE_ENV === "development" ? ghostConfig.development : ghostConfig.production,
+      options: {
+        apiUrl: process.env.GHOST_API_URL,
+        contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+      },
     },
     {
       resolve: `gatsby-source-stripe`,
