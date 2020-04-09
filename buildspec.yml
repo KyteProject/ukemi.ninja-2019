@@ -4,7 +4,6 @@ phases:
     runtime-versions:
       nodejs: 12
     commands:
-      - "touch .npmignore"
       - "yarn global add gatsby"
   pre_build:
     commands:
