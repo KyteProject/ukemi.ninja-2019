@@ -4,6 +4,8 @@ const urljoin = require("url-join");
 const path = require("path");
 const config = require("./data/siteConfig");
 
+const targetAddress = new URL(process.env.TARGET_ADDRESS || `https://ukemi.ninja`);
+
 module.exports = {
   pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
@@ -135,5 +137,18 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: process.env.TARGET_BUCKET_NAME,
+        region: process.env.AWS_REGION,
+        protocol: targetAddress.protocol.slice(0, -1),
+        hostname: targetAddress.hostname,
+        acl: null,
+        params: {
+          // In case you want to add any custom content types: https://github.com/jariz/gatsby-plugin-s3/blob/master/recipes/custom-content-type.md
+        },
+      },
+    },
   ],
 };
