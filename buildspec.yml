@@ -2,13 +2,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 13.12.0
+      nodejs: 12
     commands:
       - "yarn global add gatsby-cli"
   pre_build:
     commands:
       - "yarn"
-      - "yarn add react"
   build:
     commands:
       - "yarn run build"
