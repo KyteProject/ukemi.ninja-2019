@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - "yarn install --frozen-lockfile --production"
-      - "yarn install react"
+      - "yarn add react"
   build:
     commands:
       - "yarn run build"
