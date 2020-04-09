@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify";
 import StripeProvider from "./src/components/shop/StripeProvider";
 import MainLayout from "./src/layout/index";
 
-import { handleItemAdded, handleItemUpdated, handleItemRemoved } from "./src/utils/cart-helpers";
+import { handleItemAdded, handleItemRemoved } from "./src/utils/cart-helpers";
 
 const toastOptions = {
   position: "bottom-center",
@@ -83,7 +83,6 @@ export const wrapRootElement = ({ element }) => {
       <CartProvider
         id={randomCartId()}
         onItemAdd={handleItemAdded}
-        onItemUpdate={handleItemUpdated}
         onItemRemove={handleItemRemoved}>
         {element}
       </CartProvider>
