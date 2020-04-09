@@ -7,7 +7,7 @@ phases:
       - "yarn global add gatsby-cli"
   pre_build:
     commands:
-      - "yarn install --frozen-lockfile --production"
+      - "yarn"
       - "yarn add react"
   build:
     commands:

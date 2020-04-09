@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { Card, Col } from "react-bootstrap";
 
-import { FaCalendarAlt, FaUserAlt } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const PostSliderCard = ({ post }) => {
   const url = `/blog/${post.slug}`;
