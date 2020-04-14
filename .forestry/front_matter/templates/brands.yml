@@ -25,6 +25,7 @@ fields:
 pages:
 - src/content/brands/access-parkour.md
 - src/content/brands/aim-sports-academy.md
+- src/content/brands/art-of-retreat.md
 - src/content/brands/brewman.md
 - src/content/brands/jaggy.md
 - src/content/brands/lyra-theatre.md
@@ -32,6 +33,7 @@ pages:
 - src/content/brands/parkour-outreach.md
 - src/content/brands/parkour-scotland.md
 - src/content/brands/parkour-uk.md
+- src/content/brands/pk-syllabus.md
 - src/content/brands/scottish-canals.md
 - src/content/brands/sport-inspired.md
 - src/content/brands/the-helix.md
