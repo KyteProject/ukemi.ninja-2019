@@ -164,7 +164,7 @@ const Footer = () => {
             <p className="footer-slogan text-darg-bg">
               <span className="text-white">受け身</span>
               <br />
-              Movement inspired design specialists.
+              Movement inspired design.
             </p>
             <small className="footer-legal">{copyright}</small>
           </Col>
