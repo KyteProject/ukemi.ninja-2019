@@ -26,16 +26,9 @@ brief: |-
 
   To learn more about the Ukemi card game you can read our blog that details the process from concept to creation.
 featured: true
-featured_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/card-post.jpg
+featured_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/card spread
+  small.jpg
 project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/image0.jpg
-project_gallery:
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02576.JPG
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02572 (1).JPG
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02565.JPG
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02550.JPG
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02545.JPG
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02523.JPG
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02521.JPG
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02502.JPG
+project_gallery: []
 
 ---
