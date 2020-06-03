@@ -56,9 +56,9 @@ const loader = {
   },
 };
 
-export const onClientEntry = () => {
-  loader.start();
-};
+// export const onClientEntry = () => {
+// loader.start();
+// };
 
 export const onInitialClientRender = () => {
   loader.stop();
