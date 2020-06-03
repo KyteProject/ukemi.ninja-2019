@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { Col, Figure } from "react-bootstrap";
 
 const ProjectCard = ({ project }) => {
-  const url = `/project/${project.slug}`;
+  const url = `/projects/${project.slug}`;
 
   return (
     <Col lg={4} md={6} className="gallery-item">

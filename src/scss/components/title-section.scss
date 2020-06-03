@@ -33,5 +33,9 @@
     .active {
       color: $light;
     }
+
+    .breadcrumb-item {
+      display: inherit;
+    }
   }
 }
