@@ -76,7 +76,7 @@ const Product = ({ data, location }) => {
                             lineItems: [{ price: product.stripe_id, quantity }],
                             mode: "payment",
                             successUrl: "https://ukemi.ninja/shop/success",
-                            cancelUrl: "https://ukemi.ninja/shop/canceled",
+                            cancelUrl: "https://ukemi.ninja/shop/cancelled",
                           })
 
                         // addItem(
