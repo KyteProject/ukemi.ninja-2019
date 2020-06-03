@@ -26,16 +26,7 @@ brief: |-
   [**https://ukemi.ninja/blog/movement-card-right-to-the-city/**](https://mvmnt-card.com/ "https://mvmnt-card.com/")
 featured: true
 featured_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/mc-mock-holder.png
-project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/sleek mock
-  1.png
-project_gallery:
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/MC-mock-2.png
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/MC-mock-1.png
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/MC final mock front.png
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/MC final mock back.png
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/MC final mock 2.png
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/MC final mock 1.png
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/mc-mock-holder.png
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/mc-mock-both-back.png
+project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/movement-card.jpg
+project_gallery: []
 
 ---
