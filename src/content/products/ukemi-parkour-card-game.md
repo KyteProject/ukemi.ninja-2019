@@ -12,10 +12,7 @@ short_description: Ukemi is the worlds first Parkour and Freerunning card game -
   by traceurs for traceurs.
 thumbnail: ''
 product_images:
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02565.JPG
 - https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02545.JPG
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02523.JPG
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/DSC02502.JPG
 details: Ukemi is a random chance movement game that improves the player's ability
   to assess risk and develop quality movement. The base movements are derived from
   the disciplines of parkour, freerunning and broader movement culture. The game works
