@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { Container, Row, Col, Button, Form, InputGroup, Figure, Tabs, Tab } from "react-bootstrap";
-import { useCart } from "react-use-cart";
+// import { useCart } from "react-use-cart";
 import ReactMarkdown from "react-markdown";
-import Helmet from "react-helmet";
+import { useStripe } from "@stripe/react-stripe-js";
+// import Helmet from "react-helmet";
 
 import { MetaData } from "../components/meta";
 import TitleSection from "../components/common/TitleSection";
@@ -12,8 +13,9 @@ import { formatPrice } from "../utils/cart-helpers";
 const Product = ({ data, location }) => {
   const product = data.markdownRemark.frontmatter;
   const [quantity, setQuantity] = useState(1);
-  const { addItem } = useCart();
+  // const { addItem } = useCart();
   const productImage = product.product_images[0];
+  const stripe = useStripe();
 
   return (
     <>
@@ -68,23 +70,31 @@ const Product = ({ data, location }) => {
                   {product.enabled ? (
                     <Button
                       className="cta-btn-pink"
-                      onClick={() =>
-                        addItem(
-                          {
-                            id: product.stripe_id,
-                            price: product.price,
-                            image: product.thumbnail,
-                            name: product.name,
-                            summary: product.short_summary,
-                            width: product.width,
-                            height: product.height,
-                            length: product.length,
-                            weight: product.weight,
-                          },
-                          quantity
-                        )
+                      onClick={
+                        () =>
+                          stripe.redirectToCheckout({
+                            lineItems: [{ price: product.stripe_id, quantity }],
+                            mode: "payment",
+                            successUrl: "https://ukemi.ninja/shop/success",
+                            cancelUrl: "https://ukemi.ninja/shop/canceled",
+                          })
+
+                        // addItem(
+                        //   {
+                        //     id: product.stripe_id,
+                        //     price: product.price,
+                        //     image: product.thumbnail,
+                        //     name: product.name,
+                        //     summary: product.short_summary,
+                        //     width: product.width,
+                        //     height: product.height,
+                        //     length: product.length,
+                        //     weight: product.weight,
+                        //   },
+                        //   quantity
+                        // )
                       }>
-                      Add to Cart
+                      Buy Now
                     </Button>
                   ) : (
                     <p>This product is unavailable</p>

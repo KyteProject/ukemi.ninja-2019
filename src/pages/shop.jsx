@@ -15,7 +15,10 @@ const Shop = ({ location }) => {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
-          filter: { fileAbsolutePath: { regex: "/(/content/products)/.*\\\\.md$/" } }
+          filter: {
+            fileAbsolutePath: { regex: "/(/content/products)/.*\\\\.md$/" }
+            frontmatter: { hidden: { eq: false } }
+          }
         ) {
           edges {
             node {
@@ -35,6 +38,7 @@ const Shop = ({ location }) => {
                 short_description
                 stripe_id
                 thumbnail
+                hidden
               }
               html
             }

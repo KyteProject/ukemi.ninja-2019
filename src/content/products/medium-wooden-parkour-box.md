@@ -27,7 +27,7 @@ shipping_info: |-
   Dispatch time from the order is usually 1 week.
 
   Please send us an email at [sales@ukemi.ninja](mailto:sales@ukemi.ninja "sales@ukemi.ninja") if you have any questions regarding this process.
-enabled: true
-hidden: false
+enabled: false
+hidden: true
 shippable: false
 ---

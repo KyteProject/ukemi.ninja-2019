@@ -1,6 +1,6 @@
 ---
 category: Games
-stripe_id: prod_Go5eZTw5GVQ5cX
+stripe_id: sku_Go4zNbaLm6rfZ1
 name: Ukemi Card Game
 slug: ukemi-parkour-card-game
 price: 1699
