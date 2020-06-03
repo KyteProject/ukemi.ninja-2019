@@ -1,7 +1,7 @@
 ---
 name: Youth Urban Games 2018
 slug: youth-urban-games-2018
-date: 2018-09-28T23:00:00Z
+date: 2018-09-28T23:00:00.000+00:00
 category: Events
 clients: []
 partners:
@@ -27,13 +27,7 @@ brief: |-
   3. **Presenting classes and jams to a crowd.**
 featured: false
 featured_image: ''
-project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0413-smaller.jpg
-project_gallery:
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0717.jpg
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0111.jpg
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0244.jpg
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0197.jpg
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0080.jpg
-- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0752.jpg
+project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/yug18.jpg
+project_gallery: []
 
 ---
