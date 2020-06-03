@@ -1,7 +1,7 @@
 ---
 name: Greatest Park Never Built
 slug: the-greatest-park-never-built
-date: 2020-02-19T00:00:00Z
+date: 2020-02-19T00:00:00.000+00:00
 category: Parks
 clients: []
 partners: []
@@ -16,7 +16,7 @@ brief: |-
   Our goals are to safeguard these locations for future design implementation, so that aspect of our culture is not lost. We aim to create an interactive resource that acts as a hotbed for sharing designs and create innovation/discussion. Highlighting these communities and providing legacy by creating a visual library of historic spaces used for movement and play.
 featured: false
 featured_image: ''
-project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/Untitled-1.png
+project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/rottenrow.jpg
 project_gallery: []
 
 ---
