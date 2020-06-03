@@ -28,6 +28,13 @@ brief: |-
 featured: false
 featured_image: ''
 project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/yug18.jpg
-project_gallery: []
+project_gallery:
+- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_9952.jpg
+- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_9853.jpg
+- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0717.jpg
+- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0413.jpg
+- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0136.jpg
+- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0098.jpg
+- https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/IMG_0006.jpg
 
 ---
