@@ -48,12 +48,12 @@ const Navigation = () => {
                   className="btn-link"
                 />
               </Nav.Item>
-              <Nav.Item className="dropdown cart-dropdown position-static">
+              {/* <Nav.Item className="dropdown cart-dropdown position-static">
                 <Button as={Link} to="/shop/cart" className="btn-link" aria-label="Shopping Cart">
                   <FiShoppingCart size={26} />
                 </Button>
                 {totalUniqueItems ? <span className="badge-cart">{totalUniqueItems}</span> : null}
-              </Nav.Item>
+              </Nav.Item> */}
               {/* <Nav.Item>
                 <Button onClick={toggleSearch} className="btn-link">
                   <FiSearch size={26} />
@@ -72,11 +72,11 @@ const Navigation = () => {
                   </div>
                 )}
               </Nav.Item> */}
-              <Nav.Item>
+              {/* <Nav.Item>
                 <Button onClick={toggleOffCanvas} className="btn-link" aria-label="Help Sidebar">
                   <FiHelpCircle size={26} />
                 </Button>
-              </Nav.Item>
+              </Nav.Item> */}
             </Nav>
             <Navbar.Collapse className="offcanvas-nav" />
           </div>

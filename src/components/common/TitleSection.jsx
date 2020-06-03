@@ -11,14 +11,14 @@ const TitleSection = ({ sub, crumbLabel }) => {
             <div>
               <Breadcrumb>
                 <li>
-                  <Link to="/" className="breadcrumb-item" aria-label="Home">
+                  <Link to="/" className="" aria-label="Home">
                     Home
                   </Link>
                 </li>
                 {sub && (
                   <li>
                     <span className="crumb-seperator">/</span>
-                    <Link to={`/${sub.slug}`} className="breadcrumb-item" aria-label={sub.label}>
+                    <Link to={`/${sub.slug}`} className="" aria-label={sub.label}>
                       {sub.label}
                     </Link>
                   </li>
