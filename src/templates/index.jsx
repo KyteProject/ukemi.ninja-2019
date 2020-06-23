@@ -22,9 +22,9 @@ const Index = ({ data, location, pageContext }) => {
           <Row>
             <Col lg={8}>
               <div className="blog-content">
-                {posts.map(({ node }) => (
-                  <PostCard key={node.id} post={node} />
-                ))}
+                {posts.map(({ node }) =>
+                  node.slug !== "data-schema" ? <PostCard key={node.id} post={node} /> : null
+                )}
               </div>
             </Col>
             <Sidebar />
