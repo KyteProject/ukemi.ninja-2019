@@ -70,7 +70,7 @@ API's
 
 ## Meta #️⃣
 
-Daniel Smith – daniel.smith@ukemi.ninja
+Daniel Smith – dan@ukemi.ninja
 
 Distributed under the MIT license. See `LICENSE` for more information.
 
