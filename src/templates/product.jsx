@@ -70,30 +70,7 @@ const Product = ({ data, location }) => {
                   {product.enabled ? (
                     <Button
                       className="cta-btn-pink"
-                      onClick={
-                        () =>
-                          stripe.redirectToCheckout({
-                            lineItems: [{ price: product.stripe_id, quantity }],
-                            mode: "payment",
-                            successUrl: "https://ukemi.ninja/shop/success",
-                            cancelUrl: "https://ukemi.ninja/shop/cancelled",
-                          })
-
-                        // addItem(
-                        //   {
-                        //     id: product.stripe_id,
-                        //     price: product.price,
-                        //     image: product.thumbnail,
-                        //     name: product.name,
-                        //     summary: product.short_summary,
-                        //     width: product.width,
-                        //     height: product.height,
-                        //     length: product.length,
-                        //     weight: product.weight,
-                        //   },
-                        //   quantity
-                        // )
-                      }>
+                      href="https://www.etsy.com/uk/listing/668704403/ukemi-card-game-parkour-and-freerunning">
                       Buy Now
                     </Button>
                   ) : (
