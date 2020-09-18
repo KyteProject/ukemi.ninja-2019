@@ -17,7 +17,7 @@ details: Ukemi is a random chance movement game that improves the player's abili
   to assess risk and develop quality movement. The base movements are derived from
   the disciplines of parkour, freerunning and broader movement culture. The game works
   best with 2-4 people.
-shipping_info: Shipped next day.
+shipping_info: Shipped next day
 enabled: true
 hidden: false
 shippable: true
