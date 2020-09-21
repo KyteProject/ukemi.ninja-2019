@@ -21,9 +21,7 @@ brief: |-
 
   [**https://mvmnt-card.com/**](https://mvmnt-card.com/ "https://mvmnt-card.com/")
 
-  [**https://discordapp.com/invite/7aYRk8P**](https://mvmnt-card.com/ "https://mvmnt-card.com/")
-
-  [**https://ukemi.ninja/blog/movement-card-right-to-the-city/**](https://mvmnt-card.com/ "https://mvmnt-card.com/")
+  [**https://ukemi.ninja/blog/movement-card-right-to-the-city/**](https://ukemi.ninja/blog/movement-card-right-to-the-city/ "https://mvmnt-card.com/")
 featured: true
 featured_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/mc-mock-holder.png
 project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/movement-card.jpg
