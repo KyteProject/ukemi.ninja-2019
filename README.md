@@ -2,7 +2,7 @@
 
 > This is the 2019-2020 redesign on company website.
 
-Ukemi promote activity in highly urbanised areas and encourage a healthier society through digital design, product creation, and community arts development. We create experiences in response to, and in collaboration with, communities in order to reclaim the city for free and open activity. Our aim is to tackle health and safety culture, to encourage play, and to demystify movement and make it more accessible through our products and services.
+Ukemi promote activity in highly urbanised areas and encourage a healthier society through digital design, product creation, and community arts. We create experiences in response to, and in collaboration with, communities in order to reclaim the city for free and open activity. Our aim is to tackle health and safety culture, to encourage play, and to demystify movement and make it more accessible through our products and services.
 
 ## Installation 💻
 

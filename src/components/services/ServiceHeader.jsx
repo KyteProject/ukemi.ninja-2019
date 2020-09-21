@@ -26,7 +26,7 @@ const ServiceHeader = () => {
           <p className="mb-15">We create physical products to enrich the lives of all movers!</p>
         </Col>
         <Col md={4}>
-          <h5>Community Arts Development</h5>
+          <h5>Community Arts</h5>
           <p className="mb-15">
             We engage with local communities to bring movement to economically challenged areas.
           </p>

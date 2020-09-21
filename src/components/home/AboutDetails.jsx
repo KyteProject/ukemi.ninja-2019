@@ -13,7 +13,7 @@ const AboutDetails = () => {
               </h2>
               <p className="about-text">
                 Ukemi promotes activity in highly urbanised areas and encourages a healthier society
-                through digital design, product creation, and community arts development.
+                through digital design, product creation, and community arts.
               </p>
               <p className="about-text">
                 Each founder has practised Parkour for over a decade and this is the lens in which
