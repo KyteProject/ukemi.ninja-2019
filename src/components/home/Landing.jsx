@@ -14,8 +14,7 @@ const Landing = () => {
               <h1 className="home-title text-white">Learn • Play • Create</h1>
               <h3 className="home-sub-title">Specialists in Movement Inspired Design</h3>
               <p className="home-text text-white mx-auto">
-                We create products, design activity landscapes and pursue community arts
-                development.
+                We create products, design activity landscapes and pursue community arts.
               </p>
               <Button as={Link} to="/shop" className="btn-white landing-btn">
                 Visit Our Shop

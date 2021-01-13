@@ -8,7 +8,7 @@ const config = {
   defaultOGImage: "/images/og-index.png",
   pathPrefix: "",
   siteDescription:
-    "Ukemi promotes activity in highly urbanised areas and encourages a healthier society through digital design, product creation, and community arts development.",
+    "Ukemi promotes activity in highly urbanised areas and encourages a healthier society through digital design, product creation, and community arts.",
   siteRss: "/rss.xml",
   siteFBAppID: "", // TODO
   googleAnalyticsID: "", // TODO
