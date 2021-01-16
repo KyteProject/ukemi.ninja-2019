@@ -1,4 +1,4 @@
-// TODO: fix pagination styles
+// TODO: fix pagination styles.
 
 import React from "react";
 import { Link } from "gatsby";
