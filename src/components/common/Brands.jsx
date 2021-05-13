@@ -9,7 +9,7 @@ const Brands = () => {
         limit: 20
         sort: { order: ASC, fields: frontmatter___name }
         filter: {
-          fileAbsolutePath: { regex: "/(/content/brands)/.*\\\\.md$/" }
+          fileAbsolutePath: { regex: "/(/content/brands)/.*.md$/" }
           frontmatter: { featured: { eq: true } }
         }
       ) {
