@@ -38,7 +38,7 @@ const Roadmap = () => {
             </Figure>
           </Col>
           <Col lg={6} className="pr-60 pr-md-15">
-            <h2 className="title">We&apos;ve broken down our roadmap for 2020 into 3 stages.</h2>
+            <h2 className="title">We&apos;ve broken down our roadmap for 2021 into 3 stages.</h2>
 
             <Accordion defaultActiveKey="0" className="simple">
               <Card>
