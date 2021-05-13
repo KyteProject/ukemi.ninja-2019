@@ -11,7 +11,7 @@ const Footer = () => {
         products: allMarkdownRemark(
           sort: { fields: frontmatter___name, order: ASC }
           limit: 5
-          filter: { fileAbsolutePath: { regex: "/(/content/products)/.*\\\\.md$/" } }
+          filter: { fileAbsolutePath: { regex: "/(/content/products)/.*.md$/" } }
         ) {
           edges {
             node {
@@ -26,7 +26,7 @@ const Footer = () => {
         projects: allMarkdownRemark(
           sort: { fields: frontmatter___name, order: ASC }
           limit: 5
-          filter: { fileAbsolutePath: { regex: "/(/content/projects)/.*\\\\.md$/" } }
+          filter: { fileAbsolutePath: { regex: "/(/content/projects)/.*.md$/" } }
         ) {
           edges {
             node {

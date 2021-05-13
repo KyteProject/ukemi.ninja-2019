@@ -14,7 +14,7 @@ const Projects = ({ location }) => {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
-          filter: { fileAbsolutePath: { regex: "/(/content/projects)/.*\\\\.md$/" } }
+          filter: { fileAbsolutePath: { regex: "/(/content/projects)/.*.md$/" } }
         ) {
           edges {
             node {

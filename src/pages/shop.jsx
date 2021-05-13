@@ -16,7 +16,7 @@ const Shop = ({ location }) => {
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
           filter: {
-            fileAbsolutePath: { regex: "/(/content/products)/.*\\\\.md$/" }
+            fileAbsolutePath: { regex: "/(/content/products)/.*.md$/" }
             frontmatter: { hidden: { eq: false } }
           }
         ) {

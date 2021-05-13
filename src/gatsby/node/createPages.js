@@ -9,7 +9,7 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
       allProjects: allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
-        filter: { fileAbsolutePath: { regex: "/(/content/projects)/.*\\\\.md$/" } }
+        filter: { fileAbsolutePath: { regex: "/(/content/projects)/.*.md$/" } }
       ) {
         edges {
           node {
@@ -23,7 +23,7 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
       allProducts: allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
-        filter: { fileAbsolutePath: { regex: "/(/content/products)/.*\\\\.md$/" } }
+        filter: { fileAbsolutePath: { regex: "/(/content/products)/.*.md$/" } }
       ) {
         edges {
           node {

@@ -10,7 +10,7 @@ const FeaturedProjects = () => {
         allMarkdownRemark(
           sort: { fields: frontmatter___date, order: DESC }
           filter: {
-            fileAbsolutePath: { regex: "/(/content/projects)/.*\\\\.md$/" }
+            fileAbsolutePath: { regex: "/(/content/projects)/.*.md$/" }
             frontmatter: { featured: { eq: true } }
           }
         ) {
