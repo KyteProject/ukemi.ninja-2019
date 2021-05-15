@@ -25,7 +25,7 @@ const Project = ({ data, location }) => {
                 <h1>{project.name}</h1>
               </div>
               <div className="project-brief">
-                <ReactMarkdown source={project.brief} />
+                <ReactMarkdown children={project.brief} />
               </div>
               {/* <div className="project-tags" /> */}
             </Col>

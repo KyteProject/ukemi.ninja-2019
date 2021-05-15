@@ -83,10 +83,10 @@ const Product = ({ data, location }) => {
         </Row>
         <Tabs defaultActiveKey="details" id="product-tabs">
           <Tab eventKey="details" title="Product Details">
-            <ReactMarkdown source={product.details} />
+            <ReactMarkdown children={product.details} />
           </Tab>
           <Tab eventKey="shipping" title="Shipping and Returns">
-            <ReactMarkdown source={product.shipping_info} />
+            <ReactMarkdown children={product.shipping_info} />
           </Tab>
           <Tab eventKey="reviews" title="Reviews">
             <p>Review functionality is in development.</p>
