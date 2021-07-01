@@ -10,7 +10,11 @@ objective: Ukemi is a random chance movement game that improves the player's abi
   to assess risk and develop quality movement. The base movements are derived from
   the disciplines of parkour, freerunning and broader movement culture.
 brief: |-
-  Ukemi is a random chance movement game that improves the player's ability to assess risk and develop quality movement. The base movements are derived from the disciplines of parkour, freerunning and broader movement culture. The game works best with 2-4 people.
+  Ukemi is the world’s first freerunning card game. It is a random chance movement game that improves the player's ability to assess risk and develop quality movement. The base movements are derived from the disciplines of parkour, freerunning and broader movement culture.
+
+  The card game was created as a team with my company [Ukemi](https://ukemi.ninja). It was crowdfunded using the [Indiegogo](https://www.indiegogo.com) platform in 2018 and has since been sold to traceurs in over 25 different countries!
+
+  For more about the history and process of creating the Ukemi card game from concept to creation click [here](https://ukemi.ninja/blog/ukemi-card-game-from-concept-to-creation).
 
   **CONTENTS**
 
@@ -23,8 +27,6 @@ brief: |-
   **UKEMI CARD GAME RULES**
 
   Like parkour, this game can be played any way you want. In fact, we encourage you to experiment and discover new play styles. To get you started however we have provided you with some guidelines and a default method of play - you can find these below. Be sure to send us a message and tag us on your social media, we love to see the cards and play styles you will come up with!
-
-  To learn more about the Ukemi card game you can read our blog that details the process from concept to creation.
 featured: true
 featured_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/card spread
   small.jpg
