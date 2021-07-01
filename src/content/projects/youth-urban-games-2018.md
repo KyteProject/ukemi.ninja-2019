@@ -11,20 +11,13 @@ objective: The Youth Urban Games was a Scottish festival celebrating urban sport
   and community. Our job was to design and manage a parkour charity event. This included
   a  performance, coaching, and non-destructive competition.
 brief: |-
-  Understanding the options you have when managing a [parkour](https://ukemi.ninja/blog/tag/parkour/) [event](https://ukemi.ninja/blog/tag/event/) can have benefits for both the client and the community. In recent years parkour has grown massively and will continue to do so. Whether you regard it as a sport, an art form, lifestyle, philosophy, performance skill or all of the aforementioned we have benefited as a community by finding more than one way to share it. As a result, we ultimately receive it in many different ways too.
+  The Youth Urban Games was Scotland’s first-ever urban sports festival, featuring parkour, skateboarding and BMXing. It celebrated urban sports and community. Along with my company [Ukemi](https://ukemi.ninja/) we designed and managed the parkour section of the event. This included the delivery of the largest temporary parkour park ever in Scotland with support from [AiM](https://www.aimsportscademy.com) as well as 200 participants and 15 high-level athletes.
 
-  _Often these come in two categories;_
+  Location - [**Forth & Clyde Canal**](https://www.scottishcanals.co.uk/canals/forth-clyde-canal/).
 
-  1. **Activities that primarily benefit the participant – jams, classes, seminars, and gatherings.**
-  2. **Activities that primarily benefit the viewer – computer games, tv, performances, and competitions.**
+  Support by - [**Year of Young People 2018**](https://yoyp2018.scot/) [**EventScotland**](http://www.eventscotland.org/) [**VisitScotland**](https://www.visitscotland.com/)
 
-  When approached to run a parkour competition we began by contacting community leaders for feedback. Expectantly we quickly found that running a competition would be extremely divisive and needed to come up with a solution. We decided to attempt including every activity in _category 1_ and the live elements from _category 2_. Our goal was to create something that would benefit the community, satisfy an audience and fulfil our client’s aims.
-
-  _These requirements gave us three distinct challenges;_
-
-  1. **Running a parkour event for an audience without making it competitive.**
-  2. **Creating a spectator event that benefits the community.**
-  3. **Presenting classes and jams to a crowd.**
+  Organised by [**Scottish Canals**](https://www.scottishcanals.co.uk/) in partnership with [Ukemi](https://ukemi.ninja) [Team Extreme](http://www.teamextreme.co.uk) [Skateboard Scotland](https://skateboardscotland.com) [**SportInspired**](https://sportinspired.org/)
 featured: false
 featured_image: ''
 project_image: https://ukemi-website.s3.eu-west-2.amazonaws.com/projects/yug18.jpg
